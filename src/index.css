@@ -976,6 +976,205 @@ button {
   text-decoration: underline;
 }
 
+.course-status {
+  margin-top: 22px;
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.resume-btn {
+  margin-top: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+.resume-btn:hover {
+  background: var(--bg-hover);
+}
+
+/* ---------- Continue card ---------- */
+
+.continue-card {
+  display: grid;
+  gap: 3px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 8px;
+  transition: background 0.15s;
+}
+
+.continue-card:hover {
+  background: var(--bg-hover);
+}
+
+.continue-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.continue-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.continue-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Assignments ---------- */
+
+.assignment-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.assignment-list li {
+  margin-bottom: 8px;
+}
+
+.assignment-list label {
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+  cursor: pointer;
+}
+
+.assignment-list input {
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+
+.assignment-list li.done > label > span {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--border);
+}
+
+.assignment-summary {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Source usage ---------- */
+
+.resource-usage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  padding: 8px 14px 2px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.resource-usage a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 9px;
+}
+
+.resource-usage a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.usage-standing,
+.usage-lessons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.usage-count {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+}
+
+.usage-more {
+  background: none;
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  padding: 1px 9px;
+}
+
+.usage-more:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- Notes index ---------- */
+
+.note-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.note-entry {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.note-entry > a {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.note-entry > a:hover .search-title {
+  color: var(--accent);
+}
+
+.note-body {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  max-width: 72ch;
+}
+
+.note-delete {
+  margin-top: 10px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  padding: 3px 12px;
+}
+
+.note-delete:hover {
+  border-color: #e0736f;
+  color: #e0736f;
+}
+
+.lesson-row .note-flag {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
 /* ---------- Lesson notes ---------- */
 
 .lesson-note textarea {

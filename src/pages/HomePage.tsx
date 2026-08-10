@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { completedInYear, lessonCountByYear, program, years } from '../data'
 import { useProgress } from '../progress'
 import ProgressControls from '../components/ProgressControls'
+import ContinueCard from '../components/ContinueCard'
 
 export default function HomePage() {
   const progress = useProgress()
@@ -17,6 +18,7 @@ export default function HomePage() {
           ))}
         </ul>
       </section>
+      <ContinueCard />
       <div className="year-grid">
         {years.map((y) => {
           const total = lessonCountByYear[y.year] ?? 0

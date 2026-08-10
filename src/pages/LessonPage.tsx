@@ -1,9 +1,17 @@
-import { use } from 'react'
+import { use, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import type { CourseSummary } from '../types'
+import type { Course, CourseSummary, Lesson } from '../types'
 import { courseSummaries, loadSemesterCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
-import { lessonKey, toggleLesson, useProgress } from '../progress'
+import {
+  assignmentKey,
+  lessonKey,
+  recordVisit,
+  toggleAssignment,
+  toggleLesson,
+  useAssignments,
+  useProgress,
+} from '../progress'
 import ResourceList from '../components/ResourceList'
 import NotFound from '../components/NotFound'
 import LessonNote from '../components/LessonNote'
@@ -16,13 +24,43 @@ export default function LessonPage() {
 }
 
 function LessonView({ summary, lessonId }: { summary: CourseSummary; lessonId: string }) {
-  const progress = useProgress()
   const course = use(loadSemesterCourses(summary.semesterId)).get(summary.id)
 
   const lessonIndex = course?.lessons.findIndex((l) => l.id === lessonId) ?? -1
   const lesson = course && lessonIndex >= 0 ? course.lessons[lessonIndex] : undefined
 
   if (!course || !lesson) return <NotFound what="Lesson" />
+
+  // Split out so the visit-recording effect sits below the not-found guard
+  // rather than running for a lesson that does not exist.
+  return <LessonBody course={course} lesson={lesson} summary={summary} index={lessonIndex} />
+}
+
+function LessonBody({
+  course,
+  lesson,
+  summary,
+  index,
+}: {
+  course: Course
+  lesson: Lesson
+  summary: CourseSummary
+  index: number
+}) {
+  const progress = useProgress()
+  const assignments = useAssignments()
+
+  useEffect(() => {
+    recordVisit({
+      courseId: course.id,
+      lessonId: lesson.id,
+      courseCode: course.code,
+      title: lesson.title,
+      week: lesson.week,
+    })
+  }, [course.id, course.code, lesson.id, lesson.title, lesson.week])
+
+  const lessonIndex = index
 
   const year = years.find((y) => y.year === summary.year)
   const done = progress.has(lessonKey(course.id, lesson.id))
@@ -84,10 +122,23 @@ function LessonView({ summary, lessonId }: { summary: CourseSummary; lessonId: s
       {lesson.assignments && lesson.assignments.length > 0 && (
         <section className="lesson-section">
           <h2>Assignments</h2>
-          <ul>
-            {lesson.assignments.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
+          <ul className="assignment-list">
+            {lesson.assignments.map((item, i) => {
+              const key = assignmentKey(course.id, lesson.id, i)
+              const ticked = assignments.has(key)
+              return (
+                <li key={i} className={ticked ? 'done' : undefined}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={ticked}
+                      onChange={() => toggleAssignment(key)}
+                    />
+                    <span>{item}</span>
+                  </label>
+                </li>
+              )
+            })}
           </ul>
         </section>
       )}

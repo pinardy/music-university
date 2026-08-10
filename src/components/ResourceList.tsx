@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import type { Resource } from '../types'
 import { resourceKindLabels } from '../data/resources'
 
@@ -5,10 +6,15 @@ interface Props {
   resources: Resource[]
   /** Hide the publisher line — for lists already grouped under a publisher heading. */
   hideSource?: boolean
+  /**
+   * Extra content under each entry. A render prop rather than a flag so the
+   * library's reverse index stays out of the course and lesson chunks.
+   */
+  renderExtra?: (resource: Resource) => ReactNode
 }
 
 /** Renders external sources as a list of outbound links with a kind badge. */
-export default function ResourceList({ resources, hideSource = false }: Props) {
+export default function ResourceList({ resources, hideSource = false, renderExtra }: Props) {
   if (resources.length === 0) return null
 
   return (
@@ -30,6 +36,7 @@ export default function ResourceList({ resources, hideSource = false }: Props) {
             )}
             {r.note && <span className="resource-note">{r.note}</span>}
           </a>
+          {renderExtra?.(r)}
         </li>
       ))}
     </ul>

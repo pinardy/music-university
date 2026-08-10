@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import type { Resource, ResourceKind } from '../types'
 import { allResources, resourceKindLabels } from '../data/resources'
 import ResourceList from '../components/ResourceList'
+import ResourceUsage from '../components/ResourceUsage'
 
 const SUBGROUP_THRESHOLD = 24
 
@@ -87,11 +88,15 @@ export default function LibraryPage() {
                   <h3>
                     {source} <span className="count">{items.length}</span>
                   </h3>
-                  <ResourceList resources={items} hideSource />
+                  <ResourceList
+                    resources={items}
+                    hideSource
+                    renderExtra={(r) => <ResourceUsage id={r.id} />}
+                  />
                 </div>
               ))
             ) : (
-              <ResourceList resources={g.items} />
+              <ResourceList resources={g.items} renderExtra={(r) => <ResourceUsage id={r.id} />} />
             )}
           </section>
         ))

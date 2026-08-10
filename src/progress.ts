@@ -11,12 +11,28 @@ import { useSyncExternalStore } from 'react'
 const LEGACY_KEY = 'music-curriculum-progress-v1'
 const STORAGE_KEY = 'music-university-state-v2'
 
+/**
+ * Enough about the last lesson opened to render a "continue" card without
+ * loading a semester chunk. Denormalised on purpose: the alternative is
+ * pulling ~40 kB of lesson data into the home page just to read one title.
+ */
+export interface LastLesson {
+  courseId: string
+  lessonId: string
+  courseCode: string
+  title: string
+  week: number
+}
+
 interface StudyState {
   completed: Set<string>
   /** Repertoire items, keyed by their own text — see {@link repertoireKey}. */
   listened: Set<string>
+  /** Assignments, keyed per lesson — see {@link assignmentKey}. */
+  assignments: Set<string>
   /** Lesson key to note body. */
   notes: Map<string, string>
+  lastLesson?: LastLesson
 }
 
 let state: StudyState = load()
@@ -33,12 +49,14 @@ function freeze(s: StudyState) {
   return {
     completed: new Set(s.completed) as ReadonlySet<string>,
     listened: new Set(s.listened) as ReadonlySet<string>,
+    assignments: new Set(s.assignments) as ReadonlySet<string>,
     notes: new Map(s.notes) as ReadonlyMap<string, string>,
+    lastLesson: s.lastLesson,
   }
 }
 
 function empty(): StudyState {
-  return { completed: new Set(), listened: new Set(), notes: new Map() }
+  return { completed: new Set(), listened: new Set(), assignments: new Set(), notes: new Map() }
 }
 
 function load(): StudyState {
@@ -63,6 +81,19 @@ function fromJSON(raw: unknown): StudyState {
   const o = raw as Record<string, unknown>
   if (Array.isArray(o.completed)) s.completed = new Set(o.completed.filter(isString))
   if (Array.isArray(o.listened)) s.listened = new Set(o.listened.filter(isString))
+  if (Array.isArray(o.assignments)) s.assignments = new Set(o.assignments.filter(isString))
+  if (o.lastLesson && typeof o.lastLesson === 'object') {
+    const l = o.lastLesson as Record<string, unknown>
+    if (isString(l.courseId) && isString(l.lessonId) && isString(l.title)) {
+      s.lastLesson = {
+        courseId: l.courseId,
+        lessonId: l.lessonId,
+        courseCode: isString(l.courseCode) ? l.courseCode : l.courseId.toUpperCase(),
+        title: l.title,
+        week: typeof l.week === 'number' ? l.week : 0,
+      }
+    }
+  }
   if (o.notes && typeof o.notes === 'object') {
     for (const [k, v] of Object.entries(o.notes as Record<string, unknown>)) {
       if (isString(v) && v.trim()) s.notes.set(k, v)
@@ -79,7 +110,9 @@ function toJSON(s: StudyState) {
   return {
     completed: [...s.completed].sort(),
     listened: [...s.listened].sort(),
+    assignments: [...s.assignments].sort(),
     notes: Object.fromEntries([...s.notes.entries()].sort(([a], [b]) => a.localeCompare(b))),
+    ...(s.lastLesson ? { lastLesson: s.lastLesson } : {}),
   }
 }
 
@@ -108,6 +141,15 @@ export function repertoireKey(item: string): string {
   return item.trim()
 }
 
+/**
+ * Assignments are keyed per lesson and by position, not by text: unlike
+ * repertoire, "record your practice and review it" set by two different
+ * courses is two pieces of work, not one.
+ */
+export function assignmentKey(courseId: string, lessonId: string, index: number): string {
+  return `${courseId}/${lessonId}#${index}`
+}
+
 // ── Mutations ────────────────────────────────────────────────────────────────
 
 export function toggleLesson(courseId: string, lessonId: string) {
@@ -121,6 +163,20 @@ export function toggleListened(item: string) {
   const key = repertoireKey(item)
   if (state.listened.has(key)) state.listened.delete(key)
   else state.listened.add(key)
+  persist()
+}
+
+export function toggleAssignment(key: string) {
+  if (state.assignments.has(key)) state.assignments.delete(key)
+  else state.assignments.add(key)
+  persist()
+}
+
+/** Remembers where the reader was, for the home page's continue card. */
+export function recordVisit(last: LastLesson) {
+  const current = state.lastLesson
+  if (current?.courseId === last.courseId && current.lessonId === last.lessonId) return
+  state.lastLesson = last
   persist()
 }
 
@@ -145,7 +201,9 @@ interface StateFile {
   exportedAt: string
   completed: string[]
   listened: string[]
+  assignments: string[]
   notes: Record<string, string>
+  lastLesson?: LastLesson
 }
 
 export function exportState(): StateFile {
@@ -157,6 +215,7 @@ export class ProgressImportError extends Error {}
 export interface ImportSummary {
   completed: number
   listened: number
+  assignments: number
   notes: number
 }
 
@@ -183,7 +242,16 @@ export function importState(raw: unknown): ImportSummary {
   }
   state = fromJSON(file)
   persist()
-  return { completed: state.completed.size, listened: state.listened.size, notes: state.notes.size }
+  return summarise()
+}
+
+function summarise(): ImportSummary {
+  return {
+    completed: state.completed.size,
+    listened: state.listened.size,
+    assignments: state.assignments.size,
+    notes: state.notes.size,
+  }
 }
 
 // ── Subscription ─────────────────────────────────────────────────────────────
@@ -211,16 +279,32 @@ export function useListened(): ReadonlySet<string> {
   return useStudyState().listened
 }
 
+/** Reactive set of completed assignment keys. */
+export function useAssignments(): ReadonlySet<string> {
+  return useStudyState().assignments
+}
+
+export function useLastLesson(): LastLesson | undefined {
+  return useStudyState().lastLesson
+}
+
+/** Every note written, as lesson key to body. */
+export function useNotes(): ReadonlyMap<string, string> {
+  return useStudyState().notes
+}
+
 export function useNote(key: string): string {
   return useStudyState().notes.get(key) ?? ''
 }
 
-export function useNoteCount(): number {
-  return useStudyState().notes.size
-}
 
 /** Totals for the backup panel. */
 export function useStateSummary(): ImportSummary {
   const s = useStudyState()
-  return { completed: s.completed.size, listened: s.listened.size, notes: s.notes.size }
+  return {
+    completed: s.completed.size,
+    listened: s.listened.size,
+    assignments: s.assignments.size,
+    notes: s.notes.size,
+  }
 }

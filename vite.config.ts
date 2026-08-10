@@ -53,18 +53,20 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,woff2}'],
         // Precache the shell only. The eight semester chunks are ~900 kB of
-        // lesson prose and the install icons another ~70 kB; precaching them
-        // made every first visit download the whole degree in the background.
-        // Both are content-hashed and immutable, so CacheFirst keeps whatever
-        // the reader actually opens available offline from then on.
-        globIgnores: ['assets/y?s?-*.js', 'icon-*.png'],
+        // lesson prose, the library's source cross-reference ~90 kB, and the
+        // install icons ~70 kB; precaching them made every first visit
+        // download the whole degree before anything was readable. All are
+        // content-hashed and immutable, so CacheFirst keeps whatever the
+        // reader opens available offline, and warmOffline.ts fills the rest
+        // in at idle.
+        globIgnores: ['assets/y?s?-*.js', 'assets/LibraryPage-*.js', 'icon-*.png'],
         navigateFallback: '/music-university/index.html',
         runtimeCaching: [
           {
-            urlPattern: /\/assets\/y\ds\d-[^/]+\.js$/,
+            urlPattern: /\/assets\/(y\ds\d|LibraryPage)-[^/]+\.js$/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'curriculum-semesters',
+              cacheName: 'curriculum-data',
               expiration: { maxEntries: 16 },
               cacheableResponse: { statuses: [0, 200] },
             },
