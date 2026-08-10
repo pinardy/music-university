@@ -40,6 +40,7 @@ for (const y of years) {
         credits: course.credits,
         stream: course.stream,
         year: y.year,
+        semesterId: sem.id,
         lessonCount: course.lessons.length,
         ...(course.prerequisites?.length ? { prerequisites: course.prerequisites } : {}),
       })
@@ -132,6 +133,7 @@ ${summaries
     credits: ${s.credits},
     stream: ${q(s.stream)},
     year: ${s.year},
+    semesterId: ${q(s.semesterId)},
     lessonCount: ${s.lessonCount},${
       s.prerequisites ? `\n    prerequisites: [${s.prerequisites.map(q).join(', ')}],` : ''
     }

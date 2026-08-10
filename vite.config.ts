@@ -9,7 +9,11 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg'],
+      // icon.svg is already picked up by the workbox glob below; listing it
+      // here as well precaches it twice.
+      // Otherwise the plugin adds the manifest's install icons to the
+      // precache; they are only needed when the app is actually installed.
+      includeManifestIcons: false,
       manifest: {
         name: 'Music University — Bachelor of Music Curriculum',
         short_name: 'Music University',
@@ -47,8 +51,34 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,woff2}'],
+        // Precache the shell only. The eight semester chunks are ~900 kB of
+        // lesson prose and the install icons another ~70 kB; precaching them
+        // made every first visit download the whole degree in the background.
+        // Both are content-hashed and immutable, so CacheFirst keeps whatever
+        // the reader actually opens available offline from then on.
+        globIgnores: ['assets/y?s?-*.js', 'icon-*.png'],
         navigateFallback: '/music-university/index.html',
+        runtimeCaching: [
+          {
+            urlPattern: /\/assets\/y\ds\d-[^/]+\.js$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'curriculum-semesters',
+              expiration: { maxEntries: 16 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: /\/icon-[^/]+\.png$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'icons',
+              expiration: { maxEntries: 8 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
       },
     }),
   ],

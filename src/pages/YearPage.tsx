@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { completedInCourse, courseSummaries, years } from '../data'
+import { completedInCourse, courseSummaries, loadSemesterCourses, years } from '../data'
 import { useProgress } from '../progress'
 import { streamColor, streamLabels } from '../streams'
 import NotFound from '../components/NotFound'
@@ -32,7 +32,15 @@ export default function YearPage() {
               const done = completedInCourse(progress, course.id)
               const total = course.lessonCount
               return (
-                <Link key={course.id} to={`/course/${course.id}`} className="course-card">
+                <Link
+                  key={course.id}
+                  to={`/course/${course.id}`}
+                  className="course-card"
+                  // Start the semester chunk on intent, so the click lands on
+                  // a download that is already in flight.
+                  onMouseEnter={() => void loadSemesterCourses(course.semesterId)}
+                  onFocus={() => void loadSemesterCourses(course.semesterId)}
+                >
                   <span
                     className="stream-dot"
                     style={{ background: streamColor(course.stream) }}

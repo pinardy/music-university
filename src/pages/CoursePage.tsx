@@ -1,7 +1,7 @@
 import { use } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import type { CourseSummary } from '../types'
-import { courseSummaries, loadYearCourses, years } from '../data'
+import { courseSummaries, loadSemesterCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
 import { lessonKey, useProgress } from '../progress'
 import { streamColor, streamLabels } from '../streams'
@@ -17,7 +17,7 @@ export default function CoursePage() {
 
 function CourseView({ summary }: { summary: CourseSummary }) {
   const progress = useProgress()
-  const course = use(loadYearCourses(summary.year)).get(summary.id)
+  const course = use(loadSemesterCourses(summary.semesterId)).get(summary.id)
 
   if (!course) return <NotFound what="Course" />
 

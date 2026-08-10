@@ -1,7 +1,7 @@
-import { use, useDeferredValue, useMemo, useState } from 'react'
+import { useDeferredValue, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { Course, Lesson } from '../types'
-import { loadAllCourses } from '../data'
+import { useAllCourses } from '../useAllCourses'
 import { streamLabels } from '../streams'
 
 const MAX_RESULTS = 60
@@ -19,7 +19,7 @@ interface Hit extends Entry {
 }
 
 /**
- * Searches the lesson text itself rather than a prebuilt index: the year
+ * Searches the lesson text itself rather than a prebuilt index: the semester
  * chunks already exist for the lesson pages, so reusing them avoids shipping
  * a second copy of ~95,000 words.
  */
@@ -66,12 +66,12 @@ function findExcerpt(entry: Entry, needle: string): { excerpt: string; field: st
 }
 
 export default function SearchPage() {
-  const courses = use(loadAllCourses())
+  const courses = useAllCourses()
   const [params, setParams] = useSearchParams()
   const [query, setQuery] = useState(params.get('q') ?? '')
   const deferred = useDeferredValue(query)
 
-  const entries = useMemo(() => buildEntries(courses), [courses])
+  const entries = useMemo(() => (courses ? buildEntries(courses) : []), [courses])
 
   const { hits, total } = useMemo(() => {
     const needle = deferred.trim().toLowerCase()
@@ -88,7 +88,7 @@ export default function SearchPage() {
     setParams(value.trim() ? { q: value } : {}, { replace: true })
   }
 
-  const searching = deferred.trim().length >= 2
+  const searching = deferred.trim().length >= 2 && courses !== undefined
 
   return (
     <>
@@ -104,7 +104,7 @@ export default function SearchPage() {
       </header>
       <p className="course-description">
         Searches lesson titles, objectives, the lesson text, listening lists and assignments across
-        all {courses.length} courses.
+        all {courses?.length ?? 33} courses.
       </p>
 
       <div className="library-controls">
@@ -118,7 +118,9 @@ export default function SearchPage() {
         />
       </div>
 
-      {!searching ? (
+      {!courses ? (
+        <p className="course-description">Loading the curriculum…</p>
+      ) : !searching ? (
         <p className="course-description">Type at least two characters.</p>
       ) : total === 0 ? (
         <p className="course-description">No lessons match “{deferred.trim()}”.</p>

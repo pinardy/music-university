@@ -6,51 +6,70 @@ export { program, years, courseSummaries, lessonCountByYear }
 export type { SemesterSummary, YearSummary } from './catalogue.generated'
 
 /**
- * Lesson prose is the bulk of this app, so each year is a separate chunk that
- * only the course and lesson pages pull in. Everything the home and year pages
- * need lives in the generated catalogue instead.
+ * Lesson prose is the bulk of this app, so it is split one chunk per semester
+ * — the smallest unit the source files already divide along. Reading a lesson
+ * costs its own semester and nothing else; a year would be roughly twice the
+ * download for the same page. Everything the home, year and stream pages need
+ * lives in the generated catalogue instead.
  */
-const loaders: Record<number, () => Promise<{ default: Course[] }>> = {
-  1: () => import('./year1').then((m) => ({ default: m.year1Courses })),
-  2: () => import('./year2').then((m) => ({ default: m.year2Courses })),
-  3: () => import('./year3').then((m) => ({ default: m.year3Courses })),
-  4: () => import('./year4').then((m) => ({ default: m.year4Courses })),
+const loaders: Record<string, () => Promise<Course[]>> = {
+  y1s1: () => import('./y1s1').then((m) => m.y1s1Courses),
+  y1s2: () => import('./y1s2').then((m) => m.y1s2Courses),
+  y2s1: () => import('./y2s1').then((m) => m.y2s1Courses),
+  y2s2: () => import('./y2s2').then((m) => m.y2s2Courses),
+  y3s1: () => import('./y3s1').then((m) => m.y3s1Courses),
+  y3s2: () => import('./y3s2').then((m) => m.y3s2Courses),
+  y4s1: () => import('./y4s1').then((m) => m.y4s1Courses),
+  y4s2: () => import('./y4s2').then((m) => m.y4s2Courses),
 }
 
-const cache = new Map<number, Promise<Map<string, Course>>>()
+export const semesterIds = Object.keys(loaders)
 
-export function loadYearCourses(year: number): Promise<Map<string, Course>> {
-  let pending = cache.get(year)
+const cache = new Map<string, Promise<Map<string, Course>>>()
+
+export function loadSemesterCourses(semesterId: string): Promise<Map<string, Course>> {
+  let pending = cache.get(semesterId)
   if (!pending) {
-    const load = loaders[year]
+    const load = loaders[semesterId]
     pending = load
-      ? load().then((m) => new Map(m.default.map((c) => [c.id, c])))
+      ? load().then((courses) => new Map(courses.map((c) => [c.id, c])))
       : Promise.resolve(new Map())
-    cache.set(year, pending)
+    cache.set(semesterId, pending)
   }
   return pending
 }
 
 /**
- * Every course, in curriculum order. Pulls all four year chunks, so it is only
- * for the pages that genuinely span the whole degree — search and repertoire.
- * Those chunks are the same ones the lesson pages use, so nothing is
- * downloaded twice.
+ * Every course, in curriculum order. Pulls all eight semester chunks, so it is
+ * only for the pages that genuinely span the whole degree — search and
+ * repertoire. They are the same chunks the lesson pages use, so a semester
+ * already read is not downloaded twice.
  */
 let allCourses: Promise<Course[]> | undefined
+let resolvedCourses: Course[] | undefined
 
 export function loadAllCourses(): Promise<Course[]> {
-  allCourses ??= Promise.all([1, 2, 3, 4].map(loadYearCourses)).then((byYear) =>
-    byYear.flatMap((m) => [...m.values()]),
-  )
+  allCourses ??= Promise.all(semesterIds.map(loadSemesterCourses)).then((bySemester) => {
+    resolvedCourses = bySemester.flatMap((m) => [...m.values()])
+    return resolvedCourses
+  })
   return allCourses
+}
+
+/**
+ * The already-resolved course list, or undefined if it is still loading.
+ * Lets the whole-degree pages render their controls on the first frame and
+ * skip the loading state entirely on a second visit.
+ */
+export function peekAllCourses(): Course[] | undefined {
+  return resolvedCourses
 }
 
 /** Resolve a single course, fetching its year's chunk if it is not loaded yet. */
 export async function loadCourse(courseId: string): Promise<Course | undefined> {
   const summary = courseSummaries[courseId]
   if (!summary) return undefined
-  return (await loadYearCourses(summary.year)).get(courseId)
+  return (await loadSemesterCourses(summary.semesterId)).get(courseId)
 }
 
 export function yearSummaryFor(courseId: string) {

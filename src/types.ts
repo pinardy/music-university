@@ -105,8 +105,9 @@ export interface CourseSummary {
   title: string
   credits: number
   stream: CourseStream
-  /** Which year's chunk holds this course's lessons */
   year: 1 | 2 | 3 | 4
+  /** Which semester chunk holds this course's lessons, e.g. "y2s1" */
+  semesterId: string
   lessonCount: number
   prerequisites?: string[]
 }

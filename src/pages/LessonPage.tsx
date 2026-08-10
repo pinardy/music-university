@@ -1,7 +1,7 @@
 import { use } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import type { CourseSummary } from '../types'
-import { courseSummaries, loadYearCourses, years } from '../data'
+import { courseSummaries, loadSemesterCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
 import { lessonKey, toggleLesson, useProgress } from '../progress'
 import ResourceList from '../components/ResourceList'
@@ -17,7 +17,7 @@ export default function LessonPage() {
 
 function LessonView({ summary, lessonId }: { summary: CourseSummary; lessonId: string }) {
   const progress = useProgress()
-  const course = use(loadYearCourses(summary.year)).get(summary.id)
+  const course = use(loadSemesterCourses(summary.semesterId)).get(summary.id)
 
   const lessonIndex = course?.lessons.findIndex((l) => l.id === lessonId) ?? -1
   const lesson = course && lessonIndex >= 0 ? course.lessons[lessonIndex] : undefined

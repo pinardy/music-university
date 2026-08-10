@@ -1,7 +1,8 @@
-import { use, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Course } from '../types'
-import { courseSummaries, loadAllCourses } from '../data'
+import { courseSummaries } from '../data'
+import { useAllCourses } from '../useAllCourses'
 import { repertoireKey, toggleListened, useListened } from '../progress'
 
 interface Item {
@@ -38,12 +39,12 @@ function collect(courses: Course[]): Item[] {
 }
 
 export default function RepertoirePage() {
-  const courses = use(loadAllCourses())
+  const courses = useAllCourses()
   const listened = useListened()
   const [query, setQuery] = useState('')
   const [unheardOnly, setUnheardOnly] = useState(false)
 
-  const items = useMemo(() => collect(courses), [courses])
+  const items = useMemo(() => (courses ? collect(courses) : []), [courses])
 
   const groups = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -79,9 +80,9 @@ export default function RepertoirePage() {
         <h1 className="page-title">Listening list</h1>
       </header>
       <p className="course-description">
-        {items.length} works and recordings, gathered from the listening lists of every lesson and
-        grouped by the year they first appear. Tick them off as you go — {heard} of {items.length}{' '}
-        so far.
+        {courses
+          ? `${items.length} works and recordings, gathered from the listening lists of every lesson and grouped by the year they first appear. Tick them off as you go — ${heard} of ${items.length} so far.`
+          : 'Gathering the listening lists from every lesson…'}
       </p>
 
       <div className="progress-track" role="progressbar" aria-valuenow={heard} aria-valuemin={0}
@@ -110,7 +111,7 @@ export default function RepertoirePage() {
         </label>
       </div>
 
-      {shown === 0 ? (
+      {!courses ? null : shown === 0 ? (
         <p className="course-description">Nothing matches that filter.</p>
       ) : (
         groups.map((group) => (
