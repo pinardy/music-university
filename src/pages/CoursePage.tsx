@@ -1,28 +1,31 @@
+import { use } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getCourse, yearForCourse } from '../data'
+import type { CourseSummary } from '../types'
+import { courseSummaries, loadYearCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
 import { lessonKey, useProgress } from '../progress'
 import { streamColor, streamLabels } from '../streams'
 import ResourceList from '../components/ResourceList'
+import NotFound from '../components/NotFound'
 
 export default function CoursePage() {
   const { courseId } = useParams()
+  const summary = courseId ? courseSummaries[courseId] : undefined
+  if (!summary) return <NotFound what="Course" />
+  return <CourseView summary={summary} />
+}
+
+function CourseView({ summary }: { summary: CourseSummary }) {
   const progress = useProgress()
-  const course = courseId ? getCourse(courseId) : undefined
+  const course = use(loadYearCourses(summary.year)).get(summary.id)
 
-  if (!course) {
-    return (
-      <div className="not-found">
-        <h1>Course not found</h1>
-        <p>
-          <Link to="/">Return to the curriculum overview</Link>
-        </p>
-      </div>
-    )
-  }
+  if (!course) return <NotFound what="Course" />
 
-  const year = yearForCourse(course.id)
+  const year = years.find((y) => y.year === summary.year)
   const courseResources = resolveResources(course.resources)
+  const prerequisites = (course.prerequisites ?? [])
+    .map((id) => courseSummaries[id])
+    .filter(Boolean)
 
   return (
     <>
@@ -45,6 +48,17 @@ export default function CoursePage() {
         {course.code} · {course.title}
       </h1>
       <p className="course-description">{course.description}</p>
+
+      {prerequisites.length > 0 && (
+        <p className="prerequisites">
+          <span className="prerequisites-label">Prerequisite{prerequisites.length > 1 && 's'}</span>
+          {prerequisites.map((p) => (
+            <Link key={p.id} to={`/course/${p.id}`} className="prerequisite">
+              {p.code} · {p.title}
+            </Link>
+          ))}
+        </p>
+      )}
 
       {courseResources.length > 0 && (
         <section className="lesson-section course-references">

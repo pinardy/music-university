@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { curriculum, lessonKeysForYear } from '../data'
+import { completedInYear, lessonCountByYear, program, years } from '../data'
 import { useProgress } from '../progress'
+import ProgressControls from '../components/ProgressControls'
 
 export default function HomePage() {
   const progress = useProgress()
@@ -8,34 +9,42 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <h1>{curriculum.programTitle}</h1>
-        <p>{curriculum.description}</p>
+        <h1>{program.programTitle}</h1>
+        <p>{program.description}</p>
         <ul className="inspirations">
-          {curriculum.inspirations.map((name) => (
+          {program.inspirations.map((name) => (
             <li key={name}>{name}</li>
           ))}
         </ul>
       </section>
       <div className="year-grid">
-        {curriculum.years.map((y) => {
-          const keys = lessonKeysForYear(y.year)
-          const done = keys.filter((k) => progress.has(k)).length
-          const pct = keys.length ? Math.round((done / keys.length) * 100) : 0
+        {years.map((y) => {
+          const total = lessonCountByYear[y.year] ?? 0
+          const done = completedInYear(progress, y.year)
+          const pct = total ? Math.round((done / total) * 100) : 0
           return (
             <Link key={y.year} to={`/year/${y.year}`} className="year-card">
               <span className="year-num">Year {y.year}</span>
               <h2>{y.title}</h2>
               <p>{y.theme}</p>
-              <div className="progress-track">
+              <div
+                className="progress-track"
+                role="progressbar"
+                aria-valuenow={done}
+                aria-valuemin={0}
+                aria-valuemax={total}
+                aria-label={`Year ${y.year} progress`}
+              >
                 <div className="progress-fill" style={{ width: `${pct}%` }} />
               </div>
               <span className="progress-label">
-                {done} of {keys.length} lessons completed
+                {done} of {total} lessons completed
               </span>
             </Link>
           )
         })}
       </div>
+      <ProgressControls />
     </>
   )
 }

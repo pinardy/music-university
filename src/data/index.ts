@@ -1,46 +1,65 @@
-import type { Course, Curriculum, Year } from '../types'
-import { year1, year1Courses } from './year1'
-import { year2, year2Courses } from './year2'
-import { year3, year3Courses } from './year3'
-import { year4, year4Courses } from './year4'
-import { lessonKey } from '../progress'
+import type { Course } from '../types'
+import { courseSummaries, lessonCountByYear, years } from './catalogue.generated'
+import { program } from './program'
 
-const allCourses: Course[] = [...year1Courses, ...year2Courses, ...year3Courses, ...year4Courses]
+export { program, years, courseSummaries, lessonCountByYear }
+export type { SemesterSummary, YearSummary } from './catalogue.generated'
 
-export const curriculum: Curriculum = {
-  programTitle: 'Bachelor of Music',
-  description:
-    'A four-year, eight-semester conservatory curriculum of weekly lessons spanning music theory, ' +
-    'aural skills, music history, keyboard, composition, technology and performance. The course of ' +
-    'study is adapted from the published curricula of leading conservatories and supplemented with ' +
-    'standard repertoire and open educational resources.',
-  inspirations: [
-    'Yong Siew Toh Conservatory of Music, NUS',
-    'The Juilliard School',
-    'Royal College of Music, London',
-    'Curtis Institute of Music',
-  ],
-  years: [year1, year2, year3, year4],
-  courses: Object.fromEntries(allCourses.map((c) => [c.id, c])),
+/**
+ * Lesson prose is the bulk of this app, so each year is a separate chunk that
+ * only the course and lesson pages pull in. Everything the home and year pages
+ * need lives in the generated catalogue instead.
+ */
+const loaders: Record<number, () => Promise<{ default: Course[] }>> = {
+  1: () => import('./year1').then((m) => ({ default: m.year1Courses })),
+  2: () => import('./year2').then((m) => ({ default: m.year2Courses })),
+  3: () => import('./year3').then((m) => ({ default: m.year3Courses })),
+  4: () => import('./year4').then((m) => ({ default: m.year4Courses })),
 }
 
-export function getCourse(courseId: string): Course | undefined {
-  return curriculum.courses[courseId]
+const cache = new Map<number, Promise<Map<string, Course>>>()
+
+export function loadYearCourses(year: number): Promise<Map<string, Course>> {
+  let pending = cache.get(year)
+  if (!pending) {
+    const load = loaders[year]
+    pending = load
+      ? load().then((m) => new Map(m.default.map((c) => [c.id, c])))
+      : Promise.resolve(new Map())
+    cache.set(year, pending)
+  }
+  return pending
 }
 
-export function yearForCourse(courseId: string): Year | undefined {
-  return curriculum.years.find((y) =>
-    y.semesters.some((s) => s.courseIds.includes(courseId)),
-  )
+/** Resolve a single course, fetching its year's chunk if it is not loaded yet. */
+export async function loadCourse(courseId: string): Promise<Course | undefined> {
+  const summary = courseSummaries[courseId]
+  if (!summary) return undefined
+  return (await loadYearCourses(summary.year)).get(courseId)
 }
 
-export function lessonKeysForYear(year: number): string[] {
-  const y = curriculum.years.find((yy) => yy.year === year)
-  if (!y) return []
-  return y.semesters.flatMap((s) =>
-    s.courseIds.flatMap((courseId) => {
-      const course = curriculum.courses[courseId]
-      return course ? course.lessons.map((l) => lessonKey(course.id, l.id)) : []
-    }),
-  )
+export function yearSummaryFor(courseId: string) {
+  const summary = courseSummaries[courseId]
+  return summary ? years.find((y) => y.year === summary.year) : undefined
+}
+
+/**
+ * Completed-lesson tallies read straight off the progress keys, which are
+ * `courseId/lessonId`. Counting this way keeps the home and year pages free of
+ * the lesson data they would otherwise need just to know how many there are.
+ */
+export function completedInCourse(progress: ReadonlySet<string>, courseId: string): number {
+  const prefix = `${courseId}/`
+  let n = 0
+  for (const key of progress) if (key.startsWith(prefix)) n++
+  return n
+}
+
+export function completedInYear(progress: ReadonlySet<string>, year: number): number {
+  let n = 0
+  for (const key of progress) {
+    const courseId = key.slice(0, key.indexOf('/'))
+    if (courseSummaries[courseId]?.year === year) n++
+  }
+  return n
 }

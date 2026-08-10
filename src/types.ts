@@ -92,3 +92,21 @@ export interface Curriculum {
   years: Year[]
   courses: Record<string, Course>
 }
+
+/**
+ * The light half of a {@link Course} — everything the home and year pages need
+ * to render, with the lesson bodies left behind in the per-year chunk.
+ *
+ * Generated into `catalogue.generated.ts`; see `scripts/gen-catalogue.ts`.
+ */
+export interface CourseSummary {
+  id: string
+  code: string
+  title: string
+  credits: number
+  stream: CourseStream
+  /** Which year's chunk holds this course's lessons */
+  year: 1 | 2 | 3 | 4
+  lessonCount: number
+  prerequisites?: string[]
+}

@@ -4,6 +4,8 @@ import type { Resource, ResourceKind } from '../types'
 import { allResources, resourceKindLabels } from '../data/resources'
 import ResourceList from '../components/ResourceList'
 
+const SUBGROUP_THRESHOLD = 24
+
 const KIND_ORDER: ResourceKind[] = [
   'textbook',
   'exercise',
@@ -97,8 +99,6 @@ export default function LibraryPage() {
     </>
   )
 }
-
-const SUBGROUP_THRESHOLD = 24
 
 /** Group a kind's entries by publisher, largest collection first. */
 function bySource(items: Resource[]): [string, Resource[]][] {

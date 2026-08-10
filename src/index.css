@@ -248,6 +248,66 @@ button {
   display: block;
 }
 
+/* ---------- Progress controls ---------- */
+
+.progress-controls {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.progress-controls h2 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.progress-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.progress-actions button {
+  background: var(--bg-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.progress-actions button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.progress-actions button.danger:hover:not(:disabled) {
+  border-color: #e0736f;
+  color: #e0736f;
+}
+
+.progress-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.progress-status {
+  font-size: 0.83rem;
+  margin: 12px 0 0;
+}
+
+.progress-status.ok {
+  color: var(--success);
+}
+
+.progress-status.error {
+  color: #e0736f;
+}
+
 /* ---------- Year / semester pages ---------- */
 
 .page-title {
@@ -350,6 +410,40 @@ button {
 .course-description {
   color: var(--text-muted);
   max-width: 68ch;
+}
+
+.prerequisites {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 0;
+}
+
+.prerequisites-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.prerequisite {
+  font-size: 0.82rem;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 12px;
+  transition: border-color 0.15s;
+}
+
+.prerequisite:hover {
+  border-color: var(--accent);
+}
+
+.route-loading {
+  color: var(--text-muted);
+  padding: 60px 0;
+  text-align: center;
 }
 
 .lesson-list {

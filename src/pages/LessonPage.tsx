@@ -1,28 +1,29 @@
+import { use } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getCourse, yearForCourse } from '../data'
+import type { CourseSummary } from '../types'
+import { courseSummaries, loadYearCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
 import { lessonKey, toggleLesson, useProgress } from '../progress'
 import ResourceList from '../components/ResourceList'
+import NotFound from '../components/NotFound'
 
 export default function LessonPage() {
   const { courseId, lessonId } = useParams()
+  const summary = courseId ? courseSummaries[courseId] : undefined
+  if (!summary || !lessonId) return <NotFound what="Lesson" />
+  return <LessonView summary={summary} lessonId={lessonId} />
+}
+
+function LessonView({ summary, lessonId }: { summary: CourseSummary; lessonId: string }) {
   const progress = useProgress()
-  const course = courseId ? getCourse(courseId) : undefined
+  const course = use(loadYearCourses(summary.year)).get(summary.id)
+
   const lessonIndex = course?.lessons.findIndex((l) => l.id === lessonId) ?? -1
-  const lesson = lessonIndex >= 0 ? course!.lessons[lessonIndex] : undefined
+  const lesson = course && lessonIndex >= 0 ? course.lessons[lessonIndex] : undefined
 
-  if (!course || !lesson) {
-    return (
-      <div className="not-found">
-        <h1>Lesson not found</h1>
-        <p>
-          <Link to="/">Return to the curriculum overview</Link>
-        </p>
-      </div>
-    )
-  }
+  if (!course || !lesson) return <NotFound what="Lesson" />
 
-  const year = yearForCourse(course.id)
+  const year = years.find((y) => y.year === summary.year)
   const done = progress.has(lessonKey(course.id, lesson.id))
   const lessonResources = resolveResources(lesson.resources)
   const prev = lessonIndex > 0 ? course.lessons[lessonIndex - 1] : undefined

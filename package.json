@@ -7,6 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "build:script": "vite build --ssr scripts/gen-catalogue.ts --outDir .gen --logLevel error",
+    "gen:data": "npm run build:script && node .gen/gen-catalogue.js",
+    "check:data": "npm run build:script && node .gen/gen-catalogue.js --check",
     "preview": "vite preview"
   },
   "dependencies": {

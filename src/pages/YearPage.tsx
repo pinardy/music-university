@@ -1,23 +1,15 @@
 import { Link, useParams } from 'react-router-dom'
-import { curriculum, getCourse } from '../data'
-import { lessonKey, useProgress } from '../progress'
+import { completedInCourse, courseSummaries, years } from '../data'
+import { useProgress } from '../progress'
 import { streamColor, streamLabels } from '../streams'
+import NotFound from '../components/NotFound'
 
 export default function YearPage() {
   const { year } = useParams()
   const progress = useProgress()
-  const yearData = curriculum.years.find((y) => String(y.year) === year)
+  const yearData = years.find((y) => String(y.year) === year)
 
-  if (!yearData) {
-    return (
-      <div className="not-found">
-        <h1>Year not found</h1>
-        <p>
-          <Link to="/">Return to the curriculum overview</Link>
-        </p>
-      </div>
-    )
-  }
+  if (!yearData) return <NotFound what="Year" />
 
   return (
     <>
@@ -35,12 +27,10 @@ export default function YearPage() {
           <h2>{sem.label}</h2>
           <div className="course-list">
             {sem.courseIds.map((courseId) => {
-              const course = getCourse(courseId)
+              const course = courseSummaries[courseId]
               if (!course) return null
-              const done = course.lessons.filter((l) =>
-                progress.has(lessonKey(course.id, l.id)),
-              ).length
-              const total = course.lessons.length
+              const done = completedInCourse(progress, course.id)
+              const total = course.lessonCount
               return (
                 <Link key={course.id} to={`/course/${course.id}`} className="course-card">
                   <span
