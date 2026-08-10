@@ -47,8 +47,8 @@ export const years: YearSummary[] = [
       },
       {
         id: 'y2s2',
-        label: 'Semester 4 · 8 credits',
-        courseIds: ['aps202', 'mut202'],
+        label: 'Semester 4 · 11 credits',
+        courseIds: ['aps202', 'mut202', 'muh202'],
       },
     ],
   },
@@ -78,8 +78,8 @@ export const years: YearSummary[] = [
     semesters: [
       {
         id: 'y4s1',
-        label: 'Semester 7 · 8 credits',
-        courseIds: ['aps401', 'cnd401'],
+        label: 'Semester 7 · 11 credits',
+        courseIds: ['aps401', 'cnd401', 'ens401', 'chm401'],
       },
       {
         id: 'y4s2',
@@ -236,6 +236,16 @@ export const courseSummaries: Record<string, CourseSummary> = {
     lessonCount: 13,
     prerequisites: ['mut201'],
   },
+  muh202: {
+    id: 'muh202',
+    code: 'MUH202',
+    title: 'Music History 2: Baroque and Classical',
+    credits: 3,
+    stream: 'history',
+    year: 2,
+    lessonCount: 13,
+    prerequisites: ['mut102'],
+  },
   aps301: {
     id: 'aps301',
     code: 'APS301',
@@ -305,6 +315,26 @@ export const courseSummaries: Record<string, CourseSummary> = {
     year: 4,
     lessonCount: 13,
   },
+  ens401: {
+    id: 'ens401',
+    code: 'ENS401',
+    title: 'Large Ensemble 7',
+    credits: 2,
+    stream: 'ensemble',
+    year: 4,
+    lessonCount: 6,
+    prerequisites: ['ens102'],
+  },
+  chm401: {
+    id: 'chm401',
+    code: 'CHM401',
+    title: 'Chamber Music 5',
+    credits: 1,
+    stream: 'ensemble',
+    year: 4,
+    lessonCount: 6,
+    prerequisites: ['aps302'],
+  },
   aps402: {
     id: 'aps402',
     code: 'APS402',
@@ -358,7 +388,7 @@ export const courseSummaries: Record<string, CourseSummary> = {
 /** Total lessons per year, so the home page can show progress without the prose. */
 export const lessonCountByYear: Record<number, number> = {
   1: 102,
-  2: 51,
+  2: 64,
   3: 51,
-  4: 56,
+  4: 68,
 }
