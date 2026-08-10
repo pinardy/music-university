@@ -4,6 +4,7 @@ import type { Course } from '../types'
 import { courseSummaries } from '../data'
 import { useAllCourses } from '../useAllCourses'
 import { repertoireKey, toggleListened, useListened } from '../progress'
+import ListeningEntry from '../components/ListeningEntry'
 
 interface Item {
   key: string
@@ -155,7 +156,9 @@ export default function RepertoirePage() {
                         checked={done}
                         onChange={() => toggleListened(item.text)}
                       />
-                      <span className="repertoire-text">{item.text}</span>
+                      <span className="repertoire-text">
+                        <ListeningEntry text={item.text} />
+                      </span>
                     </label>
                     <span className="repertoire-sources">
                       {item.sources.slice(0, 3).map((s) => (

@@ -11,7 +11,8 @@
     "gen:data": "npm run build:script && node .gen/catalogue/gen-catalogue.js",
     "check:data": "npm run build:script && node .gen/catalogue/gen-catalogue.js --check",
     "preview": "vite preview",
-    "prerender": "vite build --ssr scripts/prerender.tsx --outDir .gen/prerender --logLevel error && node .gen/prerender/prerender.js"
+    "prerender": "vite build --ssr scripts/prerender.tsx --outDir .gen/prerender --logLevel error && node .gen/prerender/prerender.js",
+    "gen:listening": "vite build --ssr scripts/gen-listening-links.ts --outDir .gen/listening --logLevel error && node .gen/listening/gen-listening-links.js"
   },
   "dependencies": {
     "react": "^19.2.8",

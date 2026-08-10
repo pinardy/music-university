@@ -15,6 +15,7 @@ import {
 import ResourceList from '../components/ResourceList'
 import NotFound from '../components/NotFound'
 import LessonNote from '../components/LessonNote'
+import ListeningEntry from '../components/ListeningEntry'
 
 export default function LessonPage() {
   const { courseId, lessonId } = useParams()
@@ -113,7 +114,9 @@ function LessonBody({
           <h2>Listening &amp; repertoire</h2>
           <ul>
             {lesson.listening.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}>
+                <ListeningEntry text={item} />
+              </li>
             ))}
           </ul>
         </section>
