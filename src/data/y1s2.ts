@@ -1,0 +1,1230 @@
+import type { Course } from '../types'
+
+export const y1s2Courses: Course[] = [
+  {
+    id: 'aps102',
+    code: 'APS102',
+    title: 'Principal Study 2',
+    credits: 5,
+    stream: 'performance',
+    description:
+      'Weekly one-to-one lessons continue on your instrument or voice, expanding the technical regime established in Principal Study 1. You will prepare two to three complete works to performance standard, receive an introduction to performance psychology, and close the semester with a jury before the faculty.',
+    prerequisites: ['aps101'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Unit 1: Re-Diagnosis and the Expanded Technical Regime',
+        objectives: [
+          'Evaluate technical growth since the first-semester jury using recorded evidence',
+          'Design an expanded daily technical regime covering tone, agility, articulation and flexibility',
+          'Set measurable semester goals with your teacher, tied to specific repertoire demands',
+        ],
+        content: [
+          'The semester opens the way the degree began: with honest diagnosis. In your first lesson you perform your jury repertoire again, cold, while your teacher listens for what survived the break and what regressed. Comparing this performance with your December jury recording gives you concrete evidence of your baseline, and research on deliberate practice — from Anders Ericsson’s studies of conservatory violinists onward — shows that accurate self-assessment is the single strongest predictor of efficient improvement. You will write a one-page self-diagnosis identifying your two strongest and two weakest technical areas.',
+          'From that diagnosis you and your teacher build an expanded technical regime. Where semester one established a scale routine, semester two adds systematic coverage: all major and minor keys in rotation, arpeggios with inversions, articulation studies at graded tempos, and instrument-specific fundamentals such as long tones, bow distribution, breath pacing or vocalises. A typical regime allocates 30–40 minutes daily, organized so that every element recurs at least three times per week. The principle is interleaving rather than blocking — rotating keys and skills across days produces more durable learning than exhausting one key per session.',
+          'Finally you contract your semester goals. These must be specific and repertoire-linked: not ‘improve intonation’ but ‘perform the slow movement of my sonata with expressive, centered intonation at quarter = 60 by week 8’. Each goal names the evidence that will demonstrate it — a recording, a studio-class performance, a metronome marking. This written contract becomes the reference document for every subsequent unit, and you will revisit it formally at the mid-semester checkpoint in Unit 4.',
+        ],
+        assignments: [
+          'Record your jury repertoire in the first week and write a one-page comparative self-diagnosis against your December jury recording',
+          'Draft your expanded technical regime as a weekly grid and bring it to lesson two for revision with your teacher',
+          'Write three measurable, repertoire-linked semester goals and agree them with your teacher',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Unit 2: Building Two to Three Complete Works',
+        objectives: [
+          'Select a balanced program of two to three contrasting works with your teacher',
+          'Map each work into practice sections with entry tempos and target tempos',
+          'Apply score study away from the instrument as the first stage of learning',
+        ],
+        content: [
+          'This unit establishes the semester’s central project: the first complete, performance-ready preparation of two to three works. Balance matters in the selection — typically one substantial movement from the core repertoire of your instrument or voice, one contrasting shorter work, and often one piece by a living or underrepresented composer. Complete preparation means something stricter than ‘learned’: every note secure at tempo, interpretive decisions made and defensible, and the piece performable from beginning to end under pressure without stopping.',
+          'Learning begins away from the instrument. Score study — singing lines, conducting the meter, marking phrase structure, harmonic goals and formal joints — builds the mental map that guides physical practice. You then divide each work into rehearsal sections of eight to sixteen bars, each with an entry tempo (comfortably accurate, often 50–60 percent of performance tempo) and a target tempo. A practice log tracks each section’s current tempo, so progress is visible and no passage hides. Sections are promoted only when they pass three consecutive accurate repetitions.',
+          'The unit also introduces the distinction between practicing and performing modes. In practicing mode you stop, isolate and repeat; in performing mode you continue through errors, prioritizing line and expression. From week two onward, every practice day ends with a short performing-mode run of at least one section, because the skill of continuing — recovering from a slip without collapse — is itself trainable and is exactly what juries assess. Your teacher will model both modes in the lesson and assign the ratio appropriate to each work’s stage.',
+        ],
+        assignments: [
+          'Complete a score-study annotation of your principal work: form, phrase lengths, harmonic goals and breathing or bowing plan',
+          'Create a sectional practice map for all works with entry and target tempos, and begin a daily practice log',
+          'End each practice day with one performing-mode run-through of a section, noting recovery points in your log',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Unit 3: Performance Psychology Lab',
+        objectives: [
+          'Explain the physiology of performance arousal and the Yerkes–Dodson curve',
+          'Practice pre-performance routines including breathing, centering and constructive self-talk',
+          'Simulate performance pressure in the practice room and evaluate the results',
+        ],
+        content: [
+          'Performance anxiety is not a character flaw; it is a predictable physiological response. Under evaluation the sympathetic nervous system releases adrenaline, raising heart rate, redirecting blood from the digestive system, and producing the trembling, dry mouth and racing thoughts musicians know well. The Yerkes–Dodson law describes the underlying relationship: moderate arousal improves performance, while very low or very high arousal degrades it. The goal of performance psychology is therefore not to eliminate arousal but to regulate it into the productive middle zone.',
+          'This unit builds a personal pre-performance routine from evidence-based components. Slow diaphragmatic breathing — exhaling longer than inhaling, roughly four counts in and six out — directly activates the parasympathetic system. Centering, developed by sport psychologist Don Greene for musicians at the Juilliard School, combines breath, a focus phrase and attention directed to a process cue such as ‘warm sound’ rather than an outcome cue such as ‘don’t crack’. Cognitive reframing treats symptoms as readiness: the sensation of a pounding heart is identical in excitement and fear, and interpreting it as excitement measurably improves outcomes.',
+          'Skills only transfer if trained under pressure, so this unit introduces stress inoculation. You will create artificial stakes in the practice room: recording with one take only, performing for peers after announcing the program formally, running repertoire immediately after physical exertion to simulate adrenaline, and playing for your studio with an assigned critic. After each simulation you complete a brief written debrief — what happened in body, attention and sound — building the self-knowledge that lets you predict and manage your own responses at the jury.',
+        ],
+        assignments: [
+          'Write out your personal pre-performance routine and rehearse it daily before your first repertoire run',
+          'Complete two stress-inoculation simulations this unit and write a half-page debrief for each',
+          'Read the assigned excerpt from Don Greene’s Performance Success and identify which of his seven skills you most need',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Unit 4: Mid-Semester Checkpoint and Studio Class Performance',
+        objectives: [
+          'Perform one complete work in studio class in performing mode',
+          'Give and receive structured peer feedback using specific, observable language',
+          'Revise semester goals and practice priorities based on checkpoint evidence',
+        ],
+        content: [
+          'The mid-semester checkpoint converts private progress into public evidence. You perform one complete work in studio class — walking on, bowing, announcing the piece and playing through without stopping, exactly as at a jury. The performance is recorded, and the recording matters as much as the event: hearing yourself a day later, when adrenaline has faded, reveals tempo drift, dynamic compression and rhythmic mannerisms that are inaudible from inside the performance.',
+          'Studio class also trains you as a listener and colleague. Feedback follows a structured protocol: each peer offers one specific strength and one specific growth point, phrased as observable description — ‘the second theme lost dynamic contrast after the modulation’ — rather than global judgment such as ‘it felt nervous’. Learning to hear analytically in real time, and to translate hearing into usable language, is the same skill that makes chamber rehearsal and future teaching effective. Your teacher moderates, connecting peer observations to each performer’s stated goals.',
+          'After the checkpoint you formally revise your semester contract from Unit 1. Some goals will be ahead of schedule and can be raised; others need triage. The revision names exactly what changes in the daily regime for the remaining weeks — perhaps shifting ten minutes from scales to the développement section that fell apart under pressure, or adding a weekly performing-mode run of the full program. This audit habit, repeated every semester, is the practical core of self-directed musicianship.',
+        ],
+        assignments: [
+          'Perform one complete work in studio class and submit your recording with a one-page self-review within 48 hours',
+          'Deliver written feedback to two peers using the strength-plus-growth-point protocol',
+          'Submit your revised semester goal contract with an updated weekly practice grid',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Unit 5: Polishing, Memorization and Run-Throughs',
+        objectives: [
+          'Apply the four types of memory — aural, visual, kinesthetic and analytical — to secure repertoire',
+          'Use spot-checking and random-access drills to test memory under interference',
+          'Schedule and complete full program run-throughs with recovery practice',
+        ],
+        content: [
+          'Polishing is a distinct phase with its own techniques. Where learning builds accuracy section by section, polishing builds wholeness: dynamic architecture across the entire piece, transitions between sections, and stamina for the full program. A common error is to keep practicing the way you learned — always from the beginning, always stopping at mistakes — which strengthens the opening and rehearses stopping. Instead this unit inverts the ratio: most practice time now goes to performing-mode runs, transitions and the specific bars your checkpoint recording flagged.',
+          'Reliable memorization rests on four interlocking systems. Kinesthetic memory, the finger and muscle patterning that forms automatically, is fastest to build and first to fail under adrenaline. Aural memory lets you sing the piece; visual memory recalls the look of the page or the keyboard; analytical memory — knowing that the second theme returns in the subdominant, that the bass descends by thirds — provides the map that rescues you when the automatic systems slip. Practicing performance from memory means deliberately engaging the slower systems: starting from any rehearsal letter on demand, writing out the score’s harmonic skeleton from memory, playing hands or lines separately from memory.',
+          'The final weeks of the unit follow a run-through schedule: at least two complete program runs per week, at least one with an audience of any size, each recorded and logged. After every run you practice recovery drills on whatever failed — not just replaying the passage, but re-entering it from four different starting points so that any slip has multiple exits. By the end of this unit the program should survive the strongest test you can devise: a single-take recording, first thing in the morning, with no warm-up beyond your routine.',
+        ],
+        assignments: [
+          'Write the harmonic and formal skeleton of your memorized work from memory and check it against the score',
+          'Complete random-access drills: have a peer call out rehearsal letters and start within five seconds',
+          'Log at least two full program run-throughs per week, one with listeners, with a recovery note for each slip',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Unit 6: Jury Preparation and Performance',
+        objectives: [
+          'Execute a two-week tapering plan that peaks reliability for the jury date',
+          'Perform the complete jury program under examination conditions',
+          'Write a post-jury reflection that sets the technical agenda for Principal Study 3',
+        ],
+        content: [
+          'Athletes taper before competition, and musicians should too. In the final two weeks, total practice volume decreases while performing-mode quality increases: shorter sessions, more complete runs, more sleep, and no new interpretive decisions after the final lesson. The last 48 hours follow a fixed script agreed with your teacher — typically one light run the day before, a full night’s sleep, and on jury day only your warm-up routine plus mental rehearsal. Cramming in the final days trades reliability for the illusion of improvement.',
+          'The jury itself is a formal examination: you perform your prepared works, or examiner-selected portions of them, for a faculty panel that grades tone, technique, rhythm, intonation, style and stage presence against the semester syllabus. Treat the logistics as part of the performance — dress, entrances, tuning, announcing works, and the poise with which you handle the panel’s requests to start from a specific section. Everything you rehearsed in stress-inoculation and random-access drills exists for exactly this moment, and your pre-performance routine from Unit 3 is now non-negotiable ritual.',
+          'Within one week of the jury you write a structured reflection: what the preparation process got right, where reliability broke down, and what the recording plus the panel’s written comments identify as next-semester priorities. This document, together with your practice logs, travels with you into Principal Study 3, where the technical regime expands again toward stylistic breadth and audition repertoire. The habit being built across these juries is the professional’s cycle — prepare, perform, evaluate, redesign — which continues for the rest of a performing life.',
+        ],
+        assignments: [
+          'Submit your two-week taper plan, including the 48-hour jury-day script, to your teacher for approval',
+          'Perform your jury program in one final dress rehearsal for peers under full examination conditions',
+          'Write a two-page post-jury reflection integrating the panel’s comments, your recording and your practice logs',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'mut102',
+    code: 'MUT102',
+    title: 'Music Theory 2: Chromaticism I & Small Forms',
+    credits: 3,
+    stream: 'theory',
+    description:
+      'A continuation of diatonic harmony into the first stages of chromaticism: applied chords, tonicization, modulation to closely related keys, mixture, the Neapolitan and augmented-sixth chords. Alongside harmony, the course studies binary and ternary forms and advanced species counterpoint, culminating in the composition of a modulating period in Classical style.',
+    prerequisites: ['mut101'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Leading-Tone and Fully/Half-Diminished Seventh Chords',
+        objectives: [
+          'Spell fully diminished and half-diminished seventh chords on the leading tone in any key',
+          'Resolve vii°7 and viiø7 correctly, handling the diminished fifth and seventh',
+          'Distinguish the dominant function of vii°7 from V7 in analysis and part-writing',
+        ],
+        content: [
+          'The leading-tone seventh chord stacks thirds above scale degree 7: in C minor, B–D–F–A♭, a fully diminished seventh (°7) whose intervals are all minor thirds; in C major, B–D–F–A, a half-diminished seventh (ø7) whose top third is major. Both chords share three tones with V7 (in C, the G7 chord contains B, D and F) and therefore carry dominant function — they demand resolution to tonic. The fully diminished version borrows A♭ from the parallel minor even in major keys, which is why vii°7 appears freely in both modes while viiø7 is restricted to major.',
+          'Resolution follows the chord’s tendency tones. The leading tone rises to the tonic; the chordal seventh falls by step; the diminished fifth between root and fifth contracts inward. In four parts this typically produces a tonic triad with doubled third — in C major, B–D–F–A♭ resolving to C–E♭–E♮ would be nonsense, so in minor B–D–F–A♭ resolves to C–E♭–G with the third doubled when the tritone resolution requires it. A characteristic trap is the parallel fifths that arise if the perfect fifth D–A in viiø7 moves in parallel to C–G; the standard fix moves the seventh down before or keeps it as a common-tone approach.',
+          'The fully diminished seventh is harmonically symmetrical — it divides the octave into four equal minor thirds — which gives it enormous later potential for enharmonic modulation, previewed here and exploited in Theory 3. For now, hear its expressive charge in context: the opening of Bach’s Toccata and Fugue in D minor, the storm scenes of Vivaldi, and the anguished diminished sevenths that open Mozart’s Fantasia in D minor, K. 397. In analysis, label the chord with its inversion figures (°7, °6/5, °4/3, °4/2) and always identify which tone is the leading tone of the prevailing key.',
+        ],
+        listening: [
+          'J.S. Bach, Toccata and Fugue in D minor, BWV 565 (opening)',
+          'Mozart, Fantasia in D minor, K. 397',
+          'Bach, Chorale ‘O Haupt voll Blut und Wunden’ from the St Matthew Passion (diminished-seventh inflections)',
+        ],
+        assignments: [
+          'Spell vii°7 and viiø7 with all inversions in eight keys, four major and four minor',
+          'Part-write six progressions using leading-tone sevenths in various inversions, resolving all tendency tones',
+          'Analyze the first eight bars of Mozart’s K. 397 Fantasia, labeling every diminished sonority with Roman numerals and figures',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Sequences and Circle-of-Fifths Patterns',
+        objectives: [
+          'Identify the standard diatonic sequence types by root motion and copy interval',
+          'Write a descending-fifths sequence in four voices with correct voice-leading',
+          'Recognize sequences in repertoire and explain their formal function',
+        ],
+        content: [
+          'A harmonic sequence is the systematic transposition of a melodic-harmonic pattern to successive scale degrees. The workhorse is the descending-fifths (circle-of-fifths) sequence: roots falling by fifth through the diatonic collection — in C major, C–F–B°–e–a–d–G–C — with each chord related to the next as a local dominant. Its alternating pattern of falling fifth and rising fourth in the bass, or its smoother variant with alternating 5/3 and 6/3 chords, drives an enormous amount of Baroque music; Vivaldi and Corelli built entire episodes from it.',
+          'Other standard types are the descending 5–6 sequence (roots down by third, realized as alternating 5/3 and 6/3 chords, sometimes called the Pachelbel pattern after the Canon in D bass D–A–B–F♯–G–D–G–A), the ascending 5–6 sequence (roots up by step without parallels because of the interpolated sixth chords), and the descending-thirds sequence. In every case the analytical unit is the model plus its copies: bracket the model, mark the interval of transposition, and resist labeling every chord with a functional Roman numeral, because inside a sequence the ordinary syntax of function is suspended — the pattern itself is the logic.',
+          'Sequences serve form. In Baroque ritornello movements they spin out material and drive toward cadences; in Classical style they dominate developments and transitions, where their tonal instability is an asset. Study the sequence in bars 1–8 of the Allemande from Bach’s French Suite No. 5, and the famous circle-of-fifths passage in the first movement of Vivaldi’s ‘Winter’ from The Four Seasons. When writing, keep the outer-voice counterpoint clean — most sequence errors are parallel fifths between copies — and end the sequence with a genuine cadential progression to re-engage functional harmony.',
+        ],
+        listening: [
+          'Pachelbel, Canon in D',
+          'Vivaldi, The Four Seasons, ‘Winter’, first movement',
+          'Handel, Passacaglia from Suite in G minor, HWV 432',
+          'Corelli, Concerto Grosso in G minor, Op. 6 No. 8 (‘Christmas’), Allegro',
+        ],
+        assignments: [
+          'Write a four-voice descending-fifths sequence in D minor, one with root-position chords and one alternating 6/3 chords',
+          'Compose an eight-bar keyboard passage using an ascending 5–6 sequence ending with an authentic cadence',
+          'Find and bracket two sequences in a Corelli or Vivaldi score, identifying the model, copies and interval of transposition',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Secondary Dominants',
+        objectives: [
+          'Spell V/x and V7/x chords targeting any diatonic triad',
+          'Resolve secondary dominants with correct treatment of the chromatic leading tone',
+          'Recognize secondary dominants aurally and in score by their chromatic signals',
+        ],
+        content: [
+          'A secondary (applied) dominant treats a diatonic chord other than the tonic as a momentary tonic and precedes it with its own dominant. In C major, the dominant of the dominant — V/V — is a D major triad or D7 chord: its F♯ is the leading tone to G. Any major or minor diatonic triad can be tonicized: V/ii is A7 pointing to D minor, V/vi is E7 pointing to A minor, V/IV is C7 pointing to F. The diminished triad on the leading tone cannot be tonicized, since a diminished chord cannot function as a tonic.',
+          'The reliable signal is chromaticism with purpose: an accidental that creates a leading tone a semitone below the root of the following chord, or a chordal seventh a semitone above its third. Voice-leading follows dominant logic locally — the secondary leading tone resolves up, the seventh resolves down — with one standard license: in a circle-of-fifths chain of secondary dominants (V7/vi to V7/ii to V7/V to V7), each leading tone may slide down a semitone to become the next chord’s seventh, producing the smooth chromatic descent heard throughout ragtime and early jazz progressions.',
+          'The expressive point of a secondary dominant is intensification: it converts a plain progression into a directed one. Compare I–IV–V–I with I–V7/IV–IV–V7–I, where the added B♭ (in C major) leans the music toward F before the cadence gathers it back. Canonical examples to know: the V7/IV that opens Beethoven’s First Symphony — a C major symphony beginning on C7 — and the chain of applied chords in the ‘Marseillaise’-like sweep of Schumann’s ‘Widmung’. In figures, write the applied chord’s own inversion: V6/5/V means the applied dominant seventh of V in first inversion.',
+        ],
+        listening: [
+          'Beethoven, Symphony No. 1 in C major, Op. 21, first movement (opening V7/IV)',
+          'Schumann, ‘Widmung’ from Myrthen, Op. 25 No. 1',
+          'Scott Joplin, ‘Maple Leaf Rag’ (chained secondary dominants)',
+        ],
+        assignments: [
+          'Spell V7 of every major and minor triad in E♭ major and C minor, with key signatures and accidentals',
+          'Harmonize a given eight-bar melody inserting at least three secondary dominants, then part-write it in four voices',
+          'Aurally identify the tonicized chord in ten short recorded progressions played in class',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Secondary Leading-Tone Chords',
+        objectives: [
+          'Spell vii°7/x and viiø7/x chords and choose the correct quality by context',
+          'Resolve secondary leading-tone chords in four voices, including common-tone approaches',
+          'Compare the sound and usage of applied vii°7 with applied V7 in repertoire',
+        ],
+        content: [
+          'Just as vii°7 substitutes for V7 in the home key, any tonicized chord can be approached by its own leading-tone seventh. The chord is built a semitone below the target’s root: vii°7/V in C major is F♯–A–C–E♭, resolving to G. The fully diminished quality is usable before both major and minor targets, while the half-diminished quality works only before major triads — viiø7/V in C major (F♯–A–C–E) is possible, but before a minor target its major third above the fifth would clash with the coming chord.',
+          'Resolution discipline mirrors Week 1: the applied leading tone rises, the seventh falls, and the tritone resolves. Because vii°7/x is a four-note chord of stacked minor thirds, it is often approached by common tone or by chromatic slide, giving composers a way to inject color without bass leaps. The characteristic sound of vii°7/V — that dark clench before the dominant — saturates the Classical cadence approach: listen for F♯–A–C–E♭ moving to G in cadential preparations throughout Mozart and Beethoven, frequently in the 4/3 inversion over a bass C so that the bass steps down C–B in the resolution to V6.',
+          'Analytically, distinguish three chromatic pre-dominant intensifiers you now know: V7/V, vii°7/V, and (coming in Week 11) the augmented sixth, all of which push toward the dominant with a raised fourth scale degree. A vivid study passage is the slow introduction of Beethoven’s ‘Pathétique’ Sonata, Op. 13, where diminished sevenths pile up applied tension, and Chopin’s Prelude in C minor, Op. 28 No. 20, whose second bar uses an applied leading-tone chord within an otherwise diatonic frame. Label applied chords in full — vii°6/5/vi — so the figure shows both the function and the inversion.',
+        ],
+        listening: [
+          'Beethoven, Piano Sonata No. 8 in C minor, Op. 13 (‘Pathétique’), first movement introduction',
+          'Chopin, Prelude in C minor, Op. 28 No. 20',
+          'Mozart, Symphony No. 40 in G minor, K. 550, first movement (applied chords in the transition)',
+        ],
+        assignments: [
+          'Spell vii°7 of V, of ii and of vi in five keys, choosing fully or half-diminished quality appropriately',
+          'Part-write eight progressions mixing applied V7 and applied vii°7 chords with full figures',
+          'Write a four-bar phrase for piano that approaches its half cadence through vii°4/3/V',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Tonicization versus Modulation',
+        objectives: [
+          'Define the continuum from brief tonicization to established modulation',
+          'Apply the tests of cadence, duration and thematic weight to ambiguous passages',
+          'Analyze passages using both local (applied) and large-scale (new-key) readings',
+        ],
+        content: [
+          'Tonicization and modulation name points on a continuum, not opposites. A tonicization colors one chord with an applied dominant and evaporates; a modulation establishes a new tonic that governs the music for a meaningful span. The practical tests are three. Cadence: has the new key received a genuine cadential confirmation, especially a perfect authentic cadence? Duration: does the new key control several phrases rather than a chord or two? Thematic weight: does a theme, or a formal section such as a second theme group, live in the new key?',
+          'Between the poles lies the extended tonicization, and honest analysis often keeps both readings alive. In a Bach chorale, two beats of F♯ before a G chord in C major is simply V/V; but if the music cadences in G and continues there for a phrase, the better reading is a modulation to the dominant, and your Roman numerals should pivot to the new key. The standard notation shows the change with a new key label and, at the seam, a pivot-chord bracket giving the chord’s function in both keys — for instance, a D minor chord read simultaneously as ii in C and vi in F.',
+          'Why the distinction matters: form depends on it. The Classical period and sonata exposition are built on genuine modulation to the dominant (or relative major), while the richness of a Brahms phrase often comes from dense tonicizations that never leave home. Analyze the first phrase of ‘Wachet auf’ settings and the exposition bridge of a Haydn sonata side by side and articulate, in prose, why one is tonicization and the other modulation. This vocabulary — how strongly, and for how long, a key is asserted — is the analytical backbone of Weeks 6, 7 and 12.',
+        ],
+        listening: [
+          'Bach, Chorale ‘Wachet auf, ruft uns die Stimme’, BWV 140/7',
+          'Haydn, Piano Sonata in G major, Hob. XVI:27, first movement exposition',
+          'Brahms, Intermezzo in A major, Op. 118 No. 2 (tonicization-rich opening)',
+        ],
+        assignments: [
+          'Write a paragraph applying the three tests to a marked passage from a Bach chorale, defending a tonicization or modulation reading',
+          'Re-analyze two Week 3 homework progressions, deciding whether each applied chord is local color or the start of a key change',
+          'Find one extended tonicization in your current principal-study repertoire and bring the marked score to class',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Modulation to Closely Related Keys',
+        objectives: [
+          'List the five closely related keys of any major or minor key',
+          'Execute pivot-chord modulations with correctly bracketed dual-function analysis',
+          'Write a modulating phrase pair from tonic to dominant or relative major',
+        ],
+        content: [
+          'The closely related keys are those whose signatures differ from the home key by at most one accidental — equivalently, the keys of the diatonic triads other than the diminished one. C major’s closely related keys are G, F, A minor, D minor and E minor; C minor’s are E♭, A♭ (via the harmonic-minor perspective, B♭ minor is excluded), F minor, G minor and B♭ major. Eighteenth-century music modulates overwhelmingly within this family: major keys move first to V, minor keys to III (the relative major), and these two routes account for the tonal plans of most binary-form movements you will analyze next week.',
+          'The pivot-chord (common-chord) modulation is the standard smooth technique. Choose a chord diatonic in both keys, approach it as a familiar function in the old key, and leave it as a function in the new key — ideally a pre-dominant in the new key (ii or IV), so that the first unmistakably new event is the new dominant. Modulating from C to G, the A minor triad works beautifully: vi in C becomes ii in G, followed by D7 and a cadence in G. The analytical bracket at the pivot shows both readings stacked. Chromatic accidentals before the pivot weaken the effect; the art is that the listener discovers the new key only at the new dominant.',
+          'Direct (phrase) modulation, by contrast, simply begins the next phrase in the new key — common in chorales and songs — and sequential modulation rides a sequence into the new key. Study Bach chorale phrases that cadence in V and return, and the modulating period in Mozart’s Piano Sonata in C major, K. 545, second movement. In your own writing this week, compose antecedent–consequent pairs in which the consequent cadences in the new key; this is the direct preparation for the Week 13 composition project.',
+        ],
+        listening: [
+          'Bach, Chorale ‘Herzliebster Jesu’ (modulations among closely related keys)',
+          'Mozart, Piano Sonata in C major, K. 545, second movement',
+          'Beethoven, Piano Sonata in F minor, Op. 2 No. 1, first movement (modulation to the relative major)',
+        ],
+        assignments: [
+          'List the closely related keys of A major, F minor, B♭ major and C♯ minor',
+          'Write two pivot-chord modulations in four voices: C major to G major and G minor to B♭ major, with bracketed pivot analysis',
+          'Analyze all phrase-by-phrase key areas in an assigned Bach chorale, naming each modulation type',
+        ],
+      },
+      {
+        id: 'week-07',
+        week: 7,
+        title: 'Binary and Ternary Forms',
+        objectives: [
+          'Distinguish simple, rounded and balanced binary from ternary form',
+          'Diagram tonal plans of binary movements including interior cadences',
+          'Analyze a Baroque dance movement and a da capo form with full form labels',
+        ],
+        content: [
+          'Binary form is a two-reprise design — two sections, each usually repeated — whose engine is tonal: the first reprise moves from tonic to a secondary key (V in major, III or v in minor), and the second finds its way home. In simple binary the opening material never returns literally; in rounded binary the second reprise culminates in a return of the opening theme in the tonic, giving the scheme ||: A :||: B A′ :||; in balanced binary the closing material of the first reprise returns transposed to the tonic at the end of the second, a hallmark of Domenico Scarlatti’s sonatas. Baroque dance suites — allemande, courante, sarabande, gigue — are almost entirely binary movements.',
+          'Ternary form (ABA) is different in kind, not just in size: its A section is tonally closed, cadencing in its own tonic before the contrasting B section begins, whereas a binary first reprise is tonally open. B typically inhabits a related key with genuinely contrasting material, and the return of A may be literal, written out with ornamentation, or signaled by da capo. The Classical minuet-and-trio is compound ternary — a complete rounded-binary minuet, a complete rounded-binary trio, then the minuet again — a form you will analyze in depth in Week 12.',
+          'Analytical practice this week: diagram the reprises, mark the cadence that ends each section with its key, and decide the subtype from the evidence rather than from the repeat signs alone. The Sarabande of Bach’s French Suite No. 5 is rounded binary; Scarlatti’s Sonata in D minor, K. 9, shows balanced binary; Chopin’s Prelude in D♭ major, Op. 28 No. 15 (‘Raindrop’), is a clear large ternary with a C♯ minor middle section. Write your diagrams with measure numbers, key areas and cadence labels (PAC, HC), because these diagrams are the skeleton of every larger form you will meet in Form & Analysis.',
+        ],
+        listening: [
+          'J.S. Bach, French Suite No. 5 in G major, BWV 816, Sarabande and Gigue',
+          'Domenico Scarlatti, Sonata in D minor, K. 9',
+          'Chopin, Prelude in D♭ major, Op. 28 No. 15 (‘Raindrop’)',
+          'Handel, Minuet from the Water Music Suite in G',
+        ],
+        assignments: [
+          'Diagram two assigned Baroque dances, labeling reprises, keys, cadences and binary subtype',
+          'Write a one-page analysis of the ‘Raindrop’ Prelude arguing for ternary rather than binary design',
+          'Compose the first reprise (eight bars) of a rounded binary minuet in D major, tonic to dominant',
+        ],
+      },
+      {
+        id: 'week-08',
+        week: 8,
+        title: 'Species Counterpoint II: Third, Fourth Species and Florid',
+        objectives: [
+          'Write third-species counterpoint (4:1) with correct dissonance treatment',
+          'Write fourth-species counterpoint using prepared and resolved suspensions',
+          'Combine all species into a florid (fifth-species) line above or below a cantus firmus',
+        ],
+        content: [
+          'Third species sets four notes of counterpoint against each note of the cantus firmus. Downbeats must be consonant; the remaining beats admit passing and neighbor tones under strict stepwise control, plus two idiomatic figures Fux licenses: the nota cambiata (a five-note figure whose dissonant second note leaps down a third before recovering by step) and the double neighbor. The compositional challenge is sustained melodic quality across long spans — a single climax, no more than two consecutive leaps, recovery by step after any large leap — while avoiding the accented parallels that arise when successive downbeats form fifths or octaves.',
+          'Fourth species is the school of the suspension. The counterpoint syncopates against the cantus: a consonance struck on the weak beat is tied over the barline, becomes dissonant against the new bass note, and resolves down by step to a consonance. The canonical dissonant suspensions above the bass are 7–6 and 4–3; below the bass, 2–3. The 9–8 is usable but weaker, and chains of suspensions — 7–6 after 7–6 stepping down — create the aching continuity you hear in Corelli’s slow movements and in Palestrina’s cadential writing. When a tie would create an unresolvable dissonance, the species permits breaking into second-species motion.',
+          'Fifth species, florid counterpoint, is composition itself under supervision: mixing whole notes, halves, quarters, ties and eighth-note pairs to write a genuinely beautiful line that obeys every rule you have internalized. The historical point deserves emphasis — Fux’s Gradus ad Parnassum (1725) was the textbook from which Haydn, Mozart and Beethoven all learned, and its discipline is audible in every chorale you part-write. Sing your exercises in pairs in class; counterpoint is judged by the ear, and errors of melodic shape that hide on paper are obvious when sung.',
+        ],
+        listening: [
+          'Palestrina, Missa Papae Marcelli, Kyrie',
+          'Corelli, Trio Sonata Op. 3 No. 2, second movement (suspension chains)',
+          'J.S. Bach, Two-Part Invention No. 1 in C major, BWV 772 (free counterpoint applying species principles)',
+        ],
+        assignments: [
+          'Write third-species counterpoint above and below the assigned Fux cantus firmus in D dorian',
+          'Write a fourth-species exercise containing at least one chain of three suspensions',
+          'Write one florid counterpoint against a cantus of your choice, then sing both exercises with a partner in class',
+        ],
+      },
+      {
+        id: 'week-09',
+        week: 9,
+        title: 'Mixture Chords',
+        objectives: [
+          'Define modal mixture and spell the common borrowed chords in major keys',
+          'Part-write progressions using iv, ♭VI, ♭III, ii° and ♭VII with correct accidentals',
+          'Interpret the expressive meaning of mixture in Schubert and Beethoven passages',
+        ],
+        content: [
+          'Modal mixture (borrowing) imports notes and chords from the parallel key, overwhelmingly from minor into major. Lowering scale degree 6 in a major key transforms IV into iv and ii into ii° (or ii into iiø7 as a seventh chord); lowering degrees 6 and 3 yields ♭VI; lowering 3 alone gives the tonic minor color, and ♭III and ♭VII import the natural-minor mediant and subtonic. The borrowed tones keep their minor-key tendencies: ♭6 pulls down to 5, which is why iv–I and ♭VI–V progressions have their characteristic gravity.',
+          'Part-writing mixture requires only care with accidentals and with the melodic augmented second: do not move directly from ♭6 to the leading tone in the same voice. The plagal iv–I close — the darkened ‘amen’ — is the simplest case; more striking is the deceptive resolution V–♭VI in a major key, where the expected tonic is replaced by a chord a semitone higher than vi would be, an effect Beethoven exploits at climactic junctures. ♭VI also serves as a gateway: because it is a major triad, it can be tonicized, prepared by its own dominant, and used as a pivot toward flat-side keys — a technique that becomes central in Theory 3.',
+          'Expressively, mixture is the shadow falling across major-mode light, and Schubert is its supreme poet. In ‘Der Lindenbaum’ from Winterreise the alternation of E major and E minor carries the entire dramatic argument of memory against present suffering. Beethoven’s ‘Eroica’ Symphony flags ♭VI prominently, and the slow movement of the ‘Appassionata’ glows with borrowed darkness. In analysis, label borrowed chords with the flat prefix where the root is altered (♭VI, ♭III, ♭VII) and with lowercase or ° quality changes otherwise (iv, ii°), and always annotate what the borrowing does expressively in the passage.',
+        ],
+        listening: [
+          'Schubert, ‘Der Lindenbaum’ from Winterreise, D. 911',
+          'Beethoven, Piano Sonata No. 23 in F minor, Op. 57 (‘Appassionata’), second movement',
+          'Brahms, Symphony No. 3, third movement (mixture-saturated theme)',
+          'Radiohead, ‘Creep’ (iv borrowed in a major-key progression)',
+        ],
+        assignments: [
+          'Spell iv, ii°, ♭III, ♭VI and ♭VII in A major, E major and B♭ major',
+          'Part-write a progression I–V/♭VI–♭VI–iv–V7–I in F major, avoiding the augmented second',
+          'Write a half-page analysis of mixture and its expressive function in ‘Der Lindenbaum’',
+        ],
+      },
+      {
+        id: 'week-10',
+        week: 10,
+        title: 'The Neapolitan Sixth',
+        objectives: [
+          'Spell the Neapolitan chord and explain its normal first-inversion usage',
+          'Resolve ♭II6 to V correctly, managing the diminished-third pitfall',
+          'Locate and interpret Neapolitan passages in Classical and Romantic repertoire',
+        ],
+        content: [
+          'The Neapolitan is a major triad built on the lowered second scale degree: in C minor, D♭–F–A♭. It functions as a chromatic pre-dominant — an intensified substitute for ii° or iv — and appears characteristically in first inversion (♭II6), with the fourth scale degree in the bass, hence the name Neapolitan sixth. The name honors the early eighteenth-century Neapolitan opera composers (Alessandro Scarlatti’s circle) who favored the sound, though the chord is far older and equally at home in minor and, more rarely, major keys.',
+          'Voice-leading is distinctive: the lowered second degree (D♭ in C minor) descends — ultimately to the leading tone B♮ — while the bass fourth degree moves to the dominant. The direct melodic interval D♭ to B♮ is a diminished third, acceptable in the same voice as an expressive gesture but usually softened by interpolating the tonic note or a cadential six-four between ♭II6 and V. Double the bass (the fourth scale degree), never the altered root. The progression ♭II6–V6/4-5/3–i is one of the most powerful cadential approaches in the minor mode.',
+          'Hear the chord’s effect at three canonical sites. Beethoven’s ‘Moonlight’ Sonata deploys ♭II6 within its first page, the D natural F♯ A over F♯ bass in C♯ minor darkening the famous triplet texture; the finale of Chopin’s B♭ minor Sonata whirls through Neapolitan color; and Schubert’s ‘Der Müller und der Bach’ leans on ♭II for its grief. Root-position Neapolitans (♭II) and tonicized Neapolitans — approached by their own dominant, A♭7 to D♭ in C minor — mark the Romantic extension of the idea, and become a modulation gateway in Theory 3.',
+        ],
+        listening: [
+          'Beethoven, Piano Sonata No. 14 in C♯ minor, Op. 27 No. 2 (‘Moonlight’), first movement',
+          'Chopin, Piano Sonata No. 2 in B♭ minor, Op. 35, finale',
+          'Schubert, ‘Der Müller und der Bach’ from Die schöne Müllerin, D. 795',
+        ],
+        assignments: [
+          'Spell the Neapolitan in six minor keys and write its standard resolution to V in four voices',
+          'Part-write two cadential approaches: ♭II6–V7–i and ♭II6–i6/4 (cadential)–V7–i in G minor',
+          'Annotate the Neapolitan passage in the ‘Moonlight’ first movement, showing the resolution of the lowered second degree',
+        ],
+      },
+      {
+        id: 'week-11',
+        week: 11,
+        title: 'Augmented-Sixth Chords',
+        objectives: [
+          'Spell Italian, French and German augmented-sixth chords in any key',
+          'Resolve the augmented sixth outward to the dominant octave, avoiding parallels in the German type',
+          'Identify augmented-sixth chords by ear and distinguish the three national types',
+        ],
+        content: [
+          'Augmented-sixth chords are chromatic pre-dominants defined by an interval, not a stack of thirds: the interval of an augmented sixth between the lowered sixth scale degree in the bass and the raised fourth degree above it. In C (major or minor), the frame is A♭ below and F♯ above, both tones a semitone from G — and both resolve outward by semitone to the dominant’s octave. The three classic types add different interior tones above the shared frame: the Italian sixth adds only the tonic note (A♭–C–F♯), the French sixth adds tonic and second degree (A♭–C–D–F♯), and the German sixth adds tonic and lowered third (A♭–C–E♭–F♯).',
+          'Each type has a character and a problem. The Italian, with only three pitch classes, doubles the tonic note in four voices. The French, containing two tritones, has a piquant whole-tone tinge that Berlioz and the Russians loved. The German is the richest — it is enharmonically identical to a dominant seventh chord (A♭–C–E♭–F♯ sounds like A♭7), a pun that Theory 3 will exploit for enharmonic modulation — but its resolution directly to V produces parallel fifths (A♭–E♭ to G–D), which composers standardly evade by resolving first to the cadential six-four: Ger+6 to i6/4 to V.',
+          'Aurally, hunt for the outward semitone wedge onto the dominant. Famous sites: the German sixth that detonates the coda of Schubert’s String Quintet in C major’s first movement; the augmented sixths threaded through Beethoven’s ‘Egmont’ Overture; and the opening sonority of Wagner’s Tristan und Isolde, whose ‘Tristan chord’ is often read as a French sixth with a long appoggiatura. In figures write It+6, Fr+6 (sometimes Fr4/3) and Ger+6 (Ger6/5); in part-writing, put the lowered sixth degree in the bass and never double either chromatic tone.',
+        ],
+        listening: [
+          'Schubert, String Quintet in C major, D. 956, first movement',
+          'Beethoven, ‘Egmont’ Overture, Op. 84',
+          'Wagner, Prelude to Tristan und Isolde (opening bars)',
+        ],
+        assignments: [
+          'Spell It+6, Fr+6 and Ger+6 in D minor, A minor, E major and B♭ major',
+          'Part-write each type resolving to V (using the cadential six-four for the German) in four voices',
+          'Take dictation on eight cadential approaches, identifying Neapolitan versus each augmented-sixth type',
+        ],
+      },
+      {
+        id: 'week-12',
+        week: 12,
+        title: 'Analysis: The Classical Minuet and Song Forms',
+        objectives: [
+          'Perform a complete harmonic and formal analysis of a Classical minuet and trio',
+          'Apply phrase-model vocabulary — sentence, period, cadence types — to small forms',
+          'Connect chromatic vocabulary from Weeks 1–11 to its formal locations',
+        ],
+        content: [
+          'This week integrates the semester in full-movement analysis. The Classical minuet and trio is compound ternary: minuet (rounded binary), trio (a second rounded binary, often in the subdominant, dominant or parallel key, lighter in texture), then the minuet da capo without repeats. Within each reprise the phrase model does its work: an opening tonic-prolonging phrase — often a sentence (2+2+4 presentation and continuation) or a period (antecedent ending HC, consequent ending PAC) — then a modulating continuation, the double bar in the secondary key, a developmental standing-on-the-dominant, and the rounded return.',
+          'Your analytical protocol layers three levels. First, form: reprise structure, phrase segmentation with measure numbers, cadence labels (PAC, IAC, HC, deceptive), and theme types. Second, harmony: Roman numerals with figures throughout, pivot brackets at modulations, and explicit flags on every chromatic event — applied chords, mixture, Neapolitans, augmented sixths — noting where in the form each occurs. Third, interpretation: a short prose paragraph arguing how the harmony articulates the form, for instance how a Ger+6 marks the retransition’s arrival on the dominant.',
+          'Case studies: the Menuetto of Mozart’s Symphony No. 40 in G minor, K. 550, whose hemiola-driven phrases resist four-bar squareness; the Minuet of Haydn’s Symphony No. 104; and, for song form, Schubert’s ‘Heidenröslein’ (strophic) against ‘Erlkönig’ (through-composed), introducing the strophic–modified-strophic–through-composed taxonomy for Lieder. You will notice that chromatic chords cluster at formal seams — before double bars, at retransitions, and at final cadences — which is the deepest lesson of the week: chromaticism in this style is not decoration but formal punctuation.',
+        ],
+        listening: [
+          'Mozart, Symphony No. 40 in G minor, K. 550, Menuetto',
+          'Haydn, Symphony No. 104 in D major (‘London’), Menuet',
+          'Schubert, ‘Heidenröslein’, D. 257',
+          'Schubert, ‘Erlkönig’, D. 328',
+        ],
+        assignments: [
+          'Submit a complete three-level analysis (form, harmony, prose) of the assigned Mozart minuet and trio',
+          'Diagram the form of both Schubert songs and label each with the correct song-form category',
+          'Prepare a five-minute presentation on where chromatic harmony appears in the form of your analyzed minuet',
+        ],
+      },
+      {
+        id: 'week-13',
+        week: 13,
+        title: 'Composition Project: A Modulating Period in Classical Style',
+        objectives: [
+          'Compose a sixteen-bar modulating period for piano in Classical style',
+          'Integrate at least two chromatic devices from the semester with correct voice-leading',
+          'Revise the composition after workshop performance and peer critique',
+        ],
+        content: [
+          'The capstone project is a sixteen-bar modulating period for piano in the style of Haydn or early Beethoven: an eight-bar antecedent ending with a half cadence in the tonic, and an eight-bar consequent that modulates and closes with a perfect authentic cadence in the dominant (from major) or the relative major (from minor). The specification requires melody-and-accompaniment texture (Alberti bass, repeated chords or broken octaves), a pivot-chord modulation with the pivot bracketed in your own analysis, and at least two chromatic devices from the semester — a secondary dominant plus one of mixture, Neapolitan or augmented sixth — placed at formally meaningful moments.',
+          'Craft guidelines distilled from the semester: build the antecedent as a clear basic idea and contrasting idea; make the consequent begin as a repetition before diverging toward the new key; place the pivot chord so that the new leading tone appears only after it; and prepare the final cadence with a genuine pre-dominant and, ideally, a cadential six-four. Melodic writing obeys the counterpoint you sang in Week 8 — mostly steps, purposeful leaps, one climax, tendency tones resolved. Every accidental in your score must be explicable in one sentence; arbitrary chromaticism is the mark of a first draft.',
+          'The week runs as a workshop. Drafts are performed in class (by you or a pianist volunteer), and critique follows the analytical protocol of Week 12 applied to your own piece: peers identify the phrase structure, find the pivot and name your chromatic chords from the sound and score alone — if they cannot, the writing is not yet clear. You then submit the revised score with your own full Roman-numeral analysis beneath the staff and a paragraph tracing what you changed and why. This project is the direct ancestor of the Romantic character piece you will write in Theory 3 and the stylistic studies of Theory 4.',
+        ],
+        listening: [
+          'Haydn, Piano Sonata in E minor, Hob. XVI:34, first movement (modulating opening period)',
+          'Beethoven, Piano Sonata in G major, Op. 49 No. 2, first movement',
+          'Clementi, Sonatina in C major, Op. 36 No. 1',
+        ],
+        assignments: [
+          'Submit a complete draft of your sixteen-bar modulating period with preliminary analysis before the workshop',
+          'Perform or arrange performance of your draft in class and give protocol-based critique on two peer pieces',
+          'Submit the revised score with full Roman-numeral analysis and a revision paragraph by the end of exam week',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'aur102',
+    code: 'AUR102',
+    title: 'Aural Skills 2',
+    credits: 2,
+    stream: 'aural',
+    description:
+      'The second semester of musicianship training extends singing and dictation into chromaticism: chromatic embellishing tones, secondary dominants, and modulation to the dominant and relative keys. Rhythmic work adds compound and irregular meters and two-part textures, harmonic dictation covers full diatonic progressions, and C-clef reading begins, all converging in a cumulative exam.',
+    prerequisites: ['aur101'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Review and Chromatic Neighbor Tones in Singing',
+        objectives: [
+          'Re-establish tonic orientation, diatonic sight-singing fluency and dictation protocol',
+          'Sing chromatic lower and upper neighbors using chromatic solmization (di, ri, fi, si, li / ra, me, se, le, te)',
+          'Sustain accurate diatonic anchoring while singing chromatic embellishments',
+        ],
+        content: [
+          'The semester begins by rebuilding the first-semester foundation at speed: tonic orientation from a single chord, diatonic sight-singing with triadic leaps, and the four-stage dictation protocol (memorize, sing back, structure, notate). Then chromaticism enters through the smallest possible door — the chromatic neighbor tone, a semitone embellishment that leaves and returns to the same diatonic pitch. In movable-do solmization, raised tones take the -i vowel (di, ri, fi, si, li) and lowered tones take -e or -a (ra, me, se, le, te), so the figure do–ti–do becomes available beside do–di–re and re–ri–mi patterns.',
+          'The technique for accuracy is anchoring: hear and sustain the diatonic frame, treating the chromatic tone as inflection rather than as a new scale member. Sing sol, then sol–fi–sol, checking that the returning sol has not drifted flat — drift is the diagnostic failure of chromatic singing, and the remedy is always to re-sound the tonic and rebuild. Drills this week alternate diatonic and chromatic versions of the same melodic figures so that the ear learns exactly what the semitone alteration changes and what it leaves intact.',
+          'Repertoire connects the drill to real music. The chromatic lower neighbor saturates Classical melody — the opening theme of Mozart’s Symphony No. 40 hinges on E♭–D–D figures with chromatic inflections nearby, and the ‘Turkish’ Rondo alla turca ornaments with chromatic neighbors throughout. In dictation, chromatic neighbors are your first accidentals to notate: identify the diatonic frame first, then place the inflection. Write the accidental immediately when you hear it; deferred accidentals are the most common notation error at this stage.',
+        ],
+        assignments: [
+          'Sing the chromatic neighbor drill sheet daily: diatonic figure, then chromatic version, checking anchor pitches against the keyboard',
+          'Take dictation on six four-bar melodies containing one chromatic neighbor each',
+          'Memorize chromatic solmization syllables ascending and descending and recite the full chromatic scale on do',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Chromatic Passing Tones and the Chromatic Scale',
+        objectives: [
+          'Sing chromatic passing tones filling major-second gaps in both directions',
+          'Perform ascending and descending chromatic scale segments in tune',
+          'Notate melodies containing chromatic passing tones with correct accidental spelling',
+        ],
+        content: [
+          'The chromatic passing tone fills the space between two diatonic pitches a whole step apart: do–di–re ascending, re–ra–do descending. Unlike the neighbor, it commits to motion — the ear must aim through the chromatic tone to the goal pitch, and intonation work centers on making the two semitones genuinely equal rather than compressing the second one. Practice each figure three ways: solfège at tempo, on a neutral syllable, and silently (audiating the chromatic tone, singing only the frame), which forces the inner ear to do the work.',
+          'Extended chromatic segments follow: four- and five-note scale fragments, then the full chromatic scale over a sounding tonic drone. The drone is essential — chromatic scales sung without a reference drift almost universally, and the skill being trained is precisely the retention of tonal context through maximum chromatic saturation. Spelling conventions matter for notation: ascending chromatic lines conventionally use sharps (raised syllables), descending lines use flats (lowered syllables), with the standard exceptions that scale degree 4 rises as fi and degree 7 descends as te.',
+          'In dictation this week, melodies contain both chromatic neighbors and passing tones. The identification strategy is directional: a chromatic tone that returns is a neighbor; one that continues in the same direction is a passing tone, and its spelling follows its direction. Listen to the chromatic passing motion that opens Rimsky-Korsakov’s ‘Flight of the Bumblebee’ in extreme form, and more moderately in the melodic chromaticism of Grieg’s ‘Anitra’s Dance’ — both make audible how chromatic passing tones create urgency without leaving the key.',
+        ],
+        listening: [
+          'Rimsky-Korsakov, ‘Flight of the Bumblebee’ from The Tale of Tsar Saltan',
+          'Grieg, ‘Anitra’s Dance’ from Peer Gynt Suite No. 1',
+          'Mozart, Rondo alla turca from Piano Sonata K. 331 (chromatic embellishment)',
+        ],
+        assignments: [
+          'Sing chromatic passing-tone drills between every pair of adjacent diatonic degrees, ascending and descending, over a drone',
+          'Notate the chromatic scale from four different starting pitches with correct directional spelling',
+          'Take dictation on six melodies mixing chromatic neighbors and passing tones, labeling each chromatic tone N or P',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Compound Meter Dictation and Reading',
+        objectives: [
+          'Perform and conduct rhythms in 6/8, 9/8 and 12/8 with correct beat-level grouping',
+          'Take rhythmic dictation in compound meters including internal subdivisions and ties',
+          'Distinguish compound meter from triplet-laden simple meter by ear',
+        ],
+        content: [
+          'Compound meters divide the beat into three: 6/8 has two dotted-quarter beats, 9/8 three, 12/8 four. The reading system counts beats with a three-part subdivision (1-la-li, 2-la-li in the Takadimi-adjacent system, or 1-and-a in traditional counting), and the conductor’s arm shows the beat while the voice articulates the division. The signature confusion — 6/8 versus 3/4 — is resolved by accent: 6/8 groups its six eighths as 3+3 with two accents, 3/4 as 2+2+2 with three; the hemiola exploits exactly this ambiguity, as in Bernstein’s ‘America’ from West Side Story, which alternates the two groupings bar by bar.',
+          'Dictation in compound meter follows the protocol of hearing the beat first, then the division pattern within each beat. The common patterns get names and gestures: the full division (three eighths), the quarter–eighth (long–short), the eighth–quarter (short–long), the dotted quarter (whole beat), and beats extended by ties. Practice transcribing pattern-by-pattern before attempting full four-bar dictations; the working memory load of compound rhythm is higher than simple meter, and chunking by beat is the reliable strategy.',
+          'Repertoire anchors: the siciliana lilt of the ‘Pastoral Symphony’ from Handel’s Messiah, the 6/8 drive of the finale of Beethoven’s Seventh Symphony, and the barcarolle from Offenbach’s Les contes d’Hoffmann in 6/8 at a rocking tempo. This week also begins two-a-day rhythm performance homework: one prepared compound-meter reading and one sight-reading, both conducted while spoken, because coordination of gesture and articulation is what stabilizes meter under pressure.',
+        ],
+        listening: [
+          'Handel, ‘Pastoral Symphony (Pifa)’ from Messiah',
+          'Offenbach, Barcarolle from Les contes d’Hoffmann',
+          'Bernstein, ‘America’ from West Side Story',
+        ],
+        assignments: [
+          'Perform the compound-meter reading sheet daily, conducting in 2, 3 and 4 while speaking rhythm syllables',
+          'Take rhythmic dictation on eight two-bar patterns in 6/8 and 9/8 with ties and dotted values',
+          'Transcribe the rhythm of the first eight bars of the Offenbach Barcarolle by ear',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Hearing Secondary Dominants I: V/V',
+        objectives: [
+          'Recognize V/V and V7/V by ear within progressions and melodies',
+          'Sing fi as the applied leading tone resolving to sol in melodic contexts',
+          'Notate melodic dictation containing fi and harmonic dictation containing V/V',
+        ],
+        content: [
+          'The dominant of the dominant announces itself with a single tell-tale tone: the raised fourth degree, fi, leaning on sol exactly as ti leans on do. Sung, the core pattern is do–re–fi–sol; heard in harmony, V/V is a major chord (or dominant seventh) built on re, and the moment of recognition is the brightening produced when fa becomes fi. This week trains that recognition in isolation and context: your instructor plays I–IV–V–I versus I–V/V–V–I pairs, and you learn to catch both the chromatic inflection and the changed bass motion (re in the bass moving to sol).',
+          'Melodic work centers on singing applied resolutions with correct tendency: fi must rise. Melodies from repertoire that pivot on fi–sol include the opening phrase of ‘Oh! Susanna’ at its cadence approach in many harmonizations, and countless Classical themes at the half cadence — the strong half cadence prepared by V/V, sometimes called an emphasized half cadence, is among the most common phrase-endings in Mozart and Haydn. In dictation, when a melody’s cadence tone is sol approached from a semitone below, write fi with its sharp or natural immediately.',
+          'Harmonic dictation now adds a fifth column to your worksheet: beyond soprano, bass and Roman numerals, you flag chromatic chords. The bass line remains the primary evidence — V/V characteristically sits on re (root position) or fi (first inversion, bass rising fi–sol) — and the quality check (major where a minor ii would be diatonic) confirms it. Practice with the half-cadence phrases of Mozart’s ‘Ein kleines Nachtmusik’ minuet and the many V/V approaches in Schubert waltzes, which make ideal short dictation excerpts.',
+        ],
+        listening: [
+          'Mozart, Eine kleine Nachtmusik, K. 525, Menuetto',
+          'Schubert, Waltzes from Op. 9 (D. 365), selections',
+          'Haydn, Symphony No. 94 in G major (‘Surprise’), second movement (V/V at phrase ends)',
+        ],
+        assignments: [
+          'Sing the fi-resolution drill set: do–re–fi–sol patterns in eight keys with drone',
+          'Take harmonic dictation on eight four-chord progressions, half containing V/V or V6/5/V',
+          'Notate two four-bar melodic dictations per practice session containing fi at the half cadence',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Hearing Secondary Dominants II: Applied Chords to ii, IV and vi',
+        objectives: [
+          'Recognize V7/IV, V7/ii and V7/vi in harmonic dictation by their chromatic signal tones',
+          'Sing melodies containing di, si and te as applied leading tones and sevenths',
+          'Map each chromatic solmization syllable to the chord it most often implies',
+        ],
+        content: [
+          'Each applied dominant carries a signature chromatic syllable. V7/IV adds te (the lowered seventh degree), turning the tonic triad into a dominant seventh of fa — the sound that opens Beethoven’s First Symphony. V7/ii raises do to di, the leading tone of re; V7/vi raises sol to si, the leading tone of la, a sound Schubert loves for turning phrases toward the relative minor. Building the syllable-to-chord map is this week’s core work: hear the inflection, name the syllable, infer the target chord, and confirm with the resolution.',
+          'Melodic singing extends the tendency-tone discipline: di rises to re, si rises to la, while te — being a chordal seventh rather than a leading tone — falls to la over IV. Drills pair each inflection with its resolution in short tonal phrases, then embed them in eight-bar melodies where two different applied tones occur. The frequent student error is conflating si and le (both between sol and la): the resolution disambiguates, since si rises and le falls, and your notation must reflect the direction with the correct accidental.',
+          'Dictation excerpts this week come from real literature: the opening of Beethoven’s First (V7/IV), the ‘Trout’ Quintet theme’s applied inflections, and hymn harmonizations rich in applied chords such as ‘Abide with Me’. In harmonic dictation, continue bass-first: applied chords to ii, IV and vi most often appear in root position or first inversion, and the bass tones re/fa, do/mi (as E natural in contexts implying A) and mi/si narrow the candidates quickly. By the end of the week, you should identify any single applied dominant in a diatonic frame with two hearings.',
+        ],
+        listening: [
+          'Beethoven, Symphony No. 1 in C major, Op. 21, first movement opening',
+          'Schubert, Piano Quintet in A major, D. 667 (‘Trout’), fourth movement theme',
+          'W.H. Monk, ‘Abide with Me’ (hymn harmonization with applied chords)',
+        ],
+        assignments: [
+          'Sing the applied-tone resolution drills for di, si and te daily in four keys each',
+          'Take harmonic dictation on ten progressions, identifying which chord each applied dominant tonicizes',
+          'Transcribe the melody and bass of the first phrase of the ‘Trout’ theme and label the applied harmony',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Hearing Modulation to the Dominant',
+        objectives: [
+          'Detect the moment a passage modulates to the dominant key by ear',
+          'Sing modulating melodies, executing the pivot in solmization (do of the new key)',
+          'Notate melodic and harmonic dictation that begins in the tonic and cadences in V',
+        ],
+        content: [
+          'Modulation to the dominant is the fundamental tonal journey of eighteenth-century music, and hearing it is a matter of tracking allegiance: at some point the note you have been calling sol starts behaving like do. The reliable perceptual cues are the recurring appearance of fi (the new ti), a cadence whose finality centers on the old sol, and — in harmonic dictation — a bass that starts organizing its cadences around the new tonic. This week you learn to name the moment of pivot rather than merely noticing, too late, that the key has changed.',
+          'Singing modulating melodies requires a solmization decision, and this course uses the pivot resyllabling method: sing in the old key up to the pivot, then rename — sol becomes do — at the point where the new key takes over, usually just before the new leading tone appears. Drills use composed sixteen-bar periods whose consequents modulate (exactly the form you are writing in Theory 2), and the discipline of choosing where to resyllable is itself analysis. If you resyllable too early the old-key phrase feels wrong; too late and fi-heavy passages become unsingable — the ear finds the seam.',
+          'Dictation strategy for modulating passages: notate the final cadence first (it is freshest in memory and defines the goal key), establish the opening key, then find the seam between them. Excerpt sources include Bach chorale phrase pairs, the first reprises of Baroque binary dances — nearly all of which modulate to V — and Classical antecedent–consequent periods. Confirm every modulation with two pieces of evidence: the new accidental pattern and a genuine cadence in the new key, echoing the tonicization-versus-modulation tests from Theory 2.',
+        ],
+        listening: [
+          'Bach, Chorale ‘Nun danket alle Gott’, BWV 386 (phrases cadencing in V)',
+          'Handel, Minuet in F major, HWV 516a (binary modulation to the dominant)',
+          'Mozart, Piano Sonata in A major, K. 331, first movement theme',
+        ],
+        assignments: [
+          'Sight-sing six modulating periods, marking your pivot syllable-change point in pencil before singing',
+          'Take melodic dictation on four eight-bar melodies that modulate to the dominant',
+          'Take harmonic dictation on two chorale phrases, notating soprano, bass and Roman numerals in both keys with a pivot bracket',
+        ],
+      },
+      {
+        id: 'week-07',
+        week: 7,
+        title: 'Hearing Modulation to the Relative Key',
+        objectives: [
+          'Detect modulations between relative major and minor keys in both directions',
+          'Sing minor-key melodies that modulate to the relative major, resyllabling la to do (or do to la)',
+          'Distinguish modulation to V from modulation to III/vi in dictation',
+        ],
+        content: [
+          'The relative-key relationship — shared signature, tonics a minor third apart — is the second great modulation route, and the standard one for minor-key music: minor-key binary dances and sonata expositions go to III as reliably as major-key ones go to V. Perceptually the shift is a change of gravitational center without a change of pitch collection (until the minor key’s raised leading tone appears), so the cues differ from last week: listen for the disappearance or appearance of the raised seventh (si in la-minor solmization) and for cadential bass motion that re-centers a third away.',
+          'This course sings minor in la-based minor within the movable-do system, which makes relative modulation a clean resyllable: when C major music moves to A minor, do-centered singing gives way to la-centered singing with si as the leading tone; moving from minor to relative major reverses it. Drills run both directions, using Bach chorale pairs and folk-song settings. The characteristic error is missing the raised leading tone in the new minor key — G♯ in A minor after C major — which is precisely the accidental your dictation must capture.',
+          'Discrimination training closes the week: excerpts modulate either to V or to the relative key, and you identify the destination. The heuristic is the quality of the new tonic — modulation from major to V lands on another major chord one fifth up, while major to vi lands on a minor chord a third down; from minor, III is major and up a third. Test pieces: the E minor to G major motion in the first reprise of Bach’s Bourrée from the E minor Lute Suite, and Schubert’s constant relative-key play in the Moments musicaux. Two hearings should suffice to name the goal key and find the seam.',
+        ],
+        listening: [
+          'J.S. Bach, Bourrée in E minor from Lute Suite BWV 996',
+          'Schubert, Moment musical in F minor, D. 780 No. 3',
+          'Bach, Chorale ‘Jesu, meine Freude’ (phrases moving between E minor and G major)',
+        ],
+        assignments: [
+          'Sight-sing six melodies modulating between relative keys, marking the resyllable point',
+          'Take melodic dictation on four minor-key melodies that modulate to the relative major',
+          'Complete the discrimination drill set: sixteen excerpts, identifying modulation to V, to the relative key, or none',
+        ],
+      },
+      {
+        id: 'week-08',
+        week: 8,
+        title: 'Irregular and Mixed-Meter Rhythmic Dictation',
+        objectives: [
+          'Perform rhythms in 5/8, 7/8 and 5/4 with correct asymmetric groupings',
+          'Take rhythmic dictation in irregular meters, identifying the grouping pattern (2+3, 3+2, 2+2+3)',
+          'Read and dictate short passages with changing meters',
+        ],
+        content: [
+          'Irregular (asymmetric) meters combine unequal beat groups: 5/8 as 2+3 or 3+2, 7/8 as 2+2+3, 3+2+2 or 2+3+2. The performance skill is committing to a grouping and articulating it physically — conducting patterns for five and seven use unequal beats, a short arm stroke for the two-unit and a longer one for the three-unit — while the perception skill is extracting the grouping from accent and melodic contour. Dave Brubeck’s ‘Take Five’ (5/4 as 3+2) and the ‘Mars’ movement of Holst’s The Planets (5/4, predominantly 3+2 with its relentless ostinato) are the canonical listening anchors.',
+          'Dictation method: first count the pulse units in the repeating cycle (tap eighths and find where the pattern restarts), then locate the internal accents that reveal the grouping, then fill in surface rhythm group by group. Balkan dance meters supply graded material — the 7/8 of the Macedonian dance tradition, the 2+2+2+3 of the 9/8 heard in Dave Brubeck’s ‘Blue Rondo à la Turk’ and in Turkish aksak rhythm — and Bartók’s ‘Six Dances in Bulgarian Rhythm’ from Mikrokosmos notates these patterns precisely.',
+          'Mixed meter — the meter changing bar by bar — completes the week. Stravinsky’s ‘Danse sacrale’ is the extreme case; your exercises are gentler, alternating 3/4, 2/4 and 5/8 in four- to eight-bar spans. The dictation strategy is to keep a constant smallest unit (usually the eighth note) as your internal clock and count units per bar, rather than trying to feel each new meter as a gestalt. Two-a-day performance homework continues, now with one irregular-meter prepared reading and one mixed-meter sight-reading daily.',
+        ],
+        listening: [
+          'Dave Brubeck Quartet, ‘Take Five’',
+          'Holst, ‘Mars, the Bringer of War’ from The Planets',
+          'Bartók, ‘Six Dances in Bulgarian Rhythm’ No. 1 from Mikrokosmos, Book 6',
+          'Stravinsky, ‘Danse sacrale’ from The Rite of Spring (excerpt)',
+        ],
+        assignments: [
+          'Perform the irregular-meter reading sheet daily, conducting asymmetric patterns in 5 and 7',
+          'Take rhythmic dictation on eight patterns in 5/8 and 7/8, writing the grouping above each bar',
+          'Transcribe the ostinato rhythm of ‘Mars’ and the theme rhythm of ‘Take Five’ by ear',
+        ],
+      },
+      {
+        id: 'week-09',
+        week: 9,
+        title: 'Two-Part Dictation',
+        objectives: [
+          'Notate two-voice dictations, capturing both melody and bass line accurately',
+          'Apply outer-voice-first strategy and interval checking between voices',
+          'Track voice independence in contrary, parallel and oblique motion',
+        ],
+        content: [
+          'Two-part dictation is the gateway from melodic to true harmonic hearing: two simultaneous lines whose interaction — not just whose separate contours — must be captured. The strategy hierarchy is firm: bass first, because the bass moves more slowly, defines the harmony, and is the voice students most often neglect; then the upper voice; then a verification pass checking the intervals formed at each strong beat. Cadence intervals are the anchor points — an octave arrival preceded by contrary motion is the signature of a strong cadence.',
+          'Motion types organize perception. Contrary motion (voices in opposite directions) is easiest to hear because the lines separate perceptually; parallel motion (typically thirds and sixths) is efficient to notate — capture one voice and the interval, and the second voice follows; oblique motion (one voice static) requires noticing which voice holds. Exercises are drawn from two-part Bach chorale reductions (soprano and bass), simple invention textures, and folk-song duets, always four bars at first, extending to eight by week’s end.',
+          'The memory technique is alternation with re-listening discipline: on hearing one, sketch the bass rhythm and cadence; hearing two, complete the bass; hearing three, the soprano; hearing four, verify intervals. Singing back both parts — one voice aloud, the other audiated, then swapped — before writing anything trains the retention that makes the protocol work. This skill feeds directly into the harmonic dictation of Weeks 10–11, where the two outer voices plus quality judgments yield full Roman-numeral analysis by ear.',
+        ],
+        listening: [
+          'J.S. Bach, Two-Part Invention No. 8 in F major, BWV 779',
+          'Bach, chorale outer-voice pairs from the Riemenschneider collection (assigned selections)',
+          'Bartók, ‘In Dorian Mode’ from Mikrokosmos, Book 1 (two-voice texture)',
+        ],
+        assignments: [
+          'Take two-part dictation daily: two four-bar exercises, bass line first, with an interval verification pass',
+          'Sing one voice of an assigned two-part exercise while playing the other at the keyboard, then swap',
+          'Transcribe four bars of outer voices from a recorded Bach chorale',
+        ],
+      },
+      {
+        id: 'week-10',
+        week: 10,
+        title: 'Harmonic Dictation: Full Diatonic Progressions',
+        objectives: [
+          'Notate soprano, bass and Roman numerals for six-to-eight-chord diatonic progressions',
+          'Identify inversions from the bass line, including six-four types',
+          'Recognize the phrase model — tonic, pre-dominant, dominant, tonic — as a predictive frame',
+        ],
+        content: [
+          'Full harmonic dictation integrates everything: from a played phrase you produce the soprano line, the bass line, and a complete Roman-numeral analysis with inversion figures. The phrase model is your predictive engine — progressions begin by prolonging tonic (I, vi, I6, passing chords), move through pre-dominant (ii, ii6, IV), reach the dominant (V, V7, often preceded by a cadential six-four), and resolve. Prediction is not cheating; it is expertise. The trained ear hypothesizes the function and uses hearing to confirm or correct, which is faster and more accurate than chord-by-chord guessing.',
+          'Inversions are read off the bass. A first-inversion chord puts the third in the bass, making bass lines stepwise and singable — the bass moving do–ti–la under I–V6–vi is unmistakable once practiced. The six-four types get special attention because they are function, not chord: the cadential six-four (accented, on the dominant’s bass), the passing six-four (bass filling a third, as in I–V6/4–I6) and the pedal six-four (bass stationary under IV6/4). Hearing the six-four as dominant-with-suspensions rather than as tonic in second inversion is a perceptual habit worth drilling explicitly.',
+          'Materials are chorale phrases and Classical piano textures, played at the keyboard and from recordings, six to eight chords per exercise, three to four hearings. The verification pass checks three consistencies: bass-to-numeral (does the figure match the bass note?), soprano-to-chord (is the soprano tone a member?), and syntax (does the function sequence obey the phrase model — any dominant moving to pre-dominant should trigger a re-listen). This week is the course’s center of gravity; the exam’s harmonic dictation section is built to this specification plus the chromatic chords of Week 11.',
+        ],
+        listening: [
+          'Bach, chorales from the Riemenschneider 371 (assigned phrase set)',
+          'Mozart, Piano Sonata in C major, K. 545, first movement (harmonic reduction exercises)',
+          'Beethoven, ‘Ode to Joy’ theme from Symphony No. 9 (diatonic phrase-model dictation)',
+        ],
+        assignments: [
+          'Take two full harmonic dictations daily from the practice set, self-scoring soprano, bass and numerals separately',
+          'Play the phrase-model paradigms at the keyboard in four keys: I–vi–ii6–V7–I and I–IV–I6/4(cadential)–V–I',
+          'Write a bass line and numerals from memory for two chorale phrases studied in class, then verify against the score',
+        ],
+      },
+      {
+        id: 'week-11',
+        week: 11,
+        title: 'C-Clef Reading: Alto and Tenor Clefs',
+        objectives: [
+          'Sight-sing melodies notated in alto clef with fluency',
+          'Read tenor clef and explain its use for cello, bassoon and trombone registers',
+          'Transcribe short dictations directly into C clefs',
+        ],
+        content: [
+          'The C clef marks middle C on whichever line it straddles: on the third line it is the alto clef, home of the viola; on the fourth line, the tenor clef, used for the upper registers of cello, bassoon and trombone. Fluency in these clefs is a professional necessity — score reading, arranging, and the Keyboard Skills sequence all demand it — and the goal of this week is genuine reading, not transposition tricks. The method is landmark-based: learn middle C, then the Gs and Fs nearest it, and read intervals from landmarks, exactly as you first learned treble and bass.',
+          'Practice follows the sequence sing–name–write. First sight-sing alto-clef melodies on solfège (the tonal patterns are old friends; only the mapping is new), then name pitches aloud in rhythm from clef flashcards, then write dictations directly into the clef, which cements it faster than any amount of passive reading. Materials begin with stepwise chorale-tenor lines and viola parts from Haydn string quartets, which live naturally in the alto clef’s comfortable range around middle C.',
+          'Tenor clef follows the same protocol in the second half of the week, with cello literature as material — the opening of the Brahms Cello Sonata No. 1’s upper-register passages and Bach cello suite movements that editions print in tenor clef. A practical exercise connects clefs to real work: read a four-part open-score chorale line by line, soprano in treble, alto in alto clef, tenor in tenor clef, bass in bass clef — the exact skill Keyboard Skills 3 will demand at the piano next year. Clef drills now enter the daily warm-up permanently.',
+        ],
+        listening: [
+          'Haydn, String Quartet in E♭ major, Op. 33 No. 2 (‘The Joke’) — follow the viola part in score',
+          'Brahms, Cello Sonata No. 1 in E minor, Op. 38 (tenor-clef passages)',
+          'Bach, Cello Suite No. 3 in C major, BWV 1009, Bourrée I',
+        ],
+        assignments: [
+          'Sight-sing two alto-clef and two tenor-clef melodies daily from the clef anthology',
+          'Take four short dictations notated directly into alto clef and two into tenor clef',
+          'Read one SATB chorale in open score aloud, naming pitches line by line in the correct clefs',
+        ],
+      },
+      {
+        id: 'week-12',
+        week: 12,
+        title: 'Ensemble Error Detection',
+        objectives: [
+          'Detect pitch, rhythm and accidental errors in performances heard against a score',
+          'Localize errors by voice or instrument in two- to four-part textures',
+          'Apply error-detection systematically as preparation for rehearsal leadership',
+        ],
+        content: [
+          'Error detection inverts dictation: instead of writing what you hear, you compare what you hear against a score and name the discrepancies. It is the working musician’s core listening act — every rehearsal you will ever lead or play in depends on it — and it has a method. Scan hierarchically: first rhythm and ensemble alignment (the errors that derail performance), then pitch (wrong notes, missed accidentals), then intonation and dynamics. Divide attention voice by voice on successive hearings rather than attempting global surveillance at once.',
+          'Exercises escalate through the week. Single-line: a melody is played twice with one to three differences from the printed version; you mark bar, beat and error type. Two-part: errors may occur in either voice, and localization — which voice, not just where — becomes the task. Four-part chorale: recordings with planted errors in inner voices train the hardest skill, hearing the alto and tenor through the texture, which your C-clef work and two-part dictation have been quietly preparing all semester.',
+          'The professional frame matters: this is conductor training, section-leader training and teacher training at once. Errors most often hide in inner voices, at accidentals (especially the raised leading tone in minor), after page turns, and at rhythmic seams like syncopations and ties — knowing where errors live is half of finding them. The week closes with a live lab: a student ensemble performs prepared excerpts with deliberate mistakes, and the class, scores in hand, identifies and articulates each error in usable rehearsal language — bar number, voice, what happened, what should happen.',
+        ],
+        listening: [
+          'Bach, chorale recordings with planted errors (course materials)',
+          'Haydn, String Quartet Op. 76 No. 3 (‘Emperor’), second movement (score-following practice)',
+        ],
+        assignments: [
+          'Complete the graded error-detection packet: ten single-line, eight two-part and six four-part exercises',
+          'In the live lab, log every detected error with bar, beat, voice and correction in rehearsal language',
+          'Follow the ‘Emperor’ variations with score and write down three interpretive differences between two recordings',
+        ],
+      },
+      {
+        id: 'week-13',
+        week: 13,
+        title: 'Cumulative Exam: Singing and Dictation',
+        objectives: [
+          'Demonstrate chromatic and modulating sight-singing at semester standard',
+          'Complete melodic, rhythmic, two-part and harmonic dictations under exam conditions',
+          'Evaluate semester growth and set targets for Aural Skills 3',
+        ],
+        content: [
+          'The cumulative exam mirrors the semester’s arc in two sittings. The written sitting contains rhythmic dictation in compound and irregular meters, melodic dictation with chromatic embellishing tones and applied leading tones, one melody modulating to the dominant or relative key, one two-part dictation, and two harmonic dictations of six to eight chords including secondary dominants, with soprano, bass and full Roman numerals required. Scoring rewards structural accuracy first: cadences, downbeats and bass lines carry the most weight, because they are the load-bearing elements of musical hearing.',
+          'The individual sitting assesses performance skills: prepared sight-singing (two melodies practiced from a list issued in week 12, one modulating, one in a C clef), true sight-singing at first view with thirty seconds of study, an irregular-meter rhythm performed while conducting, and a short error-detection excerpt. Examiners listen for tonal anchoring above all — a singer who loses a chromatic inflection but keeps the key recovers; one who drifts from the tonic does not. Your pre-performance routine from Principal Study applies here too: orient, breathe, establish the tonic, begin.',
+          'Preparation advice distilled from the semester: practice dictation daily in short sessions rather than in binges, since auditory memory consolidates with spacing; sing everything you write and write everything you sing; and rehearse the exam protocol itself — timed hearings, silent staff paper, no keyboard — so the format holds no surprises. After the exam, write a one-page self-assessment naming your strongest and weakest skill areas with evidence from the exam; it seeds the diagnostic conversation that opens Aural Skills 3, where chromatic harmony deepens and atonal materials begin.',
+        ],
+        assignments: [
+          'Prepare the issued sight-singing list, recording yourself daily and checking anchor pitches',
+          'Complete two full timed mock exams from past papers under strict exam conditions',
+          'Submit a one-page post-exam self-assessment with specific targets for Aural Skills 3',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'key102',
+    code: 'KEY102',
+    title: 'Keyboard Skills 2',
+    credits: 1,
+    stream: 'keyboard',
+    description:
+      'The second semester of secondary piano extends technique to two-octave scales and progressions with secondary dominants, and builds the functional literacies every musician needs at the keyboard: figured-bass realization, harmonization with inversions, easy two-stave score reading and level-2 sight-reading. The semester ends with a comprehensive skills exam.',
+    prerequisites: ['key101'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Review and Two-Octave Major Scales',
+        objectives: [
+          'Re-establish first-semester skills: one-octave scales, I–IV–V progressions and repertoire posture',
+          'Play two-octave major scales hands separately with correct standard fingerings',
+          'Execute smooth thumb crossings using arm weight and lateral wrist motion',
+        ],
+        content: [
+          'The semester opens with a working review — one-octave scales, keyboard-style I–IV–V–I in last semester’s keys, and a short played diagnostic — then immediately extends scales to two octaves. The technical crux is the thumb crossing repeated across the longer span: in C major the right hand crosses thumb under after the third finger (C–D–E, thumb to F) and after the fourth (G–A–B–C), giving the 123-1234 pattern that repeats each octave. The left hand mirrors with 54321-321 ascending. Two octaves expose what one octave hides: uneven crossings produce audible bumps, and the remedy is lateral wrist motion that carries the thumb into position early rather than a last-instant tuck.',
+          'Fingering is not negotiable at this stage — the standard patterns exist so that scales scale: C, G, D, A and E major all share the C major pattern, while F major’s right hand uses 1234-123 to keep the thumb off B♭. Practice protocol: hands separately at quarter = 60 playing eighth notes, accenting the first of each four to stabilize the grid, then increasing by metronome notches only when three consecutive repetitions are clean. Add one new key per practice day rather than drilling all keys shallowly.',
+          'Tone quality matters even in scales, because scales are where tone habits form. Aim for a matched, singing legato — every note equal in length and weight — produced by transferring arm weight from finger to finger rather than by isolated finger strikes. Record one scale per practice session and listen for the three standard flaws: the thumb accent at crossings, the rushed final four notes, and the crescendo that creeps in with ascent. This weekly self-recording habit continues all semester and is the fastest corrective feedback available outside the lesson.',
+        ],
+        assignments: [
+          'Practice two-octave major scales in C, G, D and F hands separately, daily, with metronome from quarter = 60',
+          'Record one scale per session and log the three standard flaws you hear',
+          'Review and replay your strongest first-semester repertoire piece to restore continuity',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Two-Octave Minor Scales and Arpeggios',
+        objectives: [
+          'Play two-octave harmonic and melodic minor scales hands separately in A, E and D minor',
+          'Play two-octave tonic arpeggios with stable hand position shifts',
+          'Coordinate hands together in two-octave scales in at least two keys',
+        ],
+        content: [
+          'Minor scales at two octaves add the accidental management to the crossing technique: harmonic minor raises the seventh degree (G♯ in A minor), producing the characteristic augmented second between the sixth and seventh degrees, while melodic minor raises the sixth and seventh ascending (F♯ and G♯ in A minor) and reverts to natural minor descending. Fingering for A, E and D minor follows the familiar 123-1234 pattern, so attention can go entirely to the accidentals — say them aloud before playing, ascending and descending forms separately, before combining.',
+          'Two-octave arpeggios stretch the hand across chord tones: A minor uses right-hand 123-1235 across A–C–E–A–C–E–A, and the technical demand is the larger crossing, thumb travelling under a full fourth. The wrist leads: a slight rotational arc carries the hand to the new position so the thumb arrives ready rather than reaching. Practice arpeggios in blocked form first (grabbing each octave’s chord shape as a unit), then broken, which programs the geography before the motion. Keep the elbow softly following the hand’s travel across the keyboard.',
+          'Hands-together scale playing begins this week in C and G major: the challenge is that crossings occur at different moments in each hand, so the coordination must be grid-based — both hands locked to the metronome eighth — rather than crossing-based. Slow practice at quarter = 50, thinking in four-note groups, gets hands-together scales stable within a week for most students. By semester’s end the exam requires two-octave scales hands together in four major and two minor keys, and this week’s keys are the foundation of that list.',
+        ],
+        assignments: [
+          'Practice A, E and D minor scales, harmonic and melodic forms, two octaves hands separately',
+          'Practice two-octave arpeggios in C, G and A minor, blocked then broken',
+          'Bring C and G major scales hands together at quarter = 60 to the next class',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Progressions with Secondary Dominants: V/V at the Keyboard',
+        objectives: [
+          'Play I–V/V–V–I and I–V6/5/V–V–I in keyboard style in major keys up to two sharps and flats',
+          'Voice the applied chord so the chromatic tone resolves correctly under the hand',
+          'Connect keyboard patterns to the V/V harmonies studied in Theory 2 and Aural Skills 2',
+        ],
+        content: [
+          'Keyboard style — bass note in the left hand, three upper voices in the right — now absorbs the applied dominant. The workhorse progression is I–V/V–V–I: in C major, the right hand moves from C–E–G (or E–G–C) to a D major chord with F♯, then to G, then home, while the left hand plays C–D–G–C. Voice-leading rules from Theory 2 apply under the fingers: F♯ (the applied leading tone) sits in the same right-hand voice that then rises to G, and common tones hold. Playing the resolution correctly is easier to feel than to write — the semitone rise lies naturally under adjacent fingers — which is exactly why keyboard harmony accelerates theory learning.',
+          'The first-inversion form V6/5/V puts F♯ in the bass, creating the elegant chromatic bass line C–F♯–G heard at countless Classical half cadences; practice it as a three-chord cell until the hand knows it in C, G, D, F and B♭ major. Then chain the cell into the full phrase I–IV–V6/5/V–V–I, which adds the diatonic pre-dominant before the chromatic one. Speak the Roman numerals aloud while playing — the coordination of naming and doing is what converts finger patterns into transferable harmonic knowledge.',
+          'Transposition is the measure of understanding: a progression you can only play in C is a memorized shape, not a known progression. The transposition method is intervallic and functional — think ‘tonic, applied dominant on scale degree 2 with raised 4, dominant, tonic’, not letter names — and this week’s goal is the core cell in five keys. These progressions are precisely what Aural Skills 2 asks you to hear in Weeks 4–5; playing them daily is the single most efficient way to learn to hear them.',
+        ],
+        assignments: [
+          'Play I–V/V–V–I and I–V6/5/V–V–I in keyboard style in C, G, D, F and B♭ major, naming numerals aloud',
+          'Practice the chromatic bass cell (do–fi–sol) with correct right-hand resolutions in all five keys',
+          'Record the full phrase I–IV–V6/5/V–V–I in two keys and check every resolution against Theory 2 rules',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Progressions with Applied Chords to IV, ii and vi',
+        objectives: [
+          'Play progressions containing V7/IV, V7/ii and V7/vi in keyboard style',
+          'Manage the chromatic alterations (te, di, si) smoothly within right-hand voicings',
+          'Build an eight-chord phrase mixing diatonic and applied harmony from a Roman-numeral chart',
+        ],
+        content: [
+          'Each remaining applied dominant becomes a keyboard cell this week. V7/IV is the gentlest under the hand: the tonic chord simply adds its minor seventh (B♭ in C major) and resolves to IV — play I–V7/IV–IV–V–I and hear the opening gambit of Beethoven’s First Symphony under your own fingers. V7/ii raises do to di (C♯ in C major, over an A bass for the root-position A7), resolving to D minor; V7/vi raises sol to si (G♯ over an E bass), resolving to A minor. In every case, place the chromatic tone in a right-hand voice adjacent to its resolution so the semitone lies under neighboring fingers.',
+          'The practice sequence for each cell is: block the two chords and name the chromatic tone; play the resolution alone (just the moving semitone plus the falling seventh); play the full four-voice pair; then embed it in a phrase beginning and ending on I. Once each cell is secure in C major, transpose to G and F. Watch the left hand — applied roots put unfamiliar bass notes under the fifth finger, and bass accuracy, not right-hand color, is what usually fails first in performance.',
+          'The week culminates in chart reading: given an eight-symbol Roman-numeral chart such as I–V7/vi–vi–V7/ii–ii6–V6/5/V–V7–I, realize it in keyboard style at a slow, steady pulse without stopping. This is the keyboard player’s equivalent of reading prose aloud — the symbols must convert to sound through the hands in real time. Charts come directly from the harmonic vocabulary of Theory 2 Weeks 3–4, and the fluency standard is quarter = 60 with one chord per beat by the end of the week.',
+        ],
+        assignments: [
+          'Practice the V7/IV, V7/ii and V7/vi cells with resolutions in C, G and F major',
+          'Realize four assigned eight-chord Roman-numeral charts in keyboard style without stopping',
+          'Write your own eight-chord chart containing two applied dominants and perform it in two keys',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Figured Bass I: Reading and Realizing 5/3 and 6/3',
+        objectives: [
+          'Explain figured-bass notation as shorthand for intervals above the bass',
+          'Realize root-position and first-inversion figures in four voices at the keyboard',
+          'Apply doubling and spacing norms while keeping a smooth soprano line',
+        ],
+        content: [
+          'Figured bass is the Baroque’s harmonic shorthand: numbers under a bass note name the intervals to be played above it, with unfigured notes assuming 5/3 (root position) and a 6 indicating 6/3 (first inversion). Accidentals in the figures apply to the named interval, and a bare accidental under a note alters its third — the sharp under a dominant bass in a minor key that signals the raised leading tone. This notation was the daily working language of every continuo player from Monteverdi to C.P.E. Bach, and realizing it fluently remains a core professional literacy for accompanists, organists, conductors and scholars.',
+          'The realization discipline at this stage: left hand takes the bass alone, right hand supplies three voices, and the norms of four-part writing govern — double the root of 5/3 chords, double a non-tendency tone (usually not the bass) in 6/3 chords, keep common tones, move the upper voices by step where possible, and never double a leading tone. Start each exercise by scanning the bass for cadences, then realize chord to chord, keeping the right hand in close position within an octave. The soprano deserves deliberate shaping: of the possible top notes for each chord, choose the sequence that makes a singable line, because a realization is judged by its top voice as much as its correctness.',
+          'Exercises this week come from graded continuo primers and simplified basses from Corelli sonatas — bass lines of six to ten notes, figures limited to 5/3, 6 and cadential patterns. Practice the standard cadence formulas until automatic: 6/3 on the supertonic bass moving to 5/3 dominant, and the 4–3 suspension figure at the final cadence (introduced by ear now, formalized next week). Realizing even simple figures converts Theory 2’s inversions from paper knowledge into physical knowledge, and prepares directly for the six-four and seventh figures of Week 6.',
+        ],
+        listening: [
+          'Corelli, Violin Sonata in D minor, Op. 5 No. 12 (‘La Folia’) — attend to the continuo realization',
+          'Handel, Recorder Sonata in F major, HWV 369, Larghetto (continuo texture)',
+        ],
+        assignments: [
+          'Realize six assigned figured basses using only 5/3 and 6/3 chords, hands together at a slow pulse',
+          'Play the supertonic-to-dominant cadence formula in five keys from figures',
+          'Write out one of your realizations in four-part notation and check doublings against Theory 2 rules',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Figured Bass II: Six-Fours, Sevenths and Suspensions',
+        objectives: [
+          'Realize 6/4, 7, 6/5, 4/3 and 4/2 figures in context',
+          'Play cadential 6/4–5/3 and suspension figures (4–3, 7–6) with correct preparation and resolution',
+          'Realize a complete short continuo bass with mixed figures',
+        ],
+        content: [
+          'The figure vocabulary expands to the full working set. The 6/4 marks second inversion, almost always in one of the three contexts you know from theory: cadential (6/4 resolving to 5/3 over a dominant bass, written 6/4–5/3), passing, or pedal. Seventh chords appear as 7 (root position), 6/5 (first inversion), 4/3 (second) and 4/2 (third) — and the 4/2 figure carries a rule of thumb worth internalizing: its bass is the chordal seventh and must resolve down by step, usually to a 6/3 chord. Realizing V4/2–I6 correctly at the keyboard makes the rule permanent.',
+          'Suspension figures notate rhythm as well as harmony: 4–3 under a single bass note means play the fourth above the bass on the beat, then resolve it to the third — the sound of virtually every Baroque final cadence. The 7–6 chain over a descending bass and the 9–8 over a static one complete the set. Preparation discipline from species counterpoint applies literally: the suspended tone must be present in the previous chord in the same voice. Practice each suspension as a three-stage gesture — preparation, dissonance on the beat, resolution — and feel how the dissonance leans into the resolution under the fingers.',
+          'The week’s summit is a complete realization: a twelve-to-sixteen-note continuo bass from a Corelli or Handel slow movement, with mixed figures, played hands together at a steady slow tempo with shaped soprano. Two performance habits from professional continuo practice apply even now: keep the right hand modest (three voices, no display) because the realization accompanies rather than competes, and never stop for a wrong chord — the bass line is the contract, and continuity outranks correction. This is the exact skill Keyboard Skills 3 develops toward chromatic figures and real ensemble continuo.',
+        ],
+        listening: [
+          'Corelli, Trio Sonata in D major, Op. 3 No. 2, Grave (suspension chains over walking bass)',
+          'Handel, ‘Lascia ch’io pianga’ from Rinaldo (continuo aria texture)',
+        ],
+        assignments: [
+          'Realize six figured basses including 6/4, seventh-chord and suspension figures',
+          'Drill the cadential formulas 6/4–5/3 and 4–3 in eight keys until automatic',
+          'Prepare one complete Corelli-excerpt realization for performance in class without stopping',
+        ],
+      },
+      {
+        id: 'week-07',
+        week: 7,
+        title: 'Easy Two-Stave Score Reading',
+        objectives: [
+          'Read simple two-stave piano scores and choral reductions at sight with continuity',
+          'Apply structural scanning: key, meter, cadences and patterns before playing',
+          'Simplify texture in real time while preserving bass and melody',
+        ],
+        content: [
+          'Score reading is sight-reading with a professional purpose: playing music you have never seen well enough to serve a rehearsal — accompanying a choir warm-up, checking a passage for a colleague, reading through a song with a singer. The method starts before the hands move: a thirty-second structural scan noting key and mode, meter and tempo, the cadences that mark phrase ends, repeated patterns (an Alberti figure spotted once is read once, not per note), and the hardest-looking bar, which sets your tempo. The cardinal rule is continuity — the pulse never stops, whatever the fingers miss.',
+          'Real-time simplification is a skill, not a failure, and this week legitimizes it: when the texture exceeds your hands, keep the bass line and the melody and let inner voices go; block broken-chord figures into harmonies; omit octave doublings. The priority order — rhythm and bass first, melody second, inner detail last — reflects what listeners and ensembles actually depend on. Practice deliberately reading pieces slightly too hard for you and rescuing them by simplification, because that judgment under pressure is the actual skill.',
+          'Materials are two-stave scores of moderate simplicity: hymnal harmonizations, easy choral reductions, and the simplest Schubert dances and Schumann Album for the Young pieces. Daily reading is non-negotiable this week and after — ten minutes, always new material, always with the scan-then-play protocol and a metronome pulse. Sight-reading improves with volume of exposure more than with any other variable; the students who read hundreds of easy pieces outperform those who struggle through a few hard ones.',
+        ],
+        listening: [
+          'Schumann, Album for the Young, Op. 68: ‘Melody’ and ‘Soldier’s March’ (reading-level repertoire)',
+          'Schubert, Ländler selections from D. 366',
+        ],
+        assignments: [
+          'Read three new two-stave pieces daily using the thirty-second scan protocol, never stopping the pulse',
+          'Practice simplification: read two assigned pieces above your level, keeping only bass and melody',
+          'Read one hymn harmonization daily, aiming for full four-voice texture at a slow steady tempo',
+        ],
+      },
+      {
+        id: 'week-08',
+        week: 8,
+        title: 'Harmonization with Inversions I: Bass-Line Design',
+        objectives: [
+          'Harmonize melodies using I, ii, IV, V and vi with first inversions for stepwise bass motion',
+          'Choose chords by melodic implication, harmonic rhythm and cadence placement',
+          'Play harmonizations in keyboard style with a shaped, mostly stepwise bass',
+        ],
+        content: [
+          'First-semester harmonization used root-position I, IV and V; the craft now becomes bass-line design. First inversions free the bass to move by step: harmonizing a descending melody do–ti–la, the progression I–V6–vi gives the bass C–B–A, a line rather than a leap sequence. The design principles are those of Theory 2’s bass-line week: mostly stepwise motion, contrary motion against the melody where possible, root position reserved for phrase beginnings and cadences, and the harmonic rhythm typically one chord per beat in chorale style or per bar in song style.',
+          'The decision procedure runs melody-first: identify the key and the cadence points; harmonize the cadences first (the last two or three chords of each phrase — a half cadence on V, an authentic cadence approached by ii6 or IV); then fill the phrase interiors, testing each melody note against the two or three diatonic chords that contain it and choosing the one whose bass continues the line. The supertonic in first inversion, ii6, earns special attention as the classic pre-dominant: its bass (fa) approaches sol by step and its sound is the standard cadence preparation from Bach chorales to Mozart sonatas.',
+          'Execution is keyboard style — bass in the left hand, melody on top of right-hand chords — played at a steady slow tempo. Melodies this week are folk and hymn tunes of two four-bar phrases: ‘Amazing Grace’, ‘Ode to Joy’, and the folk songs of the course anthology. For each, prepare two different harmonizations, because discovering that one melody supports multiple defensible bass lines is the lesson: harmonization is composition under constraint, and taste — the shapeliness of the bass — separates adequate from good.',
+        ],
+        assignments: [
+          'Harmonize three assigned melodies with cadences first, then interiors, using at least three first-inversion chords each',
+          'Prepare two contrasting harmonizations of ‘Ode to Joy’ and be ready to defend the bass-line choices',
+          'Drill the ii6–V–I and IV–V6–vi cadence cells in five keys',
+        ],
+      },
+      {
+        id: 'week-09',
+        week: 9,
+        title: 'Harmonization with Inversions II: Adding Applied Chords',
+        objectives: [
+          'Enrich harmonizations with V/V and other applied dominants at appropriate moments',
+          'Use the cadential six-four correctly in final cadences',
+          'Harmonize a melody at sight using a functional decision procedure under time pressure',
+        ],
+        content: [
+          'Harmonization now absorbs the semester’s chromatic vocabulary. The highest-value addition is V6/5/V before a half cadence — the do–fi–sol bass under a melody ending on re or sol instantly elevates a plain phrase — and V7/IV where the melody lingers on do before moving to fa. The placement rule is cadential and structural: applied chords belong at phrase ends and at moments of harmonic arrival, not scattered decoratively; one or two per eight-bar melody is stylistic, five is noise. The cadential six-four completes the final cadence formula: melody-supported I6/4 on the strong beat resolving to V(7), then I.',
+          'The sight-harmonization procedure — the exam skill — compresses the Week 8 method into real time: scan the melody (key, cadence tones, obvious arpeggiations); commit to cadence formulas for each phrase end; play through once with simple root-position functions keeping strict time; play again adding inversions for bass line and one applied chord at the best cadence. Two passes, no stopping, steady tempo. This procedure is trainable to reliability in a week of daily practice, and it is precisely what church, school and session musicians do professionally every working day.',
+          'Style variation completes the skill: the same harmonization rendered as block chorale chords, as waltz-bass accompaniment (bass note then two chords), and as broken-chord arpeggiation — the textures of first-semester accompaniment patterns now driven by a richer harmonic engine. Apply all three to ‘Scarborough Fair’ (which invites modal color and a te-inflected chord) and to a major-key hymn tune, and notice how texture changes the expressive register of identical harmony. The exam in Week 13 asks for one prepared and one sight harmonization; this week’s procedure is the preparation for both.',
+        ],
+        assignments: [
+          'Add one applied dominant and a cadential six-four to each of last week’s three harmonizations',
+          'Practice the two-pass sight-harmonization procedure daily on one new melody with a timer',
+          'Perform ‘Scarborough Fair’ in two contrasting accompaniment textures',
+        ],
+      },
+      {
+        id: 'week-10',
+        week: 10,
+        title: 'Sight-Reading Level 2',
+        objectives: [
+          'Sight-read level-2 material: hands together, simple key signatures, moderate rhythmic variety',
+          'Maintain continuity and pulse through errors using structured recovery habits',
+          'Track reading ahead of the hands by one beat or more',
+        ],
+        content: [
+          'Level-2 sight-reading means hands-together textures in keys up to two sharps and flats, rhythms including dotted values and simple syncopation, and dynamics and articulation observed — roughly the level of easy Schumann, Gurlitt and Kabalevsky teaching pieces. The scan protocol from Week 7 applies, with one addition: identify the accompaniment pattern type in the left hand before playing (block chords, broken chords, Alberti, waltz bass), because pattern recognition converts hundreds of notes into a handful of decisions.',
+          'The core perceptual skill is reading ahead: the eyes live at least one beat beyond the hands, buffering what comes next while the hands execute what was buffered. Train it directly with the card drill — a partner (or your own free hand) covers the beat being played, forcing the eyes forward — and with flash reading: two seconds of looking at a bar, then playing it from the visual after-image. Both drills feel uncomfortable precisely because they attack the habit of staring at the current note, which is what caps most students’ reading speed.',
+          'Error psychology decides sight-reading outcomes: the pulse is the piece, and a wrong note inside a steady pulse is a blemish while a stopped pulse is a breakdown. Practice deliberate no-stop reading — errors acknowledged mentally, never physically — and end each session by logging error types (rhythm, pitch, key-signature lapses, pattern misreads) to target the next day’s focus. Ten minutes of daily new material remains the rule; this week the material steps up a level and stays there through the exam.',
+        ],
+        assignments: [
+          'Sight-read three new level-2 pieces daily with the full scan protocol and no-stop rule',
+          'Do the card drill or flash-reading drill for five minutes daily',
+          'Keep an error-type log for the week and write two sentences on your dominant error pattern',
+        ],
+      },
+      {
+        id: 'week-11',
+        week: 11,
+        title: 'Repertoire and Ensemble Reading',
+        objectives: [
+          'Polish one solo repertoire piece at level 2 to performance standard',
+          'Read four-hands duet repertoire, maintaining ensemble with a partner',
+          'Apply accompanist skills: cueing, balance and following a soloist',
+        ],
+        content: [
+          'The semester’s repertoire piece — chosen in consultation from the level of Schumann’s Album for the Young, Bartók’s For Children or a comparable teaching collection — reaches performance polish this week. Polish at this level means: accurate text at a stable tempo, dynamics and articulation realized rather than approximated, phrase shaping the listener can hear, and a performance that survives a no-stop run in front of the class. The practice methods are inherited from Principal Study: sectional work with target tempos, performing-mode runs, and one recorded self-review.',
+          'Duet reading develops the ensemble dimension of keyboard skill. Four-hands repertoire — Diabelli’s Melodious Pieces, Op. 149, and easy Schubert marches are the classic materials — forces the skills solo reading never demands: counting rests honestly, listening across the texture, matching articulation, and above all keeping the shared pulse when your own part falters. The primo–secondo division also teaches balance: secondo owns the pedal and the bass, primo owns the melodic surface, and both must hear the whole.',
+          'A short accompanying lab closes the week: you play a simple accompaniment while a classmate sings or plays a melody instrument, practicing the accompanist’s trinity — give a clear starting tempo (count-in or breath cue), balance under the soloist, and follow tempo fluctuation rather than fighting it. For most non-pianists this is the professional payoff of the entire keyboard sequence: the ability to serve as a functional collaborator at the keyboard in a studio, classroom or community setting.',
+        ],
+        listening: [
+          'Schumann, Album for the Young, Op. 68 (browse for repertoire-level pieces)',
+          'Bartók, For Children, Book 1, selections',
+          'Diabelli, Melodious Pieces on Five Notes, Op. 149, No. 1 (four hands)',
+        ],
+        assignments: [
+          'Bring your repertoire piece to performance standard: one recorded no-stop run submitted with self-review',
+          'Rehearse and perform one Diabelli duet movement with a partner',
+          'Complete the accompanying lab: one accompanied melody with count-in, balance and following',
+        ],
+      },
+      {
+        id: 'week-12',
+        week: 12,
+        title: 'Exam Preparation: Integration and Mock Exam',
+        objectives: [
+          'Integrate all exam components into timed run-throughs',
+          'Complete a full mock exam and identify remaining weaknesses',
+          'Build a final-week practice plan targeting the weakest components',
+        ],
+        content: [
+          'The exam has six components, published now: two-octave scales and arpeggios (major keys to four sharps/flats hands together; A, E, D minor hands separately); a progression set including applied dominants played in two keys chosen by the examiner; one figured-bass realization prepared from a short list plus one simple figure at sight; one prepared harmonization and one sight harmonization; sight-reading at level 2; and the repertoire piece. This week assembles the parts into the whole: components practiced separately behave differently in sequence, when fatigue and nerves compound.',
+          'The mock exam replicates conditions exactly — components in exam order, examiner-style requests (‘B♭ major, hands together’; ‘realize this figure’), no restarts, a classmate or instructor as examiner. The diagnostic value is in the gaps: most students discover that transposition of progressions and sight harmonization decay fastest under pressure, while scales and repertoire hold. Score yourself per component against the published rubric, which weights accuracy and continuity over speed in every category.',
+          'From the mock results, build a triage plan for the final week: daily minutes allocated by weakness, not by comfort — the temptation to re-polish the strong repertoire piece while avoiding shaky figured bass is precisely backwards. Keep every component warm with brief daily touches (scales in two keys, one chart, one figure, one read) while directing the bulk of time at the two weakest components. This targeted-taper pattern — the same logic as the Principal Study jury preparation — is how functional skills are stabilized for assessment.',
+        ],
+        assignments: [
+          'Complete one full mock exam under strict conditions and score it against the rubric',
+          'Submit your final-week triage plan with daily minutes per component',
+          'Drill your two weakest components daily, logging measurable progress (tempo, error count)',
+        ],
+      },
+      {
+        id: 'week-13',
+        week: 13,
+        title: 'Skills Exam',
+        objectives: [
+          'Perform all six exam components at semester standard in a single sitting',
+          'Demonstrate continuity, steady pulse and functional fluency under assessment',
+          'Reflect on results to set goals for Keyboard Skills 3',
+        ],
+        content: [
+          'The exam is an individual fifteen-minute practical before the keyboard faculty, in the published component order. The assessment values are functional throughout: steady pulse and continuity outrank speed; a slower, unbroken figured-bass realization scores above a faster one that stops; a sight harmonization with plain but correct harmony and a confident cadence outranks an ambitious one that collapses. Announce nothing, recover from slips silently, and treat the sitting as a rehearsal-service situation — the examiner is your choir, waiting on your pulse.',
+          'Component standards, concretely: scales at quarter = 72 in eighth notes, evenly voiced; progression sets with correct chromatic resolutions in both requested keys; the prepared figure realized with shaped soprano and correct suspensions, the sight figure at any steady tempo; harmonizations with functional cadences and at least one inversion-driven bass line; sight-reading with the pulse never broken; the repertoire piece performed with dynamics and phrasing. These standards are exactly the entry assumptions of Keyboard Skills 3, which builds chorale playing, chromatic figures and open-score reading on top of them.',
+          'After the exam, write the semester’s closing self-assessment: which functional skills are now reliable, which remain fragile, and — the forward-looking question — how keyboard fluency is beginning to change your work in theory, aural skills and your principal study. For most students the honest answer by this point is that the keyboard has become the laboratory where the other courses’ abstractions turn physical, which is precisely the design. Keyboard Skills 3 begins from your exam results and this reflection.',
+        ],
+        assignments: [
+          'Perform the skills exam',
+          'Submit a one-page self-assessment linking exam results to specific goals for Keyboard Skills 3',
+          'Archive your semester recordings and harmonization portfolio for your studio file',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ens102',
+    code: 'ENS102',
+    title: 'Large Ensemble 2',
+    credits: 2,
+    stream: 'ensemble',
+    description:
+      'The second semester in conservatory orchestra, wind ensemble or choir deepens the craft of ensemble musicianship: rotating repertoire across style periods, intonation systems in ensemble contexts, and full ownership of a concert cycle from first reading to performance and review.',
+    prerequisites: ['ens101'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Unit 1: Seating Auditions and the New Cycle',
+        objectives: [
+          'Perform a seating audition with prepared excerpts from the semester repertoire',
+          'Analyze the semester’s programmed works and your part’s role within them',
+          'Establish personal part-preparation standards and a marking system',
+        ],
+        content: [
+          'The semester opens with seating auditions: short prepared excerpts from the programmed repertoire, played or sung individually for the conductor and section principals. Auditions serve two functions beyond seating — they force early engagement with the semester’s parts, and they normalize the audition process itself, which will be a professional constant. Whatever the outcome, the working principle of ensemble culture applies: every chair matters, and the difference between a good and great ensemble lives in the back of the sections as much as the front.',
+          'This cycle’s repertoire rotates across style periods by design — typically a Classical symphony or Haydn mass movement, a Romantic overture or accompanied choral work, and a twentieth-century or living composer’s piece — because style is learned by contrast. Each period demands different defaults: Classical playing wants transparent texture, terraced dynamics and light articulation; Romantic works want longer bows and breaths, wider dynamic envelopes and rubato awareness; contemporary scores demand rhythmic exactness and unfamiliar notation read precisely. Your first assignment is a listening pass through the whole program with score or part in hand.',
+          'Part preparation is codified this semester into a standard: before the first rehearsal of any work, your part carries your markings — numbered bars if unprinted, breath or bowing plans, cues from other parts at long rests, and pencil circles on every accidental you have ever missed. The professional’s rule is that rehearsal time is for ensemble problems, not personal ones; notes are learned at home. Section leaders will spot-check parts in week two, a practice borrowed from professional orchestras’ librarian discipline.',
+        ],
+        assignments: [
+          'Perform your seating audition with the assigned excerpts',
+          'Listen to the full program with your part, marking entrances, cues and exposed passages',
+          'Prepare and mark your parts to the published standard before the first full rehearsal',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Unit 2: Intonation Systems in Ensemble',
+        objectives: [
+          'Explain equal temperament, Pythagorean and just intonation and where each applies in ensemble playing',
+          'Adjust thirds and leading tones by ear within sustained chords',
+          'Practice sectional tuning protocols built on the harmonic series',
+        ],
+        content: [
+          'Ensembles do not play in equal temperament — only pianos do. When a chord sustains, ears demand just intonation: a major third tuned pure sits about fourteen cents narrower than its equal-tempered size, and a perfect fifth two cents wider. Melodically, however, string players and singers gravitate toward Pythagorean tendencies — high leading tones pressing toward the tonic. The working musician’s skill is knowing which system the moment demands: expressive melodic intonation in lines, just intonation in sustained harmony, and equal temperament only when a keyboard instrument anchors the texture.',
+          'The practical method is chord-tone role awareness: know whether you hold the root, fifth or third. Roots and fifths tune first and pure; major thirds lower until the beating stops — the shimmer of interference waves between mistuned partials is audible once pointed out, and eliminating it is the physical definition of ‘in tune’. Sectionals this unit run the classic drill: build chords from the bass upward, sustain, and bend each tone until beats vanish. Wind players couple this with awareness of their instrument’s tendency notes; singers and string players learn how vowel color and vibrato width interact with perceived pitch.',
+          'Ensemble intonation is finally a listening hierarchy, not a tuner discipline: tune to the bass of the texture, then to the section principal, then match within the section — a tuner confirms tendencies in the practice room but cannot referee a chord. Listen to the opening of Wagner’s Prelude to Lohengrin (strings) or a Bruckner motet such as Locus iste (choir) for sustained textures whose whole effect is intonational purity. This unit’s vocabulary — beats, cents, pure thirds, tendency notes — recurs at every rehearsal for the rest of your ensemble life.',
+        ],
+        listening: [
+          'Wagner, Prelude to Lohengrin, Act I',
+          'Bruckner, Locus iste, WAB 23',
+          'Copland, ‘Fanfare for the Common Man’ (brass intonation in open textures)',
+        ],
+        assignments: [
+          'Practice the beat-elimination drill on sustained thirds and fifths with a partner or drone, ten minutes daily',
+          'Map the tendency notes of your instrument or voice and their correction strategies',
+          'In sectionals, lead one chord-building exercise from the bass upward',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Unit 3: Style Rotation — Reading Across the Periods',
+        objectives: [
+          'Adapt articulation, tone and phrasing to Classical, Romantic and contemporary styles in rehearsal',
+          'Respond to conducting gestures that differ by style and tempo character',
+          'Demonstrate rehearsal-etiquette leadership: marking passes, silence discipline, section communication',
+        ],
+        content: [
+          'The middle rehearsal block rotates intensively among the program’s style worlds, and the unit’s discipline is switching: the same ensemble must sound like three different ensembles. Concretely, in the Classical work, note lengths shorten, accents lighten and dynamics terrace — play the written piano as chamber music, listening across the ensemble rather than down your stand. In the Romantic work, sound production broadens and the conductor’s rubato becomes the governing clock; watching through the beat, not just at it, is the skill. In the contemporary work, subdivision is sovereign: mixed meters and syncopated entries reward the silent counting discipline built in Aural Skills.',
+          'Following a conductor matures this semester from watching the beat to reading the gesture vocabulary: the difference between a legato and marcato preparation, the left hand’s dynamic and cueing information, the breath the conductor takes with the ensemble before an entrance. A useful rehearsal habit is gestural prediction — guessing from the upbeat what character is coming and checking against what the conductor asks for verbally. Ensembles that read gesture rehearse twice as fast, because verbal instruction becomes confirmation rather than correction.',
+          'Rehearsal etiquette now carries leadership expectations: pencil in hand always, markings passed back through the section within seconds, absolute silence when the conductor works with another section — and productive silence, following the passage being fixed in your own part, since the same instruction usually applies broadly. Section principals learn the communication channel upward: collecting the section’s practical problems (page turns, divisi assignments, breath staggering) and raising them efficiently. These behaviors, invisible when present and glaring when absent, are what professionals mean by ‘a good colleague’.',
+        ],
+        assignments: [
+          'Prepare a style card for each programmed work: three concrete execution differences in your part',
+          'Practice the exposed passages of the contemporary work with metronome subdivision at three tempos',
+          'Serve one rehearsal as section marking-captain, ensuring all markings propagate through the section',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Unit 4: Sectionals and the Balance Rebuild',
+        objectives: [
+          'Solve section-specific problems: unisons, blend, stagger-breathing or bowing distribution',
+          'Apply balance principles: accompaniment under melody, moving lines forward, pyramid dynamics',
+          'Record and evaluate the ensemble from the audience position',
+        ],
+        content: [
+          'Mid-cycle sectionals take the ensemble apart to rebuild it. Section work targets what full rehearsal cannot: perfect unison intonation within the section (the beat-elimination drill from Unit 2, now at section scale), blend — matching tone color, vibrato width and articulation length so the section speaks as one instrument — and the mechanical logistics of stagger-breathing in winds and choir or bowing distribution in strings. The section principal runs the room, an early laboratory for the rehearsal-leadership skills that Chamber Music will formalize next year.',
+          'Balance principles get explicit treatment. The pyramid model — lower voices supporting with more sound, upper voices riding the top — governs tutti chords in bands and choirs; the melody-forward model governs accompanied textures, with everyone not carrying the tune playing genuinely under it. The working question in any texture is ‘what is my role right now: melody, countermelody, bass, or harmonic filler?’ — and dynamics on the page are relative to that role, not absolute. A written forte in an accompaniment figure is quieter than a written forte in the tune.',
+          'The unit closes with the recording exercise: a full run of one work is recorded from the hall, and the ensemble listens together from the audience’s seat. The gap between what it felt like and what it sounds like is the most instructive experience in ensemble training — balances that seemed fine on stage vanish in the hall, entrances that felt together splatter, and the conductor’s repeated requests suddenly make sense. Each player submits three written observations about the ensemble sound (not their own part), building the outward-directed listening that defines mature ensemble musicianship.',
+        ],
+        assignments: [
+          'Complete assigned sectional drills: section unisons, blend matching and breathing or bowing plans',
+          'Write role labels (melody, counter, bass, filler) over every passage of one work in your part',
+          'Submit three observations on the ensemble recording concerning balance, ensemble or intonation',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Unit 5: Production Week — Dress Rehearsals and the Concert',
+        objectives: [
+          'Execute dress-rehearsal discipline: hall adjustment, spacing, stage deportment',
+          'Perform the full concert cycle with professional stage conduct',
+          'Manage performance energy and recovery across a full program',
+        ],
+        content: [
+          'Production week compresses everything into performance conditions. The dress rehearsal in the hall is primarily an acoustic recalibration: reverberation changes articulation needs (drier halls want longer notes, wetter halls cleaner attacks), distances change ensemble (the back of the stage hears the front late, so eyes and the conductor’s beat must overrule ears for togetherness), and dynamics must be re-scaled to the room. Professionals treat the dress as a working session — testing balances in the actual acoustic — not as a run-through for confidence.',
+          'Concert conduct is choreographed and rehearsed: entrance order, tuning protocol (oboe’s A or choir’s pitch pipe, silence during), posture between movements, response to the conductor’s cues for standing and bows, and the discipline of stillness — no page-flipping or adjusting during applause or between movements. These conventions exist to frame the music and are part of what audiences experience as professionalism. Performance psychology from Principal Study applies at ensemble scale: the pre-concert routine, the channeling of adrenaline into attention, and the no-reaction rule when something goes wrong — the audience notices your face before your slip.',
+          'A full program is also an endurance event: two or three works across an hour demand energy budgeting — physical (embouchure, bow arm, vocal stamina), and attentional, since the concentration lapses that cause wrong entrances cluster in the final third of concerts. The professional habit is segment-by-segment mental reset: between works, and at long rests, consciously re-engage with the next entrance rather than reviewing the last one. The concert is recorded for Unit 6’s review, and the performance itself — its risks taken and moments landed — is the semester’s primary text.',
+        ],
+        assignments: [
+          'Attend all calls of production week; late arrival to a dress rehearsal is a professional failure',
+          'Write and use a personal concert-day routine covering warm-up, food, dress and arrival',
+          'Perform the concert with full stage discipline',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Unit 6: Concert Review and Cycle Debrief',
+        objectives: [
+          'Evaluate the concert recording analytically at ensemble and personal levels',
+          'Articulate lessons from the full cycle: preparation, rehearsal, production, performance',
+          'Set specific ensemble-skill goals for Large Ensemble 3',
+        ],
+        content: [
+          'The cycle closes the way professional ensembles close it: with the recording and honest talk. The guided listening session moves through the concert with scores, and the discussion is structured — what the ensemble planned, what happened, and what explains any gap. Analysis is aimed at systems rather than individuals: if entrances splattered after long rests, the fix is cue-marking discipline; if the balance buried the winds, the fix is role-labeling and hall-testing earlier in the cycle. This is the blameless post-mortem culture that high-functioning ensembles and organizations share.',
+          'Your written review has two layers. The ensemble layer evaluates the concert against the style goals set in Unit 1 — did the Classical work sound Classical, did the contemporary work hold its rhythmic architecture — citing specific timepoints in the recording. The personal layer audits your own cycle honestly: preparation quality by the Unit 1 standard, rehearsal contribution, sectional participation, and performance execution including recovery from any slips. Cite bar numbers; vague self-review is worthless, and the specificity habit transfers directly to your practice-room work.',
+          'Finally, the debrief sets the agenda forward. Large Ensemble 3 will assume the skills this semester built — style switching, intonation-system awareness, section leadership behaviors — and will add repertoire difficulty and possibly rotation into principal chairs. Your goal statement names two ensemble skills to develop next cycle with concrete evidence criteria, and is shared with your section leader. Across eight semesters, these accumulating goal cycles are how a student ensemble member becomes the colleague every conductor wants in the room.',
+        ],
+        assignments: [
+          'Submit your two-layer written review of the concert recording with timepoint citations',
+          'Contribute at least twice to the guided debrief session with specific, non-blaming observations',
+          'File your Large Ensemble 3 goal statement with your section leader',
+        ],
+      },
+    ],
+  },
+]

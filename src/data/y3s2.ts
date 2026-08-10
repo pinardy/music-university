@@ -1,0 +1,524 @@
+import type { Course } from '../types'
+
+export const y3s2Courses: Course[] = [
+  {
+    id: 'aps302',
+    code: 'APS302',
+    title: 'Principal Study 6 & Junior Recital',
+    credits: 5,
+    stream: 'performance',
+    description:
+      'The culmination of the third year of applied study: a 40–50 minute public junior recital with original program notes. Weekly lessons focus repertoire toward performance readiness, while milestone checkpoints cover program design, run-throughs, dress rehearsal and post-recital reflection.',
+    prerequisites: ['aps301'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Unit 1: Program Design and Recital Contract',
+        objectives: [
+          'Finalize a 40–50 minute recital program with your teacher and submit it for studio approval',
+          'Justify the program’s dramaturgy: key relationships, historical span, pacing and stamina demands',
+          'Build a backward-planned rehearsal calendar from recital date to today',
+          'Draft a one-paragraph artistic rationale to seed your program notes',
+        ],
+        content: [
+          'A recital is an argument, not a playlist. Strong junior programs balance a substantial anchor work (a sonata, a song cycle, a concerto movement with piano reduction) against contrasting shorter pieces, and they consider the listener’s attention curve: most successful 45-minute programs place the most demanding listening in the first two-thirds and end with either brilliance or intimacy, deliberately. In this unit you and your teacher sign off on a recital contract that fixes repertoire, collaborators (pianist, chamber partners), venue request and date, so that every subsequent lesson serves a known deadline.',
+          'Backward planning is the core professional skill here. Working from the recital date, mark the dress rehearsal (about ten days out), two complete run-throughs (four and two weeks out), the memorization deadline for any memorized works (six weeks out), and the date by which every movement must be learnable at performance tempo (eight weeks out). Between those posts, assign each week a primary technical target and a primary musical target; vague intentions like ‘work on the Brahms’ do not survive contact with a busy semester.',
+          'Programming ethics and breadth matter at this level. Juries and audition panels increasingly expect at least one work by a living composer or a composer from an underrepresented tradition, and your degree recital is the ideal place to make that a genuine artistic choice rather than a token. Study how professionals frame such programs: Jennifer Koh’s ‘Alone Together’ commissions, or recital programs pairing Clara Schumann with Robert, show how curation itself communicates.',
+        ],
+        listening: [
+          'A complete filmed junior or artist-diploma recital from your instrument’s repertoire (e.g. a Curtis or Juilliard student recital broadcast)',
+          'Jennifer Koh, ‘Alone Together’ project (selected micro-commissions)',
+          'A canonical recording of your program’s anchor work, plus one contrasting historical recording of the same work',
+        ],
+        assignments: [
+          'Submit the signed recital contract: final program with timings, collaborators, and requested date',
+          'Produce the backward-planned calendar with weekly technical and musical targets',
+          'Write a one-paragraph artistic rationale explaining why these works belong together',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Unit 2: Technical Peak and Interpretive Deepening',
+        objectives: [
+          'Bring every movement of the program to performance tempo with consistent accuracy',
+          'Design a maintenance technical regime that serves the program’s specific demands',
+          'Make and defend interpretive decisions from the score, the historical context and your own conviction',
+          'Record and critically annotate one complete work from the program',
+        ],
+        content: [
+          'This unit converts learned notes into owned music. For each work, isolate the five most technically fragile passages and build a rotation: each appears in daily practice at three tempi (slow with exaggerated motion, performance tempo, and 5–10 percent above tempo as an insurance margin). The over-tempo principle, standard in conservatory training, ensures that adrenaline on stage pushes you toward your practiced ceiling rather than past it. Meanwhile your general regime — scales, long tones or vocalises, articulation studies — should now be trimmed to what the program actually demands, freeing time for repertoire.',
+          'Interpretation at junior-recital level must be defensible. For each work, answer in writing: what is the formal shape and where is the expressive high point; what performance conventions belong to its period (ornamentation in Baroque works, portamento norms in Romantic ones, notated precision in contemporary scores); and where do you deliberately depart from tradition and why. Comparing two contrasting recordings — say, a mid-century reading against a historically informed or recent one — sharpens your sense that interpretation is a set of choices, not a default.',
+          'Self-recording is the most honest teacher. Record one complete work this unit, then listen twice: once as an examiner with the score, marking every deviation of rhythm, pitch and dynamics, and once as an audience member without the score, noting where attention drifts. The gap between the two listenings is your interpretive to-do list. Bring the annotated recording to your lesson and defend or revise your choices with your teacher.',
+        ],
+        listening: [
+          'Two strongly contrasting professional recordings of your recital’s anchor work',
+          'Glenn Gould’s 1955 and 1981 recordings of Bach’s Goldberg Variations, as a case study in re-interpretation',
+          'A historically informed performance relevant to any pre-1800 work on your program',
+        ],
+        assignments: [
+          'Submit the fragile-passage rotation chart and demonstrate three passages at over-tempo in your lesson',
+          'Write a one-page interpretive defense for the anchor work',
+          'Record one complete work, annotate it, and bring both recording and notes to your lesson',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Unit 3: Program Notes and Stage Craft',
+        objectives: [
+          'Write engaging, accurate program notes of 150–250 words per work for a general audience',
+          'Plan the recital’s spoken and unspoken stagecraft: entrances, bows, pacing between works, dress',
+          'Rehearse verbal introductions for at least one work',
+          'Prepare publicity materials: biography, headshot description, and program layout',
+        ],
+        content: [
+          'Program notes for a recital serve the listener in the seat, not the musicologist. Each note should answer three questions in plain prose: what is this piece and where does it come from; what should I listen for; and why is it on this program. Avoid harmonic play-by-play — ‘the second theme modulates to the mediant’ helps almost nobody — in favor of vivid, verifiable context: that Messiaen wrote the Quatuor pour la fin du temps in Stalag VIII-A in 1941, or that Florence Price’s songs circulated through Marian Anderson’s recitals, gives an audience a way in. Cite dates and facts you have checked; program notes are published writing and errors are public.',
+          'Stagecraft is rehearsable and should be rehearsed. Practice the full physical score of the evening: walking on, acknowledging the audience, settling before the first sound, holding silence after quiet endings (count a slow three before releasing the room), bowing with collaborators, and managing page turns, tuning or water without breaking the recital’s atmosphere. Decide the pacing between works — where the audience may applaud, where you will hold attacca-like continuity — and communicate it through posture and program layout.',
+          'Speaking from the stage, even briefly, measurably increases audience engagement, and many departments now require one spoken introduction in degree recitals. Script 60–90 seconds for one work: a single story or listening cue, not a lecture, ending with a clear handoff into the music. Rehearse it aloud, standing, at least five times; spoken word suffers far more than playing from under-rehearsal because students assume talking needs no practice.',
+        ],
+        listening: [
+          'Messiaen, Quatuor pour la fin du temps (any complete recording), alongside its famous premiere story',
+          'A recital or concert film in which the performer speaks to the audience (e.g. Víkingur Ólafsson or Bobby McFerrin in concert)',
+          'Recordings of the shortest work on your own program, to study how professionals shape miniatures',
+        ],
+        assignments: [
+          'Submit complete draft program notes for every work, formatted for the printed program',
+          'Script and video yourself delivering the spoken introduction; revise once',
+          'Submit your 150-word performer biography and the full program layout for proofreading',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Unit 4: Run-Throughs and Performance Psychology',
+        objectives: [
+          'Perform two complete run-throughs of the recital program for live listeners',
+          'Apply a chosen pre-performance routine and evaluate its effect',
+          'Practice recovery strategies for memory slips and technical mishaps',
+          'Analyze run-through recordings to set final priorities',
+        ],
+        content: [
+          'A run-through is a stress test, and the stress is the point. Schedule two complete performances of the program in this unit — one in studio class, one for an invited audience of friends in the recital venue if possible — playing straight through with concert dress, entrances and bows. The rule is non-negotiable: no stopping, no restarting. Every mishap you recover from in a run-through builds the specific skill the recital requires, which is not perfection but continuity.',
+          'Performance psychology research (Don Greene’s centering work, and the broader sport-psychology literature it draws on) converges on a few reliable tools: a fixed pre-performance routine that begins at a set time before walking on; slow diaphragmatic breathing to down-regulate arousal; process-focused cue words for each work (‘long line’, ‘easy hands’) instead of outcome thoughts (‘don’t miss the shift’); and rehearsed acceptance that arousal itself is fuel, not failure. Choose a routine now and use it identically for both run-throughs, so the routine itself becomes a conditioned trigger for focus.',
+          'Recovery must be practiced deliberately, because on stage you will only do what you have rehearsed. In practice this week, have a partner call ‘jump’ at random moments; you must leap to the next structural landmark without stopping. Map those landmarks — section starts, rehearsal letters, verse beginnings — for every work, and know each one cold as an independent starting point. Musicians who can start anywhere fear nothing; memory slips are catastrophic only for players whose memory is one unbroken chain.',
+        ],
+        listening: [
+          'A live-recital recording famous for risk-taking (e.g. Martha Argerich live at the 1965 Chopin Competition, or a live Jacqueline du Pré Elgar)',
+          'Your own run-through recordings, studied with the same seriousness',
+        ],
+        assignments: [
+          'Complete both run-throughs and collect written feedback from at least three listeners',
+          'Submit your landmark map for every work and demonstrate three cold starts in your lesson',
+          'Write a half-page evaluation of your pre-performance routine and any adjustments',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Unit 5: Dress Rehearsal and Production Week',
+        objectives: [
+          'Execute a full dress rehearsal in the recital venue with all collaborators',
+          'Finalize production logistics: recording, stage plot, lighting, front-of-house, printed programs',
+          'Calibrate balance and projection to the hall’s acoustics',
+          'Set a tapering practice plan for recital week',
+        ],
+        content: [
+          'The dress rehearsal is a production meeting with music in it. Arrive with a checklist: stage plot (stands, chairs, piano lid position), lighting state, recording engineer confirmed and microphones placed, page-turner briefed, programs proofed and printed, and reception or livestream details settled. Run the entire program in order with full stagecraft, and assign a trusted listener to sit in three different parts of the hall noting balance, projection and any visual distractions.',
+          'Halls change interpretations. A resonant church demands broader tempi and cleaner releases; a dry black-box rewards more pedal, more vibrato warmth or more legato than your practice room suggested. Spend focused time on the program’s acoustic extremes — the softest passage and the loudest, the fastest articulation — and adjust until a listener at the back row confirms clarity. Collaborative balance deserves equal care: the pianist’s lid position and your placement relative to the piano’s curve are the two cheapest, most powerful balance tools available.',
+          'Recital week itself should taper, not cram. Sports science and conservatory lore agree: peak performance follows reduced volume with maintained intensity. In the final five days, cut total practice time by roughly a third, keep daily contact with every work but mostly at mental-practice or excerpt level, protect sleep fiercely, and stop practicing entirely several hours before the recital. Trust is a skill; the work is done, and recital week’s job is arriving fresh.',
+        ],
+        listening: [
+          'A live concert recording made in a very resonant space and one in a dry studio, comparing the performers’ adjustments',
+          'The final professional recordings of your program works, one last time, for large-scale shape only',
+        ],
+        assignments: [
+          'Complete the dress rehearsal and submit the signed production checklist',
+          'Write the tapering plan for recital week, hour by hour for the final two days',
+          'Confirm archival recording arrangements; the recording is required for your portfolio and jury',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Unit 6: The Junior Recital, Debrief and Jury Review',
+        objectives: [
+          'Perform the 40–50 minute public junior recital with program notes',
+          'Conduct a structured self-debrief using the archival recording within one week',
+          'Receive and integrate the faculty jury’s written assessment',
+          'Set repertoire and technical goals for the senior year',
+        ],
+        content: [
+          'The recital is both an examination and a gift to your audience, and the second framing produces better playing. On the day, follow the rehearsed routine exactly: the same warm-up, the same timeline, the same cue words. On stage, your only job is the phrase you are playing; evaluation is postponed, by policy, until the debrief. Whatever happens, complete the program with full commitment — panels and audiences forgive flaws readily and remember conviction.',
+          'The structured debrief happens twice, deliberately separated. Within 48 hours, write a purely subjective account: how it felt, where you were free, where you gripped. About a week later, watch or listen to the archival recording with the score and write an objective account: intonation and rhythm accuracy, tempo choices against your plan, balance, stage presence and pacing of the whole evening. Comparing the two documents is the most instructive exercise in applied study — the passages that felt disastrous are often inaudible, and the ones that felt safe are often the flattest.',
+          'The faculty jury reviews the recital recording and your program notes and issues a written assessment that, together with your debrief, becomes the blueprint for senior year. With your teacher, translate it into concrete goals: the senior recital’s likely anchor repertoire, audition and competition targets, technical debts to retire, and one artistic risk you did not take this year that you will take next. The junior recital closes the third year; its honest assessment opens the fourth.',
+        ],
+        listening: [
+          'Your own archival recital recording, twice, per the debrief protocol',
+          'One recital by an artist you admire, watched whole, asking only: how do they pace an evening?',
+        ],
+        assignments: [
+          'Perform the public junior recital and archive the recording and printed program',
+          'Submit both debrief documents (subjective and objective) to your teacher',
+          'Draft the senior-year goal sheet and proposed senior recital anchor repertoire',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'mut302',
+    code: 'MUT302',
+    title: '20th- & 21st-Century Techniques',
+    credits: 3,
+    stream: 'theory',
+    description:
+      'A survey of compositional techniques from integral serialism to the present, combining analysis with hands-on creative exercises. Students study serialism, indeterminacy, texture music, electronics, minimalism, spectralism, polystylism and recent global currents, culminating in analysis presentations and a curated contemporary program.',
+    prerequisites: ['mut301'],
+    lessons: [
+      {
+        id: 'week-01',
+        week: 1,
+        title: 'Serialism after Webern: Integral Serialism',
+        objectives: [
+          'Explain how post-war composers extended Schoenberg’s twelve-tone method to duration, dynamics and articulation',
+          'Analyze the rhythmic and dynamic series in Messiaen’s Mode de valeurs et d’intensités',
+          'Trace row operations and pointillist texture in Boulez’s Structures Ia',
+          'Evaluate the aesthetic claims and criticisms of total organization',
+        ],
+        content: [
+          'After 1945, a generation of European composers took Webern — rather than Schoenberg or Berg — as the true prophet of serialism, prizing his concision, symmetrical rows and pointillist textures. Integral (or total) serialism extends the ordering principle beyond pitch to the other parameters of sound: duration, dynamics, articulation, and sometimes register and timbre. The catalyst was Olivier Messiaen’s piano étude Mode de valeurs et d’intensités (1949), which assigns each of 36 pitches a fixed duration, dynamic and attack — not strictly serial, but a mode of fixed parameter-bundles that electrified his students at Darmstadt.',
+          'Pierre Boulez’s Structures Ia for two pianos (1952) is the movement’s laboratory specimen: it borrows Messiaen’s pitch mode as a row, derives duration series by multiplying a base unit (a demisemiquaver) by the numbers 1–12, and maps twelve dynamics from pppp to ffff and ten attack types onto serial orderings. Analysis proceeds by building the matrix of the row and its transformations, then tracking how Boulez deploys row-forms in each piano. The paradox students should hear immediately: maximal control of every parameter produces a surface that sounds statistically uniform, almost random — a critique Ligeti made in his famous 1958 analysis of the piece.',
+          'Milton Babbitt pursued a parallel, independent path in America, developing time-point rhythm and combinatoriality in works like Three Compositions for Piano (1947), which predates the European experiments. His 1958 essay published as ‘Who Cares if You Listen?’ (his own title was ‘The Composer as Specialist’) frames the era’s central dispute: is advanced music a research discipline entitled to specialist audiences, or does total organization abdicate communication? Stockhausen’s Kreuzspiel (1951) and Nono’s Il canto sospeso (1956) show the technique yielding genuinely expressive results, complicating any easy dismissal.',
+        ],
+        listening: [
+          'Messiaen, Mode de valeurs et d’intensités (Quatre études de rythme, No. 2)',
+          'Boulez, Structures Ia for two pianos',
+          'Babbitt, Three Compositions for Piano, No. 1',
+          'Nono, Il canto sospeso, movements 2 and 4',
+        ],
+        assignments: [
+          'Build the full row matrix for Structures Ia and label the row-forms in the first page of the score',
+          'Compose an eight-bar study for your instrument using a pitch series plus a fixed duration series',
+          'Write a half-page response: does Ligeti’s critique of Structures Ia hold for Il canto sospeso?',
+        ],
+      },
+      {
+        id: 'week-02',
+        week: 2,
+        title: 'Cage, Indeterminacy and the New York School',
+        objectives: [
+          'Distinguish chance operations in composition from indeterminacy in performance',
+          'Describe the compositional methods of 4′33″, Music of Changes and the Concert for Piano and Orchestra',
+          'Situate Cage among Feldman, Brown, Wolff and Tudor in the New York School',
+          'Assess Cage’s aesthetics of non-intention against the serialists’ total control',
+        ],
+        content: [
+          'John Cage attacked the same post-war problem as Boulez — how to escape inherited taste — from the opposite direction: instead of controlling everything, he removed the composer’s intention. Two terms must be kept distinct. Chance operations mean the composer uses random procedures (coin tosses keyed to the I Ching, imperfections in paper) to fix a score that is then played exactly as written: Music of Changes (1951) is fully determinate music composed by chance. Indeterminacy means the score itself leaves decisions to the performer or the moment: the Concert for Piano and Orchestra (1958), with its 84 graphic notation types, sounds different at every performance by design.',
+          '4′33″ (1952), premiered by David Tudor at Maverick Hall, Woodstock, is neither a joke nor ‘silence’: its three timed movements frame ambient sound as the piece, enacting Cage’s claim — sharpened by his visit to Harvard’s anechoic chamber, where he still heard his nervous system and blood — that silence does not exist, only sounds we have not yet accepted. The work descends from Cage’s studies with D.T. Suzuki and Zen Buddhism, and from Rauschenberg’s all-white paintings, which Cage said gave him permission. Its notation (tacet movements, any instrumentation) makes it simultaneously the most famous chance-era work and a piece of radical conceptual clarity.',
+          'The New York School around Cage — Morton Feldman, Earle Brown, Christian Wolff, with pianist David Tudor as its virtuoso — shared means but not aims. Feldman’s graph pieces like Projection 1 (1950) specify register and timing but not exact pitch, in pursuit of soft, unrepeatable surfaces he compared to Rothko’s color fields; Brown’s December 1952 is a field of abstract rectangles that can be read in any orientation, inspired by Calder’s mobiles; Wolff built cueing systems that make performers listen to each other to proceed. Against Darmstadt’s determinism, this circle proposed that the performer’s freedom and the sound’s own life were the material — a position whose influence now extends far beyond notated concert music.',
+        ],
+        listening: [
+          'Cage, Music of Changes, Book I (David Tudor or Joseph Kubera)',
+          'Cage, 4′33″ (a filmed performance, e.g. the Berlin Philharmonic or David Tudor reconstruction)',
+          'Feldman, Projection 1 for solo cello',
+          'Earle Brown, December 1952 (any realization)',
+        ],
+        assignments: [
+          'Perform or realize December 1952 for two minutes on your instrument and write a paragraph on the decisions you made',
+          'Write a one-page comparison of composer control in Music of Changes versus the Concert for Piano and Orchestra',
+          'Keep a ten-minute Cageian listening log: sit silently in a public space and notate every sound event',
+        ],
+      },
+      {
+        id: 'week-03',
+        week: 3,
+        title: 'Texture Music: Ligeti, Penderecki, Xenakis',
+        objectives: [
+          'Define micropolyphony, sound-mass and cluster technique with score examples',
+          'Analyze the textural processes of Ligeti’s Atmosphères and the notation of Penderecki’s Threnody',
+          'Explain how Xenakis used mathematical models (glissando fields, stochastic distributions) in Metastaseis and Pithoprakta',
+          'Compare texture-driven form to pitch-driven form as an analytical problem',
+        ],
+        content: [
+          'In the late 1950s several composers abandoned both serial ordering and chance in favor of composing texture itself: dense masses of sound whose inner detail is deliberately unresolvable by the ear. György Ligeti called his version micropolyphony — in Atmosphères (1961) up to 56 string parts play a strict canon so compressed in time and pitch that individual lines fuse into a shimmering cluster-cloud, and form becomes the slow transformation of register, density and color rather than harmony or theme. His Requiem’s Kyrie and Lux aeterna refine the technique with voices; Stanley Kubrick’s use of these works in 2001: A Space Odyssey (1968) made them the era’s most widely heard avant-garde scores.',
+          'Krzysztof Penderecki’s Threnody to the Victims of Hiroshima (1960) for 52 strings builds its sound-masses from quarter-tone clusters, massed glissandi, and catalogued noise effects — playing behind the bridge, on the tailpiece, battuto — demanding a new graphic notation of thick black bands, wedges and time-space rhythm measured in seconds. Notably, the piece was composed abstractly as 8′37″ and retitled after its premiere, a useful caution about reading program into texture. The ‘Polish school’ around him (Górecki’s early Scontri, Serocki) made sonorism a national style before Penderecki himself turned neo-Romantic in the 1970s.',
+          'Iannis Xenakis, trained as an engineer and architect with Le Corbusier, rejected both serialism’s counterpoint and chance’s abdication, composing instead with mathematical models of mass phenomena — crowds, hail, cicadas. Metastaseis (1954) builds its famous opening from 46 individually notated string glissandi whose graphed straight lines generate curved ruled surfaces, the same geometry he later used for the Philips Pavilion (1958). Pithoprakta (1956) distributes pizzicati and col legno strikes according to statistical (stochastic) laws such as the Maxwell–Boltzmann distribution of gas molecules, so that the ear hears a coherent cloud whose individual particles are unpredictable — texture as probability made audible.',
+        ],
+        listening: [
+          'Ligeti, Atmosphères',
+          'Ligeti, Lux aeterna for 16 voices',
+          'Penderecki, Threnody to the Victims of Hiroshima',
+          'Xenakis, Pithoprakta',
+        ],
+        assignments: [
+          'Make a timeline graph of Atmosphères charting register span, density and dynamics against clock time',
+          'Transcribe one system of the Threnody’s graphic notation into a prose performance instruction',
+          'Compose 30 seconds of texture music for four or more players of your instrument using at least two extended techniques',
+        ],
+      },
+      {
+        id: 'week-04',
+        week: 4,
+        title: 'Electronic and Tape Music; Musique Concrète',
+        objectives: [
+          'Contrast Paris musique concrète with Cologne Elektronische Musik in materials and ideology',
+          'Describe the tape techniques of the 1950s studio: splicing, speed change, loops, filtering',
+          'Analyze Stockhausen’s Gesang der Jünglinge as a synthesis of both traditions',
+          'Connect the classical studio to later live electronics and the modern DAW',
+        ],
+        content: [
+          'Two studios founded within a few years of each other defined electronic music’s first decade with opposed ideologies. In Paris, Pierre Schaeffer’s musique concrète (from 1948, with the Études de bruits) began with recorded real-world sound — trains, saucepans, voices — manipulated on disc and then tape by splicing, reversal, speed change and looping; Schaeffer theorized the objet sonore heard acousmatically, without reference to its source. In Cologne, the WDR studio under Herbert Eimert and then Karlheinz Stockhausen pursued Elektronische Musik: sound built from nothing but sine-tone oscillators, so that serial control could reach into timbre itself, as in Stockhausen’s Studie I and II (1953–54) — Studie II being the first electronic work with a published score.',
+          'The dichotomy collapsed almost immediately in the masterpieces. Stockhausen’s Gesang der Jünglinge (1955–56) fuses a recorded boy soprano singing from the Benedicite with sine-tone complexes, arranging both on a continuum from pure tone to noise and projecting the result over five loudspeaker groups — an early landmark of spatial music. Varèse’s Poème électronique (1958), made for the Philips Pavilion that Xenakis designed, distributed concrète sounds over some 350 loudspeakers; Otto Luening and Vladimir Ussachevsky at Columbia, and later the RCA Mark II synthesizer at the Columbia-Princeton Center, established the American studio tradition that produced Babbitt’s Philomel (1964) for soprano and synthesized tape.',
+          'For today’s musician the classical studio is not a museum: every DAW operation — cutting, time-stretching, filtering, layering, looping — is a tape technique with a new interface, and acousmatic listening is the daily condition of earbud culture. The lineage runs directly from Schaeffer’s locked grooves to hip-hop sampling and from WDR’s oscillators to synthesis in Ableton or Max. Understanding tape music’s constraints (a 20-minute work could take a year of razor-blade splicing) also explains its aesthetics: economy of material, obsessive attention to the single sound, and form as montage.',
+        ],
+        listening: [
+          'Schaeffer, Étude aux chemins de fer (Cinq études de bruits)',
+          'Stockhausen, Gesang der Jünglinge',
+          'Varèse, Poème électronique',
+          'Babbitt, Philomel (opening section)',
+        ],
+        assignments: [
+          'Create a 60–90 second musique-concrète study in a DAW from three recorded household sounds, using only cutting, speed change, reversal and looping',
+          'Write a listening comparison (one page) of Gesang der Jünglinge and Poème électronique addressing material, space and form',
+        ],
+      },
+      {
+        id: 'week-05',
+        week: 5,
+        title: 'Minimalism and Process Music: Reich, Glass, Adams',
+        objectives: [
+          'Define process music and describe phasing, additive process and gradual harmonic motion',
+          'Analyze the canonic mechanics of Reich’s Piano Phase and the additive structures of Glass’s Music in Twelve Parts',
+          'Trace minimalism from La Monte Young and Riley’s In C to Adams’s post-minimalist orchestral style',
+          'Perform a phasing or additive process exercise in class',
+        ],
+        content: [
+          'Minimalism arose in 1960s downtown New York and San Francisco as a radical reset: steady pulse, diatonic or modal materials, and audible process, against both serialism’s opacity and chance’s formlessness. La Monte Young’s long sustained tones and Terry Riley’s In C (1964) — 53 modules repeated ad libitum by any ensemble over a pulsing high C — established repetition and performer-paced form. Steve Reich, after his tape pieces It’s Gonna Rain (1965) and Come Out (1966) discovered phasing by accident with misaligned tape loops, transferred the technique to live performers: in Piano Phase (1967) two pianists play the same twelve-note pattern while one accelerates slightly, moving through all twelve canonic alignments. His manifesto ‘Music as a Gradual Process’ (1968) states the aesthetic: the process should be audible, and once set in motion it runs itself.',
+          'Philip Glass built a different engine: additive and subtractive rhythmic process, expanding a figure from, say, 1+2+3 units and contracting it again, heard at scale in Music in Twelve Parts (1971–74) and the five-hour opera Einstein on the Beach (1976, with Robert Wilson), whose knee plays count and solfège their own structure aloud. Reich’s Music for 18 Musicians (1976) marks minimalism’s harmonic turn: an arch of eleven chords, breath-length pulses, and interlocking patterns whose surface glitters while the harmony glides — a work equally influential on ambient, techno and film scoring. Both composers drew on non-Western studies: Reich’s Ghanaian drumming and Balinese gamelan training, Glass’s work with Ravi Shankar.',
+          'John Adams represents post-minimalism: minimalist pulse and repetition rejoined to Romantic harmony, orchestral color and dramatic rhetoric. Shaker Loops (1978), Harmonielehre (1985) — whose opening E-minor hammer-blows he dreamed as a tanker rising from San Francisco Bay — and the opera Nixon in China (1987) show process serving expression rather than replacing it. The style’s legacy is everywhere: Julia Wolfe and Bang on a Can’s post-industrial minimalism, Arvo Pärt’s parallel ‘holy minimalism’ (Tabula Rasa, 1977), and the pulse-based lingua franca of contemporary film and media music.',
+        ],
+        listening: [
+          'Riley, In C',
+          'Reich, Piano Phase (or Come Out)',
+          'Reich, Music for 18 Musicians (Pulses and Section I)',
+          'Adams, Harmonielehre, movement I',
+        ],
+        assignments: [
+          'With a partner, perform the first four phase positions of a simplified Piano Phase pattern (clapping or on instruments)',
+          'Compose a one-minute additive-process study: a 3-note cell growing to 8 notes and back, with steady pulse',
+          'Write a paragraph testing Reich’s ‘audible process’ claim against Music for 18 Musicians',
+        ],
+      },
+      {
+        id: 'week-06',
+        week: 6,
+        title: 'Spectralism: Grisey and Murail',
+        objectives: [
+          'Explain the harmonic series and spectrogram analysis as compositional sources',
+          'Analyze the trombone-spectrum harmony that opens Grisey’s Partiels',
+          'Define instrumental synthesis, inharmonicity and process-form in spectral music',
+          'Identify spectral thinking in later composers such as Saariaho and Haas',
+        ],
+        content: [
+          'Spectral music, developed in 1970s Paris by Gérard Grisey and Tristan Murail and the Ensemble l’Itinéraire, takes the physical structure of sound itself — the harmonic spectrum — as the source of harmony and form. A spectrogram of a low E2 trombone note reveals its partials: multiples of the fundamental at decreasing amplitudes, with the upper partials falling between the cracks of equal temperament. Grisey’s Partiels (1975), the centerpiece of his cycle Les espaces acoustiques, opens by orchestrating exactly this analysis: eighteen instruments each take a partial of the trombone’s E, reproducing the note’s inner life as a chord — a technique called instrumental synthesis. Harmony and timbre become one continuum, and quarter-tones are not exotic color but acoustic necessity.',
+          'Form in spectral music is typically a slow, directed process between poles Grisey described as harmonicity and inharmonicity, or periodicity and noise: Partiels gradually distorts its pure spectrum toward compressed, bell-like inharmonic sonorities and rhythmic turbulence before subsiding. Grisey spoke of composing with ‘the flesh of sound’ and of musical time experienced at the scale of whales, humans and insects (an idea explicit in Vortex Temporum, 1996). Murail’s Gondwana (1980) for orchestra derives its harmonies from spectra of bell sounds and FM synthesis calculations, importing electronic-music mathematics into the orchestra; his piano piece Territoires de l’oubli rethinks even a fixed-pitch instrument spectrally through resonance.',
+          'Spectral thinking spread far beyond the founders and outlived the movement’s doctrinaire phase. Kaija Saariaho fused spectral harmony with electronics and luminous orchestration (Lichtbogen, 1986; the opera L’amour de loin, 2000); Georg Friedrich Haas pushed microtonal spectra into immersive darkness in in vain (2000), performed partly in a blacked-out hall; Jonathan Harvey’s Mortuos Plango, Vivos Voco (1980) analyzed Winchester Cathedral’s great bell and his son’s voice at IRCAM. For performers, spectral scores demand new skills — precise quarter-tones, harmonics, breath and bow noise as notated material — which is why this repertoire pairs naturally with next month’s extended-techniques lab.',
+        ],
+        listening: [
+          'Grisey, Partiels',
+          'Murail, Gondwana',
+          'Harvey, Mortuos Plango, Vivos Voco',
+          'Saariaho, Lichtbogen',
+        ],
+        assignments: [
+          'Using a free spectrogram tool, analyze one sustained note on your instrument and list its eight strongest partials with approximate cent deviations',
+          'Spell the first sixteen partials of E2 in staff notation, marking quarter-tone adjustments',
+          'Write a half-page comparison of process-form in Partiels and in Reich’s Music for 18 Musicians',
+        ],
+      },
+      {
+        id: 'week-07',
+        week: 7,
+        title: 'Polystylism, Quotation and the Postmodern: Berio and Schnittke',
+        objectives: [
+          'Define polystylism, quotation, collage and commentary as postmodern techniques',
+          'Analyze the third movement of Berio’s Sinfonia as a commentary on Mahler’s ‘Resurrection’ scherzo',
+          'Describe Schnittke’s polystylism in the Concerto Grosso No. 1 and its expressive stakes',
+          'Debate whether quotation is homage, critique or exhaustion of the tradition',
+        ],
+        content: [
+          'By the late 1960s many composers concluded that the avant-garde’s year-zero stance was itself exhausted, and began composing with music history rather than against it. Luciano Berio’s Sinfonia (1968–69), written for the Swingle Singers and the New York Philharmonic, is the emblem: its third movement lays the entire scherzo of Mahler’s Second Symphony under a flood of quotations — Debussy’s La mer, the Tristan prelude, Ravel’s La valse, Stockhausen, Boulez — while eight amplified voices recite fragments of Beckett’s The Unnamable (‘keep going’) and rehearsal chatter. Berio called Mahler’s scherzo a river carrying the debris of music history; the movement is not collage for its own sake but a meditation on memory, crisis (it quotes the year 1968 around it) and the impossibility of innocent continuation.',
+          'Alfred Schnittke, working inside the Soviet Union, named his method polystylism in a 1971 essay: the deliberate collision of historical idioms as expressive dramaturgy. His Concerto Grosso No. 1 (1977) sets a Corellian Baroque frame against twelve-tone writing, cluster chaos, a nostalgic tango, and a prepared-piano chorale that opens and closes the work like a cracked music box; the styles do not blend but wound each other, which listeners in the USSR heard as an image of a fractured moral world. His Symphony No. 1 (1972) goes further into carnivalesque collapse, quoting everything from Beethoven to jazz; the First Cello Sonata and Faust Cantata show the same technique at chamber and choral scale.',
+          'Quotation had precedents — Ives’s hymn-saturated Fourth Symphony, Stravinsky’s Pulcinella — and successors that students should weigh comparatively: George Rochberg’s String Quartet No. 3 (1972), which scandalized colleagues with its sincere Beethovenian slow movement after his son’s death; Crumb’s Black Angels quoting the Dies irae and Schubert’s ‘Death and the Maiden’ amid Vietnam-era electric strings; and the ironic-nostalgic strands in Pärt’s and Silvestrov’s late-Soviet work. The analytical questions are constant: is the borrowed material framed (audible as ‘other’), absorbed, or degraded, and what attitude — homage, irony, mourning, critique — does the framing project? Postmodernism in music is less a style than this self-consciousness about styles.',
+        ],
+        listening: [
+          'Berio, Sinfonia, movement III (‘In ruhig fliessender Bewegung’)',
+          'Schnittke, Concerto Grosso No. 1',
+          'Rochberg, String Quartet No. 3, movement III',
+          'Crumb, Black Angels (Images 4–6)',
+        ],
+        assignments: [
+          'Make a quotation map of Sinfonia III: list ten borrowings with their approximate locations and how each is framed',
+          'Write one page on the expressive function of stylistic collision in the Concerto Grosso No. 1',
+          'Sketch a 16-bar study that quotes a piece from your own repertoire inside a contrasting idiom',
+        ],
+      },
+      {
+        id: 'week-08',
+        week: 8,
+        title: 'New Complexity and New Notation',
+        objectives: [
+          'Characterize New Complexity through the notation and aesthetics of Ferneyhough’s scores',
+          'Explain nested tuplets, parametric polyphony and the role of ‘impossible’ notation',
+          'Survey the century’s notational innovations: graphic scores, time-space notation, tablature-like action notation',
+          'Form a reasoned position on complexity, performability and the performer’s agency',
+        ],
+        content: [
+          'The New Complexity, a label attached in the 1980s to Brian Ferneyhough, Michael Finnissy, James Dillon, Richard Barrett and others, pushes notation to the edge of the performable: nested irrational tuplets (7:5 inside 3:2), independent serial-like organization of pitch, rhythm, dynamics, bow position and fingering — parametric polyphony within a single line — and breathless density. Ferneyhough’s solo flute piece Unity Capsule (1976) and his Second String Quartet exemplify the style; his stated aim is not accuracy but a productive struggle in which the performer’s straining against the text becomes the expressive content. Critics call it fetishized difficulty; advocates answer that Liszt and late Beethoven drew the same complaint, and that the notation captures gradations of energy no simpler score could.',
+          'This debate is really about what a score is, and the century offers a spectrum of answers worth mapping. At one pole sits prescriptive precision (Ferneyhough, integral serialism); then time-space notation where horizontal distance equals duration (Penderecki, much Feldman); frame notation and controlled aleatory, as in Lutosławski’s Venetian Games and Jeux vénitiens where players repeat boxed modules freely between conductor cues; purely graphic scores (Brown’s December 1952, Cardew’s 193-page Treatise, which specifies nothing at all about realization); and text scores such as Stockhausen’s Aus den sieben Tagen or Yoko Ono’s Grapefruit, where the notation is prose instruction. Each notation type distributes authority differently among composer, performer and moment.',
+          'A second family of innovations notates actions rather than results: Helmut Lachenmann’s musique concrète instrumentale, in works like Pression for cello (1969), specifies where and how to bow, press and touch the instrument — tablature of physical gesture — because the sounds themselves (creaks, whistles, damped scrapes) have no traditional symbols. Aaron Cassidy pushes this further, notating each hand’s trajectory independently. For performers, the practical skill this week is decoding legends: every serious contemporary score front-loads a notation key, and professional new-music players read those keys the way Baroque players read figures. Reading three unfamiliar legends fluently is the week’s lab task.',
+        ],
+        listening: [
+          'Ferneyhough, Unity Capsule (or Cassandra’s Dream Song) for solo flute',
+          'Lachenmann, Pression for solo cello',
+          'Lutosławski, Jeux vénitiens, movement I',
+          'Cardew, Treatise (a filmed realization, pages of your choice)',
+        ],
+        assignments: [
+          'Clap or play a prepared two-bar excerpt containing one nested tuplet and write out your practice method',
+          'Take one page of a Lachenmann or Ferneyhough score legend and rewrite it as a plain-prose performer’s guide',
+          'Position paper (one page): where on the notation spectrum does the performer have the most artistic agency, and why?',
+        ],
+      },
+      {
+        id: 'week-09',
+        week: 9,
+        title: 'Jazz–Classical Confluences and the Vernacular Avant-Garde',
+        objectives: [
+          'Trace two-way traffic between jazz and notated concert music from Gershwin and Ellington to Third Stream',
+          'Analyze how Ellington’s extended works and Mingus’s workshop methods challenge the composition/improvisation divide',
+          'Describe the AACM and the vernacular avant-garde: Braxton, Threadgill, Coleman’s harmolodics',
+          'Identify vernacular-avant-garde legacies in current composer-performers',
+        ],
+        content: [
+          'The border between jazz and notated concert music has been crossed in both directions for a century, and this week treats the crossings as a technical repertoire, not a curiosity. Early confluences include Gershwin’s Rhapsody in Blue (1924), Milhaud’s La création du monde (1923) and Ravel’s jazz-inflected concertos; Duke Ellington’s extended works — Black, Brown and Beige (1943), premiered at Carnegie Hall, and the suites through Such Sweet Thunder — compose for improvisers by writing for specific players’ sounds, a method closer to Renaissance patronage than to orchestration manuals. Gunther Schuller named the deliberate fusion Third Stream in 1957; his own works and collaborations with the Modern Jazz Quartet and Ornette Coleman tested whether the streams could merge without one damming the other.',
+          'Charles Mingus’s Jazz Workshop dictated parts by ear and rehearsed compositions into being — The Black Saint and the Sinner Lady (1963) is a through-composed ballet score realized by an improvising band — demonstrating that composition need not pass through paper. The AACM (Association for the Advancement of Creative Musicians), founded on Chicago’s South Side in 1965, institutionalized what George Lewis calls the vernacular avant-garde: Anthony Braxton’s graphically titled compositional systems and Language Music, Roscoe Mitchell and the Art Ensemble of Chicago’s ‘Great Black Music: Ancient to the Future’, Henry Threadgill’s intervallic language in works like In for a Penny, In for a Pound (Pulitzer Prize, 2016), and Muhal Richard Abrams’s omnivorous scores. Ornette Coleman’s harmolodics and his string-quartet-with-improviser records had already loosened the same boundary from the jazz side.',
+          'The confluence is now simply the condition of much new music. Composer-performers like Tyshawn Sorey (who moves between conducted improvisation, Braxton’s lineage and Feldman-like notated slowness), Vijay Iyer, Ambrose Akinmusire and Esperanza Spalding write for classical institutions while improvising at the highest level; Wynton Marsalis’s symphonies and Mary Lou Williams’s earlier sacred works claim the concert hall from within the jazz tradition. For analysis, the key questions shift from ‘what are the pitches’ to ‘what is fixed, what is negotiated, and how does the score encode trust’ — questions this cohort of musicians answers in scores that mix notation, chord symbols, verbal instruction and delegated form.',
+        ],
+        listening: [
+          'Ellington, Black, Brown and Beige (‘Come Sunday’ with Mahalia Jackson, 1958 version)',
+          'Mingus, The Black Saint and the Sinner Lady, Track A (‘Solo Dancer’)',
+          'Braxton, Composition No. 40 (or any quartet recording from the 1970s–80s)',
+          'Threadgill, In for a Penny, In for a Pound (opening)',
+        ],
+        assignments: [
+          'Write a one-page analysis of one Ellington or Mingus track identifying what is composed, arranged and improvised, with timestamps',
+          'Learn a 12-bar blues or a modal vamp on your instrument and improvise three choruses; record and self-assess',
+          'Short essay: what does George Lewis’s term ‘vernacular avant-garde’ add that ‘Third Stream’ missed?',
+        ],
+      },
+      {
+        id: 'week-10',
+        week: 10,
+        title: 'Music Since 2000: Post-Minimalism, Indie-Classical, Globalized Voices',
+        objectives: [
+          'Map the major currents of concert music since 2000 and their institutions (Bang on a Can, yMusic, Nonclassical, ensemble commissioning consortia)',
+          'Analyze representative works by composers such as Caroline Shaw, Thomas Adès, Unsuk Chin, Anna Thorvaldsdottir and Du Yun',
+          'Discuss globalization, identity and platform change (streaming, social media) as forces on style',
+          'Articulate criteria for evaluating very recent music without the verdict of history',
+        ],
+        content: [
+          'Twenty-first-century concert music has no single mainstream, but several currents are clear. Post-minimalism and the ‘indie-classical’ ecosystem — Bang on a Can’s founders David Lang (the little match girl passion, Pulitzer 2008), Julia Wolfe (Anthracite Fields, Fire in my mouth) and Michael Gordon; ensembles like Eighth Blackbird, yMusic and Roomful of Teeth; venues and labels like Le Poisson Rouge, New Amsterdam and Nonclassical — fused pulse-based writing with rock instrumentation, amplification and self-produced recording. Caroline Shaw’s Partita for 8 Voices (Pulitzer 2013, the youngest-ever winner) is the current’s emblem: spoken word, belting, Tuvan-influenced timbres and Baroque dance titles inside a virtuoso a cappella framework.',
+          'A parallel current is a maximalist, orchestrally brilliant modernism with audience reach: Thomas Adès (Asyla, 1997; the opera The Tempest; Totentanz), Unsuk Chin (Violin Concerto No. 1, her Alice in Wonderland opera, and a lineage from Ligeti, her teacher), Anna Thorvaldsdottir’s geologic textures (Metacosmos, 2017), and Kaija Saariaho’s late operas. Globalized voices have decisively widened the field’s center: Du Yun (Angel’s Bone, Pulitzer 2017) and Huang Ruo from China, Gabriela Ortiz and Gabriela Lena Frank drawing on Latin American traditions, Tania León (Stride, Pulitzer 2021), and Tyshawn Sorey’s genre-indifferent monumentality; orchestras’ post-2020 programming reforms made this breadth institutional rather than exceptional.',
+          'Evaluating music without history’s verdict is itself a skill this course must teach. Useful criteria: craft (does the piece control its materials at every scale), necessity (does its language fit its expressive aim, or is it style worn as costume), performability economy (does it reward the rehearsal time it demands), and afterlife (does it survive a second listening and a different performance). Platform change matters analytically too: streaming playlists reward the 4–8 minute atmospheric orchestral piece, commissioning consortia favor works many orchestras can program, and social media has made composer-performers like Shaw and Jacob Collier their own distribution channels — economic forms that shape musical forms, exactly as the LP and the court chapel once did.',
+        ],
+        listening: [
+          'Caroline Shaw, Partita for 8 Voices (Allemande)',
+          'Adès, Asyla, movement III (‘Ecstasio’)',
+          'Thorvaldsdottir, Metacosmos',
+          'Du Yun, Angel’s Bone (excerpt) or Tania León, Stride',
+        ],
+        assignments: [
+          'Choose one work premiered in the last ten years, and write a two-page critical evaluation using the four criteria from this lesson',
+          'Build a 30-minute playlist of post-2000 works for your instrument with one-sentence justifications',
+        ],
+      },
+      {
+        id: 'week-11',
+        week: 11,
+        title: 'Extended-Techniques Lab on Your Instrument',
+        objectives: [
+          'Catalogue the standard extended techniques for your instrument or voice with their notations',
+          'Produce at least six techniques reliably and demonstrate them in class',
+          'Locate each technique in a canonical score that requires it',
+          'Prepare a personal extended-techniques reference sheet for composers who write for you',
+        ],
+        content: [
+          'Extended techniques are only ‘extended’ relative to a conservatory norm frozen around 1900; professionally they are simply technique, and new-music employers assume them. This lab week systematizes your instrument’s repertoire of them. Strings: harmonics (natural and artificial), sul ponticello and sul tasto, col legno battuto and tratto, snap (Bartók) pizzicato, bowing behind the bridge, scordatura. Winds: flutter-tongue, multiphonics via alternate fingerings, key clicks, air tone, whistle tones, circular breathing, slap tongue. Brass: mutes as a color system, half-valve, pedal tones, split tones, singing while playing. Voice: Sprechstimme, ingressive singing, overtone singing, vocal fry. Piano: inside-the-piano playing, harmonics, preparation in the Cage tradition. Percussionists arguably invented the category and live beyond it.',
+          'Every technique should be learned from a score that needs it, not as a stunt. Berio’s fourteen Sequenzas (1958–2002) are the central pedagogical monument — one virtuoso solo per instrument, each expanding that instrument’s language (Sequenza III turns a singer’s laughter, muttering and gasps into notated music; Sequenza V asks the trombonist to sing and play in homage to the clown Grock). Other anchors: Crumb’s Vox Balaenae (electric flute singing-while-playing, seagull-effect cello), Lachenmann’s Pression, Sciarrino’s whispering flute works, Penderecki’s string catalogues, and Stockhausen’s Stimmung for overtone singing. Reliability, not novelty, is the performance standard: a multiphonic that speaks four times out of five is not yet repertoire-ready.',
+          'The deliverable that outlives the course is your personal techniques sheet: for each technique you can produce, notate the symbol you prefer, the dynamic range in which it works, register limits, speed limits, and set-up time (mute changes, preparation). Composers writing for you will ask precisely these questions, and the sheet makes you a desirable collaborator; ensembles like Ensemble Intercontemporain and ICE maintain exactly such internal documentation. In class, each student demonstrates six techniques and teaches one to a peer on a different instrument, because explaining production mechanics to an outsider is the test of whether you actually understand your own.',
+        ],
+        listening: [
+          'Berio, the Sequenza for your instrument (or the closest relative)',
+          'Crumb, Vox Balaenae',
+          'Sciarrino, L’opera per flauto (excerpts) or Stockhausen, Stimmung (excerpt)',
+        ],
+        assignments: [
+          'Demonstrate six extended techniques in class, each cited to a published score that requires it',
+          'Produce your one-page personal extended-techniques reference sheet with notation, ranges and limits',
+          'Record a 90-second étude of your own devising using at least four of the techniques',
+        ],
+      },
+      {
+        id: 'week-12',
+        week: 12,
+        title: 'Analysis Projects: Student Presentations',
+        objectives: [
+          'Present a 15-minute analysis of a post-1945 work using methods appropriate to its idiom',
+          'Match analytical tools (set theory, process mapping, spectral analysis, notation study) to repertoire',
+          'Field questions and defend analytical claims with score and audio evidence',
+          'Give constructive written peer feedback on two colleagues’ presentations',
+        ],
+        content: [
+          'This week the course’s toolbox is tested against real repertoire chosen by you. The central methodological lesson of post-tonal analysis is that the method must fit the music: pitch-class set theory illuminates free atonality but says little about Partiels; process mapping and pattern-alignment charts fit Reich but not Ferneyhough; spectrogram evidence is primary for electronic and spectral works; for indeterminate scores the analysis may be of the notation’s decision-space and several realizations rather than of one fixed text. Your first analytical act is therefore a justified choice of tools, stated explicitly in your opening minute.',
+          'A strong presentation has a claim, not just a description. ‘The piece uses octatonic collections’ is inventory; ‘the form of this movement is a single directed process from harmonicity to noise, articulated by three registral collapses at 2′10″, 5′40″ and 8′05″’ is a claim that can be tested against the score and recording you play for the class. Structure the fifteen minutes as: the claim (1 minute), the work and context (2), the evidence in two or three focused score-and-audio passes (9), implications for performance (2), and questions you could not resolve (1) — admitting the unresolved is a scholarly strength, not a weakness.',
+          'Peer feedback is part of the graded work because professional analysts, like professional performers, improve through community. For each of two assigned colleagues, write a paragraph naming the presentation’s strongest piece of evidence, one claim that needed more support, and one suggestion of a tool or comparison work. The instructor models the register in the first session: rigorous about evidence, generous about effort, specific in every criticism. Presentations are recorded so each presenter can review their own delivery — the spoken-communication skills rehearsed here transfer directly to pre-concert talks and grant interviews.',
+        ],
+        listening: [
+          'The complete work you are presenting, with score, at least three times',
+          'The works your assigned peers are presenting, once each before their sessions',
+        ],
+        assignments: [
+          'Deliver the 15-minute analysis presentation with a one-page handout for the class',
+          'Submit written peer feedback paragraphs for two colleagues within three days',
+        ],
+      },
+      {
+        id: 'week-13',
+        week: 13,
+        title: 'Curating a Contemporary Program',
+        objectives: [
+          'Design a coherent 60-minute contemporary program for a stated venue and audience',
+          'Write curatorial notes justifying the program’s theme, sequence and accessibility strategy',
+          'Budget the program’s practical demands: rights, rehearsal time, equipment, personnel',
+          'Defend the program in a mock artistic-planning pitch',
+        ],
+        content: [
+          'Curation is the semester’s synthesis: everything analyzed since week one becomes repertoire to be chosen, sequenced and argued for. A contemporary program needs a spine — a theme, a question, a lineage — that is legible to the audience without reading an essay: David Robertson’s pairings of Ligeti with Beethoven, the Proms’ Stockhausen day, or Ensemble intercontemporain’s composer portraits all model spines. Your brief: 60 minutes of music from this course’s repertoire (at least one work from before 1975, one from after 2000, one by a woman or composer of color, and one involving electronics or extended techniques), for a specific named venue — a 200-seat black box, a church series, a campus gallery — whose acoustics, sightlines and audience you must describe.',
+          'Sequence is dramaturgy. Contemporary programs die from unrelieved density; alternate demanding and permeable listening, mind set-up changes (a program requiring three stage resets of ten minutes each has 30 minutes of dead air unless you design around it — curtain-raiser solos during resets, spoken introductions, lighting shifts), and decide the exit experience deliberately: audiences carry the final five minutes home. Practicalities are curatorial decisions too: performing rights and rental fees for post-1929 works, whether the hall has a sound system adequate for tape pieces, rehearsal hours per work multiplied by player rates if you were paying professionals, and page-turn or click-track needs. Real festivals budget exactly this way, and the assignment requires a one-page budget even with invented numbers.',
+          'The course ends with a pitch, because programs only exist when someone with a season says yes. Each student presents their program in eight minutes to a mock artistic-planning panel (instructor plus two peers), covering concept, repertoire with timings, audience and access strategy, budget headline, and one contingency (what you cut if you lose 15 minutes or the electronics fail). The panel probes weak sequencing and unrealistic logistics. This exercise, more than any exam, is the course’s claim about your future: the techniques of the last hundred years are not a museum you visit but an inventory you now hold, and curating is how performers put it to work.',
+        ],
+        listening: [
+          'One professionally curated contemporary concert, attended live or watched complete (e.g. an Ensemble intercontemporain, ICE or Kronos Quartet program)',
+          'The complete works on your own proposed program',
+        ],
+        assignments: [
+          'Submit the complete program packet: annotated program with timings, curatorial note, venue description and one-page budget',
+          'Deliver the eight-minute pitch and respond to panel questions',
+          'Write a half-page reflection connecting your program choices to three specific weeks of the course',
+        ],
+      },
+    ],
+  },
+]

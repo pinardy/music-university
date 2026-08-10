@@ -1,0 +1,458 @@
+:root {
+  --bg: #14101c;
+  --bg-raised: #1e1729;
+  --bg-hover: #271e35;
+  --border: #372c4a;
+  --text: #ece6f2;
+  --text-muted: #a396b8;
+  --accent: #e3b455;
+  --accent-soft: rgba(227, 180, 85, 0.14);
+  --success: #7fc98f;
+
+  --stream-theory: #8ab4f8;
+  --stream-aural: #f28bb2;
+  --stream-history: #c5a3ff;
+  --stream-performance: #e3b455;
+  --stream-ensemble: #7fc98f;
+  --stream-keyboard: #f0a06a;
+  --stream-composition: #6fd3d3;
+  --stream-technology: #9aa7ff;
+  --stream-context: #d3c26f;
+  --stream-professional: #b9b2c9;
+
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-body:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #faf7f2;
+    --bg-raised: #ffffff;
+    --bg-hover: #f3ede3;
+    --border: #e2d9ca;
+    --text: #26202e;
+    --text-muted: #6f6580;
+    --accent: #a8781d;
+    --accent-soft: rgba(168, 120, 29, 0.12);
+    --success: #2e7d43;
+    color-scheme: light;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px calc(48px + env(safe-area-inset-bottom));
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.site-header img {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+}
+
+.site-header .wordmark {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.site-header .wordmark small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Breadcrumbs ---------- */
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.crumbs a:hover {
+  color: var(--accent);
+}
+
+.crumbs .sep {
+  opacity: 0.5;
+}
+
+/* ---------- Home ---------- */
+
+.hero {
+  margin-bottom: 36px;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin: 0 0 14px;
+}
+
+.inspirations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.inspirations li {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.year-card {
+  display: block;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.year-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.year-card .year-num {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.year-card h2 {
+  font-size: 1.25rem;
+  margin: 6px 0 4px;
+}
+
+.year-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+}
+
+/* ---------- Progress bar ---------- */
+
+.progress-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.progress-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  display: block;
+}
+
+/* ---------- Year / semester pages ---------- */
+
+.page-title {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  margin: 0 0 26px;
+  max-width: 62ch;
+}
+
+.semester-block {
+  margin-bottom: 34px;
+}
+
+.semester-block > h2 {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.course-list {
+  display: grid;
+  gap: 12px;
+}
+
+.course-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.course-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.course-card .course-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-card .course-code {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.course-card h3 {
+  font-size: 1.02rem;
+  margin: 2px 0;
+}
+
+.course-card .course-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.stream-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.course-progress {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.course-progress.done {
+  color: var(--success);
+}
+
+/* ---------- Course page ---------- */
+
+.stream-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.course-description {
+  color: var(--text-muted);
+  max-width: 68ch;
+}
+
+.lesson-list {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.lesson-row:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.lesson-row .week-num {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 3.4em;
+  flex-shrink: 0;
+}
+
+.lesson-row .lesson-title {
+  flex: 1;
+}
+
+.lesson-row .check {
+  color: var(--success);
+  font-size: 1rem;
+}
+
+/* ---------- Lesson page ---------- */
+
+.lesson-header {
+  margin-bottom: 24px;
+}
+
+.lesson-header .kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lesson-section {
+  margin-bottom: 28px;
+}
+
+.lesson-section h2 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.lesson-section p {
+  margin: 0 0 12px;
+  max-width: 70ch;
+}
+
+.lesson-section ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.lesson-section li {
+  margin-bottom: 6px;
+  max-width: 65ch;
+}
+
+.complete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 9px 20px;
+  font-size: 0.9rem;
+}
+
+.complete-btn.done {
+  background: var(--success);
+  border-color: var(--success);
+  color: var(--bg);
+}
+
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.lesson-nav a {
+  color: var(--accent);
+  font-size: 0.9rem;
+  max-width: 45%;
+}
+
+.lesson-nav a:hover {
+  text-decoration: underline;
+}
+
+.not-found {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--text-muted);
+}
