@@ -13,7 +13,7 @@ export default function App() {
           <img src="/icon.svg" alt="" />
         </Link>
         <Link to="/" className="wordmark">
-          Conservatory
+          Music University
           <small>Bachelor of Music</small>
         </Link>
         <Link to="/library" className="header-link">

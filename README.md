@@ -1,4 +1,4 @@
-# Conservatory — Bachelor of Music Curriculum PWA
+# Music University — Bachelor of Music Curriculum PWA
 
 A React + TypeScript progressive web app presenting a complete four-year (eight-semester)
 Bachelor of Music curriculum as weekly lessons, with per-lesson objectives, teaching content,

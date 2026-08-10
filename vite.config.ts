@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       manifest: {
-        name: 'Conservatory — Bachelor of Music Curriculum',
-        short_name: 'Conservatory',
+        name: 'Music University — Bachelor of Music Curriculum',
+        short_name: 'Music University',
         description:
           'A four-year Bachelor of Music curriculum with weekly lessons, adapted from leading conservatories.',
         theme_color: '#1a1423',
