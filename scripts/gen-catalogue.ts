@@ -15,6 +15,7 @@
  */
 import { writeFileSync, readFileSync, existsSync } from 'node:fs'
 import type { Course, CourseSummary, Year } from '../src/types'
+import { resources } from '../src/data/resources'
 import { year1, year1Courses } from '../src/data/year1'
 import { year2, year2Courses } from '../src/data/year2'
 import { year3, year3Courses } from '../src/data/year3'
@@ -59,6 +60,23 @@ if (dangling.length) {
   const detail = `prerequisites pointing at courses that do not exist: ${dangling.join(', ')}`
   if (process.argv.includes('--check')) throw new Error(detail)
   console.warn(`warning: ${detail}`)
+}
+
+// resolveResources() drops ids it cannot find, so a typo in a citation would
+// otherwise vanish silently instead of failing.
+const badResources: string[] = []
+for (const course of courses.values()) {
+  for (const id of course.resources ?? []) {
+    if (!resources[id]) badResources.push(`${course.id}: ${id}`)
+  }
+  for (const lesson of course.lessons) {
+    for (const id of lesson.resources ?? []) {
+      if (!resources[id]) badResources.push(`${course.id}/${lesson.id}: ${id}`)
+    }
+  }
+}
+if (badResources.length) {
+  throw new Error(`citations of unknown resources: ${badResources.join(', ')}`)
 }
 
 const q = (s: string) => `'${s.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`

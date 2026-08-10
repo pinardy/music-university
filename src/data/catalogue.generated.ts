@@ -24,12 +24,12 @@ export const years: YearSummary[] = [
     semesters: [
       {
         id: 'y1s1',
-        label: 'Semester 1 · 17 credits',
-        courseIds: ['aps101', 'mut101', 'aur101'],
+        label: 'Semester 1 · 13 credits',
+        courseIds: ['aps101', 'mut101', 'aur101', 'key101', 'ens101'],
       },
       {
         id: 'y1s2',
-        label: 'Semester 2 · 16 credits',
+        label: 'Semester 2 · 13 credits',
         courseIds: ['aps102', 'mut102', 'aur102', 'key102', 'ens102'],
       },
     ],
@@ -42,12 +42,12 @@ export const years: YearSummary[] = [
     semesters: [
       {
         id: 'y2s1',
-        label: 'Semester 3 · 17 credits',
+        label: 'Semester 3 · 10 credits',
         courseIds: ['aps201', 'mut201', 'aur201'],
       },
       {
         id: 'y2s2',
-        label: 'Semester 4 · 17 credits',
+        label: 'Semester 4 · 8 credits',
         courseIds: ['aps202', 'mut202'],
       },
     ],
@@ -60,12 +60,12 @@ export const years: YearSummary[] = [
     semesters: [
       {
         id: 'y3s1',
-        label: 'Semester 5 · 16 credits',
+        label: 'Semester 5 · 11 credits',
         courseIds: ['aps301', 'mut301', 'muh301'],
       },
       {
         id: 'y3s2',
-        label: 'Semester 6 · 16 credits',
+        label: 'Semester 6 · 8 credits',
         courseIds: ['aps302', 'mut302'],
       },
     ],
@@ -78,12 +78,12 @@ export const years: YearSummary[] = [
     semesters: [
       {
         id: 'y4s1',
-        label: 'Semester 7 · 16 credits',
+        label: 'Semester 7 · 8 credits',
         courseIds: ['aps401', 'cnd401'],
       },
       {
         id: 'y4s2',
-        label: 'Semester 8 · 17 credits',
+        label: 'Semester 8 · 14 credits',
         courseIds: ['aps402', 'cap402', 'ped402', 'ens402', 'chm402'],
       },
     ],
@@ -117,6 +117,24 @@ export const courseSummaries: Record<string, CourseSummary> = {
     stream: 'aural',
     year: 1,
     lessonCount: 13,
+  },
+  key101: {
+    id: 'key101',
+    code: 'KEY101',
+    title: 'Keyboard Skills 1',
+    credits: 1,
+    stream: 'keyboard',
+    year: 1,
+    lessonCount: 13,
+  },
+  ens101: {
+    id: 'ens101',
+    code: 'ENS101',
+    title: 'Large Ensemble 1',
+    credits: 2,
+    stream: 'ensemble',
+    year: 1,
+    lessonCount: 6,
   },
   aps102: {
     id: 'aps102',
@@ -339,7 +357,7 @@ export const courseSummaries: Record<string, CourseSummary> = {
 
 /** Total lessons per year, so the home page can show progress without the prose. */
 export const lessonCountByYear: Record<number, number> = {
-  1: 83,
+  1: 102,
   2: 51,
   3: 51,
   4: 56,

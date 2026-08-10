@@ -1,4 +1,5 @@
 import type { Course, Year } from '../types'
+import { semesterLabel } from './semesterLabel'
 import { y4s1Courses } from './y4s1'
 import { y4s2Courses } from './y4s2'
 
@@ -12,12 +13,12 @@ export const year4: Year = {
   semesters: [
     {
       id: 'y4s1',
-      label: 'Semester 7 · 16 credits',
+      label: semesterLabel(7, y4s1Courses),
       courseIds: y4s1Courses.map((c) => c.id),
     },
     {
       id: 'y4s2',
-      label: 'Semester 8 · 17 credits',
+      label: semesterLabel(8, y4s2Courses),
       courseIds: y4s2Courses.map((c) => c.id),
     },
   ],
