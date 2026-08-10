@@ -10,6 +10,7 @@ export const y2s2Courses: Course[] = [
     description:
       'The fourth semester of one-to-one applied study culminates in the sophomore continuation jury, a barrier assessment that determines progression into the upper division. Students consolidate the technical regime built over three semesters while broadening repertoire across at least three style periods, and learn to manage a long-range preparation timeline toward a high-stakes performance.',
     prerequisites: ['aps201'],
+    resources: ['mw-blog', 'bpm-home', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -34,6 +35,7 @@ export const y2s2Courses: Course[] = [
           'Submit your proposed three-work jury program with timings and a one-sentence rationale per work',
           'Draft the fourteen-week backward-planned calendar and review it with your teacher',
         ],
+        resources: ['mw-defining-practice', 'mw-blog'],
       },
       {
         id: 'week-02',
@@ -58,6 +60,7 @@ export const y2s2Courses: Course[] = [
           'Keep a first-take log for the three hardest passages in your jury program',
           'Film your chosen persistent weakness in slow motion and bring a written component-motion diagnosis to your lesson',
         ],
+        resources: ['mw-deliberate-practice', 'score-paganini-caprices'],
       },
       {
         id: 'week-03',
@@ -83,6 +86,7 @@ export const y2s2Courses: Course[] = [
           'Record the same eight-bar phrase in deliberately ‘wrong’ style and correct style; bring both to your lesson',
           'Write and rehearse two-sentence answers to five likely panel questions',
         ],
+        resources: ['wiki-hip', 'um-classical', 'um-romantic', 'oyc-style-review'],
       },
       {
         id: 'week-04',
@@ -107,6 +111,7 @@ export const y2s2Courses: Course[] = [
           'Write out the first page of one jury work from memory and check it against the score',
           'Complete one ultra-slow expressive pass per work this week and log what the slow pass exposed',
         ],
+        resources: ['bpm-mental-practice', 'mw-deliberate-practice'],
       },
       {
         id: 'week-05',
@@ -131,6 +136,7 @@ export const y2s2Courses: Course[] = [
           'Write your three-layer pre-performance routine on a card and execute it before every run-through this week',
           'Complete five sabotage-recovery drills and log recovery times',
         ],
+        resources: ['bpm-anxiety-asset', 'bpm-quiet-eye', 'bpm-stage-fright'],
       },
       {
         id: 'week-06',
@@ -155,6 +161,7 @@ export const y2s2Courses: Course[] = [
           'Submit a one-page written reflection on your preparation system: what held, what broke, what changes',
           'Draft the junior-year repertoire and technique plan with your teacher and file it with the studio',
         ],
+        resources: ['mw-blog', 'savvy-musician'],
       },
     ],
   },
@@ -167,6 +174,7 @@ export const y2s2Courses: Course[] = [
     description:
       'The final semester of the core theory sequence follows tonality to its edge and beyond, from Mahler and Debussy through free atonality, pitch-class set theory and the twelve-tone method, to Stravinsky, Bartók and the neoclassicists. Students acquire the analytical toolkit for post-tonal music — collections, sets, rows, symmetry — and finish by composing short studies in three distinct 20th-century idioms.',
     prerequisites: ['mut201'],
+    resources: ['lib-omt', 'lib-mt21c', 'lib-mto', 'omt-twelve-tone-anthology'],
     lessons: [
       {
         id: 'week-01',
@@ -193,6 +201,7 @@ export const y2s2Courses: Course[] = [
           'Find three nonresolving dominant-quality sonorities in the Salome final scene and describe what each moves to instead',
           'Write one paragraph defining ‘emancipation of the dissonance’ with two musical examples from this week’s listening',
         ],
+        resources: ['score-mahler-1', 'score-strauss-zarathustra', 'omt-altered-extended'],
       },
       {
         id: 'week-02',
@@ -218,6 +227,10 @@ export const y2s2Courses: Course[] = [
           'Make a bar-by-bar collection map of Voiles (WT0, pentatonic, WT0) and mark the pitch center of each section with evidence',
           'Find and label two passages of diatonic planing and one of exact chromatic planing in La cathédrale engloutie',
           'Harmonize a given eight-bar pentatonic melody twice: once with functional harmony, once with parallel modal triads over a pedal; write two sentences on the difference',
+        ],
+        resources: [
+          'omt-collections', 'omt-diatonic-modes', 'mt21c-impressionism', 'score-debussy-preludes-1',
+          'score-debussy-faune',
         ],
       },
       {
@@ -245,6 +258,7 @@ export const y2s2Courses: Course[] = [
           'Analyze the first page of Vers la flamme: label the governing collection and every transposition of it, noting the interval of transposition',
           'Compose an eight-bar piano fragment that uses one transposing referential sonority (your own synthetic chord of five or six notes) and no functional cadence',
         ],
+        resources: ['score-scriabin-5', 'score-scriabin-prometheus', 'omt-analyzing-collections'],
       },
       {
         id: 'week-04',
@@ -271,6 +285,7 @@ export const y2s2Courses: Course[] = [
           'Write a short analysis (300 words) of one Webern bagatelle describing how cells, register and dynamics create a complete form in under a minute',
           'Compose a 12–16 bar atonal miniature for your instrument built from a single three-note cell, avoiding triadic verticals',
         ],
+        resources: ['score-schoenberg-op19', 'score-schoenberg-pierrot', 'omt-analyzing-set-theory'],
       },
       {
         id: 'week-05',
@@ -296,6 +311,7 @@ export const y2s2Courses: Course[] = [
           'Identify the set class of every trichord formed by adjacent notes in the first phrase of Webern Op. 5 No. 4',
           'Drill: convert twenty note-name collections to integer notation and back within a time limit, using flashcards or an app',
         ],
+        resources: ['omt-pitch-class', 'omt-pc-sets', 'mt21c-set-theory', 'mt21c-normal-form'],
       },
       {
         id: 'week-06',
@@ -321,6 +337,7 @@ export const y2s2Courses: Course[] = [
           'Write a one-page set analysis of Webern Op. 5 No. 4 demonstrating the structural role of (0167) and its subsets, with a claim about invariance',
           'Find one tetrachord in your own principal-study repertoire (any period), compute its vector, and describe its sound in vector terms',
         ],
+        resources: ['omt-prime-form', 'omt-icv', 'mt21c-prime-form', 'mt21c-interval-vector'],
       },
       {
         id: 'week-07',
@@ -346,6 +363,10 @@ export const y2s2Courses: Course[] = [
           'Construct the full 12×12 matrix for the row of Schoenberg Op. 25 (E–F–G–D♭–G♭–E♭–A♭–D–B–C–A–B♭) and label the axes',
           'Identify the row forms in the first 10 bars of the Op. 25 Präludium, marking where forms overlap or interlock',
           'Compose your own row with a designed property (a repeated trichord type, hexachordal combinatoriality, or embedded triads) and write a paragraph explaining the design',
+        ],
+        resources: [
+          'omt-twelve-tone', 'omt-row-naming', 'omt-row-properties', 'omt-webern-analysis', 'wiki-twelve-tone',
+          'mt21c-twelve-tone', 'teoria-matrix', 'score-webern-op21',
         ],
       },
       {
@@ -373,6 +394,7 @@ export const y2s2Courses: Course[] = [
           'Make a block map of the first three minutes of Symphonies of Wind Instruments: letter each block, chart returns, and note one invariant and one varied feature per return',
           'Analyze the Petrushka chord passage: show that both triads belong to one octatonic collection and describe how orchestration keeps the strata separate',
         ],
+        resources: ['score-stravinsky-rite', 'wiki-octatonic', 'omt-collections'],
       },
       {
         id: 'week-09',
@@ -399,6 +421,7 @@ export const y2s2Courses: Course[] = [
           'Find one clearly symmetrical passage in the Fourth Quartet and identify its axis; then find the same cell content used asymmetrically elsewhere',
           'Write 300 words evaluating one Lendvai claim (axis substitution or golden section) against the score: what supports it, what resists it',
         ],
+        resources: ['omt-analyzing-collections', 'wiki-octatonic'],
       },
       {
         id: 'week-10',
@@ -425,6 +448,7 @@ export const y2s2Courses: Course[] = [
           'Annotate the Classical Symphony Gavotte: mark the diatonic frame, every wrong-note displacement, and the chromatic third-relations in the trio',
           'Compose an eight-bar march in wrong-note style: a clear diatonic tune with systematic semitonal side-slips in one accompanying voice',
         ],
+        resources: ['score-hindemith-ludus', 'mt21c-impressionism'],
       },
       {
         id: 'week-11',
@@ -451,6 +475,7 @@ export const y2s2Courses: Course[] = [
           'Compose and perform (clapping or on your instrument) an eight-bar aksak melody in 2+2+3, then re-bar the same pitches in 3+2+2 and describe the difference',
           'Chart the first realignment cycle of Clapping Music: write out all 12 rotations and mark which produce maximal rhythmic dissonance',
         ],
+        resources: ['omt-20c-rhythm', 'omt-metrical-dissonance'],
       },
       {
         id: 'week-12',
@@ -475,6 +500,7 @@ export const y2s2Courses: Course[] = [
           'Submit the written version of the analysis (1,500–2,000 words with annotated score excerpts)',
           'Provide written peer responses (strength, challenge, question) for three assigned classmates',
         ],
+        resources: ['omt-twelve-tone-anthology', 'lib-mto'],
       },
       {
         id: 'week-13',
@@ -500,6 +526,7 @@ export const y2s2Courses: Course[] = [
           'Participate in the reading session, performing in at least one classmate’s study',
           'Write the final reflection (400 words) connecting one course idiom to a work in your own repertoire',
         ],
+        resources: ['omt-graphic-notation', 'mto-serial-morris', 'lib-musescore'],
       },
     ],
   },

@@ -112,6 +112,25 @@ button {
   text-transform: uppercase;
 }
 
+.site-header .header-link {
+  margin-left: auto;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.site-header .header-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* ---------- Breadcrumbs ---------- */
 
 .crumbs {
@@ -455,4 +474,199 @@ button {
   text-align: center;
   padding: 80px 0;
   color: var(--text-muted);
+}
+
+/* ---------- Sources & further reading ---------- */
+
+.section-lede {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  max-width: 66ch;
+  margin: -2px 0 12px;
+}
+
+.course-references {
+  margin-top: 28px;
+}
+
+.resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.resource-list a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'kind title'
+    '.    source'
+    '.    note';
+  align-items: baseline;
+  column-gap: 12px;
+  row-gap: 2px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.resource-list a:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.resource-kind {
+  grid-area: kind;
+  font-size: 0.62rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--kind-color);
+  border: 1px solid currentcolor;
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+.kind-textbook {
+  --kind-color: var(--stream-theory);
+}
+
+.kind-exercise {
+  --kind-color: var(--stream-aural);
+}
+
+.kind-score {
+  --kind-color: var(--stream-performance);
+}
+
+.kind-reference {
+  --kind-color: var(--stream-professional);
+}
+
+.kind-article {
+  --kind-color: var(--stream-composition);
+}
+
+.kind-primary {
+  --kind-color: var(--stream-history);
+}
+
+.kind-lecture {
+  --kind-color: var(--stream-ensemble);
+}
+
+/* The stream hues are tuned for the dark theme; darken them on a light page
+   so the badge text keeps a readable contrast ratio. */
+@media (prefers-color-scheme: light) {
+  .resource-kind {
+    color: color-mix(in srgb, var(--kind-color) 55%, #241d2c);
+    opacity: 1;
+  }
+}
+
+.resource-title {
+  grid-area: title;
+  font-size: 0.95rem;
+}
+
+.resource-source {
+  grid-area: source;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.resource-gated {
+  color: var(--accent);
+}
+
+.resource-note {
+  grid-area: note;
+  font-size: 0.79rem;
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin-top: 3px;
+}
+
+/* ---------- Source library ---------- */
+
+.library-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0 30px;
+}
+
+.library-controls input[type='search'] {
+  flex: 1;
+  min-width: 220px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 9px 16px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.library-controls input[type='search']:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.library-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.lesson-section h2 .count,
+.source-group h3 .count {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+@media (max-width: 520px) {
+  .resource-list a {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'kind'
+      'title'
+      'source'
+      'note';
+    row-gap: 4px;
+  }
+
+  .resource-kind {
+    justify-self: start;
+  }
+}
+
+.source-group {
+  margin-bottom: 20px;
+}
+
+.source-group h3 {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 8px;
 }

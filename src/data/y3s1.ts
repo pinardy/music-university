@@ -10,6 +10,7 @@ export const y3s1Courses: Course[] = [
     description:
       'The fifth semester of one-to-one applied study turns toward the junior recital: building a coherent program, mastering a concerto or aria group, and developing competition and audition strategy. Weekly lessons are supplemented by studio class, mock auditions and recorded checkpoints on your instrument or voice.',
     prerequisites: ['aps202'],
+    resources: ['mw-blog', 'bpm-home', 'lib-imslp', 'lib-medici'],
     lessons: [
       {
         id: 'week-01',
@@ -35,6 +36,7 @@ export const y3s1Courses: Course[] = [
           'Build the backward-planned preparation calendar and review it with your teacher',
           'Record a baseline read-through of the least familiar work on the program',
         ],
+        resources: ['ci-programming', 'lib-imslp'],
       },
       {
         id: 'week-02',
@@ -60,6 +62,7 @@ export const y3s1Courses: Course[] = [
           'Annotate the full orchestral score with cues, tutti tempos and breathing or bowing plans',
           'Draft or select your cadenza and ornamentation plan and defend the choices in writing',
         ],
+        resources: ['score-rachmaninoff-2', 'score-elgar-cello', 'score-mozart-don-giovanni'],
       },
       {
         id: 'week-03',
@@ -84,6 +87,7 @@ export const y3s1Courses: Course[] = [
           'Perform a timed eight-minute mock first round and write a one-page video self-analysis',
           'Draft a two-year competition and audition timeline with application deadlines',
         ],
+        resources: ['bpm-anxiety-asset', 'savvy-musician'],
       },
       {
         id: 'week-04',
@@ -108,6 +112,7 @@ export const y3s1Courses: Course[] = [
           'Demonstrate your two rebuilt passages at performance tempo, first attempt, in studio class',
           'Perform one full program segment under a simulated-adrenaline protocol',
         ],
+        resources: ['mw-deliberate-practice', 'bpm-quiet-eye'],
       },
       {
         id: 'week-05',
@@ -132,6 +137,7 @@ export const y3s1Courses: Course[] = [
           'Lead one supervised peer-coaching session and write a one-page reflection on what it exposed',
           'Submit a deportment checklist self-assessment against your performance video',
         ],
+        resources: ['mw-blog', 'bpm-home'],
       },
       {
         id: 'week-06',
@@ -156,6 +162,7 @@ export const y3s1Courses: Course[] = [
           'Deliver the recital-readiness presentation with prospectus, reliability data and timeline',
           'Submit three countersigned, measurable goals for the junior recital semester',
         ],
+        resources: ['bpm-stage-fright', 'mw-defining-practice'],
       },
     ],
   },
@@ -168,6 +175,7 @@ export const y3s1Courses: Course[] = [
     description:
       'A systematic study of musical form from theme types to complete movements, combining Caplin’s theory of formal functions with Hepokoski and Darcy’s Sonata Theory. Students analyze sonatas, rondos, variations, fugues and concertos, apply the tools to their own performing repertoire, and produce a substantial analytical essay.',
     prerequisites: ['mut202'],
+    resources: ['lib-omt', 'lib-mt21c', 'lib-fff', 'lib-mto', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -194,6 +202,10 @@ export const y3s1Courses: Course[] = [
           'Analyze five given eight-bar themes, labeling presentation, continuation, antecedent, consequent and all cadences',
           'Compose one sentence and one period for your own instrument, each with a correct cadential plan',
           'Find one sentence and one period in repertoire you are currently performing and annotate the score',
+        ],
+        resources: [
+          'omt-phrase-archetypes', 'omt-phrase-foundations', 'fff-sentences-periods', 'mt21c-phrases',
+          'score-beethoven-op2-1',
         ],
       },
       {
@@ -222,6 +234,9 @@ export const y3s1Courses: Course[] = [
           'Write a one-page comparison of a rounded binary minuet and a balanced binary Scarlatti sonata',
           'Compose the second reprise (digression plus return) for a given eight-bar first reprise',
         ],
+        resources: [
+          'omt-ternary', 'omt-hybrid-phrases', 'omt-expansion', 'mt21c-binary-ternary', 'fff-binary',
+        ],
       },
       {
         id: 'week-03',
@@ -249,6 +264,7 @@ export const y3s1Courses: Course[] = [
           'Write a paragraph identifying the MC type and EEC location in an assigned exposition, citing harmonic evidence',
           'Listen to two recordings of the same exposition and note how each shapes the medial caesura',
         ],
+        resources: ['omt-sonata', 'omt-formal-sections', 'fff-sonata', 'wiki-sonata-theory'],
       },
       {
         id: 'week-04',
@@ -276,6 +292,7 @@ export const y3s1Courses: Course[] = [
           'Locate the crux and the ESC in two recapitulations and describe every alteration from the exposition',
           'Write a rotational map (Rotation 1/2/3) of one complete first movement',
         ],
+        resources: ['mto-sonata-theory', 'omt-sonata', 'oyc-sonata'],
       },
       {
         id: 'week-05',
@@ -303,6 +320,7 @@ export const y3s1Courses: Course[] = [
           'Annotate an ornamented A-section return, listing every added diminution against the original',
           'Write a short essay on how form shapes pacing decisions in a slow movement you perform',
         ],
+        resources: ['omt-sonata', 'score-mozart-k333', 'score-beethoven-pathetique', 'mozart-dme'],
       },
       {
         id: 'week-06',
@@ -330,6 +348,7 @@ export const y3s1Courses: Course[] = [
           'Conduct or tap the hypermeter of an assigned scherzo, marking every irregular group in the score',
           'Write a paragraph comparing minuet and scherzo character using one Haydn and one Beethoven example',
         ],
+        resources: ['omt-ternary', 'score-mozart-eine-kleine', 'score-beethoven-5'],
       },
       {
         id: 'week-07',
@@ -357,6 +376,7 @@ export const y3s1Courses: Course[] = [
           'Write a paragraph tracing what happens to episode B across a sonata-rondo movement',
           'Compose a retransition (8–12 bars) that prepares a rondo refrain over a dominant pedal',
         ],
+        resources: ['omt-rondo', 'mt21c-sonata-rondo', 'fff-ternary-rondo'],
       },
       {
         id: 'week-08',
@@ -384,6 +404,7 @@ export const y3s1Courses: Course[] = [
           'Write a comparison of continuous versus sectional variation using Purcell and Mozart examples',
           'Compose two variations on a given eight-bar theme: one figural, one character',
         ],
+        resources: ['omt-ground-bass', 'score-handel-messiah', 'score-brahms-4'],
       },
       {
         id: 'week-09',
@@ -410,6 +431,10 @@ export const y3s1Courses: Course[] = [
           'Produce a complete entry-and-episode map of a WTC fugue: voice, key and bar of every subject entry',
           'Diagram the ritornello returns in a Vivaldi first movement, noting which motives return in which keys',
           'Write a short essay comparing fugue and ritornello as return-based procedures',
+        ],
+        resources: [
+          'omt-fugal-exposition', 'um-baroque', 'score-bach-wtc1', 'score-bach-art-of-fugue',
+          'score-bach-brandenburg-3', 'bach-digital',
         ],
       },
       {
@@ -438,6 +463,7 @@ export const y3s1Courses: Course[] = [
           'Write a comparison of Mozart K. 466 and Mendelssohn Op. 64 first-movement designs',
           'Analyze the formal placement and thematic sources of one written-out cadenza',
         ],
+        resources: ['score-haydn-trumpet', 'score-rachmaninoff-2', 'score-bach-brandenburg-3'],
       },
       {
         id: 'week-11',
@@ -465,6 +491,7 @@ export const y3s1Courses: Course[] = [
           'Produce parallel formal and thematic maps of a symphonic-poem or cyclic-symphony excerpt',
           'Write a two-page essay on how a specific deformation gains meaning against its Classical default',
         ],
+        resources: ['score-liszt-preludes', 'score-berlioz-fantastique', 'lib-mto'],
       },
       {
         id: 'week-12',
@@ -490,6 +517,7 @@ export const y3s1Courses: Course[] = [
           'Submit written observation–suggestion–question feedback on two peer presentations',
           'Revise your formal map in response to questions raised in class',
         ],
+        resources: ['lib-imslp', 'omt-harmony-anthology'],
       },
       {
         id: 'week-13',
@@ -515,6 +543,7 @@ export const y3s1Courses: Course[] = [
           'Write two structured peer reviews and revise your draft in response to those you receive',
           'Submit the final essay with annotated score by the end of examination week',
         ],
+        resources: ['owl-chicago', 'zotero', 'lib-mto'],
       },
     ],
   },
@@ -527,6 +556,7 @@ export const y3s1Courses: Course[] = [
     description:
       'A survey of Western music from Beethoven’s middle period to the eve of the First World War, treating repertoire alongside the institutions, ideologies and technologies that shaped it: the Lied and the salon, opera houses and music dramas, nationalism, the absolute-music debates, concert life, gender and patronage, and the birth of recording. The course culminates in an original research paper.',
     prerequisites: ['muh202'],
+    resources: ['lib-um', 'lib-oyc', 'lib-grove', 'lib-jstor', 'lib-archive', 'lib-imslp', 'lib-naxos'],
     lessons: [
       {
         id: 'week-01',
@@ -554,6 +584,7 @@ export const y3s1Courses: Course[] = [
           'Write a listening journal entry contrasting one heroic and one late work in specific musical terms',
           'Identify three features of the heroic style in a score excerpt from the Eroica first movement',
         ],
+        resources: ['um-romantic', 'score-beethoven-3', 'score-beethoven-op131', 'beethoven-haus'],
       },
       {
         id: 'week-02',
@@ -580,6 +611,10 @@ export const y3s1Courses: Course[] = [
           'Write a two-page text–music analysis of one Schubert song, addressing form, harmony and the piano’s persona',
           'Compare two recorded interpretations of ‘Der Leiermann’ (e.g. Fischer-Dieskau and a contemporary singer) in a listening journal',
           'Translate (or closely paraphrase) one Müller poem and mark where Schubert’s setting contradicts or exceeds the text',
+        ],
+        resources: [
+          'score-schubert-erlkonig', 'score-schubert-winterreise', 'score-schumann-dichterliebe',
+          'schubert-online',
         ],
       },
       {
@@ -608,6 +643,10 @@ export const y3s1Courses: Course[] = [
           'Read one Schumann review from the Neue Zeitschrift (e.g. his review of Chopin’s Op. 2) and summarize its critical persona',
           'Prepare a five-minute presentation on one salon or recital institution of the 1830s–40s',
         ],
+        resources: [
+          'score-chopin-nocturnes', 'score-chopin-op10', 'score-schumann-kinderszenen',
+          'score-liszt-transcendental', 'chopin-online',
+        ],
       },
       {
         id: 'week-04',
@@ -634,6 +673,9 @@ export const y3s1Courses: Course[] = [
           'Track the idée fixe through all five movements of the Symphonie fantastique with timings and transformation notes',
           'Read excerpts from Hanslick’s On the Musically Beautiful and write a one-page response taking a position',
           'Compare Liszt’s Les Préludes with its printed program: where does the music exceed or ignore it?',
+        ],
+        resources: [
+          'score-berlioz-fantastique', 'score-liszt-preludes', 'berlioz-memoirs', 'berlioz-treatise',
         ],
       },
       {
@@ -662,6 +704,10 @@ export const y3s1Courses: Course[] = [
           'Write a two-page essay on how the Rigoletto quartet characterizes four figures simultaneously',
           'Research one 19th-century Italian opera house or impresario and present its production system in five minutes',
         ],
+        resources: [
+          'score-rossini-barbiere', 'score-verdi-rigoletto', 'score-verdi-traviata', 'score-verdi-otello',
+          'score-bizet-carmen', 'wiki-bel-canto', 'oyc-romantic',
+        ],
       },
       {
         id: 'week-06',
@@ -689,6 +735,7 @@ export const y3s1Courses: Course[] = [
           'Read an excerpt of Oper und Drama and a scholarly essay on Wagner’s antisemitism; write a one-page reflection on how you will engage this composer',
           'Compare the endings of Götterdämmerung and Verdi’s Otello in a listening journal',
         ],
+        resources: ['score-weber-freischutz', 'score-wagner-walkure', 'score-wagner-tristan', 'wagner-prose'],
       },
       {
         id: 'week-07',
@@ -716,6 +763,7 @@ export const y3s1Courses: Course[] = [
           'Read Schoenberg’s ‘Brahms the Progressive’ (excerpt) and summarize developing variation with one score example',
           'Write a listening journal on hemiola and metrical ambiguity in an assigned Brahms chamber movement',
         ],
+        resources: ['score-brahms-4', 'hanslick-beautiful', 'lib-jstor'],
       },
       {
         id: 'week-08',
@@ -744,6 +792,10 @@ export const y3s1Courses: Course[] = [
           'Compare Musorgsky’s original and Rimsky-Korsakov’s revised orchestration of one Boris excerpt',
           'Present a five-minute case study of one nationalist composer outside the lecture’s core (e.g. Moniuszko, MacDowell, Albéniz)',
         ],
+        resources: [
+          'score-mussorgsky-boris', 'score-mussorgsky-pictures', 'score-dvorak-9',
+          'score-sibelius-finlandia', 'folkways',
+        ],
       },
       {
         id: 'week-09',
@@ -769,6 +821,9 @@ export const y3s1Courses: Course[] = [
           'Analyze three historical concert programs (1820s, 1870s, 1900s) for the living-versus-dead composer ratio and programming logic',
           'Write a two-page essay: which 19th-century concert conventions would you keep or discard in your own recitals, and why?',
           'Research one 19th-century orchestra, hall or touring virtuoso and present its economics in five minutes',
+        ],
+        resources: [
+          'score-paganini-caprices', 'score-liszt-transcendental', 'um-romantic', 'oyc-style-review',
         ],
       },
       {
@@ -798,6 +853,7 @@ export const y3s1Courses: Course[] = [
           'Read an excerpt of Citron’s Gender and the Musical Canon and summarize its argument about genre hierarchy',
           'Add one work by a 19th-century woman composer to your own repertoire list and justify the programming context',
         ],
+        resources: ['score-clara-trio', 'score-clara-romances', 'score-hensel-lieder', 'lib-resonances'],
       },
       {
         id: 'week-11',
@@ -825,6 +881,7 @@ export const y3s1Courses: Course[] = [
           'Compare the openings of Zarathustra and La mer as two versions of orchestral sunrise in a one-page essay',
           'Identify whole-tone, pentatonic and parallel-chord passages in ‘La cathédrale engloutie’ on the score',
         ],
+        resources: ['score-mahler-1', 'score-strauss-zarathustra', 'score-debussy-faune', 'um-20c'],
       },
       {
         id: 'week-12',
@@ -852,6 +909,7 @@ export const y3s1Courses: Course[] = [
           'Read a chapter of Robert Philip’s Early Recordings and Musical Style and summarize its central claim with two audio examples',
           'Experiment: apply one documented early-recorded practice (portamento, dislocation, tempo flexibility) to a passage you perform, and report the result',
         ],
+        resources: ['loc-jukebox', 'wiki-hip'],
       },
       {
         id: 'week-13',
@@ -877,6 +935,7 @@ export const y3s1Courses: Course[] = [
           'Submit written questions or comments on four peer presentations',
           'Submit the final 3,000–3,500-word paper with Chicago-style citations, bibliography and discography',
         ],
+        resources: ['owl-chicago', 'zotero', 'lib-grove', 'lib-jstor', 'lib-muse'],
       },
     ],
   },

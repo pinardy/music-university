@@ -10,6 +10,7 @@ export const y3s2Courses: Course[] = [
     description:
       'The culmination of the third year of applied study: a 40–50 minute public junior recital with original program notes. Weekly lessons focus repertoire toward performance readiness, while milestone checkpoints cover program design, run-throughs, dress rehearsal and post-recital reflection.',
     prerequisites: ['aps301'],
+    resources: ['mw-blog', 'bpm-home', 'lib-imslp', 'lib-grove'],
     lessons: [
       {
         id: 'week-01',
@@ -36,6 +37,7 @@ export const y3s2Courses: Course[] = [
           'Produce the backward-planned calendar with weekly technical and musical targets',
           'Write a one-paragraph artistic rationale explaining why these works belong together',
         ],
+        resources: ['ci-programming', 'lib-imslp'],
       },
       {
         id: 'week-02',
@@ -62,6 +64,7 @@ export const y3s2Courses: Course[] = [
           'Write a one-page interpretive defense for the anchor work',
           'Record one complete work, annotate it, and bring both recording and notes to your lesson',
         ],
+        resources: ['mw-deliberate-practice', 'mw-defining-practice'],
       },
       {
         id: 'week-03',
@@ -88,6 +91,7 @@ export const y3s2Courses: Course[] = [
           'Script and video yourself delivering the spoken introduction; revise once',
           'Submit your 150-word performer biography and the full program layout for proofreading',
         ],
+        resources: ['owl-chicago', 'lib-grove', 'zotero'],
       },
       {
         id: 'week-04',
@@ -113,6 +117,7 @@ export const y3s2Courses: Course[] = [
           'Submit your landmark map for every work and demonstrate three cold starts in your lesson',
           'Write a half-page evaluation of your pre-performance routine and any adjustments',
         ],
+        resources: ['bpm-anxiety-asset', 'bpm-quiet-eye'],
       },
       {
         id: 'week-05',
@@ -138,6 +143,7 @@ export const y3s2Courses: Course[] = [
           'Write the tapering plan for recital week, hour by hour for the final two days',
           'Confirm archival recording arrangements; the recording is required for your portfolio and jury',
         ],
+        resources: ['ci-dress-rehearsal', 'sos-techniques'],
       },
       {
         id: 'week-06',
@@ -163,6 +169,7 @@ export const y3s2Courses: Course[] = [
           'Submit both debrief documents (subjective and objective) to your teacher',
           'Draft the senior-year goal sheet and proposed senior recital anchor repertoire',
         ],
+        resources: ['ci-post-concert', 'bpm-stage-fright'],
       },
     ],
   },
@@ -175,6 +182,7 @@ export const y3s2Courses: Course[] = [
     description:
       'A survey of compositional techniques from integral serialism to the present, combining analysis with hands-on creative exercises. Students study serialism, indeterminacy, texture music, electronics, minimalism, spectralism, polystylism and recent global currents, culminating in analysis presentations and a curated contemporary program.',
     prerequisites: ['mut301'],
+    resources: ['lib-mto', 'newmusicusa', 'lib-grove', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -202,6 +210,7 @@ export const y3s2Courses: Course[] = [
           'Compose an eight-bar study for your instrument using a pitch series plus a fixed duration series',
           'Write a half-page response: does Ligeti’s critique of Structures Ia hold for Il canto sospeso?',
         ],
+        resources: ['omt-serialism-history', 'mt21c-serialism', 'score-webern-op21'],
       },
       {
         id: 'week-02',
@@ -229,6 +238,7 @@ export const y3s2Courses: Course[] = [
           'Write a one-page comparison of composer control in Music of Changes versus the Concert for Piano and Orchestra',
           'Keep a ten-minute Cageian listening log: sit silently in a public space and notate every sound event',
         ],
+        resources: ['wiki-indeterminacy', 'omt-graphic-notation'],
       },
       {
         id: 'week-03',
@@ -256,6 +266,7 @@ export const y3s2Courses: Course[] = [
           'Transcribe one system of the Threnody’s graphic notation into a prose performance instruction',
           'Compose 30 seconds of texture music for four or more players of your instrument using at least two extended techniques',
         ],
+        resources: ['wiki-sonorism', 'omt-graphic-notation'],
       },
       {
         id: 'week-04',
@@ -282,6 +293,7 @@ export const y3s2Courses: Course[] = [
           'Create a 60–90 second musique-concrète study in a DAW from three recorded household sounds, using only cutting, speed change, reversal and looping',
           'Write a listening comparison (one page) of Gesang der Jünglinge and Poème électronique addressing material, space and form',
         ],
+        resources: ['wiki-musique-concrete', 'sos-techniques', 'aes'],
       },
       {
         id: 'week-05',
@@ -309,6 +321,7 @@ export const y3s2Courses: Course[] = [
           'Compose a one-minute additive-process study: a 3-note cell growing to 8 notes and back, with steady pulse',
           'Write a paragraph testing Reich’s ‘audible process’ claim against Music for 18 Musicians',
         ],
+        resources: ['wiki-minimalism', 'mt21c-minimalism'],
       },
       {
         id: 'week-06',
@@ -336,6 +349,7 @@ export const y3s2Courses: Course[] = [
           'Spell the first sixteen partials of E2 in staff notation, marking quarter-tone adjustments',
           'Write a half-page comparison of process-form in Partiels and in Reich’s Music for 18 Musicians',
         ],
+        resources: ['wiki-spectral', 'lib-mto'],
       },
       {
         id: 'week-07',
@@ -363,6 +377,7 @@ export const y3s2Courses: Course[] = [
           'Write one page on the expressive function of stylistic collision in the Concerto Grosso No. 1',
           'Sketch a 16-bar study that quotes a piece from your own repertoire inside a contrasting idiom',
         ],
+        resources: ['lib-mto', 'newmusicusa'],
       },
       {
         id: 'week-08',
@@ -390,6 +405,7 @@ export const y3s2Courses: Course[] = [
           'Take one page of a Lachenmann or Ferneyhough score legend and rewrite it as a plain-prose performer’s guide',
           'Position paper (one page): where on the notation spectrum does the performer have the most artistic agency, and why?',
         ],
+        resources: ['wiki-new-complexity', 'omt-graphic-notation'],
       },
       {
         id: 'week-09',
@@ -417,6 +433,7 @@ export const y3s2Courses: Course[] = [
           'Learn a 12-bar blues or a modal vamp on your instrument and improvise three choruses; record and self-assess',
           'Short essay: what does George Lewis’s term ‘vernacular avant-garde’ add that ‘Third Stream’ missed?',
         ],
+        resources: ['mt21c-jazz', 'folkways', 'lib-resonances'],
       },
       {
         id: 'week-10',
@@ -443,6 +460,7 @@ export const y3s2Courses: Course[] = [
           'Choose one work premiered in the last ten years, and write a two-page critical evaluation using the four criteria from this lesson',
           'Build a 30-minute playlist of post-2000 works for your instrument with one-sentence justifications',
         ],
+        resources: ['newmusicusa', 'soundandmusic'],
       },
       {
         id: 'week-11',
@@ -469,6 +487,7 @@ export const y3s2Courses: Course[] = [
           'Produce your one-page personal extended-techniques reference sheet with notation, ranges and limits',
           'Record a 90-second étude of your own devising using at least four of the techniques',
         ],
+        resources: ['wiki-extended-technique', 'omt-orchestration', 'newmusicusa'],
       },
       {
         id: 'week-12',
@@ -493,6 +512,7 @@ export const y3s2Courses: Course[] = [
           'Deliver the 15-minute analysis presentation with a one-page handout for the class',
           'Submit written peer feedback paragraphs for two colleagues within three days',
         ],
+        resources: ['lib-mto', 'omt-graphic-notation'],
       },
       {
         id: 'week-13',
@@ -518,6 +538,7 @@ export const y3s2Courses: Course[] = [
           'Deliver the eight-minute pitch and respond to panel questions',
           'Write a half-page reflection connecting your program choices to three specific weeks of the course',
         ],
+        resources: ['newmusicusa', 'soundandmusic', 'ci-programming'],
       },
     ],
   },

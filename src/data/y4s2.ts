@@ -10,6 +10,7 @@ export const y4s2Courses: Course[] = [
     description:
       'The degree capstone: a 60-minute public graduation recital (or composition portfolio, per major) prepared in weekly one-to-one lessons and defended through written program notes. Students take full artistic ownership of programming, preparation, production and presentation on their instrument or voice.',
     prerequisites: ['aps401'],
+    resources: ['mw-blog', 'bpm-home', 'savvy-musician', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -35,6 +36,7 @@ export const y4s2Courses: Course[] = [
           'Produce a week-by-week backward plan from recital day to today and review it with your teacher',
           'Record a baseline run of the least secure work and write a candid gap analysis',
         ],
+        resources: ['ci-programming', 'lib-imslp'],
       },
       {
         id: 'week-02',
@@ -60,6 +62,7 @@ export const y4s2Courses: Course[] = [
           'Annotate the full score of your anchor work with final tempo, articulation and ornamentation decisions, citing at least two sources or reference recordings',
           'Perform one work entirely from memory starting at three different landmarks chosen by your teacher',
         ],
+        resources: ['mw-deliberate-practice', 'mw-defining-practice'],
       },
       {
         id: 'week-03',
@@ -85,6 +88,7 @@ export const y4s2Courses: Course[] = [
           'Exchange notes with a peer and return line-edited feedback focused on clarity and audience guidance',
           'Complete a 20-minute mock defense; write a one-page reflection on which questions exposed weak reasoning',
         ],
+        resources: ['owl-chicago', 'zotero', 'lib-grove'],
       },
       {
         id: 'week-04',
@@ -110,6 +114,7 @@ export const y4s2Courses: Course[] = [
           'Write out your exact pre-performance routine (from 24 hours before to walking onstage) and test it before one run',
           'Conduct one disruption rehearsal with planted errors and report recovery times at each landmark',
         ],
+        resources: ['bpm-anxiety-asset', 'bpm-quiet-eye', 'bpm-mental-practice'],
       },
       {
         id: 'week-05',
@@ -135,6 +140,7 @@ export const y4s2Courses: Course[] = [
           'Submit the signed recording plan (engineer, microphone setup, video angles, patch-session policy)',
           'Video yourself performing all entrances, bows and spoken introductions; revise with your teacher’s feedback',
         ],
+        resources: ['sos-techniques', 'ci-recording', 'ci-dress-rehearsal'],
       },
       {
         id: 'week-06',
@@ -160,6 +166,7 @@ export const y4s2Courses: Course[] = [
           'Submit a 1,000-word artistic reflection based on two viewings of your recital video',
           'Deliver a twelve-month professional plan listing repertoire, recording, audition and contact goals with dates',
         ],
+        resources: ['ci-post-concert', 'savvy-musician'],
       },
     ],
   },
@@ -171,6 +178,7 @@ export const y4s2Courses: Course[] = [
     stream: 'professional',
     description:
       'A self-directed capstone in the RCM Independent Project and YST Collaboratory tradition: students design, research and deliver an original project — community engagement, interdisciplinary creation, applied research or a recording — under faculty supervision. The course assesses initiative, project management and public communication as core professional skills.',
+    resources: ['zotero', 'owl-chicago', 'savvy-musician', 'lib-jstor'],
     lessons: [
       {
         id: 'week-01',
@@ -196,6 +204,7 @@ export const y4s2Courses: Course[] = [
           'Present a 10-minute defense with slides; revise the proposal within one week to address panel conditions',
           'Sign the supervision agreement and create your project journal, budget tracker and commitments document',
         ],
+        resources: ['zotero', 'savvy-musician'],
       },
       {
         id: 'week-02',
@@ -221,6 +230,7 @@ export const y4s2Courses: Course[] = [
           'Complete three informational interviews or site visits; log findings and one plan change each prompted',
           'Write the one-page positioning statement and prune your project plan against it',
         ],
+        resources: ['lib-jstor', 'lib-muse', 'lib-grove', 'zotero', 'lib-archive'],
       },
       {
         id: 'week-03',
@@ -246,6 +256,7 @@ export const y4s2Courses: Course[] = [
           'Run one audience test of draft material; report findings and the specific iterations they caused',
           'Present a budget-versus-actuals and scope statement at the midpoint checkpoint, flagging any cuts needed',
         ],
+        resources: ['mw-defining-practice', 'newmusicusa'],
       },
       {
         id: 'week-04',
@@ -271,6 +282,7 @@ export const y4s2Courses: Course[] = [
           'Submit the captured feedback with your adopt/adapt/investigate/decline sorting and reasoning',
           'Agree the prioritized revision plan with your supervisor, mapped onto the remaining calendar',
         ],
+        resources: ['bpm-home', 'mw-blog'],
       },
       {
         id: 'week-05',
@@ -296,6 +308,7 @@ export const y4s2Courses: Course[] = [
           'Complete the rights and permissions audit with documentation for every third-party asset',
           'Assemble the project archive with a one-page outcomes summary',
         ],
+        resources: ['sos-techniques', 'owl-chicago'],
       },
       {
         id: 'week-06',
@@ -321,6 +334,7 @@ export const y4s2Courses: Course[] = [
           'Submit the written reflection evaluating all success criteria with journal-based decision analysis',
           'Publish the project to your professional platforms and submit the 100-word and 300-word project narratives',
         ],
+        resources: ['owl-chicago', 'savvy-musician'],
       },
     ],
   },
@@ -332,6 +346,7 @@ export const y4s2Courses: Course[] = [
     stream: 'professional',
     description:
       'Training in the art and business of teaching your instrument or voice, on the RCM Teaching Musician model. The course moves from learning science and method-book literacy through lesson design, inclusive practice and studio ethics to a supervised teaching practicum, culminating in a professional teaching portfolio.',
+    resources: ['giml-mlt', 'mtna', 'suzuki-teachers', 'mw-blog'],
     lessons: [
       {
         id: 'week-01',
@@ -357,6 +372,7 @@ export const y4s2Courses: Course[] = [
           'Design two versions of a practice assignment for one passage — blocked and interleaved — and explain the predicted difference',
           'Observe one lesson (video or live) and log every instance of feedback, classifying its type and timing',
         ],
+        resources: ['giml-mlt', 'schumann-advice'],
       },
       {
         id: 'week-02',
@@ -382,6 +398,7 @@ export const y4s2Courses: Course[] = [
           'Design a practice journal template and pilot it on your own practice for one week',
           'Interview one current student or amateur about why they continue (or nearly quit) lessons; map answers to SDT needs',
         ],
+        resources: ['mw-deliberate-practice', 'mw-defining-practice', 'bpm-home'],
       },
       {
         id: 'week-03',
@@ -407,6 +424,7 @@ export const y4s2Courses: Course[] = [
           'Chart the first-year sequence of your preferred method: notes, rhythms and techniques by unit',
           'Compile a ten-item supplement file that patches the method’s two biggest gaps, with a sentence justifying each item',
         ],
+        resources: ['suzuki-teachers', 'giml-mlt'],
       },
       {
         id: 'week-04',
@@ -432,6 +450,7 @@ export const y4s2Courses: Course[] = [
           'Video three peers or students playing; produce a triaged fault diagnosis for each using the three tests',
           'Script your first-ever-lesson plan minute by minute, including the take-home routine',
         ],
+        resources: ['alexander-technique', 'nidcd-hearing', 'help-musicians'],
       },
       {
         id: 'week-05',
@@ -457,6 +476,7 @@ export const y4s2Courses: Course[] = [
           'Produce a year-long curriculum map for one detailed student profile using backward design',
           'Build a 20-piece leveled repertoire list annotated with what each piece teaches',
         ],
+        resources: ['giml-mlt', 'mtna'],
       },
       {
         id: 'week-06',
@@ -482,6 +502,7 @@ export const y4s2Courses: Course[] = [
           'Complete structured observation forms for four peer lessons using descriptive language only',
           'Submit your video self-review with talk-ratio estimate, question inventory and two-point revision plan',
         ],
+        resources: ['mtna', 'suzuki-teachers'],
       },
       {
         id: 'week-07',
@@ -507,6 +528,7 @@ export const y4s2Courses: Course[] = [
           'Read one pro-Sistema study and one critique (e.g. Baker); write a 500-word balanced evaluation',
           'Arrange 16 bars of a folk tune in three simultaneous difficulty layers for your instrument family',
         ],
+        resources: ['sistema-global', 'suzuki-teachers'],
       },
       {
         id: 'week-08',
@@ -532,6 +554,7 @@ export const y4s2Courses: Course[] = [
           'Write adaptation one-pagers for two profiles of your choice, citing specific tools and resources',
           'Draft inclusive intake-form questions and a plain-language studio policy statement',
         ],
+        resources: ['drake-music', 'ohmi', 'sounds-of-intent'],
       },
       {
         id: 'week-09',
@@ -557,6 +580,7 @@ export const y4s2Courses: Course[] = [
           'Write a first-lesson plan for a 45-year-old returner, including how you will address the inner critic explicitly',
           'For your instrument, summarize the adolescent physical-change issues and your management protocol in one page',
         ],
+        resources: ['bpm-home', 'mw-blog'],
       },
       {
         id: 'week-10',
@@ -582,6 +606,7 @@ export const y4s2Courses: Course[] = [
           'Build a first-year studio financial model: target income, hours, rates, expenses and tax set-aside',
           'Draft your safeguarding protocol including the disclosure procedure for your jurisdiction',
         ],
+        resources: ['mtna', 'savvy-musician'],
       },
       {
         id: 'week-11',
@@ -607,6 +632,7 @@ export const y4s2Courses: Course[] = [
           'Write a term-report template for parents that reports progress against goals, not just activities',
           'Plan a 10-week exam-preparation arc that protects sight-reading, ear work and repertoire breadth alongside the exam pieces',
         ],
+        resources: ['sounds-of-intent', 'mtna'],
       },
       {
         id: 'week-12',
@@ -632,6 +658,7 @@ export const y4s2Courses: Course[] = [
           'Maintain the practicum log (plan, reality, outcomes, adaptations) within 24 hours of each lesson',
           'Write the closing progress report and next-steps recommendation for your student or their parent',
         ],
+        resources: ['mtna', 'mw-blog'],
       },
       {
         id: 'week-13',
@@ -657,6 +684,7 @@ export const y4s2Courses: Course[] = [
           'Write and workshop the one-page teaching philosophy through one peer-review cycle',
           'Deliver the 15-minute panel presentation and defense of your portfolio',
         ],
+        resources: ['savvy-musician', 'mtna'],
       },
     ],
   },
@@ -669,6 +697,7 @@ export const y4s2Courses: Course[] = [
     description:
       'The culminating semester of the large-ensemble sequence: a full professional-model concert cycle featuring side-by-side collaboration with a partner professional orchestra, choir or wind ensemble. Graduating members carry section-leadership and mentoring responsibility while performing at the standard the profession will expect of them next season.',
     prerequisites: ['ens401'],
+    resources: ['lib-imslp', 'lib-dch', 'nidcd-hearing', 'savvy-musician'],
     lessons: [
       {
         id: 'week-01',
@@ -694,6 +723,7 @@ export const y4s2Courses: Course[] = [
           'Submit your leadership-role plan (sectional schedule, mentee pairing or operations checklist)',
           'Deliver the one-page ensemble-risk map for the cornerstone work',
         ],
+        resources: ['ci-communication', 'mw-blog'],
       },
       {
         id: 'week-02',
@@ -719,6 +749,7 @@ export const y4s2Courses: Course[] = [
           'Complete three documented mentoring sessions with your assigned younger player',
           'Write your section’s sound agreement: articulation defaults, intonation references and dynamic scaling for the cycle',
         ],
+        resources: ['ci-string-tips', 'ci-wind-tips', 'ci-rehearsal-technique'],
       },
       {
         id: 'week-03',
@@ -744,6 +775,7 @@ export const y4s2Courses: Course[] = [
           'Implement every conductor instruction without repetition; have your principal verify and countersign your part markings',
           'Conduct one substantive professional conversation and summarize its advice in the journal',
         ],
+        resources: ['ci-etiquette', 'savvy-musician'],
       },
       {
         id: 'week-04',
@@ -769,6 +801,7 @@ export const y4s2Courses: Course[] = [
           'Compare two reference recordings of the major work; write one page on three interpretive divergences and the conductor’s choices',
           'Document one ensemble problem and its solution per rehearsal in your cycle log',
         ],
+        resources: ['score-beethoven-9', 'score-mahler-1', 'osha-noise', 'omt-orchestration'],
       },
       {
         id: 'week-05',
@@ -794,6 +827,7 @@ export const y4s2Courses: Course[] = [
           'Write a session report: what the microphones revealed about your section and two adjustments you made between takes',
           'Rehearse and pass the broadcast-stagecraft check: dress, entrances, camera awareness and stage-cue timing',
         ],
+        resources: ['ci-recording', 'sos-techniques', 'aes'],
       },
       {
         id: 'week-06',
@@ -819,6 +853,7 @@ export const y4s2Courses: Course[] = [
           'Submit the legacy package: annotated parts returned, operations handbook entries, mentee transition summary',
           'Deliver your excerpt-in-context list, ensemble CV section and written two-minute ensemble narrative',
         ],
+        resources: ['ci-post-concert', 'ci-advocacy', 'savvy-musician'],
       },
     ],
   },
@@ -831,6 +866,7 @@ export const y4s2Courses: Course[] = [
     description:
       'The final chamber-music semester: the ensemble curates, produces and performs its own farewell program, taking every artistic and practical decision from repertoire to stage. The course assesses the group as a self-governing professional ensemble — the model of the chamber musician the sequence set out to build.',
     prerequisites: ['chm401'],
+    resources: ['lib-imslp', 'newmusicusa', 'savvy-musician'],
     lessons: [
       {
         id: 'week-01',
@@ -856,6 +892,7 @@ export const y4s2Courses: Course[] = [
           'Deliver the collective pitch with all members speaking; revise the program per faculty conditions',
           'Write a short ensemble-history note identifying the work or thread that connects this program to your first semester',
         ],
+        resources: ['ci-programming', 'score-mozart-k465', 'score-dvorak-american', 'score-beethoven-op131'],
       },
       {
         id: 'week-02',
@@ -881,6 +918,7 @@ export const y4s2Courses: Course[] = [
           'Record and arbitrate one genuine interpretive disagreement using the try-both protocol; document the outcome',
           'Book coachings with written agendas of unsolved problems; report what each consultation changed',
         ],
+        resources: ['ci-rehearsal-strategy', 'score-beethoven-op131'],
       },
       {
         id: 'week-03',
@@ -906,6 +944,7 @@ export const y4s2Courses: Course[] = [
           'Complete one composer or specialist consultation with prepared score-specific questions; log the changes it caused',
           'Submit the production cue sheet and demonstrate the failure plan in rehearsal',
         ],
+        resources: ['newmusicusa', 'soundandmusic', 'wiki-extended-technique'],
       },
       {
         id: 'week-04',
@@ -931,6 +970,7 @@ export const y4s2Courses: Course[] = [
           'Rehearse all spoken introductions on video; revise for length, single-idea focus and listening cues',
           'Deliver the production sheet with every task owned and dated; confirm venue, recording and publicity milestones',
         ],
+        resources: ['owl-chicago', 'lib-grove', 'savvy-musician'],
       },
       {
         id: 'week-05',
@@ -956,6 +996,7 @@ export const y4s2Courses: Course[] = [
           'Complete the portfolio capture with take log; deliver edited selections and confirm composer permissions',
           'Run two full stabilization performances including speeches; certify the locked decision log',
         ],
+        resources: ['sos-techniques', 'aes'],
       },
       {
         id: 'week-06',
@@ -981,6 +1022,7 @@ export const y4s2Courses: Course[] = [
           'Submit the collective retrospective and your individual colleague-formation reflection',
           'Deliver the afterlife decision document: continuation plan with first-meeting date, or closure archive deposited',
         ],
+        resources: ['ci-post-concert', 'mw-blog'],
       },
     ],
   },

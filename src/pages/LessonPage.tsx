@@ -1,6 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
 import { getCourse, yearForCourse } from '../data'
+import { resolveResources } from '../data/resources'
 import { lessonKey, toggleLesson, useProgress } from '../progress'
+import ResourceList from '../components/ResourceList'
 
 export default function LessonPage() {
   const { courseId, lessonId } = useParams()
@@ -22,6 +24,7 @@ export default function LessonPage() {
 
   const year = yearForCourse(course.id)
   const done = progress.has(lessonKey(course.id, lesson.id))
+  const lessonResources = resolveResources(lesson.resources)
   const prev = lessonIndex > 0 ? course.lessons[lessonIndex - 1] : undefined
   const next =
     lessonIndex < course.lessons.length - 1 ? course.lessons[lessonIndex + 1] : undefined
@@ -84,6 +87,17 @@ export default function LessonPage() {
               <li key={i}>{item}</li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {lessonResources.length > 0 && (
+        <section className="lesson-section">
+          <h2>Sources &amp; further reading</h2>
+          <p className="section-lede">
+            Everything below is an external link. Items marked “subscription” expect a library or
+            conservatory login; the rest are free to read.
+          </p>
+          <ResourceList resources={lessonResources} />
         </section>
       )}
 

@@ -10,6 +10,7 @@ export const y4s1Courses: Course[] = [
     description:
       'The seventh semester of one-to-one applied study shifts the focus from curricular development to professional readiness. Students build the repertoire for the senior recital, assemble a complete audition portfolio, and produce application-quality recordings for graduate programs, young-artist schemes and orchestral or ensemble auditions.',
     prerequisites: ['aps302'],
+    resources: ['mw-blog', 'bpm-home', 'savvy-musician', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -35,6 +36,7 @@ export const y4s1Courses: Course[] = [
           'Complete the written gap analysis for every proposed work and bring it to your next lesson',
           'Produce a semester calendar with milestone dates for each piece, working backward from jury and recording dates',
         ],
+        resources: ['ci-programming', 'lib-imslp', 'lib-grove'],
       },
       {
         id: 'week-02',
@@ -60,6 +62,7 @@ export const y4s1Courses: Course[] = [
           'Format a complete professional repertoire list and submit it for red-pen review',
           'Begin daily fifteen-minute excerpt or audition-specific blocks and log them in your practice journal',
         ],
+        resources: ['savvy-musician', 'bpm-home'],
       },
       {
         id: 'week-03',
@@ -85,6 +88,7 @@ export const y4s1Courses: Course[] = [
           'Keep a dated metric log for the three hardest passages, with weekly reference recordings',
           'Perform one work mentally, away from the instrument, and write a half-page report on where imagery broke down',
         ],
+        resources: ['mw-deliberate-practice', 'mw-defining-practice'],
       },
       {
         id: 'week-04',
@@ -110,6 +114,7 @@ export const y4s1Courses: Course[] = [
           'Adjudicate at least four peer performances using the rubric and hand your scoresheets to the performers',
           'Write a one-paragraph comparison of your simulated and practice-room versions of the same excerpt',
         ],
+        resources: ['mw-blog', 'bpm-home'],
       },
       {
         id: 'week-05',
@@ -135,6 +140,7 @@ export const y4s1Courses: Course[] = [
           'Complete the recording session and the edit-review meeting, documenting take selections and reasons',
           'Deliver final files formatted to a real application’s published specification and archive the session paperwork',
         ],
+        resources: ['sos-techniques', 'aes', 'ci-recording'],
       },
       {
         id: 'week-06',
@@ -160,6 +166,7 @@ export const y4s1Courses: Course[] = [
           'Submit the complete portfolio binder: recordings, lists, logs and scoresheets',
           'Deliver the signed one-page senior recital preparation contract with dated milestones',
         ],
+        resources: ['savvy-musician', 'mw-blog'],
       },
     ],
   },
@@ -171,6 +178,7 @@ export const y4s1Courses: Course[] = [
     stream: 'performance',
     description:
       'A practical introduction to conducting required of all majors, on the Curtis model that every musician benefits from podium literacy. Students develop baton technique, score-study method and rehearsal craft, conducting a lab ensemble of their peers weekly and finishing with a video-reviewed practicum and a conducted final exam.',
+    resources: ['ci-home', 'ci-mooc', 'ci-careers', 'berlioz-treatise', 'lib-imslp', 'lib-dch'],
     lessons: [
       {
         id: 'week-01',
@@ -196,6 +204,7 @@ export const y4s1Courses: Course[] = [
           'Film yourself conducting one minute in each meter and mark every unclear ictus on playback',
           'Write a half-page observation of one professional conductor’s pattern, plane and rebound from video',
         ],
+        resources: ['ci-baton', 'ci-posture', 'ci-beat-patterns'],
       },
       {
         id: 'week-02',
@@ -221,6 +230,7 @@ export const y4s1Courses: Course[] = [
           'With a partner clapping entries, practise starts on every beat and common half-beats of 2, 3 and 4 until placement is unanimous',
           'Film and review five different releases (loud, soft, lifted, closed, subito) for clarity of stopping point',
         ],
+        resources: ['ci-prep-gesture', 'ci-stopping'],
       },
       {
         id: 'week-03',
@@ -246,6 +256,7 @@ export const y4s1Courses: Course[] = [
           'Prepare a written cue map for a two-minute excerpt and execute it for peers playing or singing the entries',
           'Film yourself conducting the same eight bars at pianissimo and fortissimo; verify visible, consistent size difference',
         ],
+        resources: ['ci-non-baton-hand', 'ci-dynamics'],
       },
       {
         id: 'week-04',
@@ -272,6 +283,7 @@ export const y4s1Courses: Course[] = [
           'Practise a Largo pattern with subdivision entering and leaving cleanly at marked points',
           'Drill 5/8 and 7/8 in both groupings at three tempi, then conduct a peer clapping the meter to verify grouping legibility',
         ],
+        resources: ['ci-fermatas', 'ci-subdividing', 'ci-irregular-meters'],
       },
       {
         id: 'week-05',
@@ -296,6 +308,10 @@ export const y4s1Courses: Course[] = [
           'Complete the three-pass study of the Mozart minuet and submit your marked score',
           'Write out the chorale’s bass line and harmonic analysis from memory after singing study',
           'Submit a one-page from-analysis-to-gesture plan pairing at least eight findings with podium decisions',
+        ],
+        resources: [
+          'ci-score-study', 'ci-score-awareness', 'ci-score-investigation', 'ci-score-vision',
+          'ci-transpositions', 'omt-orchestration', 'berlioz-treatise',
         ],
       },
       {
@@ -322,6 +338,7 @@ export const y4s1Courses: Course[] = [
           'Rehearse the lab ensemble for eight minutes; film it',
           'Review your film computing talk-to-play ratio and listing every stop with its diagnosis and whether the re-test passed',
         ],
+        resources: ['ci-rehearsal-strategy', 'ci-communication', 'ci-rehearsal-technique'],
       },
       {
         id: 'week-07',
@@ -347,6 +364,7 @@ export const y4s1Courses: Course[] = [
           'Complete rubric observations for four peers and deliver them face to face',
           'Review your lab film and write three action items feeding into next week’s podium turn',
         ],
+        resources: ['ci-phrasing', 'score-bach-chorales', 'score-mozart-eine-kleine', 'lib-cpdl'],
       },
       {
         id: 'week-08',
@@ -372,6 +390,7 @@ export const y4s1Courses: Course[] = [
           'Drill the elastic-pattern exercise with a partner varying rubato; film and verify beat legibility',
           'Write a one-page reflection on one follow-versus-lead decision from your lab session and its outcome',
         ],
+        resources: ['ci-opera', 'score-mozart-don-giovanni'],
       },
       {
         id: 'week-09',
@@ -397,6 +416,7 @@ export const y4s1Courses: Course[] = [
           'Take the written recording-versus-score discrepancy test on two excerpts',
           'Write a triage justification for one lab stop you chose to make and one error you chose to leave',
         ],
+        resources: ['ci-improving-ear', 'ci-transpositions'],
       },
       {
         id: 'week-10',
@@ -423,6 +443,7 @@ export const y4s1Courses: Course[] = [
           'Practise notated accelerando and ritardando passages with a partner clapping subdivisions to test readability',
           'Compare timings of one passage across a historical and a modern recording, tabulating bar durations',
         ],
+        resources: ['ci-tempo-change', 'ci-transitions', 'score-brahms-4'],
       },
       {
         id: 'week-11',
@@ -449,6 +470,7 @@ export const y4s1Courses: Course[] = [
           'Conduct the gauntlet in lab; log every train-wreck bar from the film and diagnose each',
           'Prepare a marked mixed-meter map of a self-chosen post-1950 excerpt for practicum consideration',
         ],
+        resources: ['ci-mixed-meters', 'ci-aleatoric', 'ci-contemporary', 'score-stravinsky-rite'],
       },
       {
         id: 'week-12',
@@ -474,6 +496,7 @@ export const y4s1Courses: Course[] = [
           'Perform the three-pass video review and reconcile your scoresheet with instructor and peer sheets',
           'Submit the two-fault correction plan with daily drills and your marked exam score',
         ],
+        resources: ['ci-from-memory', 'ci-etiquette'],
       },
       {
         id: 'week-13',
@@ -499,6 +522,7 @@ export const y4s1Courses: Course[] = [
           'Submit the complete course portfolio: films, scoresheets, correction plans and marked scores',
           'Write the one-page transfer reflection connecting podium literacy to your principal study',
         ],
+        resources: ['ci-dress-rehearsal', 'ci-parts-bowings', 'ci-editions'],
       },
     ],
   },

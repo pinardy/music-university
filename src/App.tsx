@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage'
 import YearPage from './pages/YearPage'
 import CoursePage from './pages/CoursePage'
 import LessonPage from './pages/LessonPage'
+import LibraryPage from './pages/LibraryPage'
 
 export default function App() {
   return (
@@ -15,12 +16,16 @@ export default function App() {
           Conservatory
           <small>Bachelor of Music</small>
         </Link>
+        <Link to="/library" className="header-link">
+          Sources
+        </Link>
       </header>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/year/:year" element={<YearPage />} />
         <Route path="/course/:courseId" element={<CoursePage />} />
         <Route path="/course/:courseId/lesson/:lessonId" element={<LessonPage />} />
+        <Route path="/library" element={<LibraryPage />} />
         <Route
           path="*"
           element={

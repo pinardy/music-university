@@ -9,6 +9,7 @@ export const y2s1Courses: Course[] = [
     stream: 'performance',
     description: 'Third semester of one-to-one applied study, widening stylistic range across Baroque, Classical, Romantic and 20th-century repertoire on your instrument or voice. Orchestral excerpts and standard audition repertoire enter the weekly lesson for the first time, alongside a continuing technical regime and jury preparation.',
     prerequisites: ['aps102'],
+    resources: ['mw-blog', 'bpm-home', 'lib-imslp', 'lib-naxos'],
     lessons: [
       {
         id: 'week-01',
@@ -34,6 +35,7 @@ export const y2s1Courses: Course[] = [
           'Record and file a diagnostic performance of one finished work from last semester',
           'Write a half-page note on which style period is weakest in your history and why you chose the new work you did',
         ],
+        resources: ['lib-imslp', 'lib-grove'],
       },
       {
         id: 'week-02',
@@ -59,6 +61,7 @@ export const y2s1Courses: Course[] = [
           'Write out one ornamented repeat of a binary section and perform both plain and decorated versions',
           'Compare one movement in a period-instrument and a modern-instrument recording; list three concrete differences you hear',
         ],
+        resources: ['wiki-hip', 'um-baroque', 'score-bach-cello-suites', 'score-handel-messiah'],
       },
       {
         id: 'week-03',
@@ -84,6 +87,7 @@ export const y2s1Courses: Course[] = [
           'Record both excerpts at 85 percent tempo with metronome; verify rhythm note by note',
           'Play or sing each excerpt along with two different reference recordings and note tempo differences',
         ],
+        resources: ['lib-imslp', 'score-beethoven-3', 'score-mahler-1'],
       },
       {
         id: 'week-04',
@@ -109,6 +113,7 @@ export const y2s1Courses: Course[] = [
           'Perform in studio class and submit the written peer feedback you gave to two colleagues',
           'Practice one passage three ways — legato, articulated, and as marked — and record all three for comparison',
         ],
+        resources: ['um-classical', 'score-mozart-k333', 'score-haydn-trumpet', 'mozart-dme'],
       },
       {
         id: 'week-05',
@@ -134,6 +139,7 @@ export const y2s1Courses: Course[] = [
           'Record one phrase in strict time and again with planned rubato; check the pulse survives',
           'Practice the projection exercise (loudest sustainable to softest projecting sound) daily and log results',
         ],
+        resources: ['um-romantic', 'score-brahms-op118', 'score-chopin-nocturnes'],
       },
       {
         id: 'week-06',
@@ -158,6 +164,7 @@ export const y2s1Courses: Course[] = [
           'Perform your full four-work jury program in a single run-through for a peer and log the transition problems',
           'Submit the one-page semester synthesis and re-recorded diagnostic comparison',
         ],
+        resources: ['bpm-anxiety-asset', 'bpm-quiet-eye'],
       },
     ],
   },
@@ -169,6 +176,7 @@ export const y2s1Courses: Course[] = [
     stream: 'theory',
     description: 'Completes the study of chromatic harmony: distant modulation, enharmonic reinterpretation, chromatic sequences and voice-leading techniques, and extended tertian sonorities. Analytical work centers on the 19th-century repertoire — Schubert, Chopin, Brahms and Wagner — and introduces Schenkerian reduction, culminating in a model composition and an analysis portfolio.',
     prerequisites: ['mut102'],
+    resources: ['lib-omt', 'lib-mt21c', 'lib-mto', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -194,6 +202,7 @@ export const y2s1Courses: Course[] = [
           'Write a Roman-numeral and mixture analysis of Schubert’s Der Neugierige, bars 1–22',
           'Compose an eight-bar phrase in major that tonicizes ♭VI before the final cadence',
         ],
+        resources: ['fff-advanced-mixture', 'omt-modal-mixture', 'mt21c-mode-mixture'],
       },
       {
         id: 'week-02',
@@ -219,6 +228,7 @@ export const y2s1Courses: Course[] = [
           'Analyze the key scheme of the Waldstein exposition, classifying each modulation type',
           'Chart every key in Schubert’s Nacht und Träume and describe the pivot or seam at each change',
         ],
+        resources: ['mt21c-key-relationships', 'omt-chromatic-modulation', 'fff-modulation'],
       },
       {
         id: 'week-03',
@@ -244,6 +254,7 @@ export const y2s1Courses: Course[] = [
           'Take one diminished-seventh chord and resolve it, correctly respelled, to all four possible tonics in four-part texture',
           'Analyze the enharmonic passage in Der Wegweiser, showing both spellings at the pivot',
         ],
+        resources: ['mt21c-enharmonic-modulation', 'omt-chromatic-modulation', 'omt-aug6'],
       },
       {
         id: 'week-04',
@@ -269,6 +280,7 @@ export const y2s1Courses: Course[] = [
           'Compose an ascending chromatic 5–6 sequence of at least three transpositions leading to a half cadence',
           'Find and bracket two sequences in a Chopin work you are playing or studying, labeling model and transposition levels',
         ],
+        resources: ['omt-chromatic-sequences', 'fff-other-chromatic', 'fff-chromatic-pd'],
       },
       {
         id: 'week-05',
@@ -294,6 +306,7 @@ export const y2s1Courses: Course[] = [
           'Harmonize a chromatic descending bass line (an octave, C to C) using 5–6 exchanges and passing sonorities',
           'Make a two-level analysis (voice-leading sketch plus chord labels) of Chopin’s E-minor Prélude, bars 1–12',
         ],
+        resources: ['omt-omnibus', 'omt-equal-divisions', 'omt-common-tone', 'mt21c-vl-chromatic'],
       },
       {
         id: 'week-06',
@@ -320,6 +333,7 @@ export const y2s1Courses: Course[] = [
           'Find three extended dominants in Chopin nocturnes and defend the extension-versus-NCT label for each',
           'Harmonize an eight-bar melody using at least two genuine ninth chords and one thirteenth',
         ],
+        resources: ['omt-altered-extended', 'mt21c-jazz'],
       },
       {
         id: 'week-07',
@@ -344,6 +358,10 @@ export const y2s1Courses: Course[] = [
           'Produce a complete analysis of Erlkönig: form chart, key map with modulation types, and character-differentiation table',
           'Write 500 words connecting one harmonic event in Gute Nacht to the poem’s meaning',
           'Memorize and play or sing the boy’s three cries in Erlkönig, identifying the key of each',
+        ],
+        resources: [
+          'score-schubert-winterreise', 'score-schubert-schwanengesang', 'score-schubert-erlkonig',
+          'score-schumann-dichterliebe', 'schubert-online',
         ],
       },
       {
@@ -371,6 +389,7 @@ export const y2s1Courses: Course[] = [
           'Chart the form and key plan of Chopin Op. 48 No. 1, classifying every chromatic chord',
           'Write a two-page comparative essay on chromatic technique in your chosen Chopin and Brahms pieces',
         ],
+        resources: ['score-chopin-preludes', 'score-brahms-op118', 'omt-mediants', 'chopin-online'],
       },
       {
         id: 'week-09',
@@ -396,6 +415,7 @@ export const y2s1Courses: Course[] = [
           'Write 400 words defending one interpretation of the Tristan chord against one alternative',
           'Find the Tristan chord’s pitch-class content elsewhere (Berg’s Lyric Suite or a jazz half-diminished usage) and compare context',
         ],
+        resources: ['score-wagner-tristan', 'wiki-tristan-chord', 'omt-neo-riemannian'],
       },
       {
         id: 'week-10',
@@ -422,6 +442,7 @@ export const y2s1Courses: Course[] = [
           'Chart the key trajectory of one Mahler movement and write 300 words on its expressive meaning',
           'Find one song (Wolf, Strauss or Mahler) ending off-tonic and explain what the poem gains from the tonal plan',
         ],
+        resources: ['score-mahler-1', 'lib-mto'],
       },
       {
         id: 'week-11',
@@ -447,6 +468,7 @@ export const y2s1Courses: Course[] = [
           'Produce a middleground graph of Chopin’s B-minor Prélude identifying the Urlinie descent',
           'Write 300 words on what your graph revealed that Roman numerals alone did not',
         ],
+        resources: ['wiki-schenker', 'lib-mto'],
       },
       {
         id: 'week-12',
@@ -472,6 +494,7 @@ export const y2s1Courses: Course[] = [
           'Annotate your own score, locating the required chromatic devices with labels',
           'Exchange drafts with a partner and write ten specific bar-referenced comments on theirs',
         ],
+        resources: ['omt-harmony-anthology', 'lib-musescore'],
       },
       {
         id: 'week-13',
@@ -496,6 +519,7 @@ export const y2s1Courses: Course[] = [
           'Present your character piece and its analytical defense',
           'Sit the cumulative chromatic-harmony examination',
         ],
+        resources: ['lib-mto', 'owl-chicago'],
       },
     ],
   },
@@ -507,6 +531,7 @@ export const y2s1Courses: Course[] = [
     stream: 'aural',
     description: 'Third-semester musicianship parallel to Theory 3: chromatic sight-singing, harmonic dictation with chromatic predominants, melodic dictation with modulation, and the beginnings of atonal interval training. Rhythmic work tackles syncopation, hemiola and mixed meters, while C-clef reading and score-based error detection connect the ear to real rehearsal situations.',
     prerequisites: ['aur102'],
+    resources: ['lib-teoria-ex', 'lib-solfege', 'omt-sight-singing-l2', 'lib-omt'],
     lessons: [
       {
         id: 'week-01',
@@ -531,6 +556,7 @@ export const y2s1Courses: Course[] = [
           'Prepare three assigned chromatic melodies with syllables marked, then sung from clean copies',
           'Drill do–di–re, re–ri–mi, sol–fi–sol, la–te–la patterns in five keys',
         ],
+        resources: ['omt-modes-chromatic', 'omt-sight-singing-l2'],
       },
       {
         id: 'week-02',
@@ -556,6 +582,7 @@ export const y2s1Courses: Course[] = [
           'Complete twenty mode-discrimination drills and log your error pattern by scale degree',
           'Prepare one assigned Schubert melody containing mixture, sung with syllables and then with text or neutral vowel',
         ],
+        resources: ['omt-modal-mixture', 'lib-teoria-ex'],
       },
       {
         id: 'week-03',
@@ -581,6 +608,7 @@ export const y2s1Courses: Course[] = [
           'Take four assigned harmonic dictations containing N6 or +6 chords; submit bass, soprano and Roman numerals',
           'At the keyboard, play and sing the bass of i–iv6–Ger+6–V–i and i–N6–V7–i in three minor keys',
         ],
+        resources: ['teoria-harmonic', 'fff-chromatic-pd'],
       },
       {
         id: 'week-04',
@@ -606,6 +634,7 @@ export const y2s1Courses: Course[] = [
           'Sight-sing four modulating melodies, spoken-analyzing the pivot syllable before singing',
           'Compose and notate one eight-bar melody modulating to the dominant; exchange with a partner for dictation',
         ],
+        resources: ['teoria-dictation', 'omt-modulation'],
       },
       {
         id: 'week-05',
@@ -631,6 +660,7 @@ export const y2s1Courses: Course[] = [
           'Take five rhythmic dictations featuring ties across barlines; check beaming conventions',
           'Clap 3+3+2 patterns over a partner’s steady 4/4 conducting, then swap roles',
         ],
+        resources: ['omt-rhythm-essentials', 'teoria-rhythm'],
       },
       {
         id: 'week-06',
@@ -657,6 +687,7 @@ export const y2s1Courses: Course[] = [
           'Find and mark every hemiola in an assigned Brahms intermezzo excerpt, then perform its rhythm',
           'Complete ten listening drills labeling grouping versus displacement dissonance',
         ],
+        resources: ['omt-metrical-dissonance', 'omt-hypermeter'],
       },
       {
         id: 'week-07',
@@ -683,6 +714,7 @@ export const y2s1Courses: Course[] = [
           'Take four rhythmic dictations in asymmetric meters, notating grouping with correct beaming',
           'Identify the metric grouping of three recorded Balkan dance excerpts by ear',
         ],
+        resources: ['omt-20c-rhythm', 'teoria-rhythm'],
       },
       {
         id: 'week-08',
@@ -708,6 +740,7 @@ export const y2s1Courses: Course[] = [
           'Sing the trichords 012, 016 and 027 from five starting pitches each, recorded',
           'Take ten two-interval dictations (three-note cells) without key context',
         ],
+        resources: ['omt-pitch-class', 'omt-integer-intervals', 'teoria-intervals'],
       },
       {
         id: 'week-09',
@@ -733,6 +766,7 @@ export const y2s1Courses: Course[] = [
           'Maintain and submit the error-classification log for all dictations this week',
           'Play-and-sing at the keyboard: I–V7/IV–IV–Ger+6–V(6-4-5-3)–I in C, F and G major, singing the bass',
         ],
+        resources: ['teoria-harmonic', 'omt-chromatic-sequences'],
       },
       {
         id: 'week-10',
@@ -757,6 +791,7 @@ export const y2s1Courses: Course[] = [
           'Prepare six melodies (two diatonic, two chromatic, two modulating) split between the two C clefs',
           'Sing the tenor voice of an assigned chorale from open score while a partner sings alto',
         ],
+        resources: ['omt-clefs', 'teoria-clefs'],
       },
       {
         id: 'week-11',
@@ -782,6 +817,7 @@ export const y2s1Courses: Course[] = [
           'Prepare and perform an excerpt with three planted errors for the class; document who found what',
           'Write a half-page reflection on your weakest error category and a drill plan for it',
         ],
+        resources: ['teoria-harmonic-analysis', 'omt-harmony-anthology'],
       },
       {
         id: 'week-12',
@@ -806,6 +842,7 @@ export const y2s1Courses: Course[] = [
           'Submit your scored rubric, weakness ranking and final-week practice plan',
           'Complete three integrated exercises (chromatic + clef + rhythm combinations) daily',
         ],
+        resources: ['lib-teoria-ex', 'omt-sight-singing-l2'],
       },
       {
         id: 'week-13',
@@ -829,6 +866,7 @@ export const y2s1Courses: Course[] = [
           'Submit your semester error logs and anthology with markings as the participation portfolio',
           'Write a half-page plan for maintaining aural skills over the break',
         ],
+        resources: ['lib-teoria-ex', 'lib-solfege'],
       },
     ],
   },

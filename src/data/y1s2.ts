@@ -10,6 +10,7 @@ export const y1s2Courses: Course[] = [
     description:
       'Weekly one-to-one lessons continue on your instrument or voice, expanding the technical regime established in Principal Study 1. You will prepare two to three complete works to performance standard, receive an introduction to performance psychology, and close the semester with a jury before the faculty.',
     prerequisites: ['aps101'],
+    resources: ['mw-blog', 'bpm-home', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -30,6 +31,7 @@ export const y1s2Courses: Course[] = [
           'Draft your expanded technical regime as a weekly grid and bring it to lesson two for revision with your teacher',
           'Write three measurable, repertoire-linked semester goals and agree them with your teacher',
         ],
+        resources: ['mw-deliberate-practice', 'score-paganini-caprices'],
       },
       {
         id: 'week-02',
@@ -50,6 +52,7 @@ export const y1s2Courses: Course[] = [
           'Create a sectional practice map for all works with entry and target tempos, and begin a daily practice log',
           'End each practice day with one performing-mode run-through of a section, noting recovery points in your log',
         ],
+        resources: ['mw-defining-practice', 'lib-imslp'],
       },
       {
         id: 'week-03',
@@ -70,6 +73,7 @@ export const y1s2Courses: Course[] = [
           'Complete two stress-inoculation simulations this unit and write a half-page debrief for each',
           'Read the assigned excerpt from Don Greene’s Performance Success and identify which of his seven skills you most need',
         ],
+        resources: ['bpm-anxiety-asset', 'bpm-quiet-eye', 'bpm-stage-fright', 'help-musicians'],
       },
       {
         id: 'week-04',
@@ -90,6 +94,7 @@ export const y1s2Courses: Course[] = [
           'Deliver written feedback to two peers using the strength-plus-growth-point protocol',
           'Submit your revised semester goal contract with an updated weekly practice grid',
         ],
+        resources: ['bpm-stage-fright', 'mw-blog'],
       },
       {
         id: 'week-05',
@@ -110,6 +115,7 @@ export const y1s2Courses: Course[] = [
           'Complete random-access drills: have a peer call out rehearsal letters and start within five seconds',
           'Log at least two full program run-throughs per week, one with listeners, with a recovery note for each slip',
         ],
+        resources: ['bpm-mental-practice', 'mw-deliberate-practice'],
       },
       {
         id: 'week-06',
@@ -130,6 +136,7 @@ export const y1s2Courses: Course[] = [
           'Perform your jury program in one final dress rehearsal for peers under full examination conditions',
           'Write a two-page post-jury reflection integrating the panel’s comments, your recording and your practice logs',
         ],
+        resources: ['bpm-anxiety-asset', 'bpm-quiet-eye'],
       },
     ],
   },
@@ -142,6 +149,7 @@ export const y1s2Courses: Course[] = [
     description:
       'A continuation of diatonic harmony into the first stages of chromaticism: applied chords, tonicization, modulation to closely related keys, mixture, the Neapolitan and augmented-sixth chords. Alongside harmony, the course studies binary and ternary forms and advanced species counterpoint, culminating in the composition of a modulating period in Classical style.',
     prerequisites: ['mut101'],
+    resources: ['lib-omt', 'lib-mt21c', 'lib-fff', 'omt-harmony-anthology'],
     lessons: [
       {
         id: 'week-01',
@@ -167,6 +175,7 @@ export const y1s2Courses: Course[] = [
           'Part-write six progressions using leading-tone sevenths in various inversions, resolving all tendency tones',
           'Analyze the first eight bars of Mozart’s K. 397 Fantasia, labeling every diminished sonority with Roman numerals and figures',
         ],
+        resources: ['omt-leading-tone-chord', 'fff-viio', 'fff-dim7', 'mt21c-vl-sevenths'],
       },
       {
         id: 'week-02',
@@ -193,6 +202,7 @@ export const y1s2Courses: Course[] = [
           'Compose an eight-bar keyboard passage using an ascending 5–6 sequence ending with an authentic cadence',
           'Find and bracket two sequences in a Corelli or Vivaldi score, identifying the model, copies and interval of transposition',
         ],
+        resources: ['omt-diatonic-sequences', 'fff-desc-fifths', 'fff-other-sequences', 'omt-galant-schemas'],
       },
       {
         id: 'week-03',
@@ -218,6 +228,7 @@ export const y1s2Courses: Course[] = [
           'Harmonize a given eight-bar melody inserting at least three secondary dominants, then part-write it in four voices',
           'Aurally identify the tonicized chord in ten short recorded progressions played in class',
         ],
+        resources: ['omt-tonicization', 'mt21c-secondary-dominants', 'fff-applied'],
       },
       {
         id: 'week-04',
@@ -243,6 +254,7 @@ export const y1s2Courses: Course[] = [
           'Part-write eight progressions mixing applied V7 and applied vii°7 chords with full figures',
           'Write a four-bar phrase for piano that approaches its half cadence through vii°4/3/V',
         ],
+        resources: ['mt21c-secondary-dim', 'omt-tonicization', 'fff-applied'],
       },
       {
         id: 'week-05',
@@ -268,6 +280,7 @@ export const y1s2Courses: Course[] = [
           'Re-analyze two Week 3 homework progressions, deciding whether each applied chord is local color or the start of a key change',
           'Find one extended tonicization in your current principal-study repertoire and bring the marked score to class',
         ],
+        resources: ['mt21c-tonicization-v-modulation', 'omt-modulation', 'mt21c-key-relationships'],
       },
       {
         id: 'week-06',
@@ -293,6 +306,7 @@ export const y1s2Courses: Course[] = [
           'Write two pivot-chord modulations in four voices: C major to G major and G minor to B♭ major, with bracketed pivot analysis',
           'Analyze all phrase-by-phrase key areas in an assigned Bach chorale, naming each modulation type',
         ],
+        resources: ['omt-modulation', 'mt21c-modulation', 'fff-modulation'],
       },
       {
         id: 'week-07',
@@ -319,6 +333,7 @@ export const y1s2Courses: Course[] = [
           'Write a one-page analysis of the ‘Raindrop’ Prelude arguing for ternary rather than binary design',
           'Compose the first reprise (eight bars) of a rounded binary minuet in D major, tonic to dominant',
         ],
+        resources: ['omt-binary', 'omt-ternary', 'mt21c-binary-ternary', 'fff-binary'],
       },
       {
         id: 'week-08',
@@ -343,6 +358,10 @@ export const y1s2Courses: Course[] = [
           'Write third-species counterpoint above and below the assigned Fux cantus firmus in D dorian',
           'Write a fourth-species exercise containing at least one chain of three suspensions',
           'Write one florid counterpoint against a cantus of your choice, then sing both exercises with a partner in class',
+        ],
+        resources: [
+          'omt-species-3', 'omt-species-4', 'omt-species-5', 'omt-16c-counterpoint', 'omt-gradus-exercises',
+          'score-fux-gradus', 'lib-tml',
         ],
       },
       {
@@ -370,6 +389,7 @@ export const y1s2Courses: Course[] = [
           'Part-write a progression I–V/♭VI–♭VI–iv–V7–I in F major, avoiding the augmented second',
           'Write a half-page analysis of mixture and its expressive function in ‘Der Lindenbaum’',
         ],
+        resources: ['omt-modal-mixture', 'mt21c-mode-mixture', 'fff-mixture'],
       },
       {
         id: 'week-10',
@@ -395,6 +415,7 @@ export const y1s2Courses: Course[] = [
           'Part-write two cadential approaches: ♭II6–V7–i and ♭II6–i6/4 (cadential)–V7–i in G minor',
           'Annotate the Neapolitan passage in the ‘Moonlight’ first movement, showing the resolution of the lowered second degree',
         ],
+        resources: ['omt-neapolitan', 'mt21c-neapolitan', 'fff-neapolitan'],
       },
       {
         id: 'week-11',
@@ -420,6 +441,7 @@ export const y1s2Courses: Course[] = [
           'Part-write each type resolving to V (using the cadential six-four for the German) in four voices',
           'Take dictation on eight cadential approaches, identifying Neapolitan versus each augmented-sixth type',
         ],
+        resources: ['omt-aug6', 'mt21c-aug6', 'fff-aug6'],
       },
       {
         id: 'week-12',
@@ -446,6 +468,7 @@ export const y1s2Courses: Course[] = [
           'Diagram the form of both Schubert songs and label each with the correct song-form category',
           'Prepare a five-minute presentation on where chromatic harmony appears in the form of your analyzed minuet',
         ],
+        resources: ['omt-ternary', 'fff-ternary-rondo', 'score-mozart-eine-kleine', 'score-beethoven-op2-1'],
       },
       {
         id: 'week-13',
@@ -471,6 +494,7 @@ export const y1s2Courses: Course[] = [
           'Perform or arrange performance of your draft in class and give protocol-based critique on two peer pieces',
           'Submit the revised score with full Roman-numeral analysis and a revision paragraph by the end of exam week',
         ],
+        resources: ['fff-sentences-periods', 'omt-phrase-archetypes', 'lib-musescore'],
       },
     ],
   },
@@ -483,6 +507,7 @@ export const y1s2Courses: Course[] = [
     description:
       'The second semester of musicianship training extends singing and dictation into chromaticism: chromatic embellishing tones, secondary dominants, and modulation to the dominant and relative keys. Rhythmic work adds compound and irregular meters and two-part textures, harmonic dictation covers full diatonic progressions, and C-clef reading begins, all converging in a cumulative exam.',
     prerequisites: ['aur101'],
+    resources: ['lib-musictheory-net-ex', 'lib-teoria-ex', 'lib-solfege', 'omt-sight-singing'],
     lessons: [
       {
         id: 'week-01',
@@ -503,6 +528,7 @@ export const y1s2Courses: Course[] = [
           'Take dictation on six four-bar melodies containing one chromatic neighbor each',
           'Memorize chromatic solmization syllables ascending and descending and recite the full chromatic scale on do',
         ],
+        resources: ['omt-modes-chromatic', 'lib-teoria-ex'],
       },
       {
         id: 'week-02',
@@ -528,6 +554,7 @@ export const y1s2Courses: Course[] = [
           'Notate the chromatic scale from four different starting pitches with correct directional spelling',
           'Take dictation on six melodies mixing chromatic neighbors and passing tones, labeling each chromatic tone N or P',
         ],
+        resources: ['omt-modes-chromatic', 'teoria-dictation'],
       },
       {
         id: 'week-03',
@@ -553,6 +580,7 @@ export const y1s2Courses: Course[] = [
           'Take rhythmic dictation on eight two-bar patterns in 6/8 and 9/8 with ties and dotted values',
           'Transcribe the rhythm of the first eight bars of the Offenbach Barcarolle by ear',
         ],
+        resources: ['omt-compound-meter', 'teoria-rhythm'],
       },
       {
         id: 'week-04',
@@ -578,6 +606,7 @@ export const y1s2Courses: Course[] = [
           'Take harmonic dictation on eight four-chord progressions, half containing V/V or V6/5/V',
           'Notate two four-bar melodic dictations per practice session containing fi at the half cadence',
         ],
+        resources: ['teoria-harmonic', 'omt-tonicization'],
       },
       {
         id: 'week-05',
@@ -603,6 +632,7 @@ export const y1s2Courses: Course[] = [
           'Take harmonic dictation on ten progressions, identifying which chord each applied dominant tonicizes',
           'Transcribe the melody and bass of the first phrase of the ‘Trout’ theme and label the applied harmony',
         ],
+        resources: ['teoria-harmonic', 'fff-applied'],
       },
       {
         id: 'week-06',
@@ -628,6 +658,7 @@ export const y1s2Courses: Course[] = [
           'Take melodic dictation on four eight-bar melodies that modulate to the dominant',
           'Take harmonic dictation on two chorale phrases, notating soprano, bass and Roman numerals in both keys with a pivot bracket',
         ],
+        resources: ['omt-modulation', 'teoria-harmonic'],
       },
       {
         id: 'week-07',
@@ -653,6 +684,7 @@ export const y1s2Courses: Course[] = [
           'Take melodic dictation on four minor-key melodies that modulate to the relative major',
           'Complete the discrimination drill set: sixteen excerpts, identifying modulation to V, to the relative key, or none',
         ],
+        resources: ['omt-modulation', 'teoria-harmonic'],
       },
       {
         id: 'week-08',
@@ -679,6 +711,7 @@ export const y1s2Courses: Course[] = [
           'Take rhythmic dictation on eight patterns in 5/8 and 7/8, writing the grouping above each bar',
           'Transcribe the ostinato rhythm of ‘Mars’ and the theme rhythm of ‘Take Five’ by ear',
         ],
+        resources: ['omt-20c-rhythm', 'teoria-rhythm'],
       },
       {
         id: 'week-09',
@@ -704,6 +737,7 @@ export const y1s2Courses: Course[] = [
           'Sing one voice of an assigned two-part exercise while playing the other at the keyboard, then swap',
           'Transcribe four bars of outer voices from a recorded Bach chorale',
         ],
+        resources: ['teoria-two-voice', 'omt-species-1'],
       },
       {
         id: 'week-10',
@@ -729,6 +763,7 @@ export const y1s2Courses: Course[] = [
           'Play the phrase-model paradigms at the keyboard in four keys: I–vi–ii6–V7–I and I–IV–I6/4(cadential)–V–I',
           'Write a bass line and numerals from memory for two chorale phrases studied in class, then verify against the score',
         ],
+        resources: ['teoria-harmonic', 'omt-phrase-model'],
       },
       {
         id: 'week-11',
@@ -754,6 +789,7 @@ export const y1s2Courses: Course[] = [
           'Take four short dictations notated directly into alto clef and two into tenor clef',
           'Read one SATB chorale in open score aloud, naming pitches line by line in the correct clefs',
         ],
+        resources: ['omt-clefs', 'teoria-clefs'],
       },
       {
         id: 'week-12',
@@ -778,6 +814,7 @@ export const y1s2Courses: Course[] = [
           'In the live lab, log every detected error with bar, beat, voice and correction in rehearsal language',
           'Follow the ‘Emperor’ variations with score and write down three interpretive differences between two recordings',
         ],
+        resources: ['teoria-harmonic-analysis', 'omt-harmony-anthology'],
       },
       {
         id: 'week-13',
@@ -798,6 +835,7 @@ export const y1s2Courses: Course[] = [
           'Complete two full timed mock exams from past papers under strict exam conditions',
           'Submit a one-page post-exam self-assessment with specific targets for Aural Skills 3',
         ],
+        resources: ['lib-teoria-ex', 'omt-sight-singing-l2'],
       },
     ],
   },
@@ -810,6 +848,7 @@ export const y1s2Courses: Course[] = [
     description:
       'The second semester of secondary piano extends technique to two-octave scales and progressions with secondary dominants, and builds the functional literacies every musician needs at the keyboard: figured-bass realization, harmonization with inversions, easy two-stave score reading and level-2 sight-reading. The semester ends with a comprehensive skills exam.',
     prerequisites: ['key101'],
+    resources: ['lib-omt', 'omt-figured-bass', 'lib-musescore', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',
@@ -830,6 +869,7 @@ export const y1s2Courses: Course[] = [
           'Record one scale per session and log the three standard flaws you hear',
           'Review and replay your strongest first-semester repertoire piece to restore continuity',
         ],
+        resources: ['omt-major-scales', 'lib-musictheory-net'],
       },
       {
         id: 'week-02',
@@ -850,6 +890,7 @@ export const y1s2Courses: Course[] = [
           'Practice two-octave arpeggios in C, G and A minor, blocked then broken',
           'Bring C and G major scales hands together at quarter = 60 to the next class',
         ],
+        resources: ['omt-minor-scales', 'mt21c-minor-keys'],
       },
       {
         id: 'week-03',
@@ -870,6 +911,7 @@ export const y1s2Courses: Course[] = [
           'Practice the chromatic bass cell (do–fi–sol) with correct right-hand resolutions in all five keys',
           'Record the full phrase I–IV–V6/5/V–V–I in two keys and check every resolution against Theory 2 rules',
         ],
+        resources: ['mt21c-secondary-dominants', 'omt-tonicization'],
       },
       {
         id: 'week-04',
@@ -890,6 +932,7 @@ export const y1s2Courses: Course[] = [
           'Realize four assigned eight-chord Roman-numeral charts in keyboard style without stopping',
           'Write your own eight-chord chart containing two applied dominants and perform it in two keys',
         ],
+        resources: ['fff-applied', 'mt21c-secondary-dominants'],
       },
       {
         id: 'week-05',
@@ -914,6 +957,7 @@ export const y1s2Courses: Course[] = [
           'Play the supertonic-to-dominant cadence formula in five keys from figures',
           'Write out one of your realizations in four-part notation and check doublings against Theory 2 rules',
         ],
+        resources: ['omt-figured-bass', 'fff-figured-bass', 'mt21c-figured-bass'],
       },
       {
         id: 'week-06',
@@ -938,6 +982,7 @@ export const y1s2Courses: Course[] = [
           'Drill the cadential formulas 6/4–5/3 and 4–3 in eight keys until automatic',
           'Prepare one complete Corelli-excerpt realization for performance in class without stopping',
         ],
+        resources: ['omt-cadential-64', 'omt-embellishing-tones', 'mt21c-figured-bass'],
       },
       {
         id: 'week-07',
@@ -962,6 +1007,7 @@ export const y1s2Courses: Course[] = [
           'Practice simplification: read two assigned pieces above your level, keeping only bass and melody',
           'Read one hymn harmonization daily, aiming for full four-voice texture at a slow steady tempo',
         ],
+        resources: ['teoria-clefs', 'score-bach-chorales'],
       },
       {
         id: 'week-08',
@@ -982,6 +1028,7 @@ export const y1s2Courses: Course[] = [
           'Prepare two contrasting harmonizations of ‘Ode to Joy’ and be ready to defend the bass-line choices',
           'Drill the ii6–V–I and IV–V6–vi cadence cells in five keys',
         ],
+        resources: ['omt-inversion', 'omt-la-in-bass', 'fff-figured-bass'],
       },
       {
         id: 'week-09',
@@ -1002,6 +1049,7 @@ export const y1s2Courses: Course[] = [
           'Practice the two-pass sight-harmonization procedure daily on one new melody with a timer',
           'Perform ‘Scarborough Fair’ in two contrasting accompaniment textures',
         ],
+        resources: ['fff-applied', 'omt-tonicization'],
       },
       {
         id: 'week-10',
@@ -1022,6 +1070,7 @@ export const y1s2Courses: Course[] = [
           'Do the card drill or flash-reading drill for five minutes daily',
           'Keep an error-type log for the week and write two sentences on your dominant error pattern',
         ],
+        resources: ['score-bach-inventions', 'teoria-clefs'],
       },
       {
         id: 'week-11',
@@ -1047,6 +1096,7 @@ export const y1s2Courses: Course[] = [
           'Rehearse and perform one Diabelli duet movement with a partner',
           'Complete the accompanying lab: one accompanied melody with count-in, balance and following',
         ],
+        resources: ['score-schumann-kinderszenen', 'score-bach-inventions', 'lib-cpdl'],
       },
       {
         id: 'week-12',
@@ -1067,6 +1117,7 @@ export const y1s2Courses: Course[] = [
           'Submit your final-week triage plan with daily minutes per component',
           'Drill your two weakest components daily, logging measurable progress (tempo, error count)',
         ],
+        resources: ['omt-rule-of-octave', 'omt-galant-schemas'],
       },
       {
         id: 'week-13',
@@ -1087,6 +1138,7 @@ export const y1s2Courses: Course[] = [
           'Submit a one-page self-assessment linking exam results to specific goals for Keyboard Skills 3',
           'Archive your semester recordings and harmonization portfolio for your studio file',
         ],
+        resources: ['omt-figured-bass', 'lib-musictheory-net-ex'],
       },
     ],
   },
@@ -1099,6 +1151,7 @@ export const y1s2Courses: Course[] = [
     description:
       'The second semester in conservatory orchestra, wind ensemble or choir deepens the craft of ensemble musicianship: rotating repertoire across style periods, intonation systems in ensemble contexts, and full ownership of a concert cycle from first reading to performance and review.',
     prerequisites: ['ens101'],
+    resources: ['lib-imslp', 'lib-cpdl', 'nidcd-hearing'],
     lessons: [
       {
         id: 'week-01',
@@ -1119,6 +1172,7 @@ export const y1s2Courses: Course[] = [
           'Listen to the full program with your part, marking entrances, cues and exposed passages',
           'Prepare and mark your parts to the published standard before the first full rehearsal',
         ],
+        resources: ['lib-imslp', 'mw-blog'],
       },
       {
         id: 'week-02',
@@ -1144,6 +1198,7 @@ export const y1s2Courses: Course[] = [
           'Map the tendency notes of your instrument or voice and their correction strategies',
           'In sectionals, lead one chord-building exercise from the bass upward',
         ],
+        resources: ['wiki-just-intonation', 'wiki-equal-temperament'],
       },
       {
         id: 'week-03',
@@ -1164,6 +1219,7 @@ export const y1s2Courses: Course[] = [
           'Practice the exposed passages of the contemporary work with metronome subdivision at three tempos',
           'Serve one rehearsal as section marking-captain, ensuring all markings propagate through the section',
         ],
+        resources: ['score-mozart-40', 'score-brahms-4', 'score-stravinsky-rite'],
       },
       {
         id: 'week-04',
@@ -1184,6 +1240,7 @@ export const y1s2Courses: Course[] = [
           'Write role labels (melody, counter, bass, filler) over every passage of one work in your part',
           'Submit three observations on the ensemble recording concerning balance, ensemble or intonation',
         ],
+        resources: ['ci-string-tips', 'ci-wind-tips'],
       },
       {
         id: 'week-05',
@@ -1204,6 +1261,7 @@ export const y1s2Courses: Course[] = [
           'Write and use a personal concert-day routine covering warm-up, food, dress and arrival',
           'Perform the concert with full stage discipline',
         ],
+        resources: ['ci-dress-rehearsal', 'nidcd-hearing', 'osha-noise'],
       },
       {
         id: 'week-06',
@@ -1224,6 +1282,7 @@ export const y1s2Courses: Course[] = [
           'Contribute at least twice to the guided debrief session with specific, non-blaming observations',
           'File your Large Ensemble 3 goal statement with your section leader',
         ],
+        resources: ['ci-post-concert', 'mw-blog'],
       },
     ],
   },

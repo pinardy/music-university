@@ -1,7 +1,9 @@
 import { Link, useParams } from 'react-router-dom'
 import { getCourse, yearForCourse } from '../data'
+import { resolveResources } from '../data/resources'
 import { lessonKey, useProgress } from '../progress'
 import { streamColor, streamLabels } from '../streams'
+import ResourceList from '../components/ResourceList'
 
 export default function CoursePage() {
   const { courseId } = useParams()
@@ -20,6 +22,7 @@ export default function CoursePage() {
   }
 
   const year = yearForCourse(course.id)
+  const courseResources = resolveResources(course.resources)
 
   return (
     <>
@@ -42,6 +45,17 @@ export default function CoursePage() {
         {course.code} · {course.title}
       </h1>
       <p className="course-description">{course.description}</p>
+
+      {courseResources.length > 0 && (
+        <section className="lesson-section course-references">
+          <h2>Set texts &amp; standing references</h2>
+          <p className="section-lede">
+            Keep these open all semester. Week-by-week readings are listed on each lesson.
+          </p>
+          <ResourceList resources={courseResources} />
+        </section>
+      )}
+
       <ol className="lesson-list">
         {course.lessons.map((lesson) => {
           const done = progress.has(lessonKey(course.id, lesson.id))

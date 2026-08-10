@@ -10,6 +10,36 @@ export type CourseStream =
   | 'context'
   | 'professional'
 
+export type ResourceKind =
+  /** Chapter or section of an open-access textbook */
+  | 'textbook'
+  /** Encyclopaedia, dictionary or organisation reference page */
+  | 'reference'
+  /** Downloadable score or part */
+  | 'score'
+  /** Scholarly article or essay */
+  | 'article'
+  /** Recorded lecture, masterclass or documentary */
+  | 'lecture'
+  /** Interactive drills, ear-training or practice tools */
+  | 'exercise'
+  /** Historical document written by the musicians who made the music */
+  | 'primary'
+
+export interface Resource {
+  /** Catalogue key, e.g. "omt-intervals" */
+  id: string
+  title: string
+  /** Publisher, author or hosting institution */
+  source: string
+  url: string
+  kind: ResourceKind
+  /** Why this source is here and what to do with it */
+  note?: string
+  /** Free to read without a subscription or institutional login */
+  open: boolean
+}
+
 export interface Lesson {
   /** Unique within its course, e.g. "week-01" */
   id: string
@@ -22,6 +52,8 @@ export interface Lesson {
   listening?: string[]
   /** Practice tasks / homework */
   assignments?: string[]
+  /** Catalogue ids (see `src/data/resources.ts`) of readings for this lesson */
+  resources?: string[]
 }
 
 export interface Course {
@@ -34,6 +66,8 @@ export interface Course {
   description: string
   /** Course ids that should be completed first */
   prerequisites?: string[]
+  /** Catalogue ids of the standing references used across the whole course */
+  resources?: string[]
   lessons: Lesson[]
 }
 
