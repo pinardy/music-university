@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/music-university/',
   plugins: [
     react(),
     VitePWA({
@@ -17,7 +18,7 @@ export default defineConfig({
         theme_color: '#1a1423',
         background_color: '#1a1423',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/music-university/',
         icons: [
           {
             src: 'icon.svg',
@@ -45,7 +46,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        navigateFallback: '/index.html',
+        navigateFallback: '/music-university/index.html',
       },
     }),
   ],
