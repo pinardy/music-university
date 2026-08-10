@@ -31,6 +31,21 @@ export function loadYearCourses(year: number): Promise<Map<string, Course>> {
   return pending
 }
 
+/**
+ * Every course, in curriculum order. Pulls all four year chunks, so it is only
+ * for the pages that genuinely span the whole degree — search and repertoire.
+ * Those chunks are the same ones the lesson pages use, so nothing is
+ * downloaded twice.
+ */
+let allCourses: Promise<Course[]> | undefined
+
+export function loadAllCourses(): Promise<Course[]> {
+  allCourses ??= Promise.all([1, 2, 3, 4].map(loadYearCourses)).then((byYear) =>
+    byYear.flatMap((m) => [...m.values()]),
+  )
+  return allCourses
+}
+
 /** Resolve a single course, fetching its year's chunk if it is not loaded yet. */
 export async function loadCourse(courseId: string): Promise<Course | undefined> {
   const summary = courseSummaries[courseId]

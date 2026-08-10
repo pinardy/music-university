@@ -27,19 +27,20 @@
   color-scheme: dark;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #faf7f2;
-    --bg-raised: #ffffff;
-    --bg-hover: #f3ede3;
-    --border: #e2d9ca;
-    --text: #26202e;
-    --text-muted: #6f6580;
-    --accent: #a8781d;
-    --accent-soft: rgba(168, 120, 29, 0.12);
-    --success: #2e7d43;
-    color-scheme: light;
-  }
+/* The boot script in index.html resolves the preference — stored choice, or
+   the system setting when the choice is "system" — into data-theme before
+   first paint, so the stylesheet only ever has to honour the attribute. */
+:root[data-theme='light'] {
+  --bg: #faf7f2;
+  --bg-raised: #ffffff;
+  --bg-hover: #f3ede3;
+  --border: #e2d9ca;
+  --text: #26202e;
+  --text-muted: #6f6580;
+  --accent: #a8781d;
+  --accent-soft: rgba(168, 120, 29, 0.12);
+  --success: #2e7d43;
+  color-scheme: light;
 }
 
 * {
@@ -112,8 +113,21 @@ button {
   text-transform: uppercase;
 }
 
-.site-header .header-link {
+.site-header .site-mark {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.header-nav {
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-header .header-link {
   font-size: 0.78rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -126,9 +140,48 @@ button {
     color 0.15s;
 }
 
-.site-header .header-link:hover {
+.site-header .header-link:hover,
+.site-header .header-link.active {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .theme-toggle .theme-label {
+    display: none;
+  }
 }
 
 /* ---------- Breadcrumbs ---------- */
@@ -658,11 +711,9 @@ button {
 
 /* The stream hues are tuned for the dark theme; darken them on a light page
    so the badge text keeps a readable contrast ratio. */
-@media (prefers-color-scheme: light) {
-  .resource-kind {
-    color: color-mix(in srgb, var(--kind-color) 55%, #241d2c);
-    opacity: 1;
-  }
+:root[data-theme='light'] .resource-kind {
+  color: color-mix(in srgb, var(--kind-color) 55%, #241d2c);
+  opacity: 1;
 }
 
 .resource-title {
@@ -763,4 +814,197 @@ button {
   text-transform: uppercase;
   color: var(--text-muted);
   margin: 0 0 8px;
+}
+
+/* ---------- Search ---------- */
+
+.search-results {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.search-result {
+  display: grid;
+  gap: 3px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 16px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.search-result:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.search-where {
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.search-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+}
+
+.search-excerpt {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  max-width: 74ch;
+}
+
+.search-excerpt em {
+  font-style: normal;
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+
+/* ---------- Repertoire ---------- */
+
+.repertoire-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.repertoire {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.repertoire label {
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+  flex: 1;
+  min-width: 60%;
+  cursor: pointer;
+}
+
+.repertoire input {
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+
+.repertoire-text {
+  font-size: 0.92rem;
+}
+
+.repertoire.heard .repertoire-text {
+  color: var(--text-muted);
+}
+
+.repertoire-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.repertoire-sources a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ---------- Streams ---------- */
+
+.stream-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.stream-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.stream-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.stream-card .stream-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.stream-card h2 {
+  font-size: 1.02rem;
+  margin: 0 0 2px;
+}
+
+.stream-sequence {
+  margin-top: 24px;
+}
+
+.stream-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ---------- Lesson notes ---------- */
+
+.lesson-note textarea {
+  width: 100%;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.lesson-note textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.note-state {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--success);
+  margin-left: 10px;
+}
+
+.note-state.pending {
+  color: var(--text-muted);
 }

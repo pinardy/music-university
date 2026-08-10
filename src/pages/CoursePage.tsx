@@ -42,7 +42,10 @@ function CourseView({ summary }: { summary: CourseSummary }) {
       </nav>
       <div className="stream-badge">
         <span className="stream-dot" style={{ background: streamColor(course.stream) }} />
-        {streamLabels[course.stream]} · {course.credits} credits
+        <Link to={`/stream/${course.stream}`} className="stream-link">
+          {streamLabels[course.stream]}
+        </Link>{' '}
+        · {course.credits} credits
       </div>
       <h1 className="page-title">
         {course.code} · {course.title}

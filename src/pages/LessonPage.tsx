@@ -6,6 +6,7 @@ import { resolveResources } from '../data/resources'
 import { lessonKey, toggleLesson, useProgress } from '../progress'
 import ResourceList from '../components/ResourceList'
 import NotFound from '../components/NotFound'
+import LessonNote from '../components/LessonNote'
 
 export default function LessonPage() {
   const { courseId, lessonId } = useParams()
@@ -101,6 +102,8 @@ function LessonView({ summary, lessonId }: { summary: CourseSummary; lessonId: s
           <ResourceList resources={lessonResources} />
         </section>
       )}
+
+      <LessonNote key={lessonKey(course.id, lesson.id)} noteKey={lessonKey(course.id, lesson.id)} />
 
       <button
         className={`complete-btn${done ? ' done' : ''}`}
