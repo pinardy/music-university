@@ -14,6 +14,7 @@
  * in a build script.
  */
 import { writeFileSync, readFileSync, existsSync } from 'node:fs'
+import { join } from 'node:path'
 import type { Course, CourseSummary, Year } from '../src/types'
 import { resources } from '../src/data/resources'
 import { year1, year1Courses } from '../src/data/year1'
@@ -21,7 +22,8 @@ import { year2, year2Courses } from '../src/data/year2'
 import { year3, year3Courses } from '../src/data/year3'
 import { year4, year4Courses } from '../src/data/year4'
 
-const OUT = new URL('../src/data/catalogue.generated.ts', import.meta.url)
+// Relative to the project, not to wherever this script was compiled to.
+const OUT = join(process.cwd(), 'src/data/catalogue.generated.ts')
 
 const years: Year[] = [year1, year2, year3, year4]
 const byYear: Course[][] = [year1Courses, year2Courses, year3Courses, year4Courses]
@@ -158,7 +160,7 @@ ${years
 // Which lessons cite each source. The forward relation lives on every lesson;
 // inverting it at build time lets the library show it without loading all
 // eight semester chunks.
-const USAGE_OUT = new URL('../src/data/resourceUsage.generated.ts', import.meta.url)
+const USAGE_OUT = join(process.cwd(), 'src/data/resourceUsage.generated.ts')
 
 interface Usage {
   c: string
@@ -242,7 +244,7 @@ ${[...courseUsage.entries()]
 }
 `
 
-const outputs: [URL, string, string][] = [
+const outputs: [string, string, string][] = [
   [OUT, body, 'catalogue.generated.ts'],
   [USAGE_OUT, usageBody, 'resourceUsage.generated.ts'],
 ]
