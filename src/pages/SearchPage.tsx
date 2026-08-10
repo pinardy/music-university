@@ -111,11 +111,17 @@ export default function SearchPage() {
         <input
           type="search"
           value={query}
-          autoFocus
+          // Autofocus on a phone opens the keyboard and jumps the page before
+          // the reader has seen anything.
+          autoFocus={!window.matchMedia('(pointer: coarse)').matches}
           placeholder="Search the curriculum…"
           onChange={(e) => onChange(e.target.value)}
           aria-label="Search lessons"
         />
+      </div>
+
+      <div aria-live="polite" className="sr-only">
+        {searching ? `${total} matching ${total === 1 ? 'lesson' : 'lessons'}` : ''}
       </div>
 
       {!courses ? (

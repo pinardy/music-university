@@ -117,11 +117,17 @@ function CourseView({ summary }: { summary: CourseSummary }) {
                 <span className="week-num">Wk {lesson.week}</span>
                 <span className="lesson-title">{lesson.title}</span>
                 {notes.has(lessonKey(course.id, lesson.id)) && (
-                  <span className="note-flag" title="You have a note on this lesson">
-                    ✎
+                  <span className="note-flag">
+                    <span aria-hidden="true">✎</span>
+                    <span className="sr-only">Has a note</span>
                   </span>
                 )}
-                {lessonDone && <span className="check">✓</span>}
+                {lessonDone && (
+                  <span className="check">
+                    <span aria-hidden="true">✓</span>
+                    <span className="sr-only">Completed</span>
+                  </span>
+                )}
               </Link>
             </li>
           )

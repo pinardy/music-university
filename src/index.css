@@ -37,8 +37,12 @@
   --border: #e2d9ca;
   --text: #26202e;
   --text-muted: #6f6580;
-  --accent: #a8781d;
-  --accent-soft: rgba(168, 120, 29, 0.12);
+  /* The old #a8781d gave 3.66:1 on the page background — under AA for normal
+     text, and the accent carries most of the structural type: section
+     headings, kickers, buttons, chips. This clears 5.2:1 on the page and
+     5.6:1 on cards. */
+  --accent: #8a6015;
+  --accent-soft: rgba(138, 96, 21, 0.12);
   --success: #2e7d43;
   color-scheme: light;
 }
@@ -73,6 +77,66 @@ a {
 button {
   font: inherit;
   cursor: pointer;
+}
+
+/* Available to assistive technology, invisible on screen — for cues that are
+   otherwise carried only by an icon or a colour. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.show-more {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  background: var(--bg-raised);
+  color: var(--text);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 0.85rem;
+}
+
+.show-more:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 10;
+  background: var(--bg-raised);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: top 0.15s;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* The focus ring is the only cue keyboard users get; the default one washes
+   out against the raised card backgrounds. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+main:focus {
+  outline: none;
 }
 
 .app-shell {
@@ -171,16 +235,92 @@ button {
 @media (max-width: 560px) {
   .site-header {
     flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 0;
+    margin-bottom: 20px;
   }
 
+  .site-header .wordmark small {
+    display: none;
+  }
+
+  /* Five pills plus the toggle wrapped to two rows and ate roughly half the
+     first screen. One scrolling row keeps the header to ~44px. */
   .header-nav {
     width: 100%;
-    justify-content: flex-start;
     margin-left: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Fade the right edge so it reads as scrollable rather than clipped. */
+    mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+  }
+
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header .header-link,
+  .theme-toggle {
+    flex-shrink: 0;
   }
 
   .theme-toggle .theme-label {
     display: none;
+  }
+}
+
+/* ---------- Motion and print ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  /* A lesson is a reading document; print it as one. */
+  .site-header,
+  .skip-link,
+  .crumbs,
+  .lesson-nav,
+  .complete-btn,
+  .progress-controls,
+  .library-controls,
+  .lesson-note textarea,
+  .note-delete,
+  .usage-more,
+  .resume-btn {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .app-shell {
+    max-width: none;
+    padding: 0;
+  }
+
+  .lesson-section,
+  .resource,
+  .repertoire {
+    break-inside: avoid;
+  }
+
+  /* Outbound citations are the point of the page; print where they lead. */
+  .resource-list a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.7rem;
+    word-break: break-all;
   }
 }
 
@@ -189,10 +329,17 @@ button {
 .crumbs {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 18px;
+}
+
+.crumbs a {
+  /* Padding rather than a taller line-height, so the row keeps its size while
+     the hit area reaches the 24px minimum. */
+  padding: 3px 2px;
 }
 
 .crumbs a:hover {
@@ -900,11 +1047,18 @@ button {
   cursor: pointer;
 }
 
-.repertoire input {
+.repertoire input,
+.assignment-list input,
+.library-toggle input {
   flex-shrink: 0;
   accent-color: var(--accent);
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.repertoire label,
+.assignment-list label {
+  min-height: 24px;
 }
 
 .repertoire-text {
@@ -925,9 +1079,27 @@ button {
   white-space: nowrap;
 }
 
+.repertoire-sources a {
+  padding: 4px 6px;
+  margin: -4px 0;
+}
+
 .repertoire-sources a:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  /* Right-aligning the source links squeezes the title into a narrow column
+     that wraps four lines deep. Stack them instead. */
+  .repertoire {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .repertoire-sources {
+    margin-left: 31px;
+  }
 }
 
 /* ---------- Streams ---------- */
@@ -1050,13 +1222,6 @@ button {
   align-items: baseline;
   gap: 11px;
   cursor: pointer;
-}
-
-.assignment-list input {
-  flex-shrink: 0;
-  accent-color: var(--accent);
-  width: 16px;
-  height: 16px;
 }
 
 .assignment-list li.done > label > span {

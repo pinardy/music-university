@@ -7,6 +7,9 @@ import ResourceUsage from '../components/ResourceUsage'
 
 const SUBGROUP_THRESHOLD = 24
 
+/** 366 entries, each with its usage cross-reference, is ~4,500 elements. */
+const PAGE_SIZE = 80
+
 const KIND_ORDER: ResourceKind[] = [
   'textbook',
   'exercise',
@@ -20,6 +23,7 @@ const KIND_ORDER: ResourceKind[] = [
 export default function LibraryPage() {
   const [query, setQuery] = useState('')
   const [openOnly, setOpenOnly] = useState(false)
+  const [limit, setLimit] = useState(PAGE_SIZE)
 
   const groups = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -41,6 +45,18 @@ export default function LibraryPage() {
   }, [query, openOnly])
 
   const total = groups.reduce((n, g) => n + g.items.length, 0)
+
+  // Spend a render budget down the kind groups in order, so the page stays
+  // light until the reader asks for more.
+  let budget = limit
+  const visible = groups
+    .map((g) => {
+      const take = Math.max(0, Math.min(budget, g.items.length))
+      budget -= take
+      return { ...g, items: g.items.slice(0, take) }
+    })
+    .filter((g) => g.items.length > 0)
+  const shown = visible.reduce((n, g) => n + g.items.length, 0)
 
   return (
     <>
@@ -65,19 +81,33 @@ export default function LibraryPage() {
           type="search"
           value={query}
           placeholder="Search titles, publishers and notes…"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value)
+            setLimit(PAGE_SIZE)
+          }}
           aria-label="Search sources"
         />
         <label className="library-toggle">
-          <input type="checkbox" checked={openOnly} onChange={(e) => setOpenOnly(e.target.checked)} />
+          <input
+            type="checkbox"
+            checked={openOnly}
+            onChange={(e) => {
+              setOpenOnly(e.target.checked)
+              setLimit(PAGE_SIZE)
+            }}
+          />
           Free to read only
         </label>
       </div>
 
+      <p className="section-lede" role="status">
+        {total > 0 && `Showing ${shown} of ${total} sources`}
+      </p>
+
       {total === 0 ? (
         <p className="course-description">No sources match that search.</p>
       ) : (
-        groups.map((g) => (
+        visible.map((g) => (
           <section key={g.kind} className="lesson-section">
             <h2>
               {kindHeading(g.kind)} <span className="count">{g.items.length}</span>
@@ -100,6 +130,12 @@ export default function LibraryPage() {
             )}
           </section>
         ))
+      )}
+
+      {shown < total && (
+        <button className="show-more" onClick={() => setLimit((n) => n + PAGE_SIZE)}>
+          Show {Math.min(PAGE_SIZE, total - shown)} more of {total - shown} remaining
+        </button>
       )}
     </>
   )

@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useRef } from 'react'
 import { Link, NavLink, Route, Routes } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import NotFound from './components/NotFound'
@@ -28,9 +28,14 @@ const NAV = [
 ]
 
 export default function App() {
+  const mainRef = useRef<HTMLElement>(null)
+
   return (
     <div className="app-shell">
-      <ScrollToTop />
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <ScrollToTop mainRef={mainRef} />
       <header className="site-header">
         <Link to="/" aria-label="Home" className="site-mark">
           <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" />
@@ -52,21 +57,23 @@ export default function App() {
           <ThemeToggle />
         </nav>
       </header>
-      <Suspense fallback={<p className="route-loading">Loading…</p>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/year/:year" element={<YearPage />} />
-          <Route path="/course/:courseId" element={<CoursePage />} />
-          <Route path="/course/:courseId/lesson/:lessonId" element={<LessonPage />} />
-          <Route path="/library" element={<LibraryPage />} />
-          <Route path="/notes" element={<NotesPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/repertoire" element={<RepertoirePage />} />
-          <Route path="/streams" element={<StreamsIndexPage />} />
-          <Route path="/stream/:stream" element={<StreamPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <main id="main" ref={mainRef} tabIndex={-1}>
+        <Suspense fallback={<p className="route-loading">Loading…</p>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/year/:year" element={<YearPage />} />
+            <Route path="/course/:courseId" element={<CoursePage />} />
+            <Route path="/course/:courseId/lesson/:lessonId" element={<LessonPage />} />
+            <Route path="/library" element={<LibraryPage />} />
+            <Route path="/notes" element={<NotesPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/repertoire" element={<RepertoirePage />} />
+            <Route path="/streams" element={<StreamsIndexPage />} />
+            <Route path="/stream/:stream" element={<StreamPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
     </div>
   )
 }

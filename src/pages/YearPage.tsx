@@ -44,7 +44,7 @@ export default function YearPage() {
                   <span
                     className="stream-dot"
                     style={{ background: streamColor(course.stream) }}
-                    title={streamLabels[course.stream]}
+                    aria-hidden="true"
                   />
                   <div className="course-main">
                     <span className="course-code">{course.code}</span>

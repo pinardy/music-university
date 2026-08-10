@@ -38,11 +38,15 @@ function collect(courses: Course[]): Item[] {
   return [...byKey.values()]
 }
 
+/** Rendering all 787 at once put ~4,800 elements on the page. */
+const PAGE_SIZE = 120
+
 export default function RepertoirePage() {
   const courses = useAllCourses()
   const listened = useListened()
   const [query, setQuery] = useState('')
   const [unheardOnly, setUnheardOnly] = useState(false)
+  const [limit, setLimit] = useState(PAGE_SIZE)
 
   const items = useMemo(() => (courses ? collect(courses) : []), [courses])
 
@@ -64,8 +68,19 @@ export default function RepertoirePage() {
     return [...byYear.entries()].sort(([a], [b]) => a - b).map(([year, items]) => ({ year, items }))
   }, [items, query, unheardOnly, listened])
 
-  const shown = groups.reduce((n, g) => n + g.items.length, 0)
+  const matched = groups.reduce((n, g) => n + g.items.length, 0)
   const heard = items.filter((i) => listened.has(i.key)).length
+
+  // Trim to the render budget, spending it down the year groups in order.
+  let budget = limit
+  const visible = groups
+    .map((g) => {
+      const take = Math.max(0, Math.min(budget, g.items.length))
+      budget -= take
+      return { ...g, items: g.items.slice(0, take) }
+    })
+    .filter((g) => g.items.length > 0)
+  const shown = visible.reduce((n, g) => n + g.items.length, 0)
 
   return (
     <>
@@ -98,23 +113,33 @@ export default function RepertoirePage() {
           type="search"
           value={query}
           placeholder="Search composers and works…"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value)
+            setLimit(PAGE_SIZE)
+          }}
           aria-label="Search repertoire"
         />
         <label className="library-toggle">
           <input
             type="checkbox"
             checked={unheardOnly}
-            onChange={(e) => setUnheardOnly(e.target.checked)}
+            onChange={(e) => {
+              setUnheardOnly(e.target.checked)
+              setLimit(PAGE_SIZE)
+            }}
           />
           Not yet heard
         </label>
       </div>
 
-      {!courses ? null : shown === 0 ? (
+      <p className="section-lede" role="status">
+        {courses && matched > 0 && `Showing ${shown} of ${matched} matching works`}
+      </p>
+
+      {!courses ? null : matched === 0 ? (
         <p className="course-description">Nothing matches that filter.</p>
       ) : (
-        groups.map((group) => (
+        visible.map((group) => (
           <section key={group.year} className="lesson-section">
             <h2>
               Year {group.year} <span className="count">{group.items.length}</span>
@@ -149,6 +174,12 @@ export default function RepertoirePage() {
             </ul>
           </section>
         ))
+      )}
+
+      {shown < matched && (
+        <button className="show-more" onClick={() => setLimit((n) => n + PAGE_SIZE)}>
+          Show {Math.min(PAGE_SIZE, matched - shown)} more of {matched - shown} remaining
+        </button>
       )}
     </>
   )
