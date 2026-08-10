@@ -5,24 +5,41 @@
       <stop offset="1" stop-color="#1a1423"/>
     </linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f0c975"/>
-      <stop offset="1" stop-color="#c99a3c"/>
+      <stop offset="0" stop-color="#f5d489"/>
+      <stop offset="1" stop-color="#c4922f"/>
     </linearGradient>
+    <linearGradient id="pageL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e2d4ba"/>
+      <stop offset="1" stop-color="#fbf5e9"/>
+    </linearGradient>
+    <linearGradient id="pageR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fbf5e9"/>
+      <stop offset="1" stop-color="#e2d4ba"/>
+    </linearGradient>
+    <!-- Stem, flag and notehead, reused for the halo layer and the gold layer
+         so the outline never cuts across a join between them. -->
+    <g id="note">
+      <path d="M244 112 h22 v238 h-22 z"/>
+      <path d="M266 112 q86 24 102 88 q-16 -48 -102 -54 z"/>
+      <ellipse cx="200" cy="312" rx="52" ry="37" transform="rotate(-20 200 312)"/>
+    </g>
   </defs>
+
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <g stroke="#5c5273" stroke-width="6" opacity="0.55">
-    <line x1="88" y1="196" x2="424" y2="196"/>
-    <line x1="88" y1="236" x2="424" y2="236"/>
-    <line x1="88" y1="276" x2="424" y2="276"/>
-    <line x1="88" y1="316" x2="424" y2="316"/>
-    <line x1="88" y1="356" x2="424" y2="356"/>
+
+  <!-- Open book. Its gutter continues the axis of the note stem above. -->
+  <g>
+    <path d="M256 326 C212 298 150 292 92 310 L92 388 C150 370 212 376 256 400 Z" fill="url(#pageL)"/>
+    <path d="M256 326 C300 298 362 292 420 310 L420 388 C362 370 300 376 256 400 Z" fill="url(#pageR)"/>
+    <g stroke="#bda887" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.8">
+      <path d="M134 340 C168 333 200 336 228 347"/>
+      <path d="M134 361 C168 354 200 357 228 368"/>
+      <path d="M284 347 C312 336 344 333 378 340"/>
+      <path d="M284 368 C312 357 344 354 378 361"/>
+    </g>
+    <path d="M245 326 h22 v74 h-22 z" fill="#c9a86b"/>
   </g>
-  <g fill="url(#gold)">
-    <ellipse cx="216" cy="352" rx="42" ry="30" transform="rotate(-20 216 352)"/>
-    <rect x="246" y="150" width="14" height="196"/>
-    <path d="M246 150 q64 18 92 54 q-16 -8 -92 -14 z"/>
-    <ellipse cx="330" cy="312" rx="42" ry="30" transform="rotate(-20 330 312)"/>
-    <rect x="360" y="128" width="14" height="178"/>
-    <path d="M260 150 l114 -22 v36 l-114 22 z" opacity="0.9"/>
-  </g>
+
+  <use href="#note" fill="#241d2f" stroke="#241d2f" stroke-width="16" stroke-linejoin="round"/>
+  <use href="#note" fill="url(#gold)"/>
 </svg>

@@ -37,7 +37,9 @@ export default defineConfig({
             type: 'image/png',
           },
           {
-            src: 'icon-512.png',
+            // Full-bleed square: a maskable icon with transparent corners
+            // gets cut into by whatever shape the platform masks it with.
+            src: 'icon-maskable-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
