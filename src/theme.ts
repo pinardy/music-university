@@ -59,5 +59,7 @@ function getSnapshot(): ThemePreference {
 }
 
 export function useThemePreference(): ThemePreference {
-  return useSyncExternalStore(subscribe, getSnapshot)
+  // Server rendering has no stored preference; 'system' is what the boot
+  // script would resolve before the client takes over.
+  return useSyncExternalStore(subscribe, getSnapshot, () => 'system' as ThemePreference)
 }

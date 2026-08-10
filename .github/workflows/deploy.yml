@@ -24,9 +24,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Also prerenders every route to a real HTML file, and writes 404.html
+      # as the bare shell for anything unmatched.
       - run: npm run build
-      # GitHub Pages has no SPA rewrite; serve index.html for unknown deep links.
-      - run: cp dist/index.html dist/404.html
+      - run: npm run check:data
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

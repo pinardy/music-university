@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run prerender",
     "lint": "oxlint",
-    "build:script": "vite build --ssr scripts/gen-catalogue.ts --outDir .gen --logLevel error",
-    "gen:data": "npm run build:script && node .gen/gen-catalogue.js",
-    "check:data": "npm run build:script && node .gen/gen-catalogue.js --check",
-    "preview": "vite preview"
+    "build:script": "vite build --ssr scripts/gen-catalogue.ts --outDir .gen/catalogue --logLevel error",
+    "gen:data": "npm run build:script && node .gen/catalogue/gen-catalogue.js",
+    "check:data": "npm run build:script && node .gen/catalogue/gen-catalogue.js --check",
+    "preview": "vite preview",
+    "prerender": "vite build --ssr scripts/prerender.tsx --outDir .gen/prerender --logLevel error && node .gen/prerender/prerender.js"
   },
   "dependencies": {
     "react": "^19.2.8",

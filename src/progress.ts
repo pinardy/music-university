@@ -265,8 +265,20 @@ function getSnapshot() {
   return snapshot
 }
 
+/**
+ * Prerendered HTML is built with no stored state, so hydration has to start
+ * from the same place — otherwise a reader with saved progress mismatches the
+ * markup and React throws the whole tree away. React calls this during
+ * hydration and switches to the live snapshot immediately afterwards.
+ */
+const serverSnapshot = freeze(empty())
+
+function getServerSnapshot() {
+  return serverSnapshot
+}
+
 function useStudyState() {
-  return useSyncExternalStore(subscribe, getSnapshot)
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 }
 
 /** Reactive set of completed lesson keys. */

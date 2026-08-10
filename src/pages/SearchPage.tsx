@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo, useState } from 'react'
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { Course, Lesson } from '../types'
 import { useAllCourses } from '../useAllCourses'
@@ -70,6 +70,14 @@ export default function SearchPage() {
   const [params, setParams] = useSearchParams()
   const [query, setQuery] = useState(params.get('q') ?? '')
   const deferred = useDeferredValue(query)
+  const input = useRef<HTMLInputElement>(null)
+
+  // Focus after mount rather than with the autoFocus attribute: the attribute
+  // has to be present in the prerendered HTML too or hydration mismatches,
+  // and on a phone it opens the keyboard before anything has been read.
+  useEffect(() => {
+    if (!window.matchMedia('(pointer: coarse)').matches) input.current?.focus()
+  }, [])
 
   const entries = useMemo(() => (courses ? buildEntries(courses) : []), [courses])
 
@@ -110,10 +118,8 @@ export default function SearchPage() {
       <div className="library-controls">
         <input
           type="search"
+          ref={input}
           value={query}
-          // Autofocus on a phone opens the keyboard and jumps the page before
-          // the reader has seen anything.
-          autoFocus={!window.matchMedia('(pointer: coarse)').matches}
           placeholder="Search the curriculum…"
           onChange={(e) => onChange(e.target.value)}
           aria-label="Search lessons"
