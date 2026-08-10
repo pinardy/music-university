@@ -816,7 +816,7 @@ export const y3s2Courses: Course[] = [
           'Compare a passage in the Mussorgsky original and the Ravel orchestration in 500 words',
           'Identify and remove all unintentional doubling from one of your own scores',
         ],
-        resources: ['score-mussorgsky-pictures', 'score-strauss-zarathustra', 'omt-orchestration'],
+        resources: ['tr-rimsky-orch', 'berlioz-treatise', 'score-mussorgsky-pictures'],
       },
       {
         id: 'week-11',
@@ -895,7 +895,7 @@ export const y3s2Courses: Course[] = [
     description:
       'Music as human activity rather than as a repertoire of works. The course introduces ethnomusicological method and applies it across traditions — West African rhythm, Indian raga, Arab maqam, Javanese gamelan, diasporic and popular musics — alongside the harder questions of fieldwork ethics, archives, cultural ownership and the political uses of music. Assessed on a small field project of your own.',
     prerequisites: ['muh301'],
-    resources: ['folkways', 'loc-jukebox', 'lib-jstor', 'lib-grove', 'lib-archive'],
+    resources: ['folkways', 'ctx-lomax', 'ctx-ethno-review', 'lib-jstor', 'lib-archive'],
     lessons: [
       {
         id: 'week-01',
@@ -917,7 +917,7 @@ export const y3s2Courses: Course[] = [
           'Frame three research questions about a musical practice you know, none of which is about a work',
           'Read an introductory ethnomusicology chapter and summarise its definition of the field',
         ],
-        resources: ['lib-grove', 'lib-jstor', 'folkways'],
+        resources: ['ctx-ictmd', 'ctx-ethno-review', 'lib-grove'],
       },
       {
         id: 'week-02',
@@ -939,7 +939,7 @@ export const y3s2Courses: Course[] = [
           'Write a one-page positionality statement describing your relationship to the practice you will study',
           'Submit a feasible field-project proposal with a timeline and an ethical assessment',
         ],
-        resources: ['lib-jstor', 'owl-chicago', 'zotero'],
+        resources: ['ctx-atm-indiana', 'ctx-ethno-review', 'owl-chicago'],
       },
       {
         id: 'week-03',
@@ -961,7 +961,7 @@ export const y3s2Courses: Course[] = [
           'Devise a supplementary notation for one parameter staff notation cannot capture',
           'Write 400 words assessing your transcription as prescriptive or descriptive, and why',
         ],
-        resources: ['folkways', 'lib-archive', 'loc-jukebox'],
+        resources: ['ctx-lomax', 'folkways', 'lib-archive'],
       },
       {
         id: 'week-04',
@@ -983,7 +983,7 @@ export const y3s2Courses: Course[] = [
           'Analyse one musical practice as participatory or presentational, with evidence for the classification',
           'Write 400 words on the musical mechanisms of entrainment in an example you have observed',
         ],
-        resources: ['folkways', 'lib-jstor', 'lib-archive'],
+        resources: ['ctx-unesco-ich', 'folkways', 'lib-jstor'],
       },
       {
         id: 'week-05',
@@ -1010,7 +1010,7 @@ export const y3s2Courses: Course[] = [
           'Transcribe a timeline pattern and mark each drum’s entry point relative to it',
           'Write 400 words distinguishing polyrhythm and polymetre with examples from your listening',
         ],
-        resources: ['folkways', 'lib-archive', 'omt-20c-rhythm'],
+        resources: ['ctx-music-in-africa', 'ctx-lomax', 'folkways'],
       },
       {
         id: 'week-06',
@@ -1037,7 +1037,7 @@ export const y3s2Courses: Course[] = [
           'Notate the characteristic ascending and descending patterns of two ragas sharing a pitch collection',
           'Write 500 words comparing creativity in raga performance with creativity in the Western score tradition',
         ],
-        resources: ['folkways', 'lib-grove', 'wiki-just-intonation'],
+        resources: ['ctx-itcsra', 'ctx-maqamworld', 'lib-grove'],
       },
       {
         id: 'week-07',
@@ -1064,7 +1064,7 @@ export const y3s2Courses: Course[] = [
           'Trace a balungan through three layers of elaboration in one recording',
           'Write 400 words on what Debussy took from the gamelan he heard in 1889 and what he misunderstood',
         ],
-        resources: ['folkways', 'score-debussy-preludes-1', 'wiki-just-intonation'],
+        resources: ['ctx-gamelan-institute', 'folkways', 'wiki-just-intonation'],
       },
       {
         id: 'week-08',
@@ -1091,7 +1091,7 @@ export const y3s2Courses: Course[] = [
           'Analyse one authenticity claim: who makes it, on what basis, and what it accomplishes',
           'Attend a diasporic community musical event locally and document its social function',
         ],
-        resources: ['loc-jukebox', 'folkways', 'lib-archive'],
+        resources: ['ctx-lomax', 'loc-jukebox', 'ctx-music-in-africa'],
       },
       {
         id: 'week-09',
@@ -1135,7 +1135,7 @@ export const y3s2Courses: Course[] = [
           'Write 500 words on why copyright fits traditional music badly, with a concrete example',
           'Specify the access terms for your own field recordings and the reasoning behind them',
         ],
-        resources: ['loc-jukebox', 'folkways', 'lib-archive'],
+        resources: ['ctx-atm-indiana', 'ctx-unesco-ich', 'ctx-lomax'],
       },
       {
         id: 'week-11',
@@ -1201,7 +1201,7 @@ export const y3s2Courses: Course[] = [
           'Present your findings to the class in fifteen minutes and take questions',
           'Write 500 words on how the course changed your view of the tradition you were trained in',
         ],
-        resources: ['owl-chicago', 'zotero', 'lib-jstor'],
+        resources: ['ctx-ethno-review', 'owl-chicago', 'zotero'],
       },
     ],
   },

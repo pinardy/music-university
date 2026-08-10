@@ -567,7 +567,7 @@ export const y2s2Courses: Course[] = [
           'Read the Artusi–Monteverdi exchange in translation and summarise each side’s argument in a paragraph',
           'Chart the differences between court opera at Mantua and public opera at Venice under five headings',
         ],
-        resources: ['um-baroque', 'lib-grove', 'lib-imslp'],
+        resources: ['um-baroque', 'tr-zarlino', 'lib-imslp'],
       },
       {
         id: 'week-02',
@@ -649,7 +649,7 @@ export const y2s2Courses: Course[] = [
           'Write an eight-bar fugal exposition in three voices with a tonal answer',
           'Compare a passage in two temperaments and describe the difference in key character in 300 words',
         ],
-        resources: ['score-bach-wtc1', 'omt-fugal-exposition', 'wiki-equal-temperament'],
+        resources: ['score-bach-wtc1', 'tr-marpurg-fugue', 'tr-kirnberger', 'omt-fugal-exposition'],
       },
       {
         id: 'week-05',
@@ -676,7 +676,7 @@ export const y2s2Courses: Course[] = [
           'Research one documented Handel borrowing and assess what he changed, in 500 words',
           'Compare the economics of Handel’s London with Bach’s Leipzig under five headings',
         ],
-        resources: ['score-handel-messiah', 'um-baroque', 'lib-grove'],
+        resources: ['score-handel-messiah', 'tr-mattheson', 'lib-grove'],
       },
       {
         id: 'week-06',
@@ -704,7 +704,7 @@ export const y2s2Courses: Course[] = [
           'Realise one page of French harpsichord music with the ornaments from a period table',
           'Summarise Rameau’s fundamental-bass theory and its relation to Roman numerals in 500 words',
         ],
-        resources: ['lib-tml', 'um-baroque', 'lib-imslp'],
+        resources: ['tr-couperin', 'tr-rameau', 'lib-tml'],
       },
       {
         id: 'week-07',
@@ -732,7 +732,7 @@ export const y2s2Courses: Course[] = [
           'Compare a Bach and a J. C. Bach movement in the same key on phrase length and harmonic rhythm',
           'Read a chapter of C. P. E. Bach’s Essay and apply one of its instructions at your instrument',
         ],
-        resources: ['omt-galant-schemas', 'omt-rule-of-octave', 'um-classical'],
+        resources: ['tr-cpe-bach', 'tr-turk', 'omt-galant-schemas'],
       },
       {
         id: 'week-08',
@@ -899,7 +899,7 @@ export const y2s2Courses: Course[] = [
           'Present one research finding to the colloquium in ten minutes and take questions',
           'Apply one documented period practice in your own performance and report the result in 300 words',
         ],
-        resources: ['wiki-hip', 'owl-chicago', 'zotero'],
+        resources: ['tr-quantz', 'tr-leopold-mozart', 'tr-geminiani', 'wiki-hip', 'zotero'],
       },
     ],
   },

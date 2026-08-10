@@ -55,6 +55,11 @@ function score(path: string, title: string, note?: string): Seed {
   return { title, source: 'IMSLP / Petrucci Music Library', url: `${IMSLP}${path}`, kind: 'score', note, open: true }
 }
 
+/** An out-of-copyright treatise, catalogued as a primary source rather than a score. */
+function treatise(path: string, title: string, note?: string): Seed {
+  return { title, source: 'IMSLP / Petrucci Music Library', url: `${IMSLP}${path}`, kind: 'primary', note, open: true }
+}
+
 /** Understanding Music: Past and Present (Clark et al., CC BY-SA) on LibreTexts. */
 function um(path: string, title: string, note?: string): Seed {
   return {
@@ -693,6 +698,93 @@ const SEEDS: Record<string, Seed> = {
     open: true,
   },
 
+  // ── Historical treatises ───────────────────────────────────────────────────
+  // Out-of-copyright performance and theory treatises, in the original
+  // editions. These are the primary evidence behind everything the curriculum
+  // says about period practice, so students should read them rather than only
+  // read about them. Facsimiles are in the original language unless noted.
+  'tr-quantz': treatise(
+    'Versuch_einer_Anweisung_die_Fl%C3%B6te_traversiere_zu_spielen_(Quantz,_Johann_Joachim)',
+    'Quantz, Versuch einer Anweisung die Flöte traversiere zu spielen (1752)',
+    'Far more than a flute method: the standard source on late-Baroque tempo, ornamentation, articulation and ensemble conduct.',
+  ),
+  'tr-cpe-bach': treatise(
+    'Versuch_%C3%BCber_die_wahre_Art_das_Clavier_zu_spielen_(Bach,_Carl_Philipp_Emanuel)',
+    'C. P. E. Bach, Versuch über die wahre Art das Clavier zu spielen (1753/1762)',
+    'The central keyboard treatise of the century, and the source for empfindsamer performance, fingering and continuo realisation.',
+  ),
+  'tr-leopold-mozart': treatise(
+    'Versuch_einer_gr%C3%BCndlichen_Violinschule_(Mozart,_Leopold)',
+    'Leopold Mozart, Versuch einer gründlichen Violinschule (1756)',
+    'Bowing, ornamentation and taste in the Classical style, published the year his son was born.',
+  ),
+  'tr-turk': treatise(
+    'Klavierschule_(T%C3%BCrk,_Daniel_Gottlob)',
+    'Türk, Klavierschule (1789)',
+    'Late-Classical keyboard practice: touch, phrasing, and what expression marks were understood to mean.',
+  ),
+  'tr-couperin': treatise(
+    "L'art_de_toucher_le_clavecin_(Couperin,_Fran%C3%A7ois)",
+    'Couperin, L’art de toucher le clavecin (1716)',
+    'The authority on French ornament tables, notes inégales and fingering.',
+  ),
+  'tr-geminiani': treatise(
+    'The_Art_of_Playing_on_the_Violin,_Op.9_(Geminiani,_Francesco)',
+    'Geminiani, The Art of Playing on the Violin, Op. 9 (1751)',
+    'In English, and unusually explicit about bow strokes and the affect each is meant to produce.',
+  ),
+  'tr-rameau': treatise(
+    'Trait%C3%A9_de_l%27harmonie_r%C3%A9duite_%C3%A0_ses_principes_naturels_(Rameau,_Jean-Philippe)',
+    'Rameau, Traité de l’harmonie réduite à ses principes naturels (1722)',
+    'Where the fundamental bass — and with it Roman-numeral thinking — is first argued for.',
+  ),
+  'tr-zarlino': treatise(
+    'Le_Istitutioni_Harmoniche_(Zarlino,_Gioseffo)',
+    'Zarlino, Le istitutioni harmoniche (1558)',
+    'The Renaissance summa: modes, counterpoint rules and the theoretical basis of prima pratica.',
+  ),
+  'tr-marpurg-fugue': treatise(
+    'Abhandlung_von_der_Fuge_(Marpurg,_Friedrich_Wilhelm)',
+    'Marpurg, Abhandlung von der Fuge (1753–54)',
+    'The systematic treatment of fugue written in Bach’s immediate wake.',
+  ),
+  'tr-kirnberger': treatise(
+    'Die_Kunst_des_reinen_Satzes_in_der_Musik_(Kirnberger,_Johann_Philipp)',
+    'Kirnberger, Die Kunst des reinen Satzes in der Musik (1771–79)',
+    'Strict composition from a pupil of Bach; also the source of a well-known temperament.',
+  ),
+  'tr-mattheson': treatise(
+    'Der_vollkommene_Capellmeister_(Mattheson,_Johann)',
+    'Mattheson, Der vollkommene Capellmeister (1739)',
+    'Baroque musical rhetoric and the doctrine of the affections, from someone running a working music establishment.',
+  ),
+  'tr-spohr': treatise(
+    'Violinschule_(Spohr,_Louis)',
+    'Spohr, Violinschule (1832)',
+    'Nineteenth-century violin playing: position work, portamento and the earliest metronome marks by a major performer.',
+  ),
+  'tr-garcia': treatise(
+    "Ecole_de_Garcia:_trait%C3%A9_complet_de_l%27art_du_chant_(Garcia_Jr.,_Manuel)",
+    'Garcia, École de Garcia: traité complet de l’art du chant (1840–47)',
+    'The foundational modern singing treatise, by the inventor of the laryngoscope; registers, breath and bel canto ornament.',
+  ),
+  'tr-rimsky-orch': {
+    title: 'Rimsky-Korsakov, Principles of Orchestration (English edition)',
+    source: 'Internet Archive',
+    url: 'https://archive.org/details/principlesoforch00rims',
+    kind: 'primary',
+    note: 'Orchestration taught from the composer’s own scores, with every example drawn from his output.',
+    open: true,
+  },
+  'tr-helmholtz': {
+    title: 'Helmholtz, On the Sensations of Tone (trans. Ellis)',
+    source: 'Internet Archive',
+    url: 'https://archive.org/details/onsensationsofto00helmrich',
+    kind: 'primary',
+    note: 'The nineteenth-century foundation of musical acoustics: partials, beats, consonance and temperament.',
+    open: true,
+  },
+
   // ── Scores ─────────────────────────────────────────────────────────────────
   'score-bach-cello-1': score(
     'Cello_Suite_No.1_in_G_major,_BWV_1007_(Bach,_Johann_Sebastian)',
@@ -1000,6 +1092,186 @@ const SEEDS: Record<string, Seed> = {
     url: 'https://soundsofintent.org/',
     kind: 'reference',
     note: 'A framework for assessing musical development in learners with complex needs.',
+    open: true,
+  },
+
+  // ── Music technology ───────────────────────────────────────────────────────
+  'tec-xiph-primer': {
+    title: 'Digital Show and Tell — sampling and bit depth demonstrated on real hardware',
+    source: 'Xiph.Org Foundation',
+    url: 'https://xiph.org/video/vid2.shtml',
+    kind: 'lecture',
+    note: 'Monty Montgomery answers the usual myths about sample rate and bit depth with an oscilloscope rather than an argument.',
+    open: true,
+  },
+  'tec-web-audio': {
+    title: 'Web Audio API',
+    source: 'MDN Web Docs',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API',
+    kind: 'reference',
+    note: 'The routing-graph model — sources, nodes, destination — explained with runnable examples.',
+    open: true,
+  },
+  'tec-web-audio-spec': {
+    title: 'Web Audio API specification',
+    source: 'W3C',
+    url: 'https://www.w3.org/TR/webaudio/',
+    kind: 'reference',
+    note: 'The normative spec, for when the documentation is ambiguous.',
+    open: true,
+  },
+  'tec-audacity': {
+    title: 'Audacity Manual',
+    source: 'Audacity Team',
+    url: 'https://manual.audacityteam.org/',
+    kind: 'reference',
+    note: 'Free cross-platform editor; the manual doubles as a practical guide to editing and noise reduction.',
+    open: true,
+  },
+  'tec-musescore-handbook': {
+    title: 'MuseScore Handbook',
+    source: 'MuseScore',
+    url: 'https://musescore.org/en/handbook',
+    kind: 'reference',
+    note: 'Engraving, parts extraction and MusicXML interchange in the free notation program.',
+    open: true,
+  },
+  'tec-sonic-pi': {
+    title: 'Sonic Pi tutorial',
+    source: 'Sonic Pi',
+    url: 'https://sonic-pi.net/tutorial',
+    kind: 'exercise',
+    note: 'Live-coded music from the first page; the quickest route into algorithmic composition.',
+    open: true,
+  },
+  'tec-supercollider': {
+    title: 'SuperCollider documentation',
+    source: 'SuperCollider',
+    url: 'https://doc.sccode.org/',
+    kind: 'reference',
+    note: 'Synthesis and algorithmic composition environment used widely in electroacoustic studios.',
+    open: true,
+  },
+  'tec-puredata': {
+    title: 'Pure Data documentation',
+    source: 'Pure Data',
+    url: 'https://puredata.info/docs',
+    kind: 'reference',
+    note: 'Miller Puckette’s visual dataflow environment; the free sibling of Max/MSP.',
+    open: true,
+  },
+  'tec-csound': {
+    title: 'The Csound Manual',
+    source: 'Csound',
+    url: 'https://csound.com/docs/manual/index.html',
+    kind: 'reference',
+    note: 'Long-running synthesis language with an opcode for essentially every classic technique.',
+    open: true,
+  },
+  'tec-midi-specs': {
+    title: 'MIDI specifications, including MIDI 2.0',
+    source: 'The MIDI Association',
+    url: 'https://midi.org/specs',
+    kind: 'reference',
+    note: 'What the protocol actually transmits — and what it does not.',
+    open: true,
+  },
+  'tec-bs1770': {
+    title: 'ITU-R BS.1770 — loudness and true-peak measurement',
+    source: 'International Telecommunication Union',
+    url: 'https://www.itu.int/rec/R-REC-BS.1770/en',
+    kind: 'reference',
+    note: 'The algorithm behind LUFS metering and streaming loudness normalisation.',
+    open: true,
+  },
+  'tec-cc-licences': {
+    title: 'Creative Commons licences explained',
+    source: 'Creative Commons',
+    url: 'https://creativecommons.org/share-your-work/cclicenses/',
+    kind: 'reference',
+    note: 'What each licence permits, which matters before you release or reuse anything.',
+    open: true,
+  },
+  'tec-isrc': {
+    title: 'ISRC — International Standard Recording Code',
+    source: 'IFPI',
+    url: 'https://isrc.ifpi.org/',
+    kind: 'reference',
+    note: 'How recordings are identified for royalty tracking, and how to obtain codes.',
+    open: true,
+  },
+
+  // ── Musical contexts and ethnomusicology ───────────────────────────────────
+  'ctx-lomax': {
+    title: 'Alan Lomax Archive',
+    source: 'Association for Cultural Equity',
+    url: 'https://www.culturalequity.org/',
+    kind: 'primary',
+    note: 'Field recordings, films and fieldnotes from one of the largest ethnographic collections, with an explicit repatriation programme.',
+    open: true,
+  },
+  'ctx-unesco-ich': {
+    title: 'Intangible Cultural Heritage lists',
+    source: 'UNESCO',
+    url: 'https://ich.unesco.org/',
+    kind: 'reference',
+    note: 'Dossiers on safeguarded musical traditions — useful, and a case study in who gets to designate heritage.',
+    open: true,
+  },
+  'ctx-atm-indiana': {
+    title: 'Archives of Traditional Music',
+    source: 'Indiana University',
+    url: 'https://libraries.indiana.edu/archives-traditional-music',
+    kind: 'reference',
+    note: 'One of the largest university ethnographic sound archives; a working example of access policy negotiated with source communities.',
+    open: true,
+  },
+  'ctx-ethno-review': {
+    title: 'Ethnomusicology Review',
+    source: 'UCLA',
+    url: 'https://ethnomusicologyreview.ucla.edu/',
+    kind: 'article',
+    note: 'Open-access journal and sounding-board essays — current disciplinary debate without a paywall.',
+    open: true,
+  },
+  'ctx-ictmd': {
+    title: 'International Council for Traditions of Music and Dance',
+    source: 'ICTMD',
+    url: 'https://ictmusic.org/',
+    kind: 'reference',
+    note: 'Study-group publications and the discipline’s international conference programme.',
+    open: true,
+  },
+  'ctx-maqamworld': {
+    title: 'Maqam World',
+    source: 'Maqam World',
+    url: 'https://www.maqamworld.com/',
+    kind: 'reference',
+    note: 'Arab maqam explained with audio: jins structure, modulation paths and the intervals Western notation cannot write.',
+    open: true,
+  },
+  'ctx-gamelan-institute': {
+    title: 'American Gamelan Institute',
+    source: 'American Gamelan Institute',
+    url: 'https://www.gamelan.org/',
+    kind: 'reference',
+    note: 'Scores, recordings and the Balungan journal, covering Javanese and Balinese practice.',
+    open: true,
+  },
+  'ctx-music-in-africa': {
+    title: 'Music In Africa',
+    source: 'Music In Africa Foundation',
+    url: 'https://www.musicinafrica.net/',
+    kind: 'reference',
+    note: 'Country-by-country profiles written largely by musicians and scholars on the continent.',
+    open: true,
+  },
+  'ctx-itcsra': {
+    title: 'ITC Sangeet Research Academy',
+    source: 'ITC SRA',
+    url: 'https://www.itcsra.org/',
+    kind: 'reference',
+    note: 'Hindustani classical music: raga and tala reference material from a guru-shishya teaching institution.',
     open: true,
   },
 

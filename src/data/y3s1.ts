@@ -947,7 +947,7 @@ export const y3s1Courses: Course[] = [
     stream: 'technology',
     description:
       'The technical layer every working musician now operates in: how sound becomes a signal and a file, how recordings are planned, captured, edited and mixed, how notation and MIDI software actually work, and how music is distributed, credited and paid for. Practical throughout, and assessed on a portfolio of your own recorded, engraved and produced work.',
-    resources: ['sos-techniques', 'aes', 'lib-musescore', 'nidcd-hearing'],
+    resources: ['sos-techniques', 'aes', 'lib-musescore', 'tec-xiph-primer', 'nidcd-hearing'],
     lessons: [
       {
         id: 'week-01',
@@ -969,7 +969,7 @@ export const y3s1Courses: Course[] = [
           'Encode one file at several bitrates and identify the point where you can reliably hear the difference',
           'Write 300 words explaining Nyquist to a musician with no technical background',
         ],
-        resources: ['aes', 'sos-techniques'],
+        resources: ['tec-xiph-primer', 'tec-web-audio-spec', 'aes'],
       },
       {
         id: 'week-02',
@@ -991,7 +991,7 @@ export const y3s1Courses: Course[] = [
           'Find and record an example of flutter echo and one of comb filtering',
           'Map the radiation pattern of your own instrument by listening from six positions around it',
         ],
-        resources: ['sos-techniques', 'aes'],
+        resources: ['tr-helmholtz', 'sos-techniques', 'aes'],
       },
       {
         id: 'week-03',
@@ -1061,7 +1061,7 @@ export const y3s1Courses: Course[] = [
           'Have a peer attempt to locate your edit points and report how many they found',
           'Write 500 words setting out your own position on the ethics of editing, with reasons',
         ],
-        resources: ['sos-techniques', 'lib-archive'],
+        resources: ['tec-audacity', 'sos-techniques', 'lib-archive'],
       },
       {
         id: 'week-06',
@@ -1083,7 +1083,7 @@ export const y3s1Courses: Course[] = [
           'Produce two masters of one movement at different dynamic-range settings and compare on three playback systems',
           'Prepare a complete master of a multi-movement work with correct gaps and metadata',
         ],
-        resources: ['sos-techniques', 'aes'],
+        resources: ['tec-bs1770', 'sos-techniques', 'aes'],
       },
       {
         id: 'week-07',
@@ -1105,7 +1105,7 @@ export const y3s1Courses: Course[] = [
           'Extract all parts with correct bar numbers, cues, multi-bar rests and workable page turns',
           'Have a player read one of your parts and report every place the layout impeded them',
         ],
-        resources: ['lib-musescore', 'lib-imslp', 'lib-cpdl'],
+        resources: ['tec-musescore-handbook', 'lib-musescore', 'lib-cpdl'],
       },
       {
         id: 'week-08',
@@ -1127,7 +1127,7 @@ export const y3s1Courses: Course[] = [
           'Compare your mock-up with a recording of the same passage and list five audible differences',
           'Produce rehearsal tracks for one vocal work, with the sung line isolated',
         ],
-        resources: ['lib-musescore', 'sos-techniques'],
+        resources: ['tec-midi-specs', 'tec-web-audio', 'lib-musescore'],
       },
       {
         id: 'week-09',
@@ -1155,7 +1155,7 @@ export const y3s1Courses: Course[] = [
           'Reproduce one characteristic sound with two different synthesis methods and compare',
           'Write 400 words situating your study in relation to the concrète and elektronische traditions',
         ],
-        resources: ['wiki-musique-concrete', 'lib-archive', 'newmusicusa'],
+        resources: ['tec-csound', 'tec-supercollider', 'tec-puredata', 'tec-sonic-pi', 'wiki-musique-concrete'],
       },
       {
         id: 'week-10',
@@ -1199,7 +1199,7 @@ export const y3s1Courses: Course[] = [
           'Measure the thirds and fifths of your own instrument in cents across its range',
           'Write 400 words on what key character meant before equal temperament, citing measurements',
         ],
-        resources: ['wiki-just-intonation', 'wiki-equal-temperament', 'lib-tml'],
+        resources: ['tr-helmholtz', 'wiki-just-intonation', 'wiki-equal-temperament'],
       },
       {
         id: 'week-12',
@@ -1221,7 +1221,7 @@ export const y3s1Courses: Course[] = [
           'Identify the collection societies relevant to you and document the registration process for each',
           'Write 400 words distinguishing composition and recording rights, with an example of each',
         ],
-        resources: ['savvy-musician', 'newmusicusa', 'help-musicians'],
+        resources: ['tec-isrc', 'tec-cc-licences', 'savvy-musician'],
       },
       {
         id: 'week-13',

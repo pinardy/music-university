@@ -64,10 +64,7 @@ export const y1s1Courses: Course[] = [
           'Complete a daily 10-minute tone routine for six days, logging one observation per day in your tone map',
           'Bring to your lesson a demonstration of the same passage played or sung with two deliberately different timbres',
         ],
-        resources: [
-          'alexander-technique', 'nidcd-hearing', 'score-strauss-four-last', 'score-elgar-cello',
-          'score-haydn-trumpet', 'score-mozart-k333',
-        ],
+        resources: ['tr-geminiani', 'tr-garcia', 'score-strauss-four-last', 'alexander-technique'],
       },
       {
         id: 'unit-03',
@@ -124,7 +121,7 @@ export const y1s1Courses: Course[] = [
           'Establish week-one metronome benchmarks for two scale patterns and one study; log them in a table',
           'Identify three passages in current repertoire and design one regime exercise targeting each',
         ],
-        resources: ['score-paganini-caprices', 'score-liszt-transcendental', 'score-vivaldi-griselda'],
+        resources: ['tr-spohr', 'mw-deliberate-practice', 'lib-imslp'],
       },
       {
         id: 'unit-05',
@@ -1078,7 +1075,7 @@ export const y1s1Courses: Course[] = [
           'Play a four-part chorale at sight at a slow steady tempo without stopping, simplifying where necessary',
           'Record one sight-reading attempt and count how many times the pulse faltered',
         ],
-        resources: ['score-bach-chorales', 'lib-cpdl', 'omt-grand-staff'],
+        resources: ['score-bach-chorales', 'tr-turk', 'omt-grand-staff'],
       },
       {
         id: 'week-07',
@@ -1144,7 +1141,7 @@ export const y1s1Courses: Course[] = [
           'Play one exercise twice with different upper voicings and compare the top lines',
           'Write out one realisation in full notation and check it for parallel fifths and octaves',
         ],
-        resources: ['omt-figured-bass', 'mt21c-figured-bass', 'fff-figured-bass'],
+        resources: ['omt-figured-bass', 'tr-cpe-bach', 'fff-figured-bass'],
       },
       {
         id: 'week-10',
