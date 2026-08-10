@@ -10,7 +10,7 @@ export default function App() {
     <div className="app-shell">
       <header className="site-header">
         <Link to="/" aria-label="Home">
-          <img src="/icon.svg" alt="" />
+          <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" />
         </Link>
         <Link to="/" className="wordmark">
           Music University
