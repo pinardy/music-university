@@ -60,13 +60,13 @@ export const years: YearSummary[] = [
     semesters: [
       {
         id: 'y3s1',
-        label: 'Semester 5 · 11 credits',
-        courseIds: ['aps301', 'mut301', 'muh301'],
+        label: 'Semester 5 · 14 credits',
+        courseIds: ['aps301', 'mut301', 'muh301', 'tec301'],
       },
       {
         id: 'y3s2',
-        label: 'Semester 6 · 8 credits',
-        courseIds: ['aps302', 'mut302'],
+        label: 'Semester 6 · 14 credits',
+        courseIds: ['aps302', 'mut302', 'com302', 'ctx302'],
       },
     ],
   },
@@ -276,6 +276,15 @@ export const courseSummaries: Record<string, CourseSummary> = {
     lessonCount: 13,
     prerequisites: ['muh202'],
   },
+  tec301: {
+    id: 'tec301',
+    code: 'TEC301',
+    title: 'Music Technology',
+    credits: 3,
+    stream: 'technology',
+    year: 3,
+    lessonCount: 13,
+  },
   aps302: {
     id: 'aps302',
     code: 'APS302',
@@ -295,6 +304,26 @@ export const courseSummaries: Record<string, CourseSummary> = {
     year: 3,
     lessonCount: 13,
     prerequisites: ['mut301'],
+  },
+  com302: {
+    id: 'com302',
+    code: 'COM302',
+    title: 'Composition Portfolio',
+    credits: 3,
+    stream: 'composition',
+    year: 3,
+    lessonCount: 13,
+    prerequisites: ['mut301'],
+  },
+  ctx302: {
+    id: 'ctx302',
+    code: 'CTX302',
+    title: 'Musical Contexts',
+    credits: 3,
+    stream: 'context',
+    year: 3,
+    lessonCount: 13,
+    prerequisites: ['muh301'],
   },
   aps401: {
     id: 'aps401',
@@ -389,6 +418,6 @@ export const courseSummaries: Record<string, CourseSummary> = {
 export const lessonCountByYear: Record<number, number> = {
   1: 102,
   2: 64,
-  3: 51,
+  3: 90,
   4: 68,
 }
