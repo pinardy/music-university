@@ -899,7 +899,7 @@ export const y2s2Courses: Course[] = [
           'Present one research finding to the colloquium in ten minutes and take questions',
           'Apply one documented period practice in your own performance and report the result in 300 words',
         ],
-        resources: ['tr-quantz', 'tr-leopold-mozart', 'tr-geminiani', 'wiki-hip', 'zotero'],
+        resources: ['tr-quantz', 'tr-leopold-mozart', 'tr-geminiani', 'rec-78rpm', 'wiki-hip', 'zotero'],
       },
     ],
   },

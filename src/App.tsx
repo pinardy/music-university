@@ -12,6 +12,8 @@ const CoursePage = lazy(() => import('./pages/CoursePage'))
 const LessonPage = lazy(() => import('./pages/LessonPage'))
 const LibraryPage = lazy(() => import('./pages/LibraryPage'))
 const NotesPage = lazy(() => import('./pages/NotesPage'))
+const GlossaryPage = lazy(() => import('./pages/GlossaryPage'))
+const AssessmentPage = lazy(() => import('./pages/AssessmentPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const RepertoirePage = lazy(() => import('./pages/RepertoirePage'))
 const StreamPage = lazy(() => import('./pages/StreamsPage'))
@@ -23,6 +25,8 @@ const NAV = [
   { to: '/search', label: 'Search' },
   { to: '/repertoire', label: 'Repertoire' },
   { to: '/streams', label: 'Streams' },
+  { to: '/glossary', label: 'Glossary' },
+  { to: '/assessment', label: 'Assessment' },
   { to: '/notes', label: 'Notes' },
   { to: '/library', label: 'Sources' },
 ]
@@ -66,6 +70,8 @@ export default function App() {
             <Route path="/course/:courseId/lesson/:lessonId" element={<LessonPage />} />
             <Route path="/library" element={<LibraryPage />} />
             <Route path="/notes" element={<NotesPage />} />
+            <Route path="/glossary" element={<GlossaryPage />} />
+            <Route path="/assessment" element={<AssessmentPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/repertoire" element={<RepertoirePage />} />
             <Route path="/streams" element={<StreamsIndexPage />} />

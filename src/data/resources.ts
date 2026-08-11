@@ -1095,6 +1095,51 @@ const SEEDS: Record<string, Seed> = {
     open: true,
   },
 
+  // ── Recording archives ─────────────────────────────────────────────────────
+  // Every other link in this catalogue points at something to read or play
+  // from. These point at performances to listen to, which the listening lists
+  // ask for on nearly every page and nothing else here supplies.
+  'rec-archive-audio': {
+    title: 'Internet Archive — audio collection',
+    source: 'Internet Archive',
+    url: 'https://archive.org/details/audio',
+    kind: 'recording',
+    note: 'Millions of items including out-of-copyright commercial issues, concert tapes and live sets.',
+    open: true,
+  },
+  'rec-78rpm': {
+    title: 'The Great 78 Project',
+    source: 'Internet Archive',
+    url: 'https://archive.org/details/78rpm',
+    kind: 'recording',
+    note: 'Digitised 78rpm discs: the first half-century of recorded performance practice, as recorded.',
+    open: true,
+  },
+  'rec-musopen': {
+    title: 'Musopen',
+    source: 'Musopen',
+    url: 'https://musopen.org/',
+    kind: 'recording',
+    note: 'Public-domain and freely licensed recordings of the standard repertoire, downloadable.',
+    open: true,
+  },
+  'rec-commons-audio': {
+    title: 'Wikimedia Commons — audio files of music',
+    source: 'Wikimedia Commons',
+    url: 'https://commons.wikimedia.org/wiki/Category:Audio_files_of_music',
+    kind: 'recording',
+    note: 'Freely licensed recordings, each with its licence stated — usable in your own work.',
+    open: true,
+  },
+  'rec-fma': {
+    title: 'Free Music Archive',
+    source: 'Free Music Archive',
+    url: 'https://freemusicarchive.org/',
+    kind: 'recording',
+    note: 'Creative Commons music across genres; the practical source when you need audio you may reuse.',
+    open: true,
+  },
+
   // ── Music technology ───────────────────────────────────────────────────────
   'tec-xiph-primer': {
     title: 'Digital Show and Tell — sampling and bit depth demonstrated on real hardware',
@@ -1275,6 +1320,107 @@ const SEEDS: Record<string, Seed> = {
     open: true,
   },
 
+  // ── The profession: unions, funding, rights, self-employment ───────────────
+  // Professional Development was the second-thinnest stream in the catalogue,
+  // which is a poor joke for the part of the degree meant to prepare students
+  // for actually earning a living.
+  'pro-mu': {
+    title: 'Musicians’ Union',
+    source: 'Musicians’ Union (UK)',
+    url: 'https://www.musiciansunion.org.uk/',
+    kind: 'reference',
+    note: 'Minimum rates, contract advice and legal support. The rate cards are useful even outside the UK as a floor to negotiate from.',
+    open: true,
+  },
+  'pro-afm': {
+    title: 'American Federation of Musicians',
+    source: 'AFM',
+    url: 'https://www.afm.org/',
+    kind: 'reference',
+    note: 'Agreements covering orchestral, recording and touring work in the US and Canada.',
+    open: true,
+  },
+  'pro-ism': {
+    title: 'Incorporated Society of Musicians',
+    source: 'ISM',
+    url: 'https://www.ism.org/',
+    kind: 'reference',
+    note: 'Guidance on teaching, safeguarding, insurance and self-employment for the working musician.',
+    open: true,
+  },
+  'pro-copyright-gov': {
+    title: 'US Copyright Office',
+    source: 'Library of Congress',
+    url: 'https://www.copyright.gov/',
+    kind: 'reference',
+    note: 'Registration, term, and the distinction between the work and the recording of it.',
+    open: true,
+  },
+  'pro-wipo': {
+    title: 'WIPO — copyright',
+    source: 'World Intellectual Property Organization',
+    url: 'https://www.wipo.int/copyright/en/',
+    kind: 'reference',
+    note: 'How rights work across borders, which matters the moment a recording is streamed anywhere.',
+    open: true,
+  },
+  'pro-prs-foundation': {
+    title: 'PRS Foundation',
+    source: 'PRS Foundation',
+    url: 'https://prsfoundation.com/',
+    kind: 'reference',
+    note: 'Funding programmes for new music and early-career artists, with published criteria worth reading before applying.',
+    open: true,
+  },
+  'pro-nea': {
+    title: 'National Endowment for the Arts',
+    source: 'NEA',
+    url: 'https://www.arts.gov/',
+    kind: 'reference',
+    note: 'US federal arts funding: grant programmes, deadlines and the research behind them.',
+    open: true,
+  },
+  'pro-ace': {
+    title: 'Arts Council England',
+    source: 'Arts Council England',
+    url: 'https://www.artscouncil.org.uk/',
+    kind: 'reference',
+    note: 'Project grants and the developing-your-creative-practice route for individual musicians.',
+    open: true,
+  },
+  'pro-league': {
+    title: 'League of American Orchestras',
+    source: 'League of American Orchestras',
+    url: 'https://americanorchestras.org/',
+    kind: 'reference',
+    note: 'Audition listings, orchestral employment data and sector research.',
+    open: true,
+  },
+  'pro-abo': {
+    title: 'Association of British Orchestras',
+    source: 'ABO',
+    url: 'https://abo.org.uk/',
+    kind: 'reference',
+    note: 'How UK orchestras are run and funded — read before an audition or an interview.',
+    open: true,
+  },
+  'pro-selfemployed-uk': {
+    title: 'Working for yourself',
+    source: 'GOV.UK',
+    url: 'https://www.gov.uk/working-for-yourself',
+    kind: 'reference',
+    note: 'Registering as self-employed, records to keep and what counts as an expense.',
+    open: true,
+  },
+  'pro-selfemployed-us': {
+    title: 'Self-employed individuals tax center',
+    source: 'Internal Revenue Service',
+    url: 'https://www.irs.gov/businesses/small-businesses-self-employed',
+    kind: 'reference',
+    note: 'Estimated tax, deductions and record-keeping for freelance income.',
+    open: true,
+  },
+
   // ── Career, research and production ────────────────────────────────────────
   'savvy-musician': {
     title: 'The Savvy Musician',
@@ -1321,6 +1467,7 @@ export const resourceKindLabels: Record<ResourceKind, string> = {
   score: 'Score',
   article: 'Article',
   lecture: 'Lecture',
+  recording: 'Recording',
   exercise: 'Practice',
   primary: 'Primary source',
 }

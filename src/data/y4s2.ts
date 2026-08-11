@@ -178,7 +178,7 @@ export const y4s2Courses: Course[] = [
     stream: 'professional',
     description:
       'A self-directed capstone in the RCM Independent Project and YST Collaboratory tradition: students design, research and deliver an original project — community engagement, interdisciplinary creation, applied research or a recording — under faculty supervision. The course assesses initiative, project management and public communication as core professional skills.',
-    resources: ['zotero', 'owl-chicago', 'savvy-musician', 'lib-jstor'],
+    resources: ['savvy-musician', 'pro-mu', 'pro-ism', 'newmusicusa'],
     lessons: [
       {
         id: 'week-01',
@@ -230,7 +230,7 @@ export const y4s2Courses: Course[] = [
           'Complete three informational interviews or site visits; log findings and one plan change each prompted',
           'Write the one-page positioning statement and prune your project plan against it',
         ],
-        resources: ['lib-jstor', 'lib-muse', 'lib-grove', 'zotero', 'lib-archive'],
+        resources: ['zotero', 'owl-chicago', 'pro-wipo'],
       },
       {
         id: 'week-03',
@@ -256,7 +256,7 @@ export const y4s2Courses: Course[] = [
           'Run one audience test of draft material; report findings and the specific iterations they caused',
           'Present a budget-versus-actuals and scope statement at the midpoint checkpoint, flagging any cuts needed',
         ],
-        resources: ['mw-defining-practice', 'newmusicusa'],
+        resources: ['pro-nea', 'pro-ace', 'newmusicusa'],
       },
       {
         id: 'week-04',
@@ -308,7 +308,7 @@ export const y4s2Courses: Course[] = [
           'Complete the rights and permissions audit with documentation for every third-party asset',
           'Assemble the project archive with a one-page outcomes summary',
         ],
-        resources: ['sos-techniques', 'owl-chicago'],
+        resources: ['rec-fma', 'tec-isrc', 'pro-copyright-gov'],
       },
       {
         id: 'week-06',
@@ -334,7 +334,7 @@ export const y4s2Courses: Course[] = [
           'Submit the written reflection evaluating all success criteria with journal-based decision analysis',
           'Publish the project to your professional platforms and submit the 100-word and 300-word project narratives',
         ],
-        resources: ['owl-chicago', 'savvy-musician'],
+        resources: ['pro-mu', 'pro-prs-foundation', 'savvy-musician'],
       },
     ],
   },
@@ -346,7 +346,7 @@ export const y4s2Courses: Course[] = [
     stream: 'professional',
     description:
       'Training in the art and business of teaching your instrument or voice, on the RCM Teaching Musician model. The course moves from learning science and method-book literacy through lesson design, inclusive practice and studio ethics to a supervised teaching practicum, culminating in a professional teaching portfolio.',
-    resources: ['giml-mlt', 'mtna', 'suzuki-teachers', 'mw-blog'],
+    resources: ['mtna', 'suzuki-teachers', 'pro-ism', 'giml-mlt'],
     lessons: [
       {
         id: 'week-01',
@@ -606,7 +606,7 @@ export const y4s2Courses: Course[] = [
           'Build a first-year studio financial model: target income, hours, rates, expenses and tax set-aside',
           'Draft your safeguarding protocol including the disclosure procedure for your jurisdiction',
         ],
-        resources: ['mtna', 'savvy-musician'],
+        resources: ['pro-ism', 'pro-selfemployed-uk', 'pro-selfemployed-us'],
       },
       {
         id: 'week-11',
@@ -853,7 +853,7 @@ export const y4s2Courses: Course[] = [
           'Submit the legacy package: annotated parts returned, operations handbook entries, mentee transition summary',
           'Deliver your excerpt-in-context list, ensemble CV section and written two-minute ensemble narrative',
         ],
-        resources: ['ci-post-concert', 'ci-advocacy', 'savvy-musician'],
+        resources: ['pro-league', 'pro-afm', 'ci-post-concert', 'ci-advocacy'],
       },
     ],
   },

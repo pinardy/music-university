@@ -5,6 +5,7 @@ import { courseSummaries, loadSemesterCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
 import { assignmentKey, lessonKey, useAssignments, useNotes, useProgress } from '../progress'
 import { streamColor, streamLabels } from '../streams'
+import { rubricsByCourse, rubricsById } from '../data/assessment'
 import ResourceList from '../components/ResourceList'
 import NotFound from '../components/NotFound'
 
@@ -68,6 +69,17 @@ function CourseView({ summary }: { summary: CourseSummary }) {
           {prerequisites.map((p) => (
             <Link key={p.id} to={`/course/${p.id}`} className="prerequisite">
               {p.code} · {p.title}
+            </Link>
+          ))}
+        </p>
+      )}
+
+      {(rubricsByCourse[course.id] ?? []).length > 0 && (
+        <p className="course-rubrics">
+          <span className="prerequisites-label">Assessed by</span>
+          {(rubricsByCourse[course.id] ?? []).map((id) => (
+            <Link key={id} to={`/assessment#${id}`} className="prerequisite">
+              {rubricsById.get(id)?.title ?? id}
             </Link>
           ))}
         </p>

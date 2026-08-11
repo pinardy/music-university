@@ -1113,7 +1113,7 @@ export const y3s2Courses: Course[] = [
           'Measure the microtiming deviations in one groove and describe their effect',
           'Write 400 words on why the academy excluded this repertoire and what that exclusion cost',
         ],
-        resources: ['loc-jukebox', 'lib-archive', 'sos-techniques'],
+        resources: ['loc-jukebox', 'rec-archive-audio', 'sos-techniques'],
       },
       {
         id: 'week-10',
@@ -1135,7 +1135,7 @@ export const y3s2Courses: Course[] = [
           'Write 500 words on why copyright fits traditional music badly, with a concrete example',
           'Specify the access terms for your own field recordings and the reasoning behind them',
         ],
-        resources: ['ctx-atm-indiana', 'ctx-unesco-ich', 'ctx-lomax'],
+        resources: ['ctx-atm-indiana', 'ctx-unesco-ich', 'ctx-lomax', 'rec-commons-audio'],
       },
       {
         id: 'week-11',

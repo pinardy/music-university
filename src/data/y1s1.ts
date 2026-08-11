@@ -36,7 +36,7 @@ export const y1s1Courses: Course[] = [
           'Record your diagnostic performance and write a half-page self-assessment before reading your teacher’s notes',
           'Set up your practice log and complete entries for at least five sessions this week',
         ],
-        resources: ['mw-defining-practice', 'schumann-advice', 'score-clara-romances'],
+        resources: ['mw-defining-practice', 'rec-musopen', 'score-clara-romances'],
       },
       {
         id: 'unit-02',
@@ -148,7 +148,7 @@ export const y1s1Courses: Course[] = [
           'Complete three logged mental-practice sessions away from your instrument this week',
           'Bring your etude to performance standard and record a complete take without stopping',
         ],
-        resources: ['bpm-mental-practice', 'mw-deliberate-practice', 'score-chopin-op10'],
+        resources: ['mw-deliberate-practice', 'rec-archive-audio', 'bpm-mental-practice'],
       },
       {
         id: 'unit-06',

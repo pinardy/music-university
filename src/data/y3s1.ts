@@ -1061,7 +1061,7 @@ export const y3s1Courses: Course[] = [
           'Have a peer attempt to locate your edit points and report how many they found',
           'Write 500 words setting out your own position on the ethics of editing, with reasons',
         ],
-        resources: ['tec-audacity', 'sos-techniques', 'lib-archive'],
+        resources: ['tec-audacity', 'sos-techniques', 'rec-78rpm'],
       },
       {
         id: 'week-06',
@@ -1221,7 +1221,7 @@ export const y3s1Courses: Course[] = [
           'Identify the collection societies relevant to you and document the registration process for each',
           'Write 400 words distinguishing composition and recording rights, with an example of each',
         ],
-        resources: ['tec-isrc', 'tec-cc-licences', 'savvy-musician'],
+        resources: ['tec-isrc', 'tec-cc-licences', 'rec-fma', 'pro-copyright-gov'],
       },
       {
         id: 'week-13',

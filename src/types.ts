@@ -21,6 +21,8 @@ export type ResourceKind =
   | 'article'
   /** Recorded lecture, masterclass or documentary */
   | 'lecture'
+  /** Archive of listenable recordings, as opposed to a score */
+  | 'recording'
   /** Interactive drills, ear-training or practice tools */
   | 'exercise'
   /** Historical document written by the musicians who made the music */

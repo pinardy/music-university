@@ -14,6 +14,7 @@ const KIND_ORDER: ResourceKind[] = [
   'textbook',
   'exercise',
   'score',
+  'recording',
   'reference',
   'article',
   'primary',
@@ -163,6 +164,7 @@ function kindHeading(kind: ResourceKind): string {
     article: 'Articles & journals',
     primary: 'Primary sources',
     lecture: 'Recorded lectures & performance',
+    recording: 'Recording archives',
   }
   return headings[kind] ?? resourceKindLabels[kind]
 }

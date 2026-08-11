@@ -10,7 +10,7 @@ export const y4s1Courses: Course[] = [
     description:
       'The seventh semester of one-to-one applied study shifts the focus from curricular development to professional readiness. Students build the repertoire for the senior recital, assemble a complete audition portfolio, and produce application-quality recordings for graduate programs, young-artist schemes and orchestral or ensemble auditions.',
     prerequisites: ['aps302'],
-    resources: ['mw-blog', 'bpm-home', 'savvy-musician', 'lib-imslp'],
+    resources: ['pro-league', 'pro-abo', 'bpm-stage-fright', 'lib-imslp'],
     lessons: [
       {
         id: 'week-01',

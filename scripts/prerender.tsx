@@ -69,6 +69,18 @@ async function routes(): Promise<Route[]> {
       description: 'The degree read down instead of across: each subject followed through the whole programme.',
     },
     {
+      path: 'glossary',
+      title: 'Glossary — Music University',
+      description:
+        'Working definitions for the vocabulary the curriculum uses, chosen by counting what appears in the lesson text.',
+    },
+    {
+      path: 'assessment',
+      title: 'Assessment — Music University',
+      description:
+        'Rubrics and worked examples: how each kind of work is judged, and what a good answer looks like.',
+    },
+    {
       path: 'notes',
       title: 'Notes — Music University',
       description: 'Notes you have written on individual lessons.',
