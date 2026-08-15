@@ -3,6 +3,8 @@ import { Link, NavLink, Route, Routes } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import NotFound from './components/NotFound'
 import ThemeToggle from './components/ThemeToggle'
+import BackToTop from './components/BackToTop'
+import { useSearchShortcut } from './useSearchShortcut'
 
 // Route-level splitting keeps the lesson prose, the source catalogue and the
 // library's grouping logic out of the initial download.
@@ -33,6 +35,7 @@ const NAV = [
 
 export default function App() {
   const mainRef = useRef<HTMLElement>(null)
+  useSearchShortcut()
 
   return (
     <div className="app-shell">
@@ -80,6 +83,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </main>
+      <BackToTop />
     </div>
   )
 }

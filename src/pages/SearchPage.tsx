@@ -120,7 +120,7 @@ export default function SearchPage() {
           type="search"
           ref={input}
           value={query}
-          placeholder="Search the curriculum…"
+          placeholder="Search the curriculum…  (press / anywhere)"
           onChange={(e) => onChange(e.target.value)}
           aria-label="Search lessons"
         />

@@ -64,11 +64,21 @@ export default function GlossaryPage() {
         {shown} of {glossary.length} terms
       </p>
 
+      {groups.length > 1 && (
+        <nav className="jump-links" aria-label="Jump to a category">
+          {groups.map((g) => (
+            <a key={g.category} href={`#cat-${g.category}`}>
+              {glossaryCategories[g.category]}
+            </a>
+          ))}
+        </nav>
+      )}
+
       {shown === 0 ? (
         <p className="course-description">No terms match that search.</p>
       ) : (
         groups.map((group) => (
-          <section key={group.category} className="lesson-section">
+          <section key={group.category} id={`cat-${group.category}`} className="lesson-section">
             <h2>
               {glossaryCategories[group.category]}{' '}
               <span className="count">{group.terms.length}</span>

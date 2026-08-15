@@ -1,5 +1,5 @@
 import { use, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import type { Course, CourseSummary, Lesson } from '../types'
 import { courseSummaries, loadSemesterCourses, years } from '../data'
 import { resolveResources } from '../data/resources'
@@ -16,6 +16,8 @@ import ResourceList from '../components/ResourceList'
 import NotFound from '../components/NotFound'
 import LessonNote from '../components/LessonNote'
 import ListeningEntry from '../components/ListeningEntry'
+import GlossaryText from '../components/GlossaryText'
+import { newGlossaryState } from '../glossaryState'
 
 export default function LessonPage() {
   const { courseId, lessonId } = useParams()
@@ -50,6 +52,7 @@ function LessonBody({
 }) {
   const progress = useProgress()
   const assignments = useAssignments()
+  const navigate = useNavigate()
 
   useEffect(() => {
     recordVisit({
@@ -62,6 +65,10 @@ function LessonBody({
   }, [course.id, course.code, lesson.id, lesson.title, lesson.week])
 
   const lessonIndex = index
+  // Rebuilt every render on purpose. Memoising it would leave the "already
+  // marked" set full from the previous pass, so every glossary term would
+  // disappear the first time anything else on the page changed.
+  const glossaryState = newGlossaryState()
 
   const year = years.find((y) => y.year === summary.year)
   const done = progress.has(lessonKey(course.id, lesson.id))
@@ -83,13 +90,12 @@ function LessonBody({
         <span className="sep">/</span>
         <Link to={`/course/${course.id}`}>{course.code}</Link>
         <span className="sep">/</span>
-        <span>Week {lesson.week}</span>
+        <span>
+          Week {lesson.week} of {course.lessons.length}
+        </span>
       </nav>
 
       <header className="lesson-header">
-        <span className="kicker">
-          {course.title} · Week {lesson.week}
-        </span>
         <h1 className="page-title">{lesson.title}</h1>
       </header>
 
@@ -105,7 +111,9 @@ function LessonBody({
       <section className="lesson-section">
         <h2>Lesson</h2>
         {lesson.content.map((para, i) => (
-          <p key={i}>{para}</p>
+          <p key={i}>
+            <GlossaryText text={para} state={glossaryState} />
+          </p>
         ))}
       </section>
 
@@ -159,12 +167,25 @@ function LessonBody({
 
       <LessonNote key={lessonKey(course.id, lesson.id)} noteKey={lessonKey(course.id, lesson.id)} />
 
-      <button
-        className={`complete-btn${done ? ' done' : ''}`}
-        onClick={() => toggleLesson(course.id, lesson.id)}
-      >
-        {done ? '✓ Completed — tap to undo' : 'Mark lesson complete'}
-      </button>
+      <div className="lesson-actions">
+        <button
+          className={`complete-btn${done ? ' done' : ''}`}
+          onClick={() => toggleLesson(course.id, lesson.id)}
+        >
+          {done ? '✓ Completed — undo' : 'Mark lesson complete'}
+        </button>
+        {!done && next && (
+          <button
+            className="complete-btn next"
+            onClick={() => {
+              toggleLesson(course.id, lesson.id)
+              navigate(`/course/${course.id}/lesson/${next.id}`)
+            }}
+          >
+            Complete &amp; continue →
+          </button>
+        )}
+      </div>
 
       <nav className="lesson-nav">
         {prev ? (

@@ -151,10 +151,10 @@ main:focus {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 18px 0;
+  gap: 10px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 
 .site-header img {
@@ -197,13 +197,13 @@ main:focus {
 }
 
 .site-header .header-link {
-  font-size: 0.78rem;
-  letter-spacing: 0.09em;
+  font-size: 0.74rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--text-muted);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 6px 14px;
+  padding: 5px 11px;
   transition:
     border-color 0.15s,
     color 0.15s;
@@ -223,8 +223,8 @@ main:focus {
   color: var(--text-muted);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 0.78rem;
+  padding: 5px 10px;
+  font-size: 0.74rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition:
@@ -299,6 +299,8 @@ main:focus {
   .lesson-note textarea,
   .note-delete,
   .usage-more,
+  .back-to-top,
+  .jump-links,
   .resume-btn {
     display: none !important;
   }
@@ -336,7 +338,7 @@ main:focus {
   gap: 6px;
   font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .crumbs a {
@@ -695,7 +697,7 @@ main:focus {
 /* ---------- Lesson page ---------- */
 
 .lesson-header {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .lesson-header .kicker {
@@ -761,6 +763,8 @@ main:focus {
   color: var(--accent);
   font-size: 0.9rem;
   max-width: 45%;
+  display: inline-block;
+  padding: 4px 0;
 }
 
 .lesson-nav a:hover {
@@ -1405,10 +1409,134 @@ main:focus {
 
 .glossary-see a {
   color: var(--accent);
+  display: inline-block;
+  padding: 5px 2px;
 }
 
 .glossary-see a:hover {
   text-decoration: underline;
+}
+
+/* ---------- Glossary terms in prose ---------- */
+
+.glossary-term-wrap {
+  position: relative;
+}
+
+.glossary-term {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline dotted var(--accent);
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.glossary-term:hover {
+  color: var(--accent);
+}
+
+.glossary-popover {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  z-index: 20;
+  display: grid;
+  gap: 6px;
+  width: max(260px, 24vw);
+  max-width: min(380px, calc(100vw - 40px));
+  background: var(--bg-raised);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 35%);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.glossary-popover strong {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+}
+
+.glossary-popover a {
+  color: var(--accent);
+  font-size: 0.78rem;
+  justify-self: start;
+  padding: 4px 0;
+}
+
+.glossary-popover a:hover {
+  text-decoration: underline;
+}
+
+.glossary-popover-loading {
+  color: var(--text-muted);
+}
+
+/* ---------- Jump links & back to top ---------- */
+
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.jump-links a {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.jump-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.back-to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-raised);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-size: 1.1rem;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 30%);
+}
+
+.back-to-top:hover {
+  background: var(--bg-hover);
+}
+
+/* ---------- Lesson actions ---------- */
+
+.lesson-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.complete-btn.next {
+  background: none;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+.complete-btn.next:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ---------- Assessment ---------- */
@@ -1528,6 +1656,8 @@ main:focus {
 
 .rubric-courses a {
   color: var(--accent);
+  display: inline-block;
+  padding: 5px 2px;
 }
 
 .rubric-courses a:hover {
